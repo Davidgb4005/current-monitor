@@ -26,7 +26,7 @@ const char kDashboardHtml[] = R"HTML(<!DOCTYPE html>
     </header>
     <nav class="tabs">
         <button class="tab active" data-page="alternator">Alternator</button>
-        <button class="tab" data-page="battery">Battery</button>
+        <button class="tab" data-page="battery">Batteries</button>
         <button class="tab" data-page="heaters">Heaters</button>
         <button class="tab" data-page="pumps">Pumps</button>
     </nav>
@@ -59,6 +59,19 @@ const char kDashboardHtml[] = R"HTML(<!DOCTYPE html>
                 <tr><td><p>Driver Voltage</p></td><td><p id="driverVoltage" class="display">0.00</p></td></tr>
                 <tr><td><p>Driver Current</p></td><td><p id="driverCurrent" class="display">0.00</p></td></tr>
             </table>
+            <div class="controls">
+                <label class="controlRow"><span>Passenger Volt Offset</span><input id="passengerVoltageOffsetInput" type="number" step="0.01"></label>
+                <label class="controlRow"><span>Passenger Volt Slope</span><input id="passengerVoltageSlopeInput" type="number" step="0.0001"></label>
+                <label class="controlRow"><span>Passenger Curr Offset</span><input id="passengerCurrentOffsetInput" type="number" step="0.01"></label>
+                <label class="controlRow"><span>Passenger Curr Slope</span><input id="passengerCurrentSlopeInput" type="number" step="0.001"></label>
+                <label class="controlRow"><span>Driver Volt Offset</span><input id="driverVoltageOffsetInput" type="number" step="0.01"></label>
+                <label class="controlRow"><span>Driver Volt Slope</span><input id="driverVoltageSlopeInput" type="number" step="0.0001"></label>
+                <label class="controlRow"><span>Driver Curr Offset</span><input id="driverCurrentOffsetInput" type="number" step="0.01"></label>
+                <label class="controlRow"><span>Driver Curr Slope</span><input id="driverCurrentSlopeInput" type="number" step="0.001"></label>
+                <div class="buttonRow">
+                    <button id="saveBatteryCalButton">Save Battery Calibration</button>
+                </div>
+            </div>
         </section>
 
         <section class="page" id="page-heaters">
@@ -230,6 +243,14 @@ async function fetchDashboard() {
         setText("passengerCurrent", data.battery.passengerCurrent.toFixed(2));
         setText("driverVoltage", data.battery.driverVoltage.toFixed(2));
         setText("driverCurrent", data.battery.driverCurrent.toFixed(2));
+        setIfNotFocused("passengerVoltageOffsetInput", data.battery.passengerVoltageOffset.toFixed(2));
+        setIfNotFocused("passengerVoltageSlopeInput", data.battery.passengerVoltageSlope.toFixed(4));
+        setIfNotFocused("passengerCurrentOffsetInput", data.battery.passengerCurrentOffset.toFixed(2));
+        setIfNotFocused("passengerCurrentSlopeInput", data.battery.passengerCurrentSlope.toFixed(3));
+        setIfNotFocused("driverVoltageOffsetInput", data.battery.driverVoltageOffset.toFixed(2));
+        setIfNotFocused("driverVoltageSlopeInput", data.battery.driverVoltageSlope.toFixed(4));
+        setIfNotFocused("driverCurrentOffsetInput", data.battery.driverCurrentOffset.toFixed(2));
+        setIfNotFocused("driverCurrentSlopeInput", data.battery.driverCurrentSlope.toFixed(3));
 
         setText("dieselHeater", stateLabel(data.heaters.diesel));
         setText("electricHeater", stateLabel(data.heaters.electric));
@@ -255,12 +276,30 @@ async function saveCalibration() {
     fetchDashboard();
 }
 
+async function saveBatteryCalibration() {
+    const passengerVoltageOffset = document.getElementById("passengerVoltageOffsetInput").value;
+    const passengerVoltageSlope = document.getElementById("passengerVoltageSlopeInput").value;
+    const passengerCurrentOffset = document.getElementById("passengerCurrentOffsetInput").value;
+    const passengerCurrentSlope = document.getElementById("passengerCurrentSlopeInput").value;
+    const driverVoltageOffset = document.getElementById("driverVoltageOffsetInput").value;
+    const driverVoltageSlope = document.getElementById("driverVoltageSlopeInput").value;
+    const driverCurrentOffset = document.getElementById("driverCurrentOffsetInput").value;
+    const driverCurrentSlope = document.getElementById("driverCurrentSlopeInput").value;
+    await fetch("/api/battery/config", {
+        method: "POST",
+        headers: {"Content-Type": "application/x-www-form-urlencoded"},
+        body: `passengerVoltageOffset=${encodeURIComponent(passengerVoltageOffset)}&passengerVoltageSlope=${encodeURIComponent(passengerVoltageSlope)}&passengerCurrentOffset=${encodeURIComponent(passengerCurrentOffset)}&passengerCurrentSlope=${encodeURIComponent(passengerCurrentSlope)}&driverVoltageOffset=${encodeURIComponent(driverVoltageOffset)}&driverVoltageSlope=${encodeURIComponent(driverVoltageSlope)}&driverCurrentOffset=${encodeURIComponent(driverCurrentOffset)}&driverCurrentSlope=${encodeURIComponent(driverCurrentSlope)}`
+    });
+    fetchDashboard();
+}
+
 async function resetMax() {
     await fetch("/api/alternator/reset", {method: "POST"});
     fetchDashboard();
 }
 
 document.getElementById("saveCalButton").addEventListener("click", saveCalibration);
+document.getElementById("saveBatteryCalButton").addEventListener("click", saveBatteryCalibration);
 document.getElementById("resetMaxButton").addEventListener("click", resetMax);
 
 showPage("alternator");
@@ -329,6 +368,13 @@ httpd_uri_t AlternatorResetUri = {
     .user_ctx = nullptr,
 };
 
+httpd_uri_t BatteryConfigUri = {
+    .uri = "/api/battery/config",
+    .method = HTTP_POST,
+    .handler = DiagnosticsWebServer::BatteryConfigPost,
+    .user_ctx = nullptr,
+};
+
 }  // namespace
 
 DiagnosticsWebServer::DiagnosticsWebServer(BatteryMonitorSensors& sensors)
@@ -336,6 +382,7 @@ DiagnosticsWebServer::DiagnosticsWebServer(BatteryMonitorSensors& sensors)
     DashboardUri.user_ctx = this;
     AlternatorConfigUri.user_ctx = this;
     AlternatorResetUri.user_ctx = this;
+    BatteryConfigUri.user_ctx = this;
 }
 
 esp_err_t DiagnosticsWebServer::Start() {
@@ -351,6 +398,7 @@ esp_err_t DiagnosticsWebServer::Start() {
     ESP_RETURN_ON_ERROR(httpd_register_uri_handler(server_, &DashboardUri), kLogTag, "Failed to register dashboard route");
     ESP_RETURN_ON_ERROR(httpd_register_uri_handler(server_, &AlternatorConfigUri), kLogTag, "Failed to register config route");
     ESP_RETURN_ON_ERROR(httpd_register_uri_handler(server_, &AlternatorResetUri), kLogTag, "Failed to register reset route");
+    ESP_RETURN_ON_ERROR(httpd_register_uri_handler(server_, &BatteryConfigUri), kLogTag, "Failed to register battery config route");
     return ESP_OK;
 }
 
@@ -376,13 +424,15 @@ esp_err_t DiagnosticsWebServer::ScriptGet(httpd_req_t* req) {
 esp_err_t DiagnosticsWebServer::DashboardDataGet(httpd_req_t* req) {
     auto* server = static_cast<DiagnosticsWebServer*>(req->user_ctx);
     const BatteryReadings& readings = server->sensors_.LatestReadings();
-    char response[768] = {0};
+    char response[1024] = {0};
     std::snprintf(
         response,
         sizeof(response),
         "{"
         "\"alternator\":{\"current\":%.2f,\"currentMax\":%.2f,\"voltage\":%.2f,\"voltageMax\":%.2f,\"currentOffset\":%.2f,\"currentSlope\":%.3f,\"voltageOffset\":%.2f,\"voltageSlope\":%.4f,\"energyKilojoules\":%.3f},"
-        "\"battery\":{\"passengerVoltage\":%.2f,\"passengerCurrent\":%.2f,\"driverVoltage\":%.2f,\"driverCurrent\":%.2f},"
+        "\"battery\":{\"passengerVoltage\":%.2f,\"passengerCurrent\":%.2f,\"driverVoltage\":%.2f,\"driverCurrent\":%.2f,"
+        "\"passengerVoltageOffset\":%.2f,\"passengerVoltageSlope\":%.4f,\"passengerCurrentOffset\":%.2f,\"passengerCurrentSlope\":%.3f,"
+        "\"driverVoltageOffset\":%.2f,\"driverVoltageSlope\":%.4f,\"driverCurrentOffset\":%.2f,\"driverCurrentSlope\":%.3f},"
         "\"heaters\":{\"diesel\":%s,\"electric\":%s,\"engine\":%s},"
         "\"pumps\":{\"water\":%s,\"cabin\":%s}"
         "}",
@@ -399,6 +449,14 @@ esp_err_t DiagnosticsWebServer::DashboardDataGet(httpd_req_t* req) {
         readings.passenger_current,
         readings.driver_voltage,
         readings.driver_current,
+        readings.passenger_voltage_offset,
+        readings.passenger_voltage_slope,
+        readings.passenger_current_offset,
+        readings.passenger_current_slope,
+        readings.driver_voltage_offset,
+        readings.driver_voltage_slope,
+        readings.driver_current_offset,
+        readings.driver_current_slope,
         diesel_heater.Read() ? "true" : "false",
         electric_heater.Read() ? "true" : "false",
         engine_heater.Read() ? "true" : "false",
@@ -438,6 +496,46 @@ esp_err_t DiagnosticsWebServer::AlternatorConfigPost(httpd_req_t* req) {
     if (voltage_slope_buffer[0] != '\0') {
         server->sensors_.SetAlternatorVoltageSlope(std::strtof(voltage_slope_buffer, nullptr));
     }
+
+    httpd_resp_set_type(req, "application/json");
+    return httpd_resp_send(req, kOkResponse, HTTPD_RESP_USE_STRLEN);
+}
+
+esp_err_t DiagnosticsWebServer::BatteryConfigPost(httpd_req_t* req) {
+    auto* server = static_cast<DiagnosticsWebServer*>(req->user_ctx);
+    char body[384] = {0};
+    int received = httpd_req_recv(req, body, std::min<int>(req->content_len, static_cast<int>(sizeof(body) - 1)));
+    if (received <= 0) {
+        return ESP_FAIL;
+    }
+    body[received] = '\0';
+
+    char passenger_voltage_offset_buffer[32] = {0};
+    char passenger_voltage_slope_buffer[32] = {0};
+    char passenger_current_offset_buffer[32] = {0};
+    char passenger_current_slope_buffer[32] = {0};
+    char driver_voltage_offset_buffer[32] = {0};
+    char driver_voltage_slope_buffer[32] = {0};
+    char driver_current_offset_buffer[32] = {0};
+    char driver_current_slope_buffer[32] = {0};
+
+    CopyFormValue(passenger_voltage_offset_buffer, sizeof(passenger_voltage_offset_buffer), body, "passengerVoltageOffset=");
+    CopyFormValue(passenger_voltage_slope_buffer, sizeof(passenger_voltage_slope_buffer), body, "passengerVoltageSlope=");
+    CopyFormValue(passenger_current_offset_buffer, sizeof(passenger_current_offset_buffer), body, "passengerCurrentOffset=");
+    CopyFormValue(passenger_current_slope_buffer, sizeof(passenger_current_slope_buffer), body, "passengerCurrentSlope=");
+    CopyFormValue(driver_voltage_offset_buffer, sizeof(driver_voltage_offset_buffer), body, "driverVoltageOffset=");
+    CopyFormValue(driver_voltage_slope_buffer, sizeof(driver_voltage_slope_buffer), body, "driverVoltageSlope=");
+    CopyFormValue(driver_current_offset_buffer, sizeof(driver_current_offset_buffer), body, "driverCurrentOffset=");
+    CopyFormValue(driver_current_slope_buffer, sizeof(driver_current_slope_buffer), body, "driverCurrentSlope=");
+
+    if (passenger_voltage_offset_buffer[0] != '\0') server->sensors_.SetPassengerVoltageOffset(std::strtof(passenger_voltage_offset_buffer, nullptr));
+    if (passenger_voltage_slope_buffer[0] != '\0') server->sensors_.SetPassengerVoltageSlope(std::strtof(passenger_voltage_slope_buffer, nullptr));
+    if (passenger_current_offset_buffer[0] != '\0') server->sensors_.SetPassengerCurrentOffset(std::strtof(passenger_current_offset_buffer, nullptr));
+    if (passenger_current_slope_buffer[0] != '\0') server->sensors_.SetPassengerCurrentSlope(std::strtof(passenger_current_slope_buffer, nullptr));
+    if (driver_voltage_offset_buffer[0] != '\0') server->sensors_.SetDriverVoltageOffset(std::strtof(driver_voltage_offset_buffer, nullptr));
+    if (driver_voltage_slope_buffer[0] != '\0') server->sensors_.SetDriverVoltageSlope(std::strtof(driver_voltage_slope_buffer, nullptr));
+    if (driver_current_offset_buffer[0] != '\0') server->sensors_.SetDriverCurrentOffset(std::strtof(driver_current_offset_buffer, nullptr));
+    if (driver_current_slope_buffer[0] != '\0') server->sensors_.SetDriverCurrentSlope(std::strtof(driver_current_slope_buffer, nullptr));
 
     httpd_resp_set_type(req, "application/json");
     return httpd_resp_send(req, kOkResponse, HTTPD_RESP_USE_STRLEN);

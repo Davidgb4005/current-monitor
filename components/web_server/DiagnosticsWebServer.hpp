@@ -15,6 +15,7 @@ public:
     static esp_err_t ScriptGet(httpd_req_t* req);
     static esp_err_t DashboardDataGet(httpd_req_t* req);
     static esp_err_t AlternatorConfigPost(httpd_req_t* req);
+    static esp_err_t BatteryConfigPost(httpd_req_t* req);
     static esp_err_t AlternatorResetPost(httpd_req_t* req);
 
 private:

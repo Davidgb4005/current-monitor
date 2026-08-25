@@ -26,8 +26,8 @@ constexpr uint8_t kCabinPumpPin = 12;
 constexpr uint8_t kAlternatorCurrentChannel = 2;
 constexpr uint8_t kAlternatorVoltageChannel = 0;
 constexpr uint8_t kPassengerVoltageChannel = 4;
-constexpr uint8_t kDriverVoltageChannel = 1;
-constexpr uint8_t kDriverCurrentChannel = 5;
+constexpr uint8_t kDriverVoltageChannel = 5;
+constexpr uint8_t kDriverCurrentChannel = 1;
 constexpr uint8_t kPassengerCurrentChannel = 3;
 
 }  // namespace board

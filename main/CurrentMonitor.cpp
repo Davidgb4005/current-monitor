@@ -24,6 +24,8 @@ extern "C" int app_main(void)
     InitInputs();
 
     BatteryMonitorSensors sensors;
+    ESP_ERROR_CHECK(sensors.Init());
+
     network::NetworkManager network_manager;
     AppController app_controller(lcd_display, sensors, network_manager);
     app_controller.Init();
