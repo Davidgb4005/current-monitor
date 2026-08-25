@@ -1,0 +1,2 @@
+source /home/esp/esp/CurrentMonitor/build/gdbinit/symbols
+source /home/esp/esp/CurrentMonitor/build/gdbinit/connect

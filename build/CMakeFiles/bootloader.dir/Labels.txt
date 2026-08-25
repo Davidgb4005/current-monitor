@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+/home/esp/esp/CurrentMonitor/build/CMakeFiles/bootloader
+/home/esp/esp/CurrentMonitor/build/CMakeFiles/bootloader.rule
+/home/esp/esp/CurrentMonitor/build/CMakeFiles/bootloader-complete.rule
+/home/esp/esp/CurrentMonitor/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+/home/esp/esp/CurrentMonitor/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+/home/esp/esp/CurrentMonitor/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+/home/esp/esp/CurrentMonitor/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+/home/esp/esp/CurrentMonitor/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+/home/esp/esp/CurrentMonitor/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+/home/esp/esp/CurrentMonitor/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

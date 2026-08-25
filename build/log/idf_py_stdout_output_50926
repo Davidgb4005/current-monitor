@@ -1,0 +1,18 @@
+Command: ninja all
+[1/9] Performing build step for 'bootloader'
+[1/1] cd /home/esp/esp/CurrentMonitor/build/bootloader && /home/esp/.espressif/python_env/idf6.1_py3.13_env/bin/python /home/esp/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/esp/esp/CurrentMonitor/build/bootloader/bootloader.bin
+Bootloader binary size 0x58d0 bytes. 0x2730 bytes (31%) free.
+[2/9] No install step for 'bootloader'
+[3/9] Completed 'bootloader'
+[4/9] Building CXX object esp-idf/LcdDisplay/CMakeFiles/__idf_LcdDisplay.dir/LcdDisplay.cpp.obj
+[5/9] Linking C static library esp-idf/LcdDisplay/libLcdDisplay.a
+[6/9] Generating esp-idf/esp_system/ld/sections.ld
+[7/9] Linking CXX executable CurrentMonitor.elf
+[8/9] Generating binary image from built executable
+esptool v5.1.0
+Creating ESP32C6 image...
+Merged 1 ELF section.
+Successfully created ESP32C6 image.
+Generated /home/esp/esp/CurrentMonitor/build/CurrentMonitor.bin
+[9/9] cd /home/esp/esp/CurrentMonitor/build && /home/esp/.espressif/python_env/idf6.1_py3.13_env/bin/python /home/esp/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/esp/esp/CurrentMonitor/build/partition_table/partition-table.bin /home/esp/esp/CurrentMonitor/build/CurrentMonitor.bin
+CurrentMonitor.bin binary size 0x31f30 bytes. Smallest app partition is 0x100000 bytes. 0xce0d0 bytes (80%) free.

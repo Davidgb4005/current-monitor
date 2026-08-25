@@ -1,0 +1,153 @@
+Command: ninja all
+[1/9] Performing build step for 'bootloader'
+[1/1] cd /home/esp/esp/CurrentMonitor/build/bootloader && /home/esp/.espressif/python_env/idf6.1_py3.13_env/bin/python /home/esp/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/esp/esp/CurrentMonitor/build/bootloader/bootloader.bin
+Bootloader binary size 0x58d0 bytes. 0x2730 bytes (31%) free.
+[2/9] No install step for 'bootloader'
+[3/9] Completed 'bootloader'
+[4/9] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/CurrentMonitor.cpp.obj
+FAILED: esp-idf/main/CMakeFiles/__idf_main.dir/CurrentMonitor.cpp.obj 
+/home/esp/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/riscv32-esp-elf-g++ -DESP_PLATFORM -DIDF_VER=\"v6.1-dev-1-gff97953b32-dirty\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -I/home/esp/esp/CurrentMonitor/build/config -I/home/esp/esp/CurrentMonitor/main -I/home/esp/esp/esp-idf/components/esp_libc/platform_include -I/home/esp/esp/esp-idf/components/freertos/config/include -I/home/esp/esp/esp-idf/components/freertos/config/include/freertos -I/home/esp/esp/esp-idf/components/freertos/config/riscv/include -I/home/esp/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include -I/home/esp/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/include -I/home/esp/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/include/freertos -I/home/esp/esp/esp-idf/components/freertos/esp_additions/include -I/home/esp/esp/esp-idf/components/esp_hw_support/include -I/home/esp/esp/esp-idf/components/esp_hw_support/include/soc -I/home/esp/esp/esp-idf/components/esp_hw_support/dma/include -I/home/esp/esp/esp-idf/components/esp_hw_support/ldo/include -I/home/esp/esp/esp-idf/components/esp_hw_support/debug_probe/include -I/home/esp/esp/esp-idf/components/esp_hw_support/etm/include -I/home/esp/esp/esp-idf/components/esp_hw_support/mspi_timing_tuning/include -I/home/esp/esp/esp-idf/components/esp_hw_support/mspi_timing_tuning/tuning_scheme_impl/include -I/home/esp/esp/esp-idf/components/esp_hw_support/power_supply/include -I/home/esp/esp/esp-idf/components/esp_hw_support/modem/include -I/home/esp/esp/esp-idf/components/esp_hw_support/port/esp32c6/. -I/home/esp/esp/esp-idf/components/esp_hw_support/port/esp32c6/include -I/home/esp/esp/esp-idf/components/esp_hw_support/port/esp32c6/private_include -I/home/esp/esp/esp-idf/components/heap/include -I/home/esp/esp/esp-idf/components/heap/tlsf -I/home/esp/esp/esp-idf/components/log/include -I/home/esp/esp/esp-idf/components/soc/include -I/home/esp/esp/esp-idf/components/soc/esp32c6 -I/home/esp/esp/esp-idf/components/soc/esp32c6/include -I/home/esp/esp/esp-idf/components/soc/esp32c6/register -I/home/esp/esp/esp-idf/components/hal/platform_port/include -I/home/esp/esp/esp-idf/components/hal/esp32c6/include -I/home/esp/esp/esp-idf/components/hal/include -I/home/esp/esp/esp-idf/components/esp_rom/include -I/home/esp/esp/esp-idf/components/esp_rom/esp32c6/include -I/home/esp/esp/esp-idf/components/esp_rom/esp32c6/include/esp32c6 -I/home/esp/esp/esp-idf/components/esp_rom/esp32c6 -I/home/esp/esp/esp-idf/components/esp_common/include -I/home/esp/esp/esp-idf/components/esp_system/include -I/home/esp/esp/esp-idf/components/esp_system/port/soc -I/home/esp/esp/esp-idf/components/esp_system/port/include/riscv -I/home/esp/esp/esp-idf/components/esp_system/port/include/private -I/home/esp/esp/esp-idf/components/esp_stdio/include -I/home/esp/esp/esp-idf/components/riscv/include -I/home/esp/esp/esp-idf/components/esp_hal_dma/include -I/home/esp/esp/esp-idf/components/esp_hal_dma/esp32c6/include -I/home/esp/esp/esp-idf/components/lwip/include -I/home/esp/esp/esp-idf/components/lwip/include/apps -I/home/esp/esp/esp-idf/components/lwip/lwip/src/include -I/home/esp/esp/esp-idf/components/lwip/port/include -I/home/esp/esp/esp-idf/components/lwip/port/freertos/include -I/home/esp/esp/esp-idf/components/lwip/port/esp32xx/include -I/home/esp/esp/esp-idf/components/lwip/port/esp32xx/include/arch -I/home/esp/esp/esp-idf/components/lwip/port/esp32xx/include/sys -I/home/esp/esp/esp-idf/components/esp_driver_i2c/include -I/home/esp/esp/esp-idf/components/esp_hal_i2c/esp32c6/include -I/home/esp/esp/esp-idf/components/esp_hal_i2c/include -I/home/esp/esp/CurrentMonitor/components/PinController -I/home/esp/esp/esp-idf/components/esp_driver_gpio/include -I/home/esp/esp/esp-idf/components/esp_event/include -I/home/esp/esp/esp-idf/components/esp_adc/include -I/home/esp/esp/esp-idf/components/esp_adc/interface -I/home/esp/esp/esp-idf/components/esp_adc/esp32c6/include -I/home/esp/esp/esp-idf/components/esp_driver_ledc/include -I/home/esp/esp/esp-idf/components/esp_driver_uart/include -I/home/esp/esp/esp-idf/components/vfs/include -I/home/esp/esp/esp-idf/components/esp_timer/include -I/home/esp/esp/CurrentMonitor/components/LcdDisplay -I/home/esp/esp/CurrentMonitor/components/Gpio -march=rv32imac_zicsr_zifencei_zaamo_zalrsc  -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-error=extra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -nostartfiles -Og -fno-shrink-wrap -fmacro-prefix-map=/home/esp/esp/CurrentMonitor=. -fmacro-prefix-map=/home/esp/esp/esp-idf=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -std=gnu++26 -fno-exceptions -fno-rtti -fuse-cxa-atexit -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/CurrentMonitor.cpp.obj -MF esp-idf/main/CMakeFiles/__idf_main.dir/CurrentMonitor.cpp.obj.d -o esp-idf/main/CMakeFiles/__idf_main.dir/CurrentMonitor.cpp.obj -c /home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp
+In file included from /home/esp/esp/esp-idf/components/log/include/esp_log.h:20,
+                 from /home/esp/esp/CurrentMonitor/components/PinController/PinController.hpp:6,
+                 from /home/esp/esp/CurrentMonitor/components/Gpio/Gpio.hpp:1,
+                 from /home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:4:
+/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp: In function 'int app_main()':
+/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:66:21: error: expected ')' before 'page'
+   66 |     ESP_LOGE("HERE",page);
+      |                     ^~~~
+/home/esp/esp/esp-idf/components/log/include/esp_log_format.h:15:88: note: in definition of macro 'LOG_FORMAT'
+   15 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                                                                        ^~~~~~
+/home/esp/esp/esp-idf/components/log/include/esp_log.h:163:94: note: in expansion of macro 'ESP_LOG_LEVEL'
+  163 | #define ESP_LOG_LEVEL_LOCAL(configs, tag, format, ...) do { if (_ESP_LOG_ENABLED(configs)) { ESP_LOG_LEVEL(configs, tag, format __VA_OPT__(,) __VA_ARGS__); } } while(0)
+      |                                                                                              ^~~~~~~~~~~~~
+/home/esp/esp/esp-idf/components/log/include/esp_log.h:77:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+   77 | #define ESP_LOGE(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_ERROR, tag, format __VA_OPT__(,) __VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:66:5: note: in expansion of macro 'ESP_LOGE'
+   66 |     ESP_LOGE("HERE",page);
+      |     ^~~~~~~~
+/home/esp/esp/esp-idf/components/log/include/esp_log.h:194:72: note: to match this '('
+  194 |         if (ESP_LOG_GET_LEVEL(configs)==ESP_LOG_ERROR)        { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_ERROR),   tag, LOG_FORMAT(E, format), esp_log_timestamp(), tag __VA_OPT__(,) __VA_ARGS__); } \
+      |                                                                        ^
+/home/esp/esp/esp-idf/components/log/include/esp_log.h:163:94: note: in expansion of macro 'ESP_LOG_LEVEL'
+  163 | #define ESP_LOG_LEVEL_LOCAL(configs, tag, format, ...) do { if (_ESP_LOG_ENABLED(configs)) { ESP_LOG_LEVEL(configs, tag, format __VA_OPT__(,) __VA_ARGS__); } } while(0)
+      |                                                                                              ^~~~~~~~~~~~~
+/home/esp/esp/esp-idf/components/log/include/esp_log.h:77:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+   77 | #define ESP_LOGE(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_ERROR, tag, format __VA_OPT__(,) __VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:66:5: note: in expansion of macro 'ESP_LOGE'
+   66 |     ESP_LOGE("HERE",page);
+      |     ^~~~~~~~
+/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:66:21: error: expected ')' before 'page'
+   66 |     ESP_LOGE("HERE",page);
+      |                     ^~~~
+/home/esp/esp/esp-idf/components/log/include/esp_log_format.h:15:88: note: in definition of macro 'LOG_FORMAT'
+   15 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                                                                        ^~~~~~
+/home/esp/esp/esp-idf/components/log/include/esp_log.h:163:94: note: in expansion of macro 'ESP_LOG_LEVEL'
+  163 | #define ESP_LOG_LEVEL_LOCAL(configs, tag, format, ...) do { if (_ESP_LOG_ENABLED(configs)) { ESP_LOG_LEVEL(configs, tag, format __VA_OPT__(,) __VA_ARGS__); } } while(0)
+      |                                                                                              ^~~~~~~~~~~~~
+/home/esp/esp/esp-idf/components/log/include/esp_log.h:77:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+   77 | #define ESP_LOGE(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_ERROR, tag, format __VA_OPT__(,) __VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:66:5: note: in expansion of macro 'ESP_LOGE'
+   66 |     ESP_LOGE("HERE",page);
+      |     ^~~~~~~~
+/home/esp/esp/esp-idf/components/log/include/esp_log.h:195:72: note: to match this '('
+  195 |         else if (ESP_LOG_GET_LEVEL(configs)==ESP_LOG_WARN)    { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_WARN),    tag, LOG_FORMAT(W, format), esp_log_timestamp(), tag __VA_OPT__(,) __VA_ARGS__); } \
+      |                                                                        ^
+/home/esp/esp/esp-idf/components/log/include/esp_log.h:163:94: note: in expansion of macro 'ESP_LOG_LEVEL'
+  163 | #define ESP_LOG_LEVEL_LOCAL(configs, tag, format, ...) do { if (_ESP_LOG_ENABLED(configs)) { ESP_LOG_LEVEL(configs, tag, format __VA_OPT__(,) __VA_ARGS__); } } while(0)
+      |                                                                                              ^~~~~~~~~~~~~
+/home/esp/esp/esp-idf/components/log/include/esp_log.h:77:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+   77 | #define ESP_LOGE(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_ERROR, tag, format __VA_OPT__(,) __VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:66:5: note: in expansion of macro 'ESP_LOGE'
+   66 |     ESP_LOGE("HERE",page);
+      |     ^~~~~~~~
+/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:66:21: error: expected ')' before 'page'
+   66 |     ESP_LOGE("HERE",page);
+      |                     ^~~~
+/home/esp/esp/esp-idf/components/log/include/esp_log_format.h:15:88: note: in definition of macro 'LOG_FORMAT'
+   15 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                                                                        ^~~~~~
+/home/esp/esp/esp-idf/components/log/include/esp_log.h:163:94: note: in expansion of macro 'ESP_LOG_LEVEL'
+  163 | #define ESP_LOG_LEVEL_LOCAL(configs, tag, format, ...) do { if (_ESP_LOG_ENABLED(configs)) { ESP_LOG_LEVEL(configs, tag, format __VA_OPT__(,) __VA_ARGS__); } } while(0)
+      |                                                                                              ^~~~~~~~~~~~~
+/home/esp/esp/esp-idf/components/log/include/esp_log.h:77:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+   77 | #define ESP_LOGE(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_ERROR, tag, format __VA_OPT__(,) __VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:66:5: note: in expansion of macro 'ESP_LOGE'
+   66 |     ESP_LOGE("HERE",page);
+      |     ^~~~~~~~
+/home/esp/esp/esp-idf/components/log/include/esp_log.h:196:72: note: to match this '('
+  196 |         else if (ESP_LOG_GET_LEVEL(configs)==ESP_LOG_DEBUG)   { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_DEBUG),   tag, LOG_FORMAT(D, format), esp_log_timestamp(), tag __VA_OPT__(,) __VA_ARGS__); } \
+      |                                                                        ^
+/home/esp/esp/esp-idf/components/log/include/esp_log.h:163:94: note: in expansion of macro 'ESP_LOG_LEVEL'
+  163 | #define ESP_LOG_LEVEL_LOCAL(configs, tag, format, ...) do { if (_ESP_LOG_ENABLED(configs)) { ESP_LOG_LEVEL(configs, tag, format __VA_OPT__(,) __VA_ARGS__); } } while(0)
+      |                                                                                              ^~~~~~~~~~~~~
+/home/esp/esp/esp-idf/components/log/include/esp_log.h:77:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+   77 | #define ESP_LOGE(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_ERROR, tag, format __VA_OPT__(,) __VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:66:5: note: in expansion of macro 'ESP_LOGE'
+   66 |     ESP_LOGE("HERE",page);
+      |     ^~~~~~~~
+/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:66:21: error: expected ')' before 'page'
+   66 |     ESP_LOGE("HERE",page);
+      |                     ^~~~
+/home/esp/esp/esp-idf/components/log/include/esp_log_format.h:15:88: note: in definition of macro 'LOG_FORMAT'
+   15 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                                                                        ^~~~~~
+/home/esp/esp/esp-idf/components/log/include/esp_log.h:163:94: note: in expansion of macro 'ESP_LOG_LEVEL'
+  163 | #define ESP_LOG_LEVEL_LOCAL(configs, tag, format, ...) do { if (_ESP_LOG_ENABLED(configs)) { ESP_LOG_LEVEL(configs, tag, format __VA_OPT__(,) __VA_ARGS__); } } while(0)
+      |                                                                                              ^~~~~~~~~~~~~
+/home/esp/esp/esp-idf/components/log/include/esp_log.h:77:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+   77 | #define ESP_LOGE(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_ERROR, tag, format __VA_OPT__(,) __VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:66:5: note: in expansion of macro 'ESP_LOGE'
+   66 |     ESP_LOGE("HERE",page);
+      |     ^~~~~~~~
+/home/esp/esp/esp-idf/components/log/include/esp_log.h:197:72: note: to match this '('
+  197 |         else if (ESP_LOG_GET_LEVEL(configs)==ESP_LOG_VERBOSE) { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_VERBOSE), tag, LOG_FORMAT(V, format), esp_log_timestamp(), tag __VA_OPT__(,) __VA_ARGS__); } \
+      |                                                                        ^
+/home/esp/esp/esp-idf/components/log/include/esp_log.h:163:94: note: in expansion of macro 'ESP_LOG_LEVEL'
+  163 | #define ESP_LOG_LEVEL_LOCAL(configs, tag, format, ...) do { if (_ESP_LOG_ENABLED(configs)) { ESP_LOG_LEVEL(configs, tag, format __VA_OPT__(,) __VA_ARGS__); } } while(0)
+      |                                                                                              ^~~~~~~~~~~~~
+/home/esp/esp/esp-idf/components/log/include/esp_log.h:77:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+   77 | #define ESP_LOGE(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_ERROR, tag, format __VA_OPT__(,) __VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:66:5: note: in expansion of macro 'ESP_LOGE'
+   66 |     ESP_LOGE("HERE",page);
+      |     ^~~~~~~~
+/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:66:21: error: expected ')' before 'page'
+   66 |     ESP_LOGE("HERE",page);
+      |                     ^~~~
+/home/esp/esp/esp-idf/components/log/include/esp_log_format.h:15:88: note: in definition of macro 'LOG_FORMAT'
+   15 | #define LOG_FORMAT(letter, format)  LOG_COLOR_ ## letter #letter " (%" PRIu32 ") %s: " format LOG_RESET_COLOR "\n"
+      |                                                                                        ^~~~~~
+/home/esp/esp/esp-idf/components/log/include/esp_log.h:163:94: note: in expansion of macro 'ESP_LOG_LEVEL'
+  163 | #define ESP_LOG_LEVEL_LOCAL(configs, tag, format, ...) do { if (_ESP_LOG_ENABLED(configs)) { ESP_LOG_LEVEL(configs, tag, format __VA_OPT__(,) __VA_ARGS__); } } while(0)
+      |                                                                                              ^~~~~~~~~~~~~
+/home/esp/esp/esp-idf/components/log/include/esp_log.h:77:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+   77 | #define ESP_LOGE(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_ERROR, tag, format __VA_OPT__(,) __VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:66:5: note: in expansion of macro 'ESP_LOGE'
+   66 |     ESP_LOGE("HERE",page);
+      |     ^~~~~~~~
+/home/esp/esp/esp-idf/components/log/include/esp_log.h:198:72: note: to match this '('
+  198 |         else                                                  { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_INFO),    tag, LOG_FORMAT(I, format), esp_log_timestamp(), tag __VA_OPT__(,) __VA_ARGS__); } \
+      |                                                                        ^
+/home/esp/esp/esp-idf/components/log/include/esp_log.h:163:94: note: in expansion of macro 'ESP_LOG_LEVEL'
+  163 | #define ESP_LOG_LEVEL_LOCAL(configs, tag, format, ...) do { if (_ESP_LOG_ENABLED(configs)) { ESP_LOG_LEVEL(configs, tag, format __VA_OPT__(,) __VA_ARGS__); } } while(0)
+      |                                                                                              ^~~~~~~~~~~~~
+/home/esp/esp/esp-idf/components/log/include/esp_log.h:77:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+   77 | #define ESP_LOGE(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_ERROR, tag, format __VA_OPT__(,) __VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:66:5: note: in expansion of macro 'ESP_LOGE'
+   66 |     ESP_LOGE("HERE",page);
+      |     ^~~~~~~~
+/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:48:11: warning: unused variable 'temperature_buffer' [-Wunused-variable]
+   48 |     float temperature_buffer = 0;
+      |           ^~~~~~~~~~~~~~~~~~
+ninja: build stopped: subcommand failed.

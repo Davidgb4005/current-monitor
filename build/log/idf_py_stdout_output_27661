@@ -1,0 +1,101 @@
+Command: ninja flash
+[1/12] Performing build step for 'bootloader'
+[1/1] cd /home/esp/esp/CurrentMonitor/build/bootloader && /home/esp/.espressif/python_env/idf6.1_py3.13_env/bin/python /home/esp/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/esp/esp/CurrentMonitor/build/bootloader/bootloader.bin
+Bootloader binary size 0x58d0 bytes. 0x2730 bytes (31%) free.
+[2/12] No install step for 'bootloader'
+[3/12] Completed 'bootloader'
+[4/12] Building CXX object esp-idf/PinController/CMakeFiles/__idf_PinController.dir/PinController.cpp.obj
+[01m[K/home/esp/esp/CurrentMonitor/components/PinController/PinController.cpp:[m[K In member function '[01m[Kint8_t PinController::[01;32m[KSetPwmPin[m[K(uint8_t, PIN_TYPE, ledc_timer_bit_t, uint16_t, uint8_t)[m[K':
+[01m[K/home/esp/esp/CurrentMonitor/components/PinController/PinController.cpp:568:22:[m[K [01;35m[Kwarning: [m[K'[01m[Kledc_channel_config_t::intr_type[m[K' is deprecated [[01;35m[K-Wdeprecated-declarations[m[K]
+  568 |         ledc_channel.[01;35m[Kintr_type[m[K = LEDC_INTR_DISABLE;
+      |                      [01;35m[K^~~~~~~~~[m[K
+In file included from [01m[K/home/esp/esp/CurrentMonitor/components/PinController/PinController.hpp:8[m[K,
+                 from [01m[K/home/esp/esp/CurrentMonitor/components/PinController/PinController.cpp:1[m[K:
+[01m[K/home/esp/esp/esp-idf/components/esp_driver_ledc/include/driver/ledc.h:39:22:[m[K [01;36m[Knote: [m[Kdeclared here
+   39 |     ledc_intr_type_t [01;36m[Kintr_type[m[K __attribute__((deprecated));     /*!< @deprecated, no need to explicitly configure interrupt, handled in the driver */
+      |                      [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/PinController/PinController.cpp:568:22:[m[K [01;35m[Kwarning: [m[K'[01m[Kledc_channel_config_t::intr_type[m[K' is deprecated [[01;35m[K-Wdeprecated-declarations[m[K]
+  568 |         ledc_channel.[01;35m[Kintr_type[m[K = LEDC_INTR_DISABLE;
+      |                      [01;35m[K^~~~~~~~~[m[K
+[01m[K/home/esp/esp/esp-idf/components/esp_driver_ledc/include/driver/ledc.h:39:22:[m[K [01;36m[Knote: [m[Kdeclared here
+   39 |     ledc_intr_type_t [01;36m[Kintr_type[m[K __attribute__((deprecated));     /*!< @deprecated, no need to explicitly configure interrupt, handled in the driver */
+      |                      [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/PinController/PinController.cpp:568:22:[m[K [01;35m[Kwarning: [m[K'[01m[Kledc_channel_config_t::intr_type[m[K' is deprecated [[01;35m[K-Wdeprecated-declarations[m[K]
+  568 |         ledc_channel.[01;35m[Kintr_type[m[K = LEDC_INTR_DISABLE;
+      |                      [01;35m[K^~~~~~~~~[m[K
+[01m[K/home/esp/esp/esp-idf/components/esp_driver_ledc/include/driver/ledc.h:39:22:[m[K [01;36m[Knote: [m[Kdeclared here
+   39 |     ledc_intr_type_t [01;36m[Kintr_type[m[K __attribute__((deprecated));     /*!< @deprecated, no need to explicitly configure interrupt, handled in the driver */
+      |                      [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/PinController/PinController.cpp:440:14:[m[K [01;35m[Kwarning: [m[Kvariable '[01m[Kbit_mask[m[K' set but not used [[01;35m[K-Wunused-but-set-variable[m[K]
+  440 |     uint64_t [01;35m[Kbit_mask[m[K = 0;
+      |              [01;35m[K^~~~~~~~[m[K
+[5/12] Linking C static library esp-idf/PinController/libPinController.a
+[6/12] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/CurrentMonitor.cpp.obj
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:[m[K In function '[01m[Kint[01;32m[K app_main[m[K()[m[K':
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:114:14:[m[K [01;35m[Kwarning: [m[Kunused variable '[01m[Ktestdatat[m[K' [[01;35m[K-Wunused-variable[m[K]
+  114 |         char [01;35m[Ktestdatat[m[K[] = {'b', 'u', 't', ' ', 'd', 'o', 'e', 's', ' ', 't', 'h', 'i', 's', ' ', 'w', 'o', 'r', 'k'};
+      |              [01;35m[K^~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:19:13:[m[K [01;35m[Kwarning: [m[Kunused variable '[01m[Kdata[m[K' [[01;35m[K-Wunused-variable[m[K]
+   19 |     uint8_t [01;35m[Kdata[m[K[2]; // Example: read 14 bytes
+      |             [01;35m[K^~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:23:13:[m[K [01;35m[Kwarning: [m[Kunused variable '[01m[Kfreq[m[K' [[01;35m[K-Wunused-variable[m[K]
+   23 |     uint8_t [01;35m[Kfreq[m[K = 0;
+      |             [01;35m[K^~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:47:10:[m[K [01;35m[Kwarning: [m[Kunused variable '[01m[Kflip[m[K' [[01;35m[K-Wunused-variable[m[K]
+   47 |     bool [01;35m[Kflip[m[K = true;
+      |          [01;35m[K^~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:49:9:[m[K [01;35m[Kwarning: [m[Kunused variable '[01m[Kposition1[m[K' [[01;35m[K-Wunused-variable[m[K]
+   49 |     int [01;35m[Kposition1[m[K = 20;
+      |         [01;35m[K^~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:50:9:[m[K [01;35m[Kwarning: [m[Kunused variable '[01m[Kposition2[m[K' [[01;35m[K-Wunused-variable[m[K]
+   50 |     int [01;35m[Kposition2[m[K = 0;
+      |         [01;35m[K^~~~~~~~~[m[K
+[7/12] Linking C static library esp-idf/main/libmain.a
+[8/12] Generating esp-idf/esp_system/ld/sections.ld
+[9/12] Linking CXX executable CurrentMonitor.elf
+[10/12] Generating binary image from built executable
+esptool v5.1.0
+Creating ESP32C6 image...
+Merged 1 ELF section.
+Successfully created ESP32C6 image.
+Generated /home/esp/esp/CurrentMonitor/build/CurrentMonitor.bin
+[11/12] cd /home/esp/esp/CurrentMonitor/build && /home/esp/.espressif/python_env/idf6.1_py3.13_env/bin/python /home/esp/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/esp/esp/CurrentMonitor/build/partition_table/partition-table.bin /home/esp/esp/CurrentMonitor/build/CurrentMonitor.bin
+CurrentMonitor.bin binary size 0x36d60 bytes. Smallest app partition is 0x100000 bytes. 0xc92a0 bytes (79%) free.
+[11/12] Running utility command for flash
+esptool --chip esp32c6 -p /dev/ttyUSB0 -b 460800 --before=default-reset --after=hard-reset write-flash --flash-mode dio --flash-freq 80m --flash-size 2MB 0x0 bootloader/bootloader.bin 0x8000 partition_table/partition-table.bin 0x10000 CurrentMonitor.bin
+esptool v5.1.0
+Serial port /dev/ttyUSB0:
+Connecting....
+[1A[2K[1A[2KConnected to ESP32-C6 on /dev/ttyUSB0:
+Chip type:          ESP32-C6 (QFN40) (revision v0.2)
+Features:           Wi-Fi 6, BT 5 (LE), IEEE802.15.4, Single Core + LP Core, 160MHz
+Crystal frequency:  40MHz
+MAC:                10:51:db:ff:fe:01:30:e8
+BASE MAC:           10:51:db:01:30:e8
+MAC_EXT:            ff:fe
+
+Uploading stub flasher...
+Running stub flasher...
+[1A[2K[1A[2KStub flasher running.
+Changing baud rate to 460800...
+Changed.
+
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Flash will be erased from 0x00010000 to 0x00046fff...
+SHA digest in image updated.
+Compressed 22736 bytes to 14178...
+[KWriting at 0x00000000 [                              ]   0.0% 0/14178 bytes... [KWriting at 0x000058d0 [==============================] 100.0% 14178/14178 bytes... 
+[1A[2K[1A[2KWrote 22736 bytes (14178 compressed) at 0x00000000 in 0.6 seconds (325.8 kbit/s).
+Hash of data verified.
+Compressed 3072 bytes to 103...
+[KWriting at 0x00008000 [                              ]   0.0% 0/103 bytes... [KWriting at 0x00008c00 [==============================] 100.0% 103/103 bytes... 
+[1A[2K[1A[2KWrote 3072 bytes (103 compressed) at 0x00008000 in 0.0 seconds (716.8 kbit/s).
+Hash of data verified.
+Compressed 224608 bytes to 113029...
+[KWriting at 0x00010000 [                              ]   0.0% 0/113029 bytes... [KWriting at 0x0001bc0e [===>                          ]  14.5% 16384/113029 bytes... [KWriting at 0x000221cb [=======>                      ]  29.0% 32768/113029 bytes... [KWriting at 0x000295e9 [============>                 ]  43.5% 49152/113029 bytes... [KWriting at 0x000319cd [================>             ]  58.0% 65536/113029 bytes... [KWriting at 0x000388bc [====================>         ]  72.5% 81920/113029 bytes... [KWriting at 0x0003fd9d [=========================>    ]  87.0% 98304/113029 bytes... [KWriting at 0x00046d60 [==============================] 100.0% 113029/113029 bytes... 
+[1A[2K[1A[2KWrote 224608 bytes (113029 compressed) at 0x00010000 in 2.9 seconds (613.5 kbit/s).
+Hash of data verified.
+
+Hard resetting via RTS pin...

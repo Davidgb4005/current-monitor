@@ -1,0 +1,456 @@
+Command: /home/esp/.espressif/python_env/idf6.1_py3.13_env/bin/python /home/esp/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c6 --revision 0 --decode-panic backtrace /home/esp/esp/CurrentMonitor/build/CurrentMonitor.elf /home/esp/esp/CurrentMonitor/build/bootloader/bootloader.elf -m '/home/esp/.espressif/python_env/idf6.1_py3.13_env/bin/python' '/home/esp/esp/esp-idf/tools/idf.py'
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0xc (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875730,len:0x175c
+load:0x4086b910,len:0xed4
+load:0x4086e610,len:0x3244
+entry 0x4086b91a
+[0;32mI (23) boot: ESP-IDF v6.1-dev-1-gff97953b32-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Dec  4 2025 14:13:05[0m
+[0;32mI (24) boot: chip revision: v0.2[0m
+[0;32mI (25) boot: efuse block revision: v0.3[0m
+[0;32mI (29) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (33) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (37) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (40) boot: Enabling RNG early entropy source...[0m
+[0;32mI (45) boot: Partition Table:[0m
+[0;32mI (47) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (54) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (60) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (67) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (73) boot: End of partition table[0m
+[0;32mI (77) esp_image: segment 0: paddr=00010020 vaddr=42020020 size=0b10ch ( 45324) map[0m
+[0;32mI (93) esp_image: segment 1: paddr=0001b134 vaddr=40800000 size=04ee4h ( 20196) load[0m
+[0;32mI (98) esp_image: segment 2: paddr=00020020 vaddr=42000020 size=1b3e0h (111584) map[0m
+[0;32mI (120) esp_image: segment 3: paddr=0003b408 vaddr=40804ee4 size=053c0h ( 21440) load[0m
+[0;32mI (125) esp_image: segment 4: paddr=000407d0 vaddr=4080a2b0 size=01ba4h (  7076) load[0m
+[0;32mI (127) esp_image: segment 5: paddr=0004237c vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (134) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (136) boot: Disabling RNG early entropy source...[0m
+[0;32mI (153) cpu_start: Unicore app[0m
+[0;32mI (161) cpu_start: GPIO 17 and 16 are used as console UART I/O pins[0m
+[0;32mI (161) cpu_start: Pro cpu start user code[0m
+[0;32mI (162) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (163) app_init: Application information:[0m
+[0;32mI (167) app_init: Project name:     CurrentMonitor[0m
+[0;32mI (172) app_init: App version:      1[0m
+[0;32mI (175) app_init: Compile time:     Dec  8 2025 17:05:14[0m
+[0;32mI (180) app_init: ELF file SHA256:  c64c2acf5...[0m
+[0;32mI (185) app_init: ESP-IDF:          v6.1-dev-1-gff97953b32-dirty[0m
+[0;32mI (190) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (194) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (198) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (202) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (208) heap_init: At 4080CEB0 len 0006F760 (445 KiB): RAM[0m
+[0;32mI (213) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (218) heap_init: At 50000020 len 00003FC8 (15 KiB): RTCRAM[0m
+[0;32mI (225) spi_flash: detected chip: generic[0m
+[0;32mI (228) spi_flash: flash io: dio[0m
+[0;33mW (231) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (243) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (249) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (256) coexist: coex firmware version: 0cec0ed[0m
+[0;32mI (274) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (275) main_task: Started on CPU0[0m
+[0;32mI (275) main_task: Calling app_main()[0m
+[0;32mI (375) PinController: Pin Already Used: 1[0m
+[0;32mI (375) Lcd Controller: Dec Index: 1[0m
+[0;32mI (425) Lcd Controller: Dec Index: 1[0m
+[0;32mI (475) Lcd Controller: Dec Index: 1[0m
+[0;32mI (525) Lcd Controller: Dec Index: 1[0m
+[0;32mI (575) Lcd Controller: Dec Index: 1[0m
+[0;32mI (625) Lcd Controller: Dec Index: 1[0m
+[0;32mI (675) Lcd Controller: Dec Index: 1[0m
+[0;32mI (725) Lcd Controller: Dec Index: 1[0m
+[0;32mI (775) Lcd Controller: Dec Index: 1[0m
+[0;32mI (825) Lcd Controller: Dec Index: 1[0m
+[0;32mI (875) Lcd Controller: Dec Index: 1[0m
+[0;32mI (925) Lcd Controller: Dec Index: 1[0m
+[0;32mI (975) Lcd Controller: Dec Index: 1[0m
+[0;32mI (1025) Lcd Controller: Dec Index: 1[0m
+[0;32mI (1075) Lcd Controller: Dec Index: 1[0m
+[0;32mI (1125) Lcd Controller: Dec Index: 1[0m
+[0;32mI (1175) Lcd Controller: Dec Index: 1[0m
+[0;32mI (1225) Lcd Controller: Dec Index: 1[0m
+[0;32mI (1275) Lcd Controller: Dec Index: 1[0m
+[0;32mI (1325) Lcd Controller: Dec Index: 1[0m
+[0;32mI (1375) Lcd Controller: Dec Index: 1[0m
+[0;32mI (1425) Lcd Controller: Dec Index: 1[0m
+[0;32mI (1475) Lcd Controller: Dec Index: 1[0m
+[0;32mI (1525) Lcd Controller: Dec Index: 1[0m
+[0;32mI (1575) Lcd Controller: Dec Index: 1[0m
+[0;32mI (1625) Lcd Controller: Dec Index: 1[0m
+[0;32mI (1675) Lcd Controller: Dec Index: 1[0m
+[0;32mI (1725) Lcd Controller: Dec Index: 1[0m
+[0;32mI (1775) Lcd Controller: Dec Index: 1[0m
+[0;32mI (1825) Lcd Controller: Dec Index: 1[0m
+[0;32mI (1875) Lcd Controller: Dec Index: 1[0m
+[0;32mI (1925) Lcd Controller: Dec Index: 1[0m
+[0;32mI (1975) Lcd Controller: Dec Index: 1[0m
+[0;32mI (2025) Lcd Controller: Dec Index: 1[0m
+[0;32mI (2075) Lcd Controller: Dec Index: 1[0m
+[0;32mI (2125) Lcd Controller: Dec Index: 1[0m
+[0;32mI (2175) Lcd Controller: Dec Index: 1[0m
+[0;32mI (2225) Lcd Controller: Dec Index: 1[0m
+[0;32mI (2275) Lcd Controller: Dec Index: 1[0m
+[0;32mI (2325) Lcd Controller: Dec Index: 1[0m
+[0;32mI (2375) Lcd Controller: Dec Index: 1[0m
+[0;32mI (2425) Lcd Controller: Dec Index: 1[0m
+[0;32mI (2475) Lcd Controller: Dec Index: 1[0m
+[0;32mI (2525) Lcd Controller: Dec Index: 1[0m
+[0;32mI (2575) Lcd Controller: Dec Index: 1[0m
+[0;32mI (2625) Lcd Controller: Dec Index: 1[0m
+[0;32mI (2675) Lcd Controller: Dec Index: 1[0m
+[0;32mI (2725) Lcd Controller: Dec Index: 1[0m
+[0;32mI (2775) Lcd Controller: Dec Index: 1[0m
+[0;32mI (2825) Lcd Controller: Dec Index: 1[0m
+[0;32mI (2875) Lcd Controller: Dec Index: 1[0m
+[0;32mI (2925) Lcd Controller: Dec Index: 1[0m
+[0;32mI (2975) Lcd Controller: Dec Index: 1[0m
+[0;32mI (3025) Lcd Controller: Dec Index: 1[0m
+[0;32mI (3075) Lcd Controller: Dec Index: 1[0m
+[0;32mI (3125) Lcd Controller: Dec Index: 1[0m
+[0;32mI (3175) Lcd Controller: Dec Index: 1[0m
+[0;32mI (3225) Lcd Controller: Dec Index: 1[0m
+[0;32mI (3275) Lcd Controller: Dec Index: 1[0m
+[0;32mI (3325) Lcd Controller: Dec Index: 1[0m
+[0;32mI (3375) Lcd Controller: Dec Index: 1[0m
+[0;32mI (3425) Lcd Controller: Dec Index: 1[0m
+[0;32mI (3475) Lcd Controller: Dec Index: 1[0m
+[0;32mI (3525) Lcd Controller: Dec Index: 1[0m
+[0;32mI (3575) Lcd Controller: Dec Index: 1[0m
+[0;32mI (3625) Lcd Controller: Dec Index: 1[0m
+[0;32mI (3675) Lcd Controller: Dec Index: 1[0m
+[0;32mI (3725) Lcd Controller: Dec Index: 1[0m
+[0;32mI (3775) Lcd Controller: Dec Index: 1[0m
+[0;32mI (3825) Lcd Controller: Dec Index: 1[0m
+[0;32mI (3875) Lcd Controller: Dec Index: 1[0m
+[0;32mI (3925) Lcd Controller: Dec Index: 1[0m
+[0;32mI (3975) Lcd Controller: Dec Index: 1[0m
+[0;32mI (4025) Lcd Controller: Dec Index: 1[0m
+[0;32mI (4075) Lcd Controller: Dec Index: 1[0m
+[0;32mI (4125) Lcd Controller: Dec Index: 1[0m
+[0;32mI (4175) Lcd Controller: Dec Index: 1[0m
+[0;32mI (4225) Lcd Controller: Dec Index: 1[0m
+[0;32mI (4275) Lcd Controller: Dec Index: 1[0m
+[0;32mI (4325) Lcd Controller: Dec Index: 1[0m
+[0;32mI (4375) Lcd Controller: Dec Index: 1[0m
+[0;32mI (4425) Lcd Controller: Dec Index: 1[0m
+[0;32mI (4475) Lcd Controller: Dec Index: 1[0m
+[0;32mI (4525) Lcd Controller: Dec Index: 1[0m
+[0;32mI (4575) Lcd Controller: Dec Index: 1[0m
+[0;32mI (4625) Lcd Controller: Dec Index: 1[0m
+[0;32mI (4675) Lcd Controller: Dec Index: 1[0m
+[0;32mI (4725) Lcd Controller: Dec Index: 1[0m
+[0;32mI (4775) Lcd Controller: Dec Index: 1[0m
+[0;32mI (4825) Lcd Controller: Dec Index: 1[0m
+[0;32mI (4875) Lcd Controller: Dec Index: 1[0m
+[0;32mI (4925) Lcd Controller: Dec Index: 1[0m
+[0;32mI (4975) Lcd Controller: Dec Index: 1[0m
+[0;32mI (5025) Lcd Controller: Dec Index: 1[0m
+[0;32mI (5075) Lcd Controller: Dec Index: 1[0m
+[0;32mI (5125) Lcd Controller: Dec Index: 1[0m
+[0;32mI (5175) Lcd Controller: Dec Index: 1[0m
+[0;32mI (5225) Lcd Controller: Dec Index: 1[0m
+[0;32mI (5275) Lcd Controller: Dec Index: 1[0m
+[0;32mI (5325) Lcd Controller: Dec Index: 1[0m
+[0;32mI (5375) Lcd Controller: Dec Index: 2[0m
+[0;32mI (5425) Lcd Controller: Dec Index: 2[0m
+[0;32mI (5475) Lcd Controller: Dec Index: 2[0m
+[0;32mI (5525) Lcd Controller: Dec Index: 2[0m
+[0;32mI (5575) Lcd Controller: Dec Index: 2[0m
+[0;32mI (5625) Lcd Controller: Dec Index: 2[0m
+[0;32mI (5675) Lcd Controller: Dec Index: 2[0m
+[0;32mI (5725) Lcd Controller: Dec Index: 2[0m
+[0;32mI (5775) Lcd Controller: Dec Index: 2[0m
+[0;32mI (5825) Lcd Controller: Dec Index: 2[0m
+[0;32mI (5875) Lcd Controller: Dec Index: 2[0m
+[0;32mI (5925) Lcd Controller: Dec Index: 2[0m
+[0;32mI (5975) Lcd Controller: Dec Index: 2[0m
+[0;32mI (6025) Lcd Controller: Dec Index: 2[0m
+[0;32mI (6075) Lcd Controller: Dec Index: 2[0m
+[0;32mI (6125) Lcd Controller: Dec Index: 2[0m
+[0;32mI (6175) Lcd Controller: Dec Index: 2[0m
+[0;32mI (6225) Lcd Controller: Dec Index: 2[0m
+[0;32mI (6275) Lcd Controller: Dec Index: 2[0m
+[0;32mI (6325) Lcd Controller: Dec Index: 2[0m
+[0;32mI (6375) Lcd Controller: Dec Index: 2[0m
+[0;32mI (6425) Lcd Controller: Dec Index: 2[0m
+[0;32mI (6475) Lcd Controller: Dec Index: 2[0m
+[0;32mI (6525) Lcd Controller: Dec Index: 2[0m
+[0;32mI (6575) Lcd Controller: Dec Index: 2[0m
+[0;32mI (6625) Lcd Controller: Dec Index: 2[0m
+[0;32mI (6675) Lcd Controller: Dec Index: 2[0m
+[0;32mI (6725) Lcd Controller: Dec Index: 2[0m
+[0;32mI (6775) Lcd Controller: Dec Index: 2[0m
+[0;32mI (6825) Lcd Controller: Dec Index: 2[0m
+[0;32mI (6875) Lcd Controller: Dec Index: 2[0m
+[0;32mI (6925) Lcd Controller: Dec Index: 2[0m
+[0;32mI (6975) Lcd Controller: Dec Index: 2[0m
+[0;32mI (7025) Lcd Controller: Dec Index: 2[0m
+[0;32mI (7075) Lcd Controller: Dec Index: 2[0m
+[0;32mI (7125) Lcd Controller: Dec Index: 2[0m
+[0;32mI (7175) Lcd Controller: Dec Index: 2[0m
+[0;32mI (7225) Lcd Controller: Dec Index: 2[0m
+[0;32mI (7275) Lcd Controller: Dec Index: 2[0m
+[0;32mI (7325) Lcd Controller: Dec Index: 2[0m
+[0;32mI (7375) Lcd Controller: Dec Index: 2[0m
+[0;32mI (7425) Lcd Controller: Dec Index: 2[0m
+[0;32mI (7475) Lcd Controller: Dec Index: 2[0m
+[0;32mI (7525) Lcd Controller: Dec Index: 2[0m
+[0;32mI (7575) Lcd Controller: Dec Index: 2[0m
+[0;32mI (7625) Lcd Controller: Dec Index: 2[0m
+[0;32mI (7675) Lcd Controller: Dec Index: 2[0m
+[0;32mI (7725) Lcd Controller: Dec Index: 2[0m
+[0;32mI (7775) Lcd Controller: Dec Index: 2[0m
+[0;32mI (7825) Lcd Controller: Dec Index: 2[0m
+[0;32mI (7875) Lcd Controller: Dec Index: 2[0m
+[0;32mI (7925) Lcd Controller: Dec Index: 2[0m
+[0;32mI (7975) Lcd Controller: Dec Index: 2[0m
+[0;32mI (8025) Lcd Controller: Dec Index: 2[0m
+[0;32mI (8075) Lcd Controller: Dec Index: 2[0m
+[0;32mI (8125) Lcd Controller: Dec Index: 2[0m
+[0;32mI (8175) Lcd Controller: Dec Index: 2[0m
+[0;32mI (8225) Lcd Controller: Dec Index: 2[0m
+[0;32mI (8275) Lcd Controller: Dec Index: 2[0m
+[0;32mI (8325) Lcd Controller: Dec Index: 2[0m
+[0;32mI (8375) Lcd Controller: Dec Index: 2[0m
+[0;32mI (8425) Lcd Controller: Dec Index: 2[0m
+[0;32mI (8475) Lcd Controller: Dec Index: 2[0m
+[0;32mI (8525) Lcd Controller: Dec Index: 2[0m
+[0;32mI (8575) Lcd Controller: Dec Index: 2[0m
+[0;32mI (8625) Lcd Controller: Dec Index: 2[0m
+[0;32mI (8675) Lcd Controller: Dec Index: 2[0m
+[0;32mI (8725) Lcd Controller: Dec Index: 2[0m
+[0;32mI (8775) Lcd Controller: Dec Index: 2[0m
+[0;32mI (8825) Lcd Controller: Dec Index: 2[0m
+[0;32mI (8875) Lcd Controller: Dec Index: 2[0m
+[0;32mI (8925) Lcd Controller: Dec Index: 2[0m
+[0;32mI (8975) Lcd Controller: Dec Index: 2[0m
+[0;32mI (9025) Lcd Controller: Dec Index: 2[0m
+[0;32mI (9075) Lcd Controller: Dec Index: 2[0m
+[0;32mI (9125) Lcd Controller: Dec Index: 2[0m
+[0;32mI (9175) Lcd Controller: Dec Index: 2[0m
+[0;32mI (9225) Lcd Controller: Dec Index: 2[0m
+[0;32mI (9275) Lcd Controller: Dec Index: 2[0m
+[0;32mI (9325) Lcd Controller: Dec Index: 2[0m
+[0;32mI (9375) Lcd Controller: Dec Index: 2[0m
+[0;32mI (9425) Lcd Controller: Dec Index: 2[0m
+[0;32mI (9475) Lcd Controller: Dec Index: 2[0m
+[0;32mI (9525) Lcd Controller: Dec Index: 2[0m
+[0;32mI (9575) Lcd Controller: Dec Index: 2[0m
+[0;32mI (9625) Lcd Controller: Dec Index: 2[0m
+[0;32mI (9675) Lcd Controller: Dec Index: 2[0m
+[0;32mI (9725) Lcd Controller: Dec Index: 2[0m
+[0;32mI (9775) Lcd Controller: Dec Index: 2[0m
+[0;32mI (9825) Lcd Controller: Dec Index: 2[0m
+[0;32mI (9875) Lcd Controller: Dec Index: 2[0m
+[0;32mI (9925) Lcd Controller: Dec Index: 2[0m
+[0;32mI (9975) Lcd Controller: Dec Index: 2[0m
+[0;32mI (10025) Lcd Controller: Dec Index: 2[0m
+[0;32mI (10075) Lcd Controller: Dec Index: 2[0m
+[0;32mI (10125) Lcd Controller: Dec Index: 2[0m
+[0;32mI (10175) Lcd Controller: Dec Index: 2[0m
+[0;32mI (10225) Lcd Controller: Dec Index: 2[0m
+[0;32mI (10275) Lcd Controller: Dec Index: 2[0m
+[0;32mI (10325) Lcd Controller: Dec Index: 2[0m
+[0;32mI (10375) Lcd Controller: Dec Index: 2[0m
+[0;32mI (10425) Lcd Controller: Dec Index: 2[0m
+[0;32mI (10475) Lcd Controller: Dec Index: 2[0m
+[0;32mI (10525) Lcd Controller: Dec Index: 2[0m
+[0;32mI (10575) Lcd Controller: Dec Index: 2[0m
+[0;32mI (10625) Lcd Controller: Dec Index: 2[0m
+[0;32mI (10675) Lcd Controller: Dec Index: 2[0m
+[0;32mI (10725) Lcd Controller: Dec Index: 2[0m
+[0;32mI (10775) Lcd Controller: Dec Index: 2[0m
+[0;32mI (10825) Lcd Controller: Dec Index: 2[0m
+[0;32mI (10875) Lcd Controller: Dec Index: 2[0m
+[0;32mI (10925) Lcd Controller: Dec Index: 2[0m
+[0;32mI (10975) Lcd Controller: Dec Index: 2[0m
+[0;32mI (11025) Lcd Controller: Dec Index: 2[0m
+[0;32mI (11075) Lcd Controller: Dec Index: 2[0m
+[0;32mI (11125) Lcd Controller: Dec Index: 2[0m
+[0;32mI (11175) Lcd Controller: Dec Index: 2[0m
+[0;32mI (11225) Lcd Controller: Dec Index: 2[0m
+[0;32mI (11275) Lcd Controller: Dec Index: 2[0m
+[0;32mI (11325) Lcd Controller: Dec Index: 2[0m
+[0;32mI (11375) Lcd Controller: Dec Index: 2[0m
+[0;32mI (11425) Lcd Controller: Dec Index: 2[0m
+[0;32mI (11475) Lcd Controller: Dec Index: 2[0m
+[0;32mI (11525) Lcd Controller: Dec Index: 2[0m
+[0;32mI (11575) Lcd Controller: Dec Index: 2[0m
+[0;32mI (11625) Lcd Controller: Dec Index: 2[0m
+[0;32mI (11675) Lcd Controller: Dec Index: 2[0m
+[0;32mI (11725) Lcd Controller: Dec Index: 2[0m
+[0;32mI (11775) Lcd Controller: Dec Index: 2[0m
+[0;32mI (11825) Lcd Controller: Dec Index: 2[0m
+[0;32mI (11875) Lcd Controller: Dec Index: 2[0m
+[0;32mI (11925) Lcd Controller: Dec Index: 2[0m
+[0;32mI (11975) Lcd Controller: Dec Index: 2[0m
+[0;32mI (12025) Lcd Controller: Dec Index: 2[0m
+[0;32mI (12075) Lcd Controller: Dec Index: 2[0m
+[0;32mI (12125) Lcd Controller: Dec Index: 2[0m
+[0;32mI (12175) Lcd Controller: Dec Index: 2[0m
+[0;32mI (12225) Lcd Controller: Dec Index: 2[0m
+[0;32mI (12275) Lcd Controller: Dec Index: 2[0m
+[0;32mI (12325) Lcd Controller: Dec Index: 2[0m
+[0;32mI (12375) Lcd Controller: Dec Index: 2[0m
+[0;32mI (12425) Lcd Controller: Dec Index: 2[0m
+[0;32mI (12475) Lcd Controller: Dec Index: 2[0m
+[0;32mI (12525) Lcd Controller: Dec Index: 2[0m
+[0;32mI (12575) Lcd Controller: Dec Index: 2[0m
+[0;32mI (12625) Lcd Controller: Dec Index: 2[0m
+[0;32mI (12675) Lcd Controller: Dec Index: 2[0m
+[0;32mI (12725) Lcd Controller: Dec Index: 2[0m
+[0;32mI (12775) Lcd Controller: Dec Index: 2[0m
+[0;32mI (12825) Lcd Controller: Dec Index: 2[0m
+[0;32mI (12875) Lcd Controller: Dec Index: 2[0m
+[0;32mI (12925) Lcd Controller: Dec Index: 2[0m
+[0;32mI (12975) Lcd Controller: Dec Index: 2[0m
+[0;32mI (13025) Lcd Controller: Dec Index: 2[0m
+[0;32mI (13075) Lcd Controller: Dec Index: 2[0m
+[0;32mI (13125) Lcd Controller: Dec Index: 2[0m
+[0;32mI (13175) Lcd Controller: Dec Index: 2[0m
+[0;32mI (13225) Lcd Controller: Dec Index: 2[0m
+[0;32mI (13275) Lcd Controller: Dec Index: 2[0m
+[0;32mI (13325) Lcd Controller: Dec Index: 2[0m
+[0;32mI (13375) Lcd Controller: Dec Index: 2[0m
+[0;32mI (13425) Lcd Controller: Dec Index: 2[0m
+[0;32mI (13475) Lcd Controller: Dec Index: 2[0m
+[0;32mI (13525) Lcd Controller: Dec Index: 2[0m
+[0;32mI (13575) Lcd Controller: Dec Index: 2[0m
+[0;32mI (13625) Lcd Controller: Dec Index: 2[0m
+[0;32mI (13675) Lcd Controller: Dec Index: 2[0m
+[0;32mI (13725) Lcd Controller: Dec Index: 2[0m
+[0;32mI (13775) Lcd Controller: Dec Index: 2[0m
+[0;32mI (13825) Lcd Controller: Dec Index: 2[0m
+[0;32mI (13875) Lcd Controller: Dec Index: 2[0m
+[0;32mI (13925) Lcd Controller: Dec Index: 2[0m
+[0;32mI (13975) Lcd Controller: Dec Index: 2[0m
+[0;32mI (14025) Lcd Controller: Dec Index: 2[0m
+[0;32mI (14075) Lcd Controller: Dec Index: 2[0m
+[0;32mI (14125) Lcd Controller: Dec Index: 2[0m
+[0;32mI (14175) Lcd Controller: Dec Index: 2[0m
+[0;32mI (14225) Lcd Controller: Dec Index: 2[0m
+[0;32mI (14275) Lcd Controller: Dec Index: 2[0m
+[0;32mI (14325) Lcd Controller: Dec Index: 2[0m
+[0;32mI (14375) Lcd Controller: Dec Index: 2[0m
+[0;32mI (14425) Lcd Controller: Dec Index: 2[0m
+[0;32mI (14475) Lcd Controller: Dec Index: 2[0m
+[0;32mI (14525) Lcd Controller: Dec Index: 2[0m
+[0;32mI (14575) Lcd Controller: Dec Index: 2[0m
+[0;32mI (14625) Lcd Controller: Dec Index: 2[0m
+[0;32mI (14675) Lcd Controller: Dec Index: 2[0m
+[0;32mI (14725) Lcd Controller: Dec Index: 2[0m
+[0;32mI (14775) Lcd Controller: Dec Index: 2[0m
+[0;32mI (14825) Lcd Controller: Dec Index: 2[0m
+[0;32mI (14875) Lcd Controller: Dec Index: 2[0m
+[0;32mI (14925) Lcd Controller: Dec Index: 2[0m
+[0;32mI (14975) Lcd Controller: Dec Index: 2[0m
+[0;32mI (15025) Lcd Controller: Dec Index: 2[0m
+[0;32mI (15075) Lcd Controller: Dec Index: 2[0m
+[0;32mI (15125) Lcd Controller: Dec Index: 2[0m
+[0;32mI (15175) Lcd Controller: Dec Index: 2[0m
+[0;32mI (15225) Lcd Controller: Dec Index: 2[0m
+[0;32mI (15275) Lcd Controller: Dec Index: 2[0m
+[0;32mI (15325) Lcd Controller: Dec Index: 2[0m
+[0;32mI (15375) Lcd Controller: Dec Index: 2[0m
+[0;32mI (15425) Lcd Controller: Dec Index: 2[0m
+[0;32mI (15475) Lcd Controller: Dec Index: 2[0m
+[0;32mI (15525) Lcd Controller: Dec Index: 2[0m
+[0;32mI (15575) Lcd Controller: Dec Index: 2[0m
+[0;32mI (15625) Lcd Controller: Dec Index: 2[0m
+[0;32mI (15675) Lcd Controller: Dec Index: 2[0m
+[0;32mI (15725) Lcd Controller: Dec Index: 2[0m
+[0;32mI (15775) Lcd Controller: Dec Index: 2[0m
+[0;32mI (15825) Lcd Controller: Dec Index: 2[0m
+[0;32mI (15875) Lcd Controller: Dec Index: 2[0m
+[0;32mI (15925) Lcd Controller: Dec Index: 2[0m
+[0;32mI (15975) Lcd Controller: Dec Index: 2[0m
+[0;32mI (16025) Lcd Controller: Dec Index: 2[0m
+[0;32mI (16075) Lcd Controller: Dec Index: 2[0m
+[0;32mI (16125) Lcd Controller: Dec Index: 2[0m
+[0;32mI (16175) Lcd Controller: Dec Index: 2[0m
+[0;32mI (16225) Lcd Controller: Dec Index: 2[0m
+[0;32mI (16275) Lcd Controller: Dec Index: 2[0m
+[0;32mI (16325) Lcd Controller: Dec Index: 2[0m
+[0;32mI (16375) Lcd Controller: Dec Index: 2[0m
+[0;32mI (16425) Lcd Controller: Dec Index: 2[0m
+[0;32mI (16475) Lcd Controller: Dec Index: 2[0m
+[0;32mI (16525) Lcd Controller: Dec Index: 2[0m
+[0;32mI (16575) Lcd Controller: Dec Index: 2[0m
+[0;32mI (16625) Lcd Controller: Dec Index: 2[0m
+[0;32mI (16675) Lcd Controller: Dec Index: 2[0m
+[0;32mI (16725) Lcd Controller: Dec Index: 2[0m
+[0;32mI (16775) Lcd Controller: Dec Index: 2[0m
+[0;32mI (16825) Lcd Controller: Dec Index: 2[0m
+[0;32mI (16875) Lcd Controller: Dec Index: 2[0m
+[0;32mI (16925) Lcd Controller: Dec Index: 2[0m
+[0;32mI (16975) Lcd Controller: Dec Index: 2[0m
+[0;32mI (17025) Lcd Controller: Dec Index: 2[0m
+[0;32mI (17075) Lcd Controller: Dec Index: 2[0m
+[0;32mI (17125) Lcd Controller: Dec Index: 2[0m
+[0;32mI (17175) Lcd Controller: Dec Index: 2[0m
+[0;32mI (17225) Lcd Controller: Dec Index: 2[0m
+[0;32mI (17275) Lcd Controller: Dec Index: 2[0m
+[0;32mI (17325) Lcd Controller: Dec Index: 2[0m
+[0;32mI (17375) Lcd Controller: Dec Index: 2[0m
+[0;32mI (17425) Lcd Controller: Dec Index: 2[0m
+[0;32mI (17475) Lcd Controller: Dec Index: 2[0m
+[0;32mI (17525) Lcd Controller: Dec Index: 2[0m
+[0;32mI (17575) Lcd Controller: Dec Index: 2[0m
+[0;32mI (17625) Lcd Controller: Dec Index: 2[0m
+[0;32mI (17675) Lcd Controller: Dec Index: 2[0m
+[0;32mI (17725) Lcd Controller: Dec Index: 2[0m
+[0;32mI (17775) Lcd Controller: Dec Index: 2[0m
+[0;32mI (17825) Lcd Controller: Dec Index: 2[0m
+[0;32mI (17875) Lcd Controller: Dec Index: 2[0m
+[0;32mI (17925) Lcd Controller: Dec Index: 2[0m
+[0;32mI (17975) Lcd Controller: Dec Index: 2[0m
+[0;32mI (18025) Lcd Controller: Dec Index: 2[0m
+[0;32mI (18075) Lcd Controller: Dec Index: 2[0m
+[0;32mI (18125) Lcd Controller: Dec Index: 2[0m
+[0;32mI (18175) Lcd Controller: Dec Index: 2[0m
+[0;32mI (18225) Lcd Controller: Dec Index: 2[0m
+[0;32mI (18275) Lcd Controller: Dec Index: 2[0m
+[0;32mI (18325) Lcd Controller: Dec Index: 2[0m
+[0;32mI (18375) Lcd Controller: Dec Index: 2[0m
+[0;32mI (18425) Lcd Controller: Dec Index: 2[0m
+[0;32mI (18475) Lcd Controller: Dec Index: 2[0m
+[0;32mI (18525) Lcd Controller: Dec Index: 2[0m
+[0;32mI (18575) Lcd Controller: Dec Index: 2[0m
+[0;32mI (18625) Lcd Controller: Dec Index: 2[0m
+[0;32mI (18675) Lcd Controller: Dec Index: 2[0m
+[0;32mI (18725) Lcd Controller: Dec Index: 2[0m
+[0;32mI (18775) Lcd Controller: Dec Index: 2[0m
+[0;32mI (18825) Lcd Controller: Dec Index: 2[0m
+[0;32mI (18875) Lcd Controller: Dec Index: 2[0m
+[0;32mI (18925) Lcd Controller: Dec Index: 2[0m
+[0;32mI (18975) Lcd Controller: Dec Index: 2[0m
+[0;32mI (19025) Lcd Controller: Dec Index: 2[0m
+[0;32mI (19075) Lcd Controller: Dec Index: 2[0m
+[0;32mI (19125) Lcd Controller: Dec Index: 2[0m
+[0;32mI (19175) Lcd Controller: Dec Index: 2[0m
+[0;32mI (19225) Lcd Controller: Dec Index: 2[0m
+[0;32mI (19275) Lcd Controller: Dec Index: 2[0m
+[0;32mI (19325) Lcd Controller: Dec Index: 2[0m
+[0;32mI (19375) Lcd Controller: Dec Index: 2[0m
+[0;32mI (19425) Lcd Controller: Dec Index: 2[0m
+[0;32mI (19475) Lcd Controller: Dec Index: 2[0m
+[0;32mI (19525) Lcd Controller: Dec Index: 2[0m
+[0;32mI (19575) Lcd Controller: Dec Index: 2[0m
+[0;32mI (19625) Lcd Controller: Dec Index: 2[0m
+[0;32mI (19675) Lcd Controller: Dec Index: 2[0m
+[0;32mI (19725) Lcd Controller: Dec Index: 2[0m
+[0;32mI (19775) Lcd Controller: Dec Index: 2[0m
+[0;32mI (19825) Lcd Controller: Dec Index: 2[0m
+[0;32mI (19875) Lcd Controller: Dec Index: 2[0m
+[0;32mI (19925) Lcd Controller: Dec Index: 2[0m
+[0;32mI (19975) Lcd Controller: Dec Index: 2[0m
+[0;32mI (20025) Lcd Controller: Dec Index: 2[0m
+[0;32mI (20075) Lcd Controller: Dec Index: 2[0m
+[0;32mI (20125) Lcd Controller: Dec Index: 2[0m
+[0;32mI (20175) Lcd Controller: Dec Index: 2[0m

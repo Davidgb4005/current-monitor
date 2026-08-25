@@ -1,0 +1,275 @@
+Command: ninja flash
+[1/12] Performing build step for 'bootloader'
+[1/1] cd /home/esp/esp/CurrentMonitor/build/bootloader && /home/esp/.espressif/python_env/idf6.1_py3.13_env/bin/python /home/esp/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/esp/esp/CurrentMonitor/build/bootloader/bootloader.bin
+Bootloader binary size 0x58d0 bytes. 0x2730 bytes (31%) free.
+[2/12] Building CXX object esp-idf/LcdDisplay/CMakeFiles/__idf_LcdDisplay.dir/LcdDisplay.cpp.obj
+[31mFAILED: [0mesp-idf/LcdDisplay/CMakeFiles/__idf_LcdDisplay.dir/LcdDisplay.cpp.obj 
+/home/esp/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/riscv32-esp-elf-g++ -DESP_PLATFORM -DIDF_VER=\"v6.1-dev-1-gff97953b32-dirty\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -I/home/esp/esp/CurrentMonitor/build/config -I/home/esp/esp/CurrentMonitor/components/LcdDisplay -I/home/esp/esp/esp-idf/components/esp_libc/platform_include -I/home/esp/esp/esp-idf/components/freertos/config/include -I/home/esp/esp/esp-idf/components/freertos/config/include/freertos -I/home/esp/esp/esp-idf/components/freertos/config/riscv/include -I/home/esp/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include -I/home/esp/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/include -I/home/esp/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/include/freertos -I/home/esp/esp/esp-idf/components/freertos/esp_additions/include -I/home/esp/esp/esp-idf/components/esp_hw_support/include -I/home/esp/esp/esp-idf/components/esp_hw_support/include/soc -I/home/esp/esp/esp-idf/components/esp_hw_support/dma/include -I/home/esp/esp/esp-idf/components/esp_hw_support/ldo/include -I/home/esp/esp/esp-idf/components/esp_hw_support/debug_probe/include -I/home/esp/esp/esp-idf/components/esp_hw_support/etm/include -I/home/esp/esp/esp-idf/components/esp_hw_support/mspi_timing_tuning/include -I/home/esp/esp/esp-idf/components/esp_hw_support/mspi_timing_tuning/tuning_scheme_impl/include -I/home/esp/esp/esp-idf/components/esp_hw_support/power_supply/include -I/home/esp/esp/esp-idf/components/esp_hw_support/modem/include -I/home/esp/esp/esp-idf/components/esp_hw_support/port/esp32c6/. -I/home/esp/esp/esp-idf/components/esp_hw_support/port/esp32c6/include -I/home/esp/esp/esp-idf/components/esp_hw_support/port/esp32c6/private_include -I/home/esp/esp/esp-idf/components/heap/include -I/home/esp/esp/esp-idf/components/heap/tlsf -I/home/esp/esp/esp-idf/components/log/include -I/home/esp/esp/esp-idf/components/soc/include -I/home/esp/esp/esp-idf/components/soc/esp32c6 -I/home/esp/esp/esp-idf/components/soc/esp32c6/include -I/home/esp/esp/esp-idf/components/soc/esp32c6/register -I/home/esp/esp/esp-idf/components/hal/platform_port/include -I/home/esp/esp/esp-idf/components/hal/esp32c6/include -I/home/esp/esp/esp-idf/components/hal/include -I/home/esp/esp/esp-idf/components/esp_rom/include -I/home/esp/esp/esp-idf/components/esp_rom/esp32c6/include -I/home/esp/esp/esp-idf/components/esp_rom/esp32c6/include/esp32c6 -I/home/esp/esp/esp-idf/components/esp_rom/esp32c6 -I/home/esp/esp/esp-idf/components/esp_common/include -I/home/esp/esp/esp-idf/components/esp_system/include -I/home/esp/esp/esp-idf/components/esp_system/port/soc -I/home/esp/esp/esp-idf/components/esp_system/port/include/riscv -I/home/esp/esp/esp-idf/components/esp_system/port/include/private -I/home/esp/esp/esp-idf/components/esp_stdio/include -I/home/esp/esp/esp-idf/components/riscv/include -I/home/esp/esp/esp-idf/components/esp_hal_dma/include -I/home/esp/esp/esp-idf/components/esp_hal_dma/esp32c6/include -I/home/esp/esp/esp-idf/components/lwip/include -I/home/esp/esp/esp-idf/components/lwip/include/apps -I/home/esp/esp/esp-idf/components/lwip/lwip/src/include -I/home/esp/esp/esp-idf/components/lwip/port/include -I/home/esp/esp/esp-idf/components/lwip/port/freertos/include -I/home/esp/esp/esp-idf/components/lwip/port/esp32xx/include -I/home/esp/esp/esp-idf/components/lwip/port/esp32xx/include/arch -I/home/esp/esp/esp-idf/components/lwip/port/esp32xx/include/sys -I/home/esp/esp/esp-idf/components/esp_event/include -I/home/esp/esp/esp-idf/components/esp_driver_i2c/include -I/home/esp/esp/esp-idf/components/esp_hal_i2c/esp32c6/include -I/home/esp/esp/esp-idf/components/esp_hal_i2c/include -march=rv32imac_zicsr_zifencei_zaamo_zalrsc  -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-error=extra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -nostartfiles -Og -fno-shrink-wrap -fmacro-prefix-map=/home/esp/esp/CurrentMonitor=. -fmacro-prefix-map=/home/esp/esp/esp-idf=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -std=gnu++26 -fno-exceptions -fno-rtti -fuse-cxa-atexit -MD -MT esp-idf/LcdDisplay/CMakeFiles/__idf_LcdDisplay.dir/LcdDisplay.cpp.obj -MF esp-idf/LcdDisplay/CMakeFiles/__idf_LcdDisplay.dir/LcdDisplay.cpp.obj.d -o esp-idf/LcdDisplay/CMakeFiles/__idf_LcdDisplay.dir/LcdDisplay.cpp.obj -c /home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp
+In file included from [01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp:1[m[K:
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.hpp:31:23:[m[K [01;31m[Kerror: [m[Kexpected identifier before '[01m[K*[m[K' token
+   31 |     uint8_t * display([01;31m[K*[m[K)[COLS] = {page_1, page_2, page_3};
+      |                       [01;31m[K^[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.hpp:31:35:[m[K [01;31m[Kerror: [m[Kinvalid pure specifier (only '[01m[K= 0[m[K' is allowed) before '[01m[Kpage_1[m[K'
+   31 |     uint8_t * display(*)[COLS] = {[01;31m[Kpage_1[m[K, page_2, page_3};
+      |                                   [01;31m[K^~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.hpp:31:5:[m[K [01;31m[Kerror: [m[K'[01m[Kdisplay[m[K' declared as function returning an array
+   31 |     [01;31m[Kuint8_t[m[K * display(*)[COLS] = {page_1, page_2, page_3};
+      |     [01;31m[K^~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.hpp:31:51:[m[K [01;31m[Kerror: [m[Kexpected '[01m[K;[m[K' at end of member declaration
+   31 |     uint8_t * display(*)[COLS] = {page_1, page_2, [01;31m[Kpage_3[m[K};
+      |                                                   [01;31m[K^~~~~~[m[K
+      |                                                         [32m[K;[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.hpp:45:1:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before '[01m[Kpublic[m[K'
+   45 | [01;31m[Kpublic[m[K:
+      | [01;31m[K^~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.hpp:47:18:[m[K [01;31m[Kerror: [m[Kexpected constructor, destructor, or type conversion before '[01m[K;[m[K' token
+   47 |     ~LcdDisplay()[01;31m[K;[m[K
+      |                  [01;31m[K^[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.hpp:62:1:[m[K [01;31m[Kerror: [m[Kexpected declaration before '[01m[K}[m[K' token
+   62 | [01;31m[K}[m[K;
+      | [01;31m[K^[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp:15:1:[m[K [01;31m[Kerror: [m[Kno declaration matches '[01m[KLcdDisplay::[01;32m[KLcdDisplay[m[K(i2c_master_bus_handle_t, uint8_t, uint16_t, i2c_addr_bit_len_t)[m[K'
+   15 | [01;31m[KLcdDisplay[m[K::LcdDisplay(i2c_master_bus_handle_t bus_handle, uint8_t adr, uint16_t freq, i2c_addr_bit_len_t adr_len)
+      | [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.hpp:27:7:[m[K [01;36m[Knote: [m[Kcandidates are: '[01m[Kconstexpr LcdDisplay::[01;32m[KLcdDisplay[m[K(LcdDisplay&&)[m[K'
+   27 | class [01;36m[KLcdDisplay[m[K
+      |       [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.hpp:27:7:[m[K [01;36m[Knote: [m[K                '[01m[Kconstexpr LcdDisplay::[01;32m[KLcdDisplay[m[K(const LcdDisplay&)[m[K'
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.hpp:27:7:[m[K [01;36m[Knote: [m[K                '[01m[Kconstexpr LcdDisplay::[01;32m[KLcdDisplay[m[K()[m[K'
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.hpp:27:7:[m[K [01;36m[Knote: [m[K'[01m[Kclass LcdDisplay[m[K' defined here
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp:29:25:[m[K [01;31m[Kerror: [m[Kdefinition of implicitly-declared '[01m[Kconstexpr LcdDisplay::[01;32m[K~LcdDisplay[m[K()[m[K'
+   29 | LcdDisplay::~LcdDisplay([01;31m[K)[m[K
+      |                         [01;31m[K^[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp:32:11:[m[K [01;31m[Kerror: [m[Kno declaration matches '[01m[Kesp_err_t LcdDisplay::[01;32m[Klcd_write_byte[m[K(uint8_t)[m[K'
+   32 | esp_err_t [01;31m[KLcdDisplay[m[K::lcd_write_byte(uint8_t data)
+      |           [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp:32:11:[m[K [01;36m[Knote: [m[Kno functions named '[01m[Kesp_err_t LcdDisplay::[01;32m[Klcd_write_byte[m[K(uint8_t)[m[K'
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.hpp:27:7:[m[K [01;36m[Knote: [m[K'[01m[Kclass LcdDisplay[m[K' defined here
+   27 | class [01;36m[KLcdDisplay[m[K
+      |       [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp:39:6:[m[K [01;31m[Kerror: [m[Kno declaration matches '[01m[Kvoid LcdDisplay::[01;32m[Klcd_toggle_enable[m[K(uint8_t)[m[K'
+   39 | void [01;31m[KLcdDisplay[m[K::lcd_toggle_enable(uint8_t data)
+      |      [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp:39:6:[m[K [01;36m[Knote: [m[Kno functions named '[01m[Kvoid LcdDisplay::[01;32m[Klcd_toggle_enable[m[K(uint8_t)[m[K'
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.hpp:27:7:[m[K [01;36m[Knote: [m[K'[01m[Kclass LcdDisplay[m[K' defined here
+   27 | class [01;36m[KLcdDisplay[m[K
+      |       [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp:45:6:[m[K [01;31m[Kerror: [m[Kno declaration matches '[01m[Kvoid LcdDisplay::[01;32m[Klcd_send_nibble[m[K(uint8_t, uint8_t)[m[K'
+   45 | void [01;31m[KLcdDisplay[m[K::lcd_send_nibble(uint8_t nibble, uint8_t rs)
+      |      [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp:45:6:[m[K [01;36m[Knote: [m[Kno functions named '[01m[Kvoid LcdDisplay::[01;32m[Klcd_send_nibble[m[K(uint8_t, uint8_t)[m[K'
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.hpp:27:7:[m[K [01;36m[Knote: [m[K'[01m[Kclass LcdDisplay[m[K' defined here
+   27 | class [01;36m[KLcdDisplay[m[K
+      |       [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp:53:6:[m[K [01;31m[Kerror: [m[Kno declaration matches '[01m[Kvoid LcdDisplay::[01;32m[Klcd_send_byte[m[K(uint8_t, uint8_t)[m[K'
+   53 | void [01;31m[KLcdDisplay[m[K::lcd_send_byte(uint8_t byte, uint8_t rs)
+      |      [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp:53:6:[m[K [01;36m[Knote: [m[Kno functions named '[01m[Kvoid LcdDisplay::[01;32m[Klcd_send_byte[m[K(uint8_t, uint8_t)[m[K'
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.hpp:27:7:[m[K [01;36m[Knote: [m[K'[01m[Kclass LcdDisplay[m[K' defined here
+   27 | class [01;36m[KLcdDisplay[m[K
+      |       [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp:59:6:[m[K [01;31m[Kerror: [m[Kno declaration matches '[01m[Kvoid LcdDisplay::[01;32m[Klcd_send_command[m[K(uint8_t)[m[K'
+   59 | void [01;31m[KLcdDisplay[m[K::lcd_send_command(uint8_t cmd)
+      |      [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp:59:6:[m[K [01;36m[Knote: [m[Kno functions named '[01m[Kvoid LcdDisplay::[01;32m[Klcd_send_command[m[K(uint8_t)[m[K'
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.hpp:27:7:[m[K [01;36m[Knote: [m[K'[01m[Kclass LcdDisplay[m[K' defined here
+   27 | class [01;36m[KLcdDisplay[m[K
+      |       [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp:64:6:[m[K [01;31m[Kerror: [m[Kno declaration matches '[01m[Kvoid LcdDisplay::[01;32m[Klcd_send_char[m[K(char)[m[K'
+   64 | void [01;31m[KLcdDisplay[m[K::lcd_send_char(char c)
+      |      [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp:64:6:[m[K [01;36m[Knote: [m[Kno functions named '[01m[Kvoid LcdDisplay::[01;32m[Klcd_send_char[m[K(char)[m[K'
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.hpp:27:7:[m[K [01;36m[Knote: [m[K'[01m[Kclass LcdDisplay[m[K' defined here
+   27 | class [01;36m[KLcdDisplay[m[K
+      |       [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp:69:6:[m[K [01;31m[Kerror: [m[Kno declaration matches '[01m[Kvoid LcdDisplay::[01;32m[Klcd_init[m[K()[m[K'
+   69 | void [01;31m[KLcdDisplay[m[K::lcd_init()
+      |      [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp:69:6:[m[K [01;36m[Knote: [m[Kno functions named '[01m[Kvoid LcdDisplay::[01;32m[Klcd_init[m[K()[m[K'
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.hpp:27:7:[m[K [01;36m[Knote: [m[K'[01m[Kclass LcdDisplay[m[K' defined here
+   27 | class [01;36m[KLcdDisplay[m[K
+      |       [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp:86:6:[m[K [01;31m[Kerror: [m[Kno declaration matches '[01m[Kvoid LcdDisplay::[01;32m[Kupdate_lcd_task[m[K(uint16_t)[m[K'
+   86 | void [01;31m[KLcdDisplay[m[K::update_lcd_task(uint16_t refresh_rate)
+      |      [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp:86:6:[m[K [01;36m[Knote: [m[Kno functions named '[01m[Kvoid LcdDisplay::[01;32m[Kupdate_lcd_task[m[K(uint16_t)[m[K'
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.hpp:27:7:[m[K [01;36m[Knote: [m[K'[01m[Kclass LcdDisplay[m[K' defined here
+   27 | class [01;36m[KLcdDisplay[m[K
+      |       [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp:98:6:[m[K [01;31m[Kerror: [m[Kno declaration matches '[01m[Kvoid LcdDisplay::[01;32m[Kupdate_lcd[m[K(void*)[m[K'
+   98 | void [01;31m[KLcdDisplay[m[K::update_lcd(void *arg)
+      |      [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp:98:6:[m[K [01;36m[Knote: [m[Kno functions named '[01m[Kvoid LcdDisplay::[01;32m[Kupdate_lcd[m[K(void*)[m[K'
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.hpp:27:7:[m[K [01;36m[Knote: [m[K'[01m[Kclass LcdDisplay[m[K' defined here
+   27 | class [01;36m[KLcdDisplay[m[K
+      |       [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp:122:8:[m[K [01;31m[Kerror: [m[Kno declaration matches '[01m[Kint8_t LcdDisplay::[01;32m[KWriteRightAlign[m[K(char*, int8_t, uint8_t, uint8_t, uint8_t, uint8_t)[m[K'
+  122 | int8_t [01;31m[KLcdDisplay[m[K::WriteRightAlign(char *data, int8_t len, uint8_t row, uint8_t col, uint8_t size, uint8_t page)
+      |        [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp:122:8:[m[K [01;36m[Knote: [m[Kno functions named '[01m[Kint8_t LcdDisplay::[01;32m[KWriteRightAlign[m[K(char*, int8_t, uint8_t, uint8_t, uint8_t, uint8_t)[m[K'
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.hpp:27:7:[m[K [01;36m[Knote: [m[K'[01m[Kclass LcdDisplay[m[K' defined here
+   27 | class [01;36m[KLcdDisplay[m[K
+      |       [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp:154:8:[m[K [01;31m[Kerror: [m[Kno declaration matches '[01m[Kint8_t LcdDisplay::[01;32m[KWriteLeftAlign[m[K(char*, int8_t, uint8_t, uint8_t, uint8_t, uint8_t, bool)[m[K'
+  154 | int8_t [01;31m[KLcdDisplay[m[K::WriteLeftAlign(char *data, int8_t len, uint8_t row, uint8_t col, uint8_t size, uint8_t page, bool sign_pad)
+      |        [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp:154:8:[m[K [01;36m[Knote: [m[Kno functions named '[01m[Kint8_t LcdDisplay::[01;32m[KWriteLeftAlign[m[K(char*, int8_t, uint8_t, uint8_t, uint8_t, uint8_t, bool)[m[K'
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.hpp:27:7:[m[K [01;36m[Knote: [m[K'[01m[Kclass LcdDisplay[m[K' defined here
+   27 | class [01;36m[KLcdDisplay[m[K
+      |       [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp:192:8:[m[K [01;31m[Kerror: [m[Kno declaration matches '[01m[Kint8_t LcdDisplay::[01;32m[KWriteDecimalAlign[m[K(char*, int8_t, uint8_t, uint8_t, uint8_t, uint8_t)[m[K'
+  192 | int8_t [01;31m[KLcdDisplay[m[K::WriteDecimalAlign(char *data, int8_t len, uint8_t row, uint8_t col, uint8_t size, uint8_t page)
+      |        [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp:192:8:[m[K [01;36m[Knote: [m[Kno functions named '[01m[Kint8_t LcdDisplay::[01;32m[KWriteDecimalAlign[m[K(char*, int8_t, uint8_t, uint8_t, uint8_t, uint8_t)[m[K'
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.hpp:27:7:[m[K [01;36m[Knote: [m[K'[01m[Kclass LcdDisplay[m[K' defined here
+   27 | class [01;36m[KLcdDisplay[m[K
+      |       [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp:233:26:[m[K [01;31m[Kerror: [m[Kno declaration matches '[01m[Ki2c_master_dev_t** LcdDisplay::[01;32m[KGetDevHandle[m[K()[m[K'
+  233 | i2c_master_dev_handle_t *[01;31m[KLcdDisplay[m[K::GetDevHandle()
+      |                          [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp:233:26:[m[K [01;36m[Knote: [m[Kno functions named '[01m[Ki2c_master_dev_t** LcdDisplay::[01;32m[KGetDevHandle[m[K()[m[K'
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.hpp:27:7:[m[K [01;36m[Knote: [m[K'[01m[Kclass LcdDisplay[m[K' defined here
+   27 | class [01;36m[KLcdDisplay[m[K
+      |       [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp:238:6:[m[K [01;31m[Kerror: [m[Kno declaration matches '[01m[Kvoid LcdDisplay::[01;32m[KLcdClear[m[K()[m[K'
+  238 | void [01;31m[KLcdDisplay[m[K::LcdClear()
+      |      [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp:238:6:[m[K [01;36m[Knote: [m[Kno functions named '[01m[Kvoid LcdDisplay::[01;32m[KLcdClear[m[K()[m[K'
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.hpp:27:7:[m[K [01;36m[Knote: [m[K'[01m[Kclass LcdDisplay[m[K' defined here
+   27 | class [01;36m[KLcdDisplay[m[K
+      |       [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp:252:8:[m[K [01;31m[Kerror: [m[Kno declaration matches '[01m[Kint8_t LcdDisplay::[01;32m[KEncodeInt[m[K(char*, int32_t)[m[K'
+  252 | int8_t [01;31m[KLcdDisplay[m[K::EncodeInt(char *buffer, int32_t value)
+      |        [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp:252:8:[m[K [01;36m[Knote: [m[Kno functions named '[01m[Kint8_t LcdDisplay::[01;32m[KEncodeInt[m[K(char*, int32_t)[m[K'
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.hpp:27:7:[m[K [01;36m[Knote: [m[K'[01m[Kclass LcdDisplay[m[K' defined here
+   27 | class [01;36m[KLcdDisplay[m[K
+      |       [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp:292:8:[m[K [01;31m[Kerror: [m[Kno declaration matches '[01m[Kint8_t LcdDisplay::[01;32m[KEncodeFloat[m[K(char*, float, int)[m[K'
+  292 | int8_t [01;31m[KLcdDisplay[m[K::EncodeFloat(char *buffer, float value, int positions)
+      |        [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp:292:8:[m[K [01;36m[Knote: [m[Kno functions named '[01m[Kint8_t LcdDisplay::[01;32m[KEncodeFloat[m[K(char*, float, int)[m[K'
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.hpp:27:7:[m[K [01;36m[Knote: [m[K'[01m[Kclass LcdDisplay[m[K' defined here
+   27 | class [01;36m[KLcdDisplay[m[K
+      |       [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp:356:6:[m[K [01;31m[Kerror: [m[Kno declaration matches '[01m[Kvoid LcdDisplay::[01;32m[KDisableDisplay[m[K()[m[K'
+  356 | void [01;31m[KLcdDisplay[m[K::DisableDisplay()
+      |      [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp:356:6:[m[K [01;36m[Knote: [m[Kno functions named '[01m[Kvoid LcdDisplay::[01;32m[KDisableDisplay[m[K()[m[K'
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.hpp:27:7:[m[K [01;36m[Knote: [m[K'[01m[Kclass LcdDisplay[m[K' defined here
+   27 | class [01;36m[KLcdDisplay[m[K
+      |       [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp:370:6:[m[K [01;31m[Kerror: [m[Kno declaration matches '[01m[Kvoid LcdDisplay::[01;32m[KNextPage[m[K()[m[K'
+  370 | void [01;31m[KLcdDisplay[m[K::NextPage()
+      |      [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp:370:6:[m[K [01;36m[Knote: [m[Kno functions named '[01m[Kvoid LcdDisplay::[01;32m[KNextPage[m[K()[m[K'
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.hpp:27:7:[m[K [01;36m[Knote: [m[K'[01m[Kclass LcdDisplay[m[K' defined here
+   27 | class [01;36m[KLcdDisplay[m[K
+      |       [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp:379:6:[m[K [01;31m[Kerror: [m[Kno declaration matches '[01m[Kvoid LcdDisplay::[01;32m[KPrevPage[m[K()[m[K'
+  379 | void [01;31m[KLcdDisplay[m[K::PrevPage()
+      |      [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp:379:6:[m[K [01;36m[Knote: [m[Kno functions named '[01m[Kvoid LcdDisplay::[01;32m[KPrevPage[m[K()[m[K'
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.hpp:27:7:[m[K [01;36m[Knote: [m[K'[01m[Kclass LcdDisplay[m[K' defined here
+   27 | class [01;36m[KLcdDisplay[m[K
+      |       [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp:388:8:[m[K [01;31m[Kerror: [m[Kno declaration matches '[01m[Kint8_t LcdDisplay::[01;32m[KGetPage[m[K()[m[K'
+  388 | int8_t [01;31m[KLcdDisplay[m[K::GetPage(){
+      |        [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp:388:8:[m[K [01;36m[Knote: [m[Kno functions named '[01m[Kint8_t LcdDisplay::[01;32m[KGetPage[m[K()[m[K'
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.hpp:27:7:[m[K [01;36m[Knote: [m[K'[01m[Kclass LcdDisplay[m[K' defined here
+   27 | class [01;36m[KLcdDisplay[m[K
+      |       [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.hpp:41:17:[m[K [01;35m[Kwarning: [m[K'[01m[Kvoid update_lcd(void*)[m[K' declared '[01m[Kstatic[m[K' but never defined [[01;35m[K-Wunused-function[m[K]
+   41 |     static void [01;35m[Kupdate_lcd[m[K(void *arg);
+      |                 [01;35m[K^~~~~~~~~~[m[K
+[3/12] No install step for 'bootloader'
+[4/12] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/CurrentMonitor.cpp.obj
+[31mFAILED: [0mesp-idf/main/CMakeFiles/__idf_main.dir/CurrentMonitor.cpp.obj 
+/home/esp/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/riscv32-esp-elf-g++ -DESP_PLATFORM -DIDF_VER=\"v6.1-dev-1-gff97953b32-dirty\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -I/home/esp/esp/CurrentMonitor/build/config -I/home/esp/esp/CurrentMonitor/main -I/home/esp/esp/esp-idf/components/esp_libc/platform_include -I/home/esp/esp/esp-idf/components/freertos/config/include -I/home/esp/esp/esp-idf/components/freertos/config/include/freertos -I/home/esp/esp/esp-idf/components/freertos/config/riscv/include -I/home/esp/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include -I/home/esp/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/include -I/home/esp/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/include/freertos -I/home/esp/esp/esp-idf/components/freertos/esp_additions/include -I/home/esp/esp/esp-idf/components/esp_hw_support/include -I/home/esp/esp/esp-idf/components/esp_hw_support/include/soc -I/home/esp/esp/esp-idf/components/esp_hw_support/dma/include -I/home/esp/esp/esp-idf/components/esp_hw_support/ldo/include -I/home/esp/esp/esp-idf/components/esp_hw_support/debug_probe/include -I/home/esp/esp/esp-idf/components/esp_hw_support/etm/include -I/home/esp/esp/esp-idf/components/esp_hw_support/mspi_timing_tuning/include -I/home/esp/esp/esp-idf/components/esp_hw_support/mspi_timing_tuning/tuning_scheme_impl/include -I/home/esp/esp/esp-idf/components/esp_hw_support/power_supply/include -I/home/esp/esp/esp-idf/components/esp_hw_support/modem/include -I/home/esp/esp/esp-idf/components/esp_hw_support/port/esp32c6/. -I/home/esp/esp/esp-idf/components/esp_hw_support/port/esp32c6/include -I/home/esp/esp/esp-idf/components/esp_hw_support/port/esp32c6/private_include -I/home/esp/esp/esp-idf/components/heap/include -I/home/esp/esp/esp-idf/components/heap/tlsf -I/home/esp/esp/esp-idf/components/log/include -I/home/esp/esp/esp-idf/components/soc/include -I/home/esp/esp/esp-idf/components/soc/esp32c6 -I/home/esp/esp/esp-idf/components/soc/esp32c6/include -I/home/esp/esp/esp-idf/components/soc/esp32c6/register -I/home/esp/esp/esp-idf/components/hal/platform_port/include -I/home/esp/esp/esp-idf/components/hal/esp32c6/include -I/home/esp/esp/esp-idf/components/hal/include -I/home/esp/esp/esp-idf/components/esp_rom/include -I/home/esp/esp/esp-idf/components/esp_rom/esp32c6/include -I/home/esp/esp/esp-idf/components/esp_rom/esp32c6/include/esp32c6 -I/home/esp/esp/esp-idf/components/esp_rom/esp32c6 -I/home/esp/esp/esp-idf/components/esp_common/include -I/home/esp/esp/esp-idf/components/esp_system/include -I/home/esp/esp/esp-idf/components/esp_system/port/soc -I/home/esp/esp/esp-idf/components/esp_system/port/include/riscv -I/home/esp/esp/esp-idf/components/esp_system/port/include/private -I/home/esp/esp/esp-idf/components/esp_stdio/include -I/home/esp/esp/esp-idf/components/riscv/include -I/home/esp/esp/esp-idf/components/esp_hal_dma/include -I/home/esp/esp/esp-idf/components/esp_hal_dma/esp32c6/include -I/home/esp/esp/esp-idf/components/lwip/include -I/home/esp/esp/esp-idf/components/lwip/include/apps -I/home/esp/esp/esp-idf/components/lwip/lwip/src/include -I/home/esp/esp/esp-idf/components/lwip/port/include -I/home/esp/esp/esp-idf/components/lwip/port/freertos/include -I/home/esp/esp/esp-idf/components/lwip/port/esp32xx/include -I/home/esp/esp/esp-idf/components/lwip/port/esp32xx/include/arch -I/home/esp/esp/esp-idf/components/lwip/port/esp32xx/include/sys -I/home/esp/esp/esp-idf/components/esp_driver_i2c/include -I/home/esp/esp/esp-idf/components/esp_hal_i2c/esp32c6/include -I/home/esp/esp/esp-idf/components/esp_hal_i2c/include -I/home/esp/esp/CurrentMonitor/components/PinController -I/home/esp/esp/esp-idf/components/esp_driver_gpio/include -I/home/esp/esp/esp-idf/components/esp_event/include -I/home/esp/esp/esp-idf/components/esp_adc/include -I/home/esp/esp/esp-idf/components/esp_adc/interface -I/home/esp/esp/esp-idf/components/esp_adc/esp32c6/include -I/home/esp/esp/esp-idf/components/esp_driver_ledc/include -I/home/esp/esp/esp-idf/components/esp_driver_uart/include -I/home/esp/esp/esp-idf/components/vfs/include -I/home/esp/esp/esp-idf/components/esp_timer/include -I/home/esp/esp/CurrentMonitor/components/LcdDisplay -march=rv32imac_zicsr_zifencei_zaamo_zalrsc  -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-error=extra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -nostartfiles -Og -fno-shrink-wrap -fmacro-prefix-map=/home/esp/esp/CurrentMonitor=. -fmacro-prefix-map=/home/esp/esp/esp-idf=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -std=gnu++26 -fno-exceptions -fno-rtti -fuse-cxa-atexit -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/CurrentMonitor.cpp.obj -MF esp-idf/main/CMakeFiles/__idf_main.dir/CurrentMonitor.cpp.obj.d -o esp-idf/main/CMakeFiles/__idf_main.dir/CurrentMonitor.cpp.obj -c /home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp
+In file included from [01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:6[m[K:
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.hpp:31:23:[m[K [01;31m[Kerror: [m[Kexpected identifier before '[01m[K*[m[K' token
+   31 |     uint8_t * display([01;31m[K*[m[K)[COLS] = {page_1, page_2, page_3};
+      |                       [01;31m[K^[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.hpp:31:35:[m[K [01;31m[Kerror: [m[Kinvalid pure specifier (only '[01m[K= 0[m[K' is allowed) before '[01m[Kpage_1[m[K'
+   31 |     uint8_t * display(*)[COLS] = {[01;31m[Kpage_1[m[K, page_2, page_3};
+      |                                   [01;31m[K^~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.hpp:31:5:[m[K [01;31m[Kerror: [m[K'[01m[Kdisplay[m[K' declared as function returning an array
+   31 |     [01;31m[Kuint8_t[m[K * display(*)[COLS] = {page_1, page_2, page_3};
+      |     [01;31m[K^~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.hpp:31:51:[m[K [01;31m[Kerror: [m[Kexpected '[01m[K;[m[K' at end of member declaration
+   31 |     uint8_t * display(*)[COLS] = {page_1, page_2, [01;31m[Kpage_3[m[K};
+      |                                                   [01;31m[K^~~~~~[m[K
+      |                                                         [32m[K;[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.hpp:45:1:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before '[01m[Kpublic[m[K'
+   45 | [01;31m[Kpublic[m[K:
+      | [01;31m[K^~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.hpp:47:18:[m[K [01;31m[Kerror: [m[Kexpected constructor, destructor, or type conversion before '[01m[K;[m[K' token
+   47 |     ~LcdDisplay()[01;31m[K;[m[K
+      |                  [01;31m[K^[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.hpp:62:1:[m[K [01;31m[Kerror: [m[Kexpected declaration before '[01m[K}[m[K' token
+   62 | [01;31m[K}[m[K;
+      | [01;31m[K^[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:[m[K In function '[01m[Kint[01;32m[K app_main[m[K()[m[K':
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:68:51:[m[K [01;31m[Kerror: [m[Kno matching function for call to '[01m[KLcdDisplay::LcdDisplay(i2c_master_bus_t*&, int, int)[m[K'
+   68 |     LcdDisplay display(I2C_bus_handle, 0x27, 20000[01;31m[K)[m[K;
+      |                                                   [01;31m[K^[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:68:51:[m[K [01;36m[Knote: [m[Kthere are 3 candidates
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.hpp:27:7:[m[K [01;36m[Knote: [m[Kcandidate 1: '[01m[Kconstexpr LcdDisplay::[01;32m[KLcdDisplay[m[K()[m[K'
+   27 | class [01;36m[KLcdDisplay[m[K
+      |       [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.hpp:27:7:[m[K [01;36m[Knote: [m[Kcandidate expects 0 arguments, 3 provided
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.hpp:27:7:[m[K [01;36m[Knote: [m[Kcandidate 2: '[01m[Kconstexpr LcdDisplay::[01;32m[KLcdDisplay[m[K(const LcdDisplay&)[m[K'
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.hpp:27:7:[m[K [01;36m[Knote: [m[Kcandidate expects 1 argument, 3 provided
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.hpp:27:7:[m[K [01;36m[Knote: [m[Kcandidate 3: '[01m[Kconstexpr LcdDisplay::[01;32m[KLcdDisplay[m[K(LcdDisplay&&)[m[K'
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.hpp:27:7:[m[K [01;36m[Knote: [m[Kcandidate expects 1 argument, 3 provided
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:69:13:[m[K [01;31m[Kerror: [m[K'[01m[Kclass LcdDisplay[m[K' has no member named '[01m[Klcd_init[m[K'
+   69 |     display.[01;31m[Klcd_init[m[K();
+      |             [01;31m[K^~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:70:13:[m[K [01;31m[Kerror: [m[K'[01m[Kclass LcdDisplay[m[K' has no member named '[01m[Kupdate_lcd_task[m[K'
+   70 |     display.[01;31m[Kupdate_lcd_task[m[K(200);
+      |             [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:93:21:[m[K [01;31m[Kerror: [m[K'[01m[Kclass LcdDisplay[m[K' has no member named '[01m[KDisableDisplay[m[K'
+   93 |             display.[01;31m[KDisableDisplay[m[K();
+      |                     [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:97:21:[m[K [01;31m[Kerror: [m[K'[01m[Kclass LcdDisplay[m[K' has no member named '[01m[KNextPage[m[K'
+   97 |             display.[01;31m[KNextPage[m[K();
+      |                     [01;31m[K^~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:101:21:[m[K [01;31m[Kerror: [m[K'[01m[Kclass LcdDisplay[m[K' has no member named '[01m[KPrevPage[m[K'
+  101 |             display.[01;31m[KPrevPage[m[K();
+      |                     [01;31m[K^~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:103:24:[m[K [01;31m[Kerror: [m[K'[01m[Kclass LcdDisplay[m[K' has no member named '[01m[KGetPage[m[K'
+  103 |         page = display.[01;31m[KGetPage[m[K();
+      |                        [01;31m[K^~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:118:21:[m[K [01;31m[Kerror: [m[K'[01m[Kclass LcdDisplay[m[K' has no member named '[01m[KWriteRightAlign[m[K'
+  118 |             display.[01;31m[KWriteRightAlign[m[K(buffer, display.EncodeFloat(buffer, lion_1_volt, 1), 1, 8, 5, page);
+      |                     [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:118:53:[m[K [01;31m[Kerror: [m[K'[01m[Kclass LcdDisplay[m[K' has no member named '[01m[KEncodeFloat[m[K'
+  118 |             display.WriteRightAlign(buffer, display.[01;31m[KEncodeFloat[m[K(buffer, lion_1_volt, 1), 1, 8, 5, page);
+      |                                                     [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:119:21:[m[K [01;31m[Kerror: [m[K'[01m[Kclass LcdDisplay[m[K' has no member named '[01m[KWriteRightAlign[m[K'
+  119 |             display.[01;31m[KWriteRightAlign[m[K(buffer, display.EncodeFloat(buffer, lion_2_volt, 1), 1, 19, 5, page);
+      |                     [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:119:53:[m[K [01;31m[Kerror: [m[K'[01m[Kclass LcdDisplay[m[K' has no member named '[01m[KEncodeFloat[m[K'
+  119 |             display.WriteRightAlign(buffer, display.[01;31m[KEncodeFloat[m[K(buffer, lion_2_volt, 1), 1, 19, 5, page);
+      |                                                     [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:120:21:[m[K [01;31m[Kerror: [m[K'[01m[Kclass LcdDisplay[m[K' has no member named '[01m[KWriteRightAlign[m[K'
+  120 |             display.[01;31m[KWriteRightAlign[m[K(buffer, display.EncodeFloat(buffer, lion_1_cur, 1), 2, 8, 5, page);
+      |                     [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:120:53:[m[K [01;31m[Kerror: [m[K'[01m[Kclass LcdDisplay[m[K' has no member named '[01m[KEncodeFloat[m[K'
+  120 |             display.WriteRightAlign(buffer, display.[01;31m[KEncodeFloat[m[K(buffer, lion_1_cur, 1), 2, 8, 5, page);
+      |                                                     [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:121:21:[m[K [01;31m[Kerror: [m[K'[01m[Kclass LcdDisplay[m[K' has no member named '[01m[KWriteRightAlign[m[K'
+  121 |             display.[01;31m[KWriteRightAlign[m[K(buffer, display.EncodeFloat(buffer, lion_2_cur, 1), 2, 19, 5, page);
+      |                     [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:121:53:[m[K [01;31m[Kerror: [m[K'[01m[Kclass LcdDisplay[m[K' has no member named '[01m[KEncodeFloat[m[K'
+  121 |             display.WriteRightAlign(buffer, display.[01;31m[KEncodeFloat[m[K(buffer, lion_2_cur, 1), 2, 19, 5, page);
+      |                                                     [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:61:11:[m[K [01;35m[Kwarning: [m[Kunused variable '[01m[Ktemperature_buffer[m[K' [[01;35m[K-Wunused-variable[m[K]
+   61 |     float [01;35m[Ktemperature_buffer[m[K = 0;
+      |           [01;35m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.hpp:[m[K At global scope:
+[01m[K/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.hpp:41:17:[m[K [01;35m[Kwarning: [m[K'[01m[Kvoid update_lcd(void*)[m[K' declared '[01m[Kstatic[m[K' but never defined [[01;35m[K-Wunused-function[m[K]
+   41 |     static void [01;35m[Kupdate_lcd[m[K(void *arg);
+      |                 [01;35m[K^~~~~~~~~~[m[K
+ninja: build stopped: subcommand failed.

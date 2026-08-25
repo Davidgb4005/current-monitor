@@ -1,0 +1,72 @@
+Command: ninja all
+[1/11] Performing build step for 'bootloader'
+[1/1] cd /home/esp/esp/CurrentMonitor/build/bootloader && /home/esp/.espressif/python_env/idf6.1_py3.13_env/bin/python /home/esp/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/esp/esp/CurrentMonitor/build/bootloader/bootloader.bin
+Bootloader binary size 0x58d0 bytes. 0x2730 bytes (31%) free.
+[2/11] No install step for 'bootloader'
+[3/11] Completed 'bootloader'
+[4/11] Building CXX object esp-idf/LcdDisplay/CMakeFiles/__idf_LcdDisplay.dir/LcdDisplay.cpp.obj
+[5/11] Linking C static library esp-idf/LcdDisplay/libLcdDisplay.a
+[6/11] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/CurrentMonitor.cpp.obj
+/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp: In function 'int app_main()':
+/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:153:14: warning: unused variable 'testdatat' [-Wunused-variable]
+  153 |         char testdatat[] = {'b', 'u', 't', ' ', 'd', 'o', 'e', 's', ' ', 't', 'h', 'i', 's', ' ', 'w', 'o', 'r', 'k'};
+      |              ^~~~~~~~~
+/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:52:13: warning: unused variable 'data' [-Wunused-variable]
+   52 |     uint8_t data[2]; // Example: read 14 bytes
+      |             ^~~~
+/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:55:13: warning: unused variable 'freq' [-Wunused-variable]
+   55 |     uint8_t freq = 0;
+      |             ^~~~
+/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:61:13: warning: unused variable 'pin5rx' [-Wunused-variable]
+   61 |     uint8_t pin5rx = 5;
+      |             ^~~~~~
+/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:62:13: warning: unused variable 'pin6tx' [-Wunused-variable]
+   62 |     uint8_t pin6tx = 6;
+      |             ^~~~~~
+/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:63:13: warning: unused variable 'pin7sda' [-Wunused-variable]
+   63 |     uint8_t pin7sda = 21;
+      |             ^~~~~~~
+/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:64:13: warning: unused variable 'pin8scl' [-Wunused-variable]
+   64 |     uint8_t pin8scl = 20;
+      |             ^~~~~~~
+/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:76:10: warning: unused variable 'flip' [-Wunused-variable]
+   76 |     bool flip = true;
+      |          ^~~~
+/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:77:13: warning: unused variable 'counter' [-Wunused-variable]
+   77 |     int16_t counter = 0;
+      |             ^~~~~~~
+/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:79:9: warning: unused variable 'position1' [-Wunused-variable]
+   79 |     int position1 = 20;
+      |         ^~~~~~~~~
+/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:80:9: warning: unused variable 'position2' [-Wunused-variable]
+   80 |     int position2 = 0;
+      |         ^~~~~~~~~
+/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:81:14: warning: unused variable 'last' [-Wunused-variable]
+   81 |     uint64_t last = 0;
+      |              ^~~~
+/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:82:14: warning: unused variable 'last_2' [-Wunused-variable]
+   82 |     uint64_t last_2 = 0;
+      |              ^~~~~~
+/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:83:10: warning: unused variable 'one_shot_2' [-Wunused-variable]
+   83 |     bool one_shot_2 = false;
+      |          ^~~~~~~~~~
+/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:84:10: warning: unused variable 'one_shot' [-Wunused-variable]
+   84 |     bool one_shot = false;
+      |          ^~~~~~~~
+/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:85:13: warning: unused variable 'level_a' [-Wunused-variable]
+   85 |     uint8_t level_a = false;
+      |             ^~~~~~~
+/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:86:13: warning: unused variable 'level_b' [-Wunused-variable]
+   86 |     uint8_t level_b = false;
+      |             ^~~~~~~
+[7/11] Linking C static library esp-idf/main/libmain.a
+[8/11] Generating esp-idf/esp_system/ld/sections.ld
+[9/11] Linking CXX executable CurrentMonitor.elf
+[10/11] Generating binary image from built executable
+esptool v5.1.0
+Creating ESP32C6 image...
+Merged 1 ELF section.
+Successfully created ESP32C6 image.
+Generated /home/esp/esp/CurrentMonitor/build/CurrentMonitor.bin
+[11/11] cd /home/esp/esp/CurrentMonitor/build && /home/esp/.espressif/python_env/idf6.1_py3.13_env/bin/python /home/esp/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/esp/esp/CurrentMonitor/build/partition_table/partition-table.bin /home/esp/esp/CurrentMonitor/build/CurrentMonitor.bin
+CurrentMonitor.bin binary size 0x324d0 bytes. Smallest app partition is 0x100000 bytes. 0xcdb30 bytes (80%) free.

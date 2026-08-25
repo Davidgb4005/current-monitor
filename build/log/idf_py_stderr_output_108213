@@ -1,0 +1,65 @@
+Command: /home/esp/.espressif/python_env/idf6.1_py3.13_env/bin/python /home/esp/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c6 --revision 0 --decode-panic backtrace /home/esp/esp/CurrentMonitor/build/CurrentMonitor.elf /home/esp/esp/CurrentMonitor/build/bootloader/bootloader.elf -m '/home/esp/.espressif/python_env/idf6.1_py3.13_env/bin/python' '/home/esp/esp/esp-idf/tools/idf.py'
+[0;33m--- esp-idf-monitor 1.8.0 on /dev/ttyUSB0 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/home/esp/esp/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m40[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/home/esp/esp/esp-idf/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/home/esp/esp/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200c658: [0;33mLcdDisplay::WriteLeftAlign(char*, signed char, unsigned char, unsigned char, unsigned char, bool)[0m[0m at [0;32m/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp[0m[0m:[1;31m182[0m
+[0m--- 0x4200a152: [0;33mapp_main[0m[0m at [0;32m/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp[0m[0m:[1;31m164[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/home/esp/esp/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0m--- 0x40806c76: [0;33mvPortYield[0m[0m at [0;32m/home/esp/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c[0m[0m:[1;31m653[0m
+[0m--- 0x40806c6e: [0;33mvPortYield[0m[0m at [0;32m/home/esp/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c[0m[0m:[1;31m653[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/home/esp/esp/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0m--- 0x4200c9ec: [0;33mLcdDisplay::EncodeFloat(char*, float, int)[0m[0m at [0;32m/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp[0m[0m:[1;31m350[0m
+[0m--- 0x4200c87c: [0;33mLcdDisplay::EncodeFloat(char*, float, int)[0m[0m at [0;32m/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp[0m[0m:[1;31m313[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/home/esp/esp/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0m--- 0x4200c66a: [0;33mLcdDisplay::WriteDecimalAlign(char*, signed char, unsigned char, unsigned char, unsigned char)[0m[0m at [0;32m/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp[0m[0m:[1;31m195[0m
+[0m--- 0x4200a162: [0;33mapp_main[0m[0m at [0;32m/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp[0m[0m:[1;31m171[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/home/esp/esp/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0m--- 0x4200c970: [0;33mLcdDisplay::EncodeFloat(char*, float, int)[0m[0m at [0;32m/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp[0m[0m:[1;31m336[0m
+[0m--- 0x4200c87c: [0;33mLcdDisplay::EncodeFloat(char*, float, int)[0m[0m at [0;32m/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp[0m[0m:[1;31m313[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/home/esp/esp/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0m--- 0x4200c57e: [0;33mLcdDisplay::WriteRightAlign(char*, signed char, unsigned char, unsigned char, unsigned char)[0m[0m at [0;32m/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp[0m[0m:[1;31m154[0m
+[0m--- 0x4200a130: [0;33mapp_main[0m[0m at [0;32m/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp[0m[0m:[1;31m160[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/home/esp/esp/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0m--- 0x4200a0d2: [0;33mapp_main[0m[0m at [0;32m/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp[0m[0m:[1;31m153[0m
+[0m--- 0x4200a0c0: [0;33mapp_main[0m[0m at [0;32m/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp[0m[0m:[1;31m152[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/home/esp/esp/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0m--- 0x4200a14a: [0;33mapp_main[0m[0m at [0;32m/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp[0m[0m:[1;31m160[0m
+[0m--- 0x4200a140: [0;33mapp_main[0m[0m at [0;32m/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp[0m[0m:[1;31m160[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/home/esp/esp/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0m--- 0x40806c78: [0;33mvPortYield[0m[0m at [0;32m/home/esp/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c[0m[0m:[1;31m653[0m
+[0m--- 0x40806c6e: [0;33mvPortYield[0m[0m at [0;32m/home/esp/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c[0m[0m:[1;31m653[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/home/esp/esp/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0m--- 0x4200a0cc: [0;33mapp_main[0m[0m at [0;32m/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp[0m[0m:[1;31m153[0m
+[0m--- 0x4200a0c0: [0;33mapp_main[0m[0m at [0;32m/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp[0m[0m:[1;31m152[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/home/esp/esp/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0m--- 0x40030390: [0;33m_rvfp__floatsisf[0m[0m in [0;32mROM[0m
+[0m--- 0x4200c85e: [0;33mLcdDisplay::EncodeFloat(char*, float, int)[0m[0m at [0;32m/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp[0m[0m:[1;31m309[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/home/esp/esp/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0m--- 0x40806c78: [0;33mvPortYield[0m[0m at [0;32m/home/esp/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c[0m[0m:[1;31m653[0m
+[0m--- 0x40806c6e: [0;33mvPortYield[0m[0m at [0;32m/home/esp/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c[0m[0m:[1;31m653[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/home/esp/esp/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0m--- 0x40806c76: [0;33mvPortYield[0m[0m at [0;32m/home/esp/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c[0m[0m:[1;31m653[0m
+[0m--- 0x40806c6e: [0;33mvPortYield[0m[0m at [0;32m/home/esp/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c[0m[0m:[1;31m653[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/home/esp/esp/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0m--- 0x4200c55a: [0;33mLcdDisplay::WriteRightAlign(char*, signed char, unsigned char, unsigned char, unsigned char)[0m[0m at [0;32m/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp[0m[0m:[1;31m142[0m
+[0m--- 0x4200a130: [0;33mapp_main[0m[0m at [0;32m/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp[0m[0m:[1;31m160[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/home/esp/esp/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0m--- 0x4200c54e: [0;33mLcdDisplay::WriteRightAlign(char*, signed char, unsigned char, unsigned char, unsigned char)[0m[0m at [0;32m/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp[0m[0m:[1;31m149[0m
+[0m--- 0x4200a130: [0;33mapp_main[0m[0m at [0;32m/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp[0m[0m:[1;31m160[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/home/esp/esp/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0m--- 0x4200c646: [0;33mLcdDisplay::WriteLeftAlign(char*, signed char, unsigned char, unsigned char, unsigned char, bool)[0m[0m at [0;32m/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp[0m[0m:[1;31m182[0m
+[0m--- 0x4200a152: [0;33mapp_main[0m[0m at [0;32m/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp[0m[0m:[1;31m164[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/home/esp/esp/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0m--- 0x40806bc0: [0;33mvPortClearInterruptMaskFromISR[0m[0m at [0;32m/home/esp/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c[0m[0m:[1;31m518[0m
+[0m--- 0x40806c50: [0;33mvPortExitCritical[0m[0m at [0;32m/home/esp/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c[0m[0m:[1;31m631[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/home/esp/esp/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0m--- 0x40806c78: [0;33mvPortYield[0m[0m at [0;32m/home/esp/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c[0m[0m:[1;31m653[0m
+[0m--- 0x40806c6e: [0;33mvPortYield[0m[0m at [0;32m/home/esp/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c[0m[0m:[1;31m653[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/home/esp/esp/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0m--- 0x4200c61e: [0;33mLcdDisplay::WriteLeftAlign(char*, signed char, unsigned char, unsigned char, unsigned char, bool)[0m[0m at [0;32m/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp[0m[0m:[1;31m186[0m
+[0m--- 0x4200a152: [0;33mapp_main[0m[0m at [0;32m/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp[0m[0m:[1;31m164[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/home/esp/esp/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0m

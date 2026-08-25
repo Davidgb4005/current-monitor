@@ -1,0 +1,3257 @@
+Command: /home/esp/.espressif/python_env/idf6.1_py3.13_env/bin/python /home/esp/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c6 --revision 0 --decode-panic backtrace /home/esp/esp/CurrentMonitor/build/CurrentMonitor.elf /home/esp/esp/CurrentMonitor/build/bootloader/bootloader.elf -m '/home/esp/.espressif/python_env/idf6.1_py3.13_env/bin/python' '/home/esp/esp/esp-idf/tools/idf.py'
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0xc (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875730,len:0x175c
+load:0x4086b910,len:0xed4
+load:0x4086e610,len:0x3244
+entry 0x4086b91a
+[0;32mI (23) boot: ESP-IDF v6.1-dev-1-gff97953b32-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Dec  4 2025 14:13:05[0m
+[0;32mI (24) boot: chip revision: v0.2[0m
+[0;32mI (25) boot: efuse block revision: v0.3[0m
+[0;32mI (29) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (33) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (37) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (40) boot: Enabling RNG early entropy source...[0m
+[0;32mI (45) boot: Partition Table:[0m
+[0;32mI (47) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (54) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (60) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (67) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (73) boot: End of partition table[0m
+[0;32mI (77) esp_image: segment 0: paddr=00010020 vaddr=42018020 size=09704h ( 38660) map[0m
+[0;32mI (91) esp_image: segment 1: paddr=0001972c vaddr=40800000 size=068ech ( 26860) load[0m
+[0;32mI (98) esp_image: segment 2: paddr=00020020 vaddr=42000020 size=15730h ( 87856) map[0m
+[0;32mI (115) esp_image: segment 3: paddr=00035758 vaddr=408068ec size=0324ch ( 12876) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=000389ac vaddr=40809b40 size=01b24h (  6948) load[0m
+[0;32mI (121) esp_image: segment 5: paddr=0003a4d8 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (129) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (132) boot: Disabling RNG early entropy source...[0m
+[0;32mI (148) cpu_start: Unicore app[0m
+[0;32mI (157) cpu_start: GPIO 17 and 16 are used as console UART I/O pins[0m
+[0;32mI (157) cpu_start: Pro cpu start user code[0m
+[0;32mI (157) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (159) app_init: Application information:[0m
+[0;32mI (163) app_init: Project name:     CurrentMonitor[0m
+[0;32mI (167) app_init: App version:      1[0m
+[0;32mI (171) app_init: Compile time:     Dec  4 2025 14:10:11[0m
+[0;32mI (176) app_init: ELF file SHA256:  bc463068c...[0m
+[0;32mI (180) app_init: ESP-IDF:          v6.1-dev-1-gff97953b32-dirty[0m
+[0;32mI (186) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (190) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (194) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (198) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (204) heap_init: At 4080C660 len 0006FFB0 (447 KiB): RAM[0m
+[0;32mI (209) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (214) heap_init: At 50000020 len 00003FC8 (15 KiB): RTCRAM[0m
+[0;32mI (220) spi_flash: detected chip: generic[0m
+[0;32mI (223) spi_flash: flash io: dio[0m
+[0;33mW (226) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (239) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (245) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (251) coexist: coex firmware version: 0cec0ed[0m
+[0;32mI (270) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (270) main_task: Started on CPU0[0m
+[0;32mI (270) main_task: Calling app_main()[0m
+[0;32mI (270) PinController: Pin Already Used: 1[0m
+[0;32mI (1270) PinController: Pin Val 0[0m
+[0;32mI (1270) ISR: Value: 0[0m
+[0;32mI (2270) PinController: Pin Val 0[0m
+[0;32mI (2270) ISR: Value: 0[0m
+[0;32mI (3270) PinController: Pin Val 0[0m
+[0;32mI (3270) ISR: Value: 0[0m
+[0;32mI (4270) PinController: Pin Val 0[0m
+[0;32mI (4270) ISR: Value: 0[0m
+[0;32mI (5270) PinController: Pin Val 0[0m
+[0;32mI (5270) ISR: Value: 0[0m
+[0;32mI (6270) PinController: Pin Val 0[0m
+[0;32mI (6270) ISR: Value: 0[0m
+[0;32mI (7270) PinController: Pin Val 0[0m
+[0;32mI (7270) ISR: Value: 0[0m
+[0;32mI (8270) PinController: Pin Val 0[0m
+[0;32mI (8270) ISR: Value: 0[0m
+[0;32mI (9270) PinController: Pin Val 0[0m
+[0;32mI (9270) ISR: Value: 0[0m
+[0;32mI (10270) PinController: Pin Val 0[0m
+[0;32mI (10270) ISR: Value: 0[0m
+[0;32mI (11270) PinController: Pin Val 0[0m
+[0;32mI (11270) ISR: Value: 0[0m
+[0;32mI (12270) PinController: Pin Val 0[0m
+[0;32mI (12270) ISR: Value: 0[0m
+[0;32mI (13270) PinController: Pin Val 0[0m
+[0;32mI (13270) ISR: Value: 0[0m
+[0;32mI (14270) PinController: Pin Val 0[0m
+[0;32mI (14270) ISR: Value: 0[0m
+[0;32mI (15270) PinController: Pin Val 0[0m
+[0;32mI (15270) ISR: Value: 0[0m
+[0;32mI (16270) PinController: Pin Val 0[0m
+[0;32mI (16270) ISR: Value: 0[0m
+[0;32mI (17270) PinController: Pin Val 0[0m
+[0;32mI (17270) ISR: Value: 0[0m
+[0;32mI (18270) PinController: Pin Val 0[0m
+[0;32mI (18270) ISR: Value: 0[0m
+[0;32mI (19270) PinController: Pin Val 0[0m
+[0;32mI (19270) ISR: Value: 0[0m
+[0;32mI (20270) PinController: Pin Val 0[0m
+[0;32mI (20270) ISR: Value: 0[0m
+[0;32mI (21270) PinController: Pin Val 0[0m
+[0;32mI (21270) ISR: Value: 0[0m
+[0;32mI (22270) PinController: Pin Val 0[0m
+[0;32mI (22270) ISR: Value: 0[0m
+[0;32mI (23270) PinController: Pin Val 0[0m
+[0;32mI (23270) ISR: Value: 0[0m
+[0;32mI (24270) PinController: Pin Val 0[0m
+[0;32mI (24270) ISR: Value: 0[0m
+[0;32mI (25270) PinController: Pin Val 0[0m
+[0;32mI (25270) ISR: Value: 0[0m
+[0;32mI (26270) PinController: Pin Val 0[0m
+[0;32mI (26270) ISR: Value: 0[0m
+[0;32mI (27270) PinController: Pin Val 0[0m
+[0;32mI (27270) ISR: Value: 0[0m
+[0;32mI (28270) PinController: Pin Val 0[0m
+[0;32mI (28270) ISR: Value: 0[0m
+[0;32mI (29270) PinController: Pin Val 0[0m
+[0;32mI (29270) ISR: Value: 0[0m
+[0;32mI (30270) PinController: Pin Val 0[0m
+[0;32mI (30270) ISR: Value: 0[0m
+[0;32mI (31270) PinController: Pin Val 0[0m
+[0;32mI (31270) ISR: Value: 0[0m
+[0;32mI (32270) PinController: Pin Val 0[0m
+[0;32mI (32270) ISR: Value: 0[0m
+[0;32mI (33270) PinController: Pin Val 0[0m
+[0;32mI (33270) ISR: Value: 0[0m
+[0;32mI (34270) PinController: Pin Val 0[0m
+[0;32mI (34270) ISR: Value: 0[0m
+[0;32mI (35270) PinController: Pin Val 0[0m
+[0;32mI (35270) ISR: Value: 0[0m
+[0;32mI (36270) PinController: Pin Val 0[0m
+[0;32mI (36270) ISR: Value: 0[0m
+[0;32mI (37270) PinController: Pin Val 0[0m
+[0;32mI (37270) ISR: Value: 0[0m
+[0;32mI (38270) PinController: Pin Val 0[0m
+[0;32mI (38270) ISR: Value: 0[0m
+[0;32mI (39270) PinController: Pin Val 0[0m
+[0;32mI (39270) ISR: Value: 0[0m
+[0;32mI (40270) PinController: Pin Val 0[0m
+[0;32mI (40270) ISR: Value: 0[0m
+[0;32mI (41270) PinController: Pin Val 0[0m
+[0;32mI (41270) ISR: Value: 0[0m
+[0;32mI (42270) PinController: Pin Val 0[0m
+[0;32mI (42270) ISR: Value: 0[0m
+[0;32mI (43270) PinController: Pin Val 0[0m
+[0;32mI (43270) ISR: Value: 0[0m
+[0;32mI (44270) PinController: Pin Val 0[0m
+[0;32mI (44270) ISR: Value: 0[0m
+[0;32mI (45270) PinController: Pin Val 0[0m
+[0;32mI (45270) ISR: Value: 0[0m
+[0;32mI (46270) PinController: Pin Val 0[0m
+[0;32mI (46270) ISR: Value: 0[0m
+[0;32mI (47270) PinController: Pin Val 0[0m
+[0;32mI (47270) ISR: Value: 0[0m
+[0;32mI (48270) PinController: Pin Val 0[0m
+[0;32mI (48270) ISR: Value: 0[0m
+[0;32mI (49270) PinController: Pin Val 0[0m
+[0;32mI (49270) ISR: Value: 0[0m
+[0;32mI (50270) PinController: Pin Val 0[0m
+[0;32mI (50270) ISR: Value: 0[0m
+[0;32mI (51270) PinController: Pin Val 0[0m
+[0;32mI (51270) ISR: Value: 0[0m
+[0;32mI (52270) PinController: Pin Val 0[0m
+[0;32mI (52270) ISR: Value: 0[0m
+[0;32mI (53270) PinController: Pin Val 0[0m
+[0;32mI (53270) ISR: Value: 0[0m
+[0;32mI (54270) PinController: Pin Val 0[0m
+[0;32mI (54270) ISR: Value: 0[0m
+[0;32mI (55270) PinController: Pin Val 1[0m
+[0;32mI (55270) ISR: Value: 229[0m
+[0;32mI (56270) PinController: Pin Val 0[0m
+[0;32mI (56270) ISR: Value: 230[0m
+[0;32mI (57270) PinController: Pin Val 0[0m
+[0;32mI (57270) ISR: Value: 230[0m
+[0;32mI (58270) PinController: Pin Val 0[0m
+[0;32mI (58270) ISR: Value: 230[0m
+[0;32mI (59270) PinController: Pin Val 0[0m
+[0;32mI (59270) ISR: Value: 230[0m
+[0;32mI (60270) PinController: Pin Val 0[0m
+[0;32mI (60270) ISR: Value: 230[0m
+[0;32mI (61270) PinController: Pin Val 0[0m
+[0;32mI (61270) ISR: Value: 230[0m
+[0;32mI (62270) PinController: Pin Val 0[0m
+[0;32mI (62270) ISR: Value: 230[0m
+[0;32mI (63270) PinController: Pin Val 0[0m
+[0;32mI (63270) ISR: Value: 230[0m
+[0;32mI (64270) PinController: Pin Val 0[0m
+[0;32mI (64270) ISR: Value: 230[0m
+[0;32mI (65270) PinController: Pin Val 0[0m
+[0;32mI (65270) ISR: Value: 230[0m
+[0;32mI (66270) PinController: Pin Val 0[0m
+[0;32mI (66270) ISR: Value: 230[0m
+[0;32mI (67270) PinController: Pin Val 0[0m
+[0;32mI (67270) ISR: Value: 230[0m
+[0;32mI (68270) PinController: Pin Val 0[0m
+[0;32mI (68270) ISR: Value: 230[0m
+[0;32mI (69270) PinController: Pin Val 0[0m
+[0;32mI (69270) ISR: Value: 230[0m
+[0;32mI (70270) PinController: Pin Val 0[0m
+[0;32mI (70270) ISR: Value: 230[0m
+[0;32mI (71270) PinController: Pin Val 0[0m
+[0;32mI (71270) ISR: Value: 230[0m
+[0;32mI (72270) PinController: Pin Val 0[0m
+[0;32mI (72270) ISR: Value: 230[0m
+[0;32mI (73270) PinController: Pin Val 0[0m
+[0;32mI (73270) ISR: Value: 230[0m
+[0;32mI (74270) PinController: Pin Val 0[0m
+[0;32mI (74270) ISR: Value: 230[0m
+[0;32mI (75270) PinController: Pin Val 0[0m
+[0;32mI (75270) ISR: Value: 230[0m
+[0;32mI (76270) PinController: Pin Val 0[0m
+[0;32mI (76270) ISR: Value: 230[0m
+[0;32mI (77270) PinController: Pin Val 0[0m
+[0;32mI (77270) ISR: Value: 230[0m
+[0;32mI (78270) PinController: Pin Val 0[0m
+[0;32mI (78270) ISR: Value: 230[0m
+[0;32mI (79270) PinController: Pin Val 0[0m
+[0;32mI (79270) ISR: Value: 230[0m
+[0;32mI (80270) PinController: Pin Val 0[0m
+[0;32mI (80270) ISR: Value: 230[0m
+[0;32mI (81270) PinController: Pin Val 0[0m
+[0;32mI (81270) ISR: Value: 230[0m
+[0;32mI (82270) PinController: Pin Val 0[0m
+[0;32mI (82270) ISR: Value: 230[0m
+[0;32mI (83270) PinController: Pin Val 0[0m
+[0;32mI (83270) ISR: Value: 230[0m
+[0;32mI (84270) PinController: Pin Val 0[0m
+[0;32mI (84270) ISR: Value: 230[0m
+[0;32mI (85270) PinController: Pin Val 0[0m
+[0;32mI (85270) ISR: Value: 230[0m
+[0;32mI (86270) PinController: Pin Val 0[0m
+[0;32mI (86270) ISR: Value: 230[0m
+[0;32mI (87270) PinController: Pin Val 0[0m
+[0;32mI (87270) ISR: Value: 230[0m
+[0;32mI (88270) PinController: Pin Val 0[0m
+[0;32mI (88270) ISR: Value: 230[0m
+[0;32mI (89270) PinController: Pin Val 0[0m
+[0;32mI (89270) ISR: Value: 230[0m
+[0;32mI (90270) PinController: Pin Val 0[0m
+[0;32mI (90270) ISR: Value: 230[0m
+[0;32mI (91270) PinController: Pin Val 0[0m
+[0;32mI (91270) ISR: Value: 230[0m
+[0;32mI (92270) PinController: Pin Val 0[0m
+[0;32mI (92270) ISR: Value: 230[0m
+[0;32mI (93270) PinController: Pin Val 0[0m
+[0;32mI (93270) ISR: Value: 230[0m
+[0;32mI (94270) PinController: Pin Val 0[0m
+[0;32mI (94270) ISR: Value: 230[0m
+[0;32mI (95270) PinController: Pin Val 0[0m
+[0;32mI (95270) ISR: Value: 230[0m
+[0;32mI (96270) PinController: Pin Val 0[0m
+[0;32mI (96270) ISR: Value: 230[0m
+[0;32mI (97270) PinController: Pin Val 0[0m
+[0;32mI (97270) ISR: Value: 230[0m
+[0;32mI (98270) PinController: Pin Val 0[0m
+[0;32mI (98270) ISR: Value: 230[0m
+[0;32mI (99270) PinController: Pin Val 0[0m
+[0;32mI (99270) ISR: Value: 230[0m
+[0;32mI (100270) PinController: Pin Val 0[0m
+[0;32mI (100270) ISR: Value: 230[0m
+[0;32mI (101270) PinController: Pin Val 0[0m
+[0;32mI (101270) ISR: Value: 230[0m
+[0;32mI (102270) PinController: Pin Val 0[0m
+[0;32mI (102270) ISR: Value: 230[0m
+[0;32mI (103270) PinController: Pin Val 0[0m
+[0;32mI (103270) ISR: Value: 230[0m
+[0;32mI (104270) PinController: Pin Val 0[0m
+[0;32mI (104270) ISR: Value: 230[0m
+[0;32mI (105270) PinController: Pin Val 0[0m
+[0;32mI (105270) ISR: Value: 230[0m
+[0;32mI (106270) PinController: Pin Val 0[0m
+[0;32mI (106270) ISR: Value: 230[0m
+[0;32mI (107270) PinController: Pin Val 0[0m
+[0;32mI (107270) ISR: Value: 230[0m
+[0;32mI (108270) PinController: Pin Val 0[0m
+[0;32mI (108270) ISR: Value: 230[0m
+[0;32mI (109270) PinController: Pin Val 0[0m
+[0;32mI (109270) ISR: Value: 230[0m
+[0;32mI (110270) PinController: Pin Val 0[0m
+[0;32mI (110270) ISR: Value: 230[0m
+[0;32mI (111270) PinController: Pin Val 0[0m
+[0;32mI (111270) ISR: Value: 230[0m
+[0;32mI (112270) PinController: Pin Val 0[0m
+[0;32mI (112270) ISR: Value: 230[0m
+[0;32mI (113270) PinController: Pin Val 0[0m
+[0;32mI (113270) ISR: Value: 230[0m
+[0;32mI (114270) PinController: Pin Val 0[0m
+[0;32mI (114270) ISR: Value: 230[0m
+[0;32mI (115270) PinController: Pin Val 0[0m
+[0;32mI (115270) ISR: Value: 230[0m
+[0;32mI (116270) PinController: Pin Val 0[0m
+[0;32mI (116270) ISR: Value: 230[0m
+[0;32mI (117270) PinController: Pin Val 0[0m
+[0;32mI (117270) ISR: Value: 230[0m
+[0;32mI (118270) PinController: Pin Val 0[0m
+[0;32mI (118270) ISR: Value: 230[0m
+[0;32mI (119270) PinController: Pin Val 0[0m
+[0;32mI (119270) ISR: Value: 230[0m
+[0;32mI (120270) PinController: Pin Val 0[0m
+[0;32mI (120270) ISR: Value: 230[0m
+[0;32mI (121270) PinController: Pin Val 0[0m
+[0;32mI (121270) ISR: Value: 230[0m
+[0;32mI (122270) PinController: Pin Val 0[0m
+[0;32mI (122270) ISR: Value: 230[0m
+[0;32mI (123270) PinController: Pin Val 0[0m
+[0;32mI (123270) ISR: Value: 230[0m
+[0;32mI (124270) PinController: Pin Val 0[0m
+[0;32mI (124270) ISR: Value: 230[0m
+[0;32mI (125270) PinController: Pin Val 0[0m
+[0;32mI (125270) ISR: Value: 230[0m
+[0;32mI (126270) PinController: Pin Val 0[0m
+[0;32mI (126270) ISR: Value: 230[0m
+[0;32mI (127270) PinController: Pin Val 0[0m
+[0;32mI (127270) ISR: Value: 230[0m
+[0;32mI (128270) PinController: Pin Val 0[0m
+[0;32mI (128270) ISR: Value: 230[0m
+[0;32mI (129270) PinController: Pin Val 0[0m
+[0;32mI (129270) ISR: Value: 230[0m
+[0;32mI (130270) PinController: Pin Val 0[0m
+[0;32mI (130270) ISR: Value: 230[0m
+[0;32mI (131270) PinController: Pin Val 0[0m
+[0;32mI (131270) ISR: Value: 230[0m
+[0;32mI (132270) PinController: Pin Val 0[0m
+[0;32mI (132270) ISR: Value: 230[0m
+[0;32mI (133270) PinController: Pin Val 0[0m
+[0;32mI (133270) ISR: Value: 230[0m
+[0;32mI (134270) PinController: Pin Val 0[0m
+[0;32mI (134270) ISR: Value: 230[0m
+[0;32mI (135270) PinController: Pin Val 0[0m
+[0;32mI (135270) ISR: Value: 230[0m
+[0;32mI (136270) PinController: Pin Val 0[0m
+[0;32mI (136270) ISR: Value: 230[0m
+[0;32mI (137270) PinController: Pin Val 0[0m
+[0;32mI (137270) ISR: Value: 230[0m
+[0;32mI (138270) PinController: Pin Val 0[0m
+[0;32mI (138270) ISR: Value: 230[0m
+[0;32mI (139270) PinController: Pin Val 0[0m
+[0;32mI (139270) ISR: Value: 230[0m
+[0;32mI (140270) PinController: Pin Val 0[0m
+[0;32mI (140270) ISR: Value: 230[0m
+[0;32mI (141270) PinController: Pin Val 0[0m
+[0;32mI (141270) ISR: Value: 230[0m
+[0;32mI (142270) PinController: Pin Val 0[0m
+[0;32mI (142270) ISR: Value: 230[0m
+[0;32mI (143270) PinController: Pin Val 0[0m
+[0;32mI (143270) ISR: Value: 230[0m
+[0;32mI (144270) PinController: Pin Val 0[0m
+[0;32mI (144270) ISR: Value: 230[0m
+[0;32mI (145270) PinController: Pin Val 0[0m
+[0;32mI (145270) ISR: Value: 230[0m
+[0;32mI (146270) PinController: Pin Val 0[0m
+[0;32mI (146270) ISR: Value: 230[0m
+[0;32mI (147270) PinController: Pin Val 0[0m
+[0;32mI (147270) ISR: Value: 230[0m
+[0;32mI (148270) PinController: Pin Val 0[0m
+[0;32mI (148270) ISR: Value: 230[0m
+[0;32mI (149270) PinController: Pin Val 0[0m
+[0;32mI (149270) ISR: Value: 230[0m
+[0;32mI (150270) PinController: Pin Val 0[0m
+[0;32mI (150270) ISR: Value: 230[0m
+[0;32mI (151270) PinController: Pin Val 0[0m
+[0;32mI (151270) ISR: Value: 230[0m
+[0;32mI (152270) PinController: Pin Val 0[0m
+[0;32mI (152270) ISR: Value: 230[0m
+[0;32mI (153270) PinController: Pin Val 0[0m
+[0;32mI (153270) ISR: Value: 230[0m
+[0;32mI (154270) PinController: Pin Val 0[0m
+[0;32mI (154270) ISR: Value: 230[0m
+[0;32mI (155270) PinController: Pin Val 0[0m
+[0;32mI (155270) ISR: Value: 230[0m
+[0;32mI (156270) PinController: Pin Val 0[0m
+[0;32mI (156270) ISR: Value: 230[0m
+[0;32mI (157270) PinController: Pin Val 0[0m
+[0;32mI (157270) ISR: Value: 230[0m
+[0;32mI (158270) PinController: Pin Val 0[0m
+[0;32mI (158270) ISR: Value: 230[0m
+[0;32mI (159270) PinController: Pin Val 0[0m
+[0;32mI (159270) ISR: Value: 230[0m
+[0;32mI (160270) PinController: Pin Val 0[0m
+[0;32mI (160270) ISR: Value: 230[0m
+[0;32mI (161270) PinController: Pin Val 0[0m
+[0;32mI (161270) ISR: Value: 230[0m
+[0;32mI (162270) PinController: Pin Val 0[0m
+[0;32mI (162270) ISR: Value: 230[0m
+[0;32mI (163270) PinController: Pin Val 0[0m
+[0;32mI (163270) ISR: Value: 230[0m
+[0;32mI (164270) PinController: Pin Val 0[0m
+[0;32mI (164270) ISR: Value: 230[0m
+[0;32mI (165270) PinController: Pin Val 0[0m
+[0;32mI (165270) ISR: Value: 230[0m
+[0;32mI (166270) PinController: Pin Val 0[0m
+[0;32mI (166270) ISR: Value: 230[0m
+[0;32mI (167270) PinController: Pin Val 0[0m
+[0;32mI (167270) ISR: Value: 230[0m
+[0;32mI (168270) PinController: Pin Val 0[0m
+[0;32mI (168270) ISR: Value: 230[0m
+[0;32mI (169270) PinController: Pin Val 0[0m
+[0;32mI (169270) ISR: Value: 230[0m
+[0;32mI (170270) PinController: Pin Val 0[0m
+[0;32mI (170270) ISR: Value: 230[0m
+[0;32mI (171270) PinController: Pin Val 0[0m
+[0;32mI (171270) ISR: Value: 230[0m
+[0;32mI (172270) PinController: Pin Val 0[0m
+[0;32mI (172270) ISR: Value: 230[0m
+[0;32mI (173270) PinController: Pin Val 0[0m
+[0;32mI (173270) ISR: Value: 230[0m
+[0;32mI (174270) PinController: Pin Val 0[0m
+[0;32mI (174270) ISR: Value: 230[0m
+[0;32mI (175270) PinController: Pin Val 0[0m
+[0;32mI (175270) ISR: Value: 230[0m
+[0;32mI (176270) PinController: Pin Val 0[0m
+[0;32mI (176270) ISR: Value: 230[0m
+[0;32mI (177270) PinController: Pin Val 0[0m
+[0;32mI (177270) ISR: Value: 230[0m
+[0;32mI (178270) PinController: Pin Val 0[0m
+[0;32mI (178270) ISR: Value: 230[0m
+[0;32mI (179270) PinController: Pin Val 0[0m
+[0;32mI (179270) ISR: Value: 230[0m
+[0;32mI (180270) PinController: Pin Val 0[0m
+[0;32mI (180270) ISR: Value: 230[0m
+[0;32mI (181270) PinController: Pin Val 0[0m
+[0;32mI (181270) ISR: Value: 230[0m
+[0;32mI (182270) PinController: Pin Val 0[0m
+[0;32mI (182270) ISR: Value: 230[0m
+[0;32mI (183270) PinController: Pin Val 0[0m
+[0;32mI (183270) ISR: Value: 230[0m
+[0;32mI (184270) PinController: Pin Val 0[0m
+[0;32mI (184270) ISR: Value: 230[0m
+[0;32mI (185270) PinController: Pin Val 0[0m
+[0;32mI (185270) ISR: Value: 230[0m
+[0;32mI (186270) PinController: Pin Val 0[0m
+[0;32mI (186270) ISR: Value: 230[0m
+[0;32mI (187270) PinController: Pin Val 0[0m
+[0;32mI (187270) ISR: Value: 230[0m
+[0;32mI (188270) PinController: Pin Val 0[0m
+[0;32mI (188270) ISR: Value: 230[0m
+[0;32mI (189270) PinController: Pin Val 0[0m
+[0;32mI (189270) ISR: Value: 230[0m
+[0;32mI (190270) PinController: Pin Val 0[0m
+[0;32mI (190270) ISR: Value: 230[0m
+[0;32mI (191270) PinController: Pin Val 0[0m
+[0;32mI (191270) ISR: Value: 230[0m
+[0;32mI (192270) PinController: Pin Val 0[0m
+[0;32mI (192270) ISR: Value: 230[0m
+[0;32mI (193270) PinController: Pin Val 0[0m
+[0;32mI (193270) ISR: Value: 230[0m
+[0;32mI (194270) PinController: Pin Val 0[0m
+[0;32mI (194270) ISR: Value: 230[0m
+[0;32mI (195270) PinController: Pin Val 0[0m
+[0;32mI (195270) ISR: Value: 230[0m
+[0;32mI (196270) PinController: Pin Val 0[0m
+[0;32mI (196270) ISR: Value: 230[0m
+[0;32mI (197270) PinController: Pin Val 0[0m
+[0;32mI (197270) ISR: Value: 230[0m
+[0;32mI (198270) PinController: Pin Val 0[0m
+[0;32mI (198270) ISR: Value: 230[0m
+[0;32mI (199270) PinController: Pin Val 0[0m
+[0;32mI (199270) ISR: Value: 230[0m
+[0;32mI (200270) PinController: Pin Val 0[0m
+[0;32mI (200270) ISR: Value: 230[0m
+[0;32mI (201270) PinController: Pin Val 0[0m
+[0;32mI (201270) ISR: Value: 230[0m
+[0;32mI (202270) PinController: Pin Val 0[0m
+[0;32mI (202270) ISR: Value: 230[0m
+[0;32mI (203270) PinController: Pin Val 0[0m
+[0;32mI (203270) ISR: Value: 230[0m
+[0;32mI (204270) PinController: Pin Val 0[0m
+[0;32mI (204270) ISR: Value: 230[0m
+[0;32mI (205270) PinController: Pin Val 0[0m
+[0;32mI (205270) ISR: Value: 230[0m
+[0;32mI (206270) PinController: Pin Val 0[0m
+[0;32mI (206270) ISR: Value: 230[0m
+[0;32mI (207270) PinController: Pin Val 0[0m
+[0;32mI (207270) ISR: Value: 230[0m
+[0;32mI (208270) PinController: Pin Val 0[0m
+[0;32mI (208270) ISR: Value: 230[0m
+[0;32mI (209270) PinController: Pin Val 0[0m
+[0;32mI (209270) ISR: Value: 230[0m
+[0;32mI (210270) PinController: Pin Val 0[0m
+[0;32mI (210270) ISR: Value: 230[0m
+[0;32mI (211270) PinController: Pin Val 0[0m
+[0;32mI (211270) ISR: Value: 230[0m
+[0;32mI (212270) PinController: Pin Val 0[0m
+[0;32mI (212270) ISR: Value: 230[0m
+[0;32mI (213270) PinController: Pin Val 0[0m
+[0;32mI (213270) ISR: Value: 230[0m
+[0;32mI (214270) PinController: Pin Val 0[0m
+[0;32mI (214270) ISR: Value: 230[0m
+[0;32mI (215270) PinController: Pin Val 0[0m
+[0;32mI (215270) ISR: Value: 230[0m
+[0;32mI (216270) PinController: Pin Val 0[0m
+[0;32mI (216270) ISR: Value: 230[0m
+[0;32mI (217270) PinController: Pin Val 0[0m
+[0;32mI (217270) ISR: Value: 230[0m
+[0;32mI (218270) PinController: Pin Val 0[0m
+[0;32mI (218270) ISR: Value: 230[0m
+[0;32mI (219270) PinController: Pin Val 0[0m
+[0;32mI (219270) ISR: Value: 230[0m
+[0;32mI (220270) PinController: Pin Val 0[0m
+[0;32mI (220270) ISR: Value: 230[0m
+[0;32mI (221270) PinController: Pin Val 0[0m
+[0;32mI (221270) ISR: Value: 230[0m
+[0;32mI (222270) PinController: Pin Val 0[0m
+[0;32mI (222270) ISR: Value: 230[0m
+[0;32mI (223270) PinController: Pin Val 0[0m
+[0;32mI (223270) ISR: Value: 230[0m
+[0;32mI (224270) PinController: Pin Val 0[0m
+[0;32mI (224270) ISR: Value: 230[0m
+[0;32mI (225270) PinController: Pin Val 0[0m
+[0;32mI (225270) ISR: Value: 230[0m
+[0;32mI (226270) PinController: Pin Val 0[0m
+[0;32mI (226270) ISR: Value: 230[0m
+[0;32mI (227270) PinController: Pin Val 0[0m
+[0;32mI (227270) ISR: Value: 230[0m
+[0;32mI (228270) PinController: Pin Val 0[0m
+[0;32mI (228270) ISR: Value: 230[0m
+[0;32mI (229270) PinController: Pin Val 0[0m
+[0;32mI (229270) ISR: Value: 230[0m
+[0;32mI (230270) PinController: Pin Val 0[0m
+[0;32mI (230270) ISR: Value: 230[0m
+[0;32mI (231270) PinController: Pin Val 0[0m
+[0;32mI (231270) ISR: Value: 230[0m
+[0;32mI (232270) PinController: Pin Val 0[0m
+[0;32mI (232270) ISR: Value: 230[0m
+[0;32mI (233270) PinController: Pin Val 0[0m
+[0;32mI (233270) ISR: Value: 230[0m
+[0;32mI (234270) PinController: Pin Val 0[0m
+[0;32mI (234270) ISR: Value: 230[0m
+[0;32mI (235270) PinController: Pin Val 0[0m
+[0;32mI (235270) ISR: Value: 230[0m
+[0;32mI (236270) PinController: Pin Val 0[0m
+[0;32mI (236270) ISR: Value: 230[0m
+[0;32mI (237270) PinController: Pin Val 0[0m
+[0;32mI (237270) ISR: Value: 230[0m
+[0;32mI (238270) PinController: Pin Val 0[0m
+[0;32mI (238270) ISR: Value: 230[0m
+[0;32mI (239270) PinController: Pin Val 0[0m
+[0;32mI (239270) ISR: Value: 230[0m
+[0;32mI (240270) PinController: Pin Val 0[0m
+[0;32mI (240270) ISR: Value: 230[0m
+[0;32mI (241270) PinController: Pin Val 0[0m
+[0;32mI (241270) ISR: Value: 230[0m
+[0;32mI (242270) PinController: Pin Val 0[0m
+[0;32mI (242270) ISR: Value: 230[0m
+[0;32mI (243270) PinController: Pin Val 0[0m
+[0;32mI (243270) ISR: Value: 230[0m
+[0;32mI (244270) PinController: Pin Val 0[0m
+[0;32mI (244270) ISR: Value: 230[0m
+[0;32mI (245270) PinController: Pin Val 0[0m
+[0;32mI (245270) ISR: Value: 230[0m
+[0;32mI (246270) PinController: Pin Val 0[0m
+[0;32mI (246270) ISR: Value: 230[0m
+[0;32mI (247270) PinController: Pin Val 0[0m
+[0;32mI (247270) ISR: Value: 230[0m
+[0;32mI (248270) PinController: Pin Val 0[0m
+[0;32mI (248270) ISR: Value: 230[0m
+[0;32mI (249270) PinController: Pin Val 0[0m
+[0;32mI (249270) ISR: Value: 230[0m
+[0;32mI (250270) PinController: Pin Val 0[0m
+[0;32mI (250270) ISR: Value: 230[0m
+[0;32mI (251270) PinController: Pin Val 0[0m
+[0;32mI (251270) ISR: Value: 230[0m
+[0;32mI (252270) PinController: Pin Val 0[0m
+[0;32mI (252270) ISR: Value: 230[0m
+[0;32mI (253270) PinController: Pin Val 0[0m
+[0;32mI (253270) ISR: Value: 230[0m
+[0;32mI (254270) PinController: Pin Val 0[0m
+[0;32mI (254270) ISR: Value: 230[0m
+[0;32mI (255270) PinController: Pin Val 0[0m
+[0;32mI (255270) ISR: Value: 230[0m
+[0;32mI (256270) PinController: Pin Val 0[0m
+[0;32mI (256270) ISR: Value: 230[0m
+[0;32mI (257270) PinController: Pin Val 0[0m
+[0;32mI (257270) ISR: Value: 230[0m
+[0;32mI (258270) PinController: Pin Val 0[0m
+[0;32mI (258270) ISR: Value: 230[0m
+[0;32mI (259270) PinController: Pin Val 0[0m
+[0;32mI (259270) ISR: Value: 230[0m
+[0;32mI (260270) PinController: Pin Val 0[0m
+[0;32mI (260270) ISR: Value: 230[0m
+[0;32mI (261270) PinController: Pin Val 0[0m
+[0;32mI (261270) ISR: Value: 230[0m
+[0;32mI (262270) PinController: Pin Val 0[0m
+[0;32mI (262270) ISR: Value: 230[0m
+[0;32mI (263270) PinController: Pin Val 0[0m
+[0;32mI (263270) ISR: Value: 230[0m
+[0;32mI (264270) PinController: Pin Val 0[0m
+[0;32mI (264270) ISR: Value: 230[0m
+[0;32mI (265270) PinController: Pin Val 0[0m
+[0;32mI (265270) ISR: Value: 230[0m
+[0;32mI (266270) PinController: Pin Val 0[0m
+[0;32mI (266270) ISR: Value: 230[0m
+[0;32mI (267270) PinController: Pin Val 0[0m
+[0;32mI (267270) ISR: Value: 230[0m
+[0;32mI (268270) PinController: Pin Val 0[0m
+[0;32mI (268270) ISR: Value: 230[0m
+[0;32mI (269270) PinController: Pin Val 0[0m
+[0;32mI (269270) ISR: Value: 230[0m
+[0;32mI (270270) PinController: Pin Val 0[0m
+[0;32mI (270270) ISR: Value: 230[0m
+[0;32mI (271270) PinController: Pin Val 0[0m
+[0;32mI (271270) ISR: Value: 230[0m
+[0;32mI (272270) PinController: Pin Val 0[0m
+[0;32mI (272270) ISR: Value: 230[0m
+[0;32mI (273270) PinController: Pin Val 0[0m
+[0;32mI (273270) ISR: Value: 230[0m
+[0;32mI (274270) PinController: Pin Val 0[0m
+[0;32mI (274270) ISR: Value: 230[0m
+[0;32mI (275270) PinController: Pin Val 0[0m
+[0;32mI (275270) ISR: Value: 230[0m
+[0;32mI (276270) PinController: Pin Val 0[0m
+[0;32mI (276270) ISR: Value: 230[0m
+[0;32mI (277270) PinController: Pin Val 0[0m
+[0;32mI (277270) ISR: Value: 230[0m
+[0;32mI (278270) PinController: Pin Val 0[0m
+[0;32mI (278270) ISR: Value: 230[0m
+[0;32mI (279270) PinController: Pin Val 0[0m
+[0;32mI (279270) ISR: Value: 230[0m
+[0;32mI (280270) PinController: Pin Val 0[0m
+[0;32mI (280270) ISR: Value: 230[0m
+[0;32mI (281270) PinController: Pin Val 0[0m
+[0;32mI (281270) ISR: Value: 230[0m
+[0;32mI (282270) PinController: Pin Val 0[0m
+[0;32mI (282270) ISR: Value: 230[0m
+[0;32mI (283270) PinController: Pin Val 0[0m
+[0;32mI (283270) ISR: Value: 230[0m
+[0;32mI (284270) PinController: Pin Val 0[0m
+[0;32mI (284270) ISR: Value: 230[0m
+[0;32mI (285270) PinController: Pin Val 0[0m
+[0;32mI (285270) ISR: Value: 230[0m
+[0;32mI (286270) PinController: Pin Val 0[0m
+[0;32mI (286270) ISR: Value: 230[0m
+[0;32mI (287270) PinController: Pin Val 0[0m
+[0;32mI (287270) ISR: Value: 230[0m
+[0;32mI (288270) PinController: Pin Val 0[0m
+[0;32mI (288270) ISR: Value: 230[0m
+[0;32mI (289270) PinController: Pin Val 0[0m
+[0;32mI (289270) ISR: Value: 230[0m
+[0;32mI (290270) PinController: Pin Val 0[0m
+[0;32mI (290270) ISR: Value: 230[0m
+[0;32mI (291270) PinController: Pin Val 0[0m
+[0;32mI (291270) ISR: Value: 230[0m
+[0;32mI (292270) PinController: Pin Val 0[0m
+[0;32mI (292270) ISR: Value: 230[0m
+[0;32mI (293270) PinController: Pin Val 0[0m
+[0;32mI (293270) ISR: Value: 230[0m
+[0;32mI (294270) PinController: Pin Val 0[0m
+[0;32mI (294270) ISR: Value: 230[0m
+[0;32mI (295270) PinController: Pin Val 0[0m
+[0;32mI (295270) ISR: Value: 230[0m
+[0;32mI (296270) PinController: Pin Val 0[0m
+[0;32mI (296270) ISR: Value: 230[0m
+[0;32mI (297270) PinController: Pin Val 0[0m
+[0;32mI (297270) ISR: Value: 230[0m
+[0;32mI (298270) PinController: Pin Val 0[0m
+[0;32mI (298270) ISR: Value: 230[0m
+[0;32mI (299270) PinController: Pin Val 0[0m
+[0;32mI (299270) ISR: Value: 230[0m
+[0;32mI (300270) PinController: Pin Val 0[0m
+[0;32mI (300270) ISR: Value: 230[0m
+[0;32mI (301270) PinController: Pin Val 0[0m
+[0;32mI (301270) ISR: Value: 230[0m
+[0;32mI (302270) PinController: Pin Val 0[0m
+[0;32mI (302270) ISR: Value: 230[0m
+[0;32mI (303270) PinController: Pin Val 0[0m
+[0;32mI (303270) ISR: Value: 230[0m
+[0;32mI (304270) PinController: Pin Val 0[0m
+[0;32mI (304270) ISR: Value: 230[0m
+[0;32mI (305270) PinController: Pin Val 0[0m
+[0;32mI (305270) ISR: Value: 230[0m
+[0;32mI (306270) PinController: Pin Val 0[0m
+[0;32mI (306270) ISR: Value: 230[0m
+[0;32mI (307270) PinController: Pin Val 0[0m
+[0;32mI (307270) ISR: Value: 230[0m
+[0;32mI (308270) PinController: Pin Val 0[0m
+[0;32mI (308270) ISR: Value: 230[0m
+[0;32mI (309270) PinController: Pin Val 0[0m
+[0;32mI (309270) ISR: Value: 230[0m
+[0;32mI (310270) PinController: Pin Val 0[0m
+[0;32mI (310270) ISR: Value: 230[0m
+[0;32mI (311270) PinController: Pin Val 0[0m
+[0;32mI (311270) ISR: Value: 230[0m
+[0;32mI (312270) PinController: Pin Val 0[0m
+[0;32mI (312270) ISR: Value: 230[0m
+[0;32mI (313270) PinController: Pin Val 0[0m
+[0;32mI (313270) ISR: Value: 230[0m
+[0;32mI (314270) PinController: Pin Val 0[0m
+[0;32mI (314270) ISR: Value: 230[0m
+[0;32mI (315270) PinController: Pin Val 0[0m
+[0;32mI (315270) ISR: Value: 230[0m
+[0;32mI (316270) PinController: Pin Val 0[0m
+[0;32mI (316270) ISR: Value: 230[0m
+[0;32mI (317270) PinController: Pin Val 0[0m
+[0;32mI (317270) ISR: Value: 230[0m
+[0;32mI (318270) PinController: Pin Val 0[0m
+[0;32mI (318270) ISR: Value: 230[0m
+[0;32mI (319270) PinController: Pin Val 0[0m
+[0;32mI (319270) ISR: Value: 230[0m
+[0;32mI (320270) PinController: Pin Val 0[0m
+[0;32mI (320270) ISR: Value: 230[0m
+[0;32mI (321270) PinController: Pin Val 0[0m
+[0;32mI (321270) ISR: Value: 230[0m
+[0;32mI (322270) PinController: Pin Val 0[0m
+[0;32mI (322270) ISR: Value: 230[0m
+[0;32mI (323270) PinController: Pin Val 0[0m
+[0;32mI (323270) ISR: Value: 230[0m
+[0;32mI (324270) PinController: Pin Val 0[0m
+[0;32mI (324270) ISR: Value: 230[0m
+[0;32mI (325270) PinController: Pin Val 0[0m
+[0;32mI (325270) ISR: Value: 230[0m
+[0;32mI (326270) PinController: Pin Val 0[0m
+[0;32mI (326270) ISR: Value: 230[0m
+[0;32mI (327270) PinController: Pin Val 0[0m
+[0;32mI (327270) ISR: Value: 230[0m
+[0;32mI (328270) PinController: Pin Val 0[0m
+[0;32mI (328270) ISR: Value: 230[0m
+[0;32mI (329270) PinController: Pin Val 0[0m
+[0;32mI (329270) ISR: Value: 230[0m
+[0;32mI (330270) PinController: Pin Val 0[0m
+[0;32mI (330270) ISR: Value: 230[0m
+[0;32mI (331270) PinController: Pin Val 0[0m
+[0;32mI (331270) ISR: Value: 230[0m
+[0;32mI (332270) PinController: Pin Val 0[0m
+[0;32mI (332270) ISR: Value: 230[0m
+[0;32mI (333270) PinController: Pin Val 0[0m
+[0;32mI (333270) ISR: Value: 230[0m
+[0;32mI (334270) PinController: Pin Val 0[0m
+[0;32mI (334270) ISR: Value: 230[0m
+[0;32mI (335270) PinController: Pin Val 0[0m
+[0;32mI (335270) ISR: Value: 230[0m
+[0;32mI (336270) PinController: Pin Val 0[0m
+[0;32mI (336270) ISR: Value: 230[0m
+[0;32mI (337270) PinController: Pin Val 0[0m
+[0;32mI (337270) ISR: Value: 230[0m
+[0;32mI (338270) PinController: Pin Val 0[0m
+[0;32mI (338270) ISR: Value: 230[0m
+[0;32mI (339270) PinController: Pin Val 0[0m
+[0;32mI (339270) ISR: Value: 230[0m
+[0;32mI (340270) PinController: Pin Val 0[0m
+[0;32mI (340270) ISR: Value: 230[0m
+[0;32mI (341270) PinController: Pin Val 0[0m
+[0;32mI (341270) ISR: Value: 230[0m
+[0;32mI (342270) PinController: Pin Val 0[0m
+[0;32mI (342270) ISR: Value: 230[0m
+[0;32mI (343270) PinController: Pin Val 0[0m
+[0;32mI (343270) ISR: Value: 230[0m
+[0;32mI (344270) PinController: Pin Val 0[0m
+[0;32mI (344270) ISR: Value: 230[0m
+[0;32mI (345270) PinController: Pin Val 0[0m
+[0;32mI (345270) ISR: Value: 230[0m
+[0;32mI (346270) PinController: Pin Val 0[0m
+[0;32mI (346270) ISR: Value: 230[0m
+[0;32mI (347270) PinController: Pin Val 0[0m
+[0;32mI (347270) ISR: Value: 230[0m
+[0;32mI (348270) PinController: Pin Val 0[0m
+[0;32mI (348270) ISR: Value: 230[0m
+[0;32mI (349270) PinController: Pin Val 0[0m
+[0;32mI (349270) ISR: Value: 230[0m
+[0;32mI (350270) PinController: Pin Val 0[0m
+[0;32mI (350270) ISR: Value: 230[0m
+[0;32mI (351270) PinController: Pin Val 0[0m
+[0;32mI (351270) ISR: Value: 230[0m
+[0;32mI (352270) PinController: Pin Val 0[0m
+[0;32mI (352270) ISR: Value: 230[0m
+[0;32mI (353270) PinController: Pin Val 0[0m
+[0;32mI (353270) ISR: Value: 230[0m
+[0;32mI (354270) PinController: Pin Val 0[0m
+[0;32mI (354270) ISR: Value: 230[0m
+[0;32mI (355270) PinController: Pin Val 0[0m
+[0;32mI (355270) ISR: Value: 230[0m
+[0;32mI (356270) PinController: Pin Val 0[0m
+[0;32mI (356270) ISR: Value: 230[0m
+[0;32mI (357270) PinController: Pin Val 0[0m
+[0;32mI (357270) ISR: Value: 230[0m
+[0;32mI (358270) PinController: Pin Val 0[0m
+[0;32mI (358270) ISR: Value: 230[0m
+[0;32mI (359270) PinController: Pin Val 0[0m
+[0;32mI (359270) ISR: Value: 230[0m
+[0;32mI (360270) PinController: Pin Val 0[0m
+[0;32mI (360270) ISR: Value: 230[0m
+[0;32mI (361270) PinController: Pin Val 0[0m
+[0;32mI (361270) ISR: Value: 230[0m
+[0;32mI (362270) PinController: Pin Val 0[0m
+[0;32mI (362270) ISR: Value: 230[0m
+[0;32mI (363270) PinController: Pin Val 0[0m
+[0;32mI (363270) ISR: Value: 230[0m
+[0;32mI (364270) PinController: Pin Val 0[0m
+[0;32mI (364270) ISR: Value: 230[0m
+[0;32mI (365270) PinController: Pin Val 0[0m
+[0;32mI (365270) ISR: Value: 230[0m
+[0;32mI (366270) PinController: Pin Val 0[0m
+[0;32mI (366270) ISR: Value: 230[0m
+[0;32mI (367270) PinController: Pin Val 0[0m
+[0;32mI (367270) ISR: Value: 230[0m
+[0;32mI (368270) PinController: Pin Val 0[0m
+[0;32mI (368270) ISR: Value: 230[0m
+[0;32mI (369270) PinController: Pin Val 0[0m
+[0;32mI (369270) ISR: Value: 230[0m
+[0;32mI (370270) PinController: Pin Val 0[0m
+[0;32mI (370270) ISR: Value: 230[0m
+[0;32mI (371270) PinController: Pin Val 0[0m
+[0;32mI (371270) ISR: Value: 230[0m
+[0;32mI (372270) PinController: Pin Val 0[0m
+[0;32mI (372270) ISR: Value: 230[0m
+[0;32mI (373270) PinController: Pin Val 0[0m
+[0;32mI (373270) ISR: Value: 230[0m
+[0;32mI (374270) PinController: Pin Val 0[0m
+[0;32mI (374270) ISR: Value: 230[0m
+[0;32mI (375270) PinController: Pin Val 0[0m
+[0;32mI (375270) ISR: Value: 230[0m
+[0;32mI (376270) PinController: Pin Val 0[0m
+[0;32mI (376270) ISR: Value: 230[0m
+[0;32mI (377270) PinController: Pin Val 0[0m
+[0;32mI (377270) ISR: Value: 230[0m
+[0;32mI (378270) PinController: Pin Val 0[0m
+[0;32mI (378270) ISR: Value: 230[0m
+[0;32mI (379270) PinController: Pin Val 0[0m
+[0;32mI (379270) ISR: Value: 230[0m
+[0;32mI (380270) PinController: Pin Val 0[0m
+[0;32mI (380270) ISR: Value: 230[0m
+[0;32mI (381270) PinController: Pin Val 0[0m
+[0;32mI (381270) ISR: Value: 230[0m
+[0;32mI (382270) PinController: Pin Val 0[0m
+[0;32mI (382270) ISR: Value: 230[0m
+[0;32mI (383270) PinController: Pin Val 0[0m
+[0;32mI (383270) ISR: Value: 230[0m
+[0;32mI (384270) PinController: Pin Val 0[0m
+[0;32mI (384270) ISR: Value: 230[0m
+[0;32mI (385270) PinController: Pin Val 0[0m
+[0;32mI (385270) ISR: Value: 230[0m
+[0;32mI (386270) PinController: Pin Val 0[0m
+[0;32mI (386270) ISR: Value: 230[0m
+[0;32mI (387270) PinController: Pin Val 0[0m
+[0;32mI (387270) ISR: Value: 230[0m
+[0;32mI (388270) PinController: Pin Val 0[0m
+[0;32mI (388270) ISR: Value: 230[0m
+[0;32mI (389270) PinController: Pin Val 0[0m
+[0;32mI (389270) ISR: Value: 230[0m
+[0;32mI (390270) PinController: Pin Val 0[0m
+[0;32mI (390270) ISR: Value: 230[0m
+[0;32mI (391270) PinController: Pin Val 0[0m
+[0;32mI (391270) ISR: Value: 230[0m
+[0;32mI (392270) PinController: Pin Val 0[0m
+[0;32mI (392270) ISR: Value: 230[0m
+[0;32mI (393270) PinController: Pin Val 0[0m
+[0;32mI (393270) ISR: Value: 241[0m
+[0;32mI (394270) PinController: Pin Val 0[0m
+[0;32mI (394270) ISR: Value: 241[0m
+[0;32mI (395270) PinController: Pin Val 0[0m
+[0;32mI (395270) ISR: Value: 241[0m
+[0;32mI (396270) PinController: Pin Val 0[0m
+[0;32mI (396270) ISR: Value: 241[0m
+[0;32mI (397270) PinController: Pin Val 0[0m
+[0;32mI (397270) ISR: Value: 241[0m
+[0;32mI (398270) PinController: Pin Val 0[0m
+[0;32mI (398270) ISR: Value: 241[0m
+[0;32mI (399270) PinController: Pin Val 0[0m
+[0;32mI (399270) ISR: Value: 241[0m
+[0;32mI (400270) PinController: Pin Val 0[0m
+[0;32mI (400270) ISR: Value: 241[0m
+[0;32mI (401270) PinController: Pin Val 0[0m
+[0;32mI (401270) ISR: Value: 241[0m
+[0;32mI (402270) PinController: Pin Val 0[0m
+[0;32mI (402270) ISR: Value: 241[0m
+[0;32mI (403270) PinController: Pin Val 0[0m
+[0;32mI (403270) ISR: Value: 241[0m
+[0;32mI (404270) PinController: Pin Val 0[0m
+[0;32mI (404270) ISR: Value: 241[0m
+[0;32mI (405270) PinController: Pin Val 0[0m
+[0;32mI (405270) ISR: Value: 241[0m
+[0;32mI (406270) PinController: Pin Val 0[0m
+[0;32mI (406270) ISR: Value: 241[0m
+[0;32mI (407270) PinController: Pin Val 0[0m
+[0;32mI (407270) ISR: Value: 241[0m
+[0;32mI (408270) PinController: Pin Val 0[0m
+[0;32mI (408270) ISR: Value: 241[0m
+[0;32mI (409270) PinController: Pin Val 0[0m
+[0;32mI (409270) ISR: Value: 241[0m
+[0;32mI (410270) PinController: Pin Val 0[0m
+[0;32mI (410270) ISR: Value: 241[0m
+[0;32mI (411270) PinController: Pin Val 0[0m
+[0;32mI (411270) ISR: Value: 241[0m
+[0;32mI (412270) PinController: Pin Val 0[0m
+[0;32mI (412270) ISR: Value: 241[0m
+[0;32mI (413270) PinController: Pin Val 0[0m
+[0;32mI (413270) ISR: Value: 241[0m
+[0;32mI (414270) PinController: Pin Val 0[0m
+[0;32mI (414270) ISR: Value: 241[0m
+[0;32mI (415270) PinController: Pin Val 0[0m
+[0;32mI (415270) ISR: Value: 241[0m
+[0;32mI (416270) PinController: Pin Val 0[0m
+[0;32mI (416270) ISR: Value: 241[0m
+[0;32mI (417270) PinController: Pin Val 0[0m
+[0;32mI (417270) ISR: Value: 241[0m
+[0;32mI (418270) PinController: Pin Val 0[0m
+[0;32mI (418270) ISR: Value: 241[0m
+[0;32mI (419270) PinController: Pin Val 0[0m
+[0;32mI (419270) ISR: Value: 241[0m
+[0;32mI (420270) PinController: Pin Val 0[0m
+[0;32mI (420270) ISR: Value: 241[0m
+[0;32mI (421270) PinController: Pin Val 0[0m
+[0;32mI (421270) ISR: Value: 241[0m
+[0;32mI (422270) PinController: Pin Val 0[0m
+[0;32mI (422270) ISR: Value: 241[0m
+[0;32mI (423270) PinController: Pin Val 0[0m
+[0;32mI (423270) ISR: Value: 241[0m
+[0;32mI (424270) PinController: Pin Val 0[0m
+[0;32mI (424270) ISR: Value: 241[0m
+[0;32mI (425270) PinController: Pin Val 0[0m
+[0;32mI (425270) ISR: Value: 241[0m
+[0;32mI (426270) PinController: Pin Val 0[0m
+[0;32mI (426270) ISR: Value: 241[0m
+[0;32mI (427270) PinController: Pin Val 0[0m
+[0;32mI (427270) ISR: Value: 241[0m
+[0;32mI (428270) PinController: Pin Val 0[0m
+[0;32mI (428270) ISR: Value: 241[0m
+[0;32mI (429270) PinController: Pin Val 0[0m
+[0;32mI (429270) ISR: Value: 241[0m
+[0;32mI (430270) PinController: Pin Val 0[0m
+[0;32mI (430270) ISR: Value: 241[0m
+[0;32mI (431270) PinController: Pin Val 0[0m
+[0;32mI (431270) ISR: Value: 241[0m
+[0;32mI (432270) PinController: Pin Val 0[0m
+[0;32mI (432270) ISR: Value: 241[0m
+[0;32mI (433270) PinController: Pin Val 0[0m
+[0;32mI (433270) ISR: Value: 241[0m
+[0;32mI (434270) PinController: Pin Val 0[0m
+[0;32mI (434270) ISR: Value: 241[0m
+[0;32mI (435270) PinController: Pin Val 0[0m
+[0;32mI (435270) ISR: Value: 241[0m
+[0;32mI (436270) PinController: Pin Val 0[0m
+[0;32mI (436270) ISR: Value: 241[0m
+[0;32mI (437270) PinController: Pin Val 0[0m
+[0;32mI (437270) ISR: Value: 241[0m
+[0;32mI (438270) PinController: Pin Val 0[0m
+[0;32mI (438270) ISR: Value: 241[0m
+[0;32mI (439270) PinController: Pin Val 0[0m
+[0;32mI (439270) ISR: Value: 241[0m
+[0;32mI (440270) PinController: Pin Val 0[0m
+[0;32mI (440270) ISR: Value: 241[0m
+[0;32mI (441270) PinController: Pin Val 0[0m
+[0;32mI (441270) ISR: Value: 241[0m
+[0;32mI (442270) PinController: Pin Val 0[0m
+[0;32mI (442270) ISR: Value: 241[0m
+[0;32mI (443270) PinController: Pin Val 0[0m
+[0;32mI (443270) ISR: Value: 241[0m
+[0;32mI (444270) PinController: Pin Val 0[0m
+[0;32mI (444270) ISR: Value: 241[0m
+[0;32mI (445270) PinController: Pin Val 0[0m
+[0;32mI (445270) ISR: Value: 241[0m
+[0;32mI (446270) PinController: Pin Val 0[0m
+[0;32mI (446270) ISR: Value: 241[0m
+[0;32mI (447270) PinController: Pin Val 0[0m
+[0;32mI (447270) ISR: Value: 241[0m
+[0;32mI (448270) PinController: Pin Val 0[0m
+[0;32mI (448270) ISR: Value: 241[0m
+[0;32mI (449270) PinController: Pin Val 0[0m
+[0;32mI (449270) ISR: Value: 241[0m
+[0;32mI (450270) PinController: Pin Val 0[0m
+[0;32mI (450270) ISR: Value: 241[0m
+[0;32mI (451270) PinController: Pin Val 0[0m
+[0;32mI (451270) ISR: Value: 241[0m
+[0;32mI (452270) PinController: Pin Val 0[0m
+[0;32mI (452270) ISR: Value: 241[0m
+[0;32mI (453270) PinController: Pin Val 0[0m
+[0;32mI (453270) ISR: Value: 241[0m
+[0;32mI (454270) PinController: Pin Val 0[0m
+[0;32mI (454270) ISR: Value: 241[0m
+[0;32mI (455270) PinController: Pin Val 0[0m
+[0;32mI (455270) ISR: Value: 241[0m
+[0;32mI (456270) PinController: Pin Val 0[0m
+[0;32mI (456270) ISR: Value: 241[0m
+[0;32mI (457270) PinController: Pin Val 0[0m
+[0;32mI (457270) ISR: Value: 241[0m
+[0;32mI (458270) PinController: Pin Val 0[0m
+[0;32mI (458270) ISR: Value: 241[0m
+[0;32mI (459270) PinController: Pin Val 0[0m
+[0;32mI (459270) ISR: Value: 241[0m
+[0;32mI (460270) PinController: Pin Val 0[0m
+[0;32mI (460270) ISR: Value: 241[0m
+[0;32mI (461270) PinController: Pin Val 0[0m
+[0;32mI (461270) ISR: Value: 241[0m
+[0;32mI (462270) PinController: Pin Val 0[0m
+[0;32mI (462270) ISR: Value: 241[0m
+[0;32mI (463270) PinController: Pin Val 0[0m
+[0;32mI (463270) ISR: Value: 241[0m
+[0;32mI (464270) PinController: Pin Val 0[0m
+[0;32mI (464270) ISR: Value: 241[0m
+[0;32mI (465270) PinController: Pin Val 0[0m
+[0;32mI (465270) ISR: Value: 241[0m
+[0;32mI (466270) PinController: Pin Val 0[0m
+[0;32mI (466270) ISR: Value: 241[0m
+[0;32mI (467270) PinController: Pin Val 0[0m
+[0;32mI (467270) ISR: Value: 241[0m
+[0;32mI (468270) PinController: Pin Val 0[0m
+[0;32mI (468270) ISR: Value: 241[0m
+[0;32mI (469270) PinController: Pin Val 0[0m
+[0;32mI (469270) ISR: Value: 241[0m
+[0;32mI (470270) PinController: Pin Val 0[0m
+[0;32mI (470270) ISR: Value: 241[0m
+[0;32mI (471270) PinController: Pin Val 0[0m
+[0;32mI (471270) ISR: Value: 241[0m
+[0;32mI (472270) PinController: Pin Val 0[0m
+[0;32mI (472270) ISR: Value: 241[0m
+[0;32mI (473270) PinController: Pin Val 0[0m
+[0;32mI (473270) ISR: Value: 241[0m
+[0;32mI (474270) PinController: Pin Val 0[0m
+[0;32mI (474270) ISR: Value: 241[0m
+[0;32mI (475270) PinController: Pin Val 0[0m
+[0;32mI (475270) ISR: Value: 241[0m
+[0;32mI (476270) PinController: Pin Val 0[0m
+[0;32mI (476270) ISR: Value: 241[0m
+[0;32mI (477270) PinController: Pin Val 0[0m
+[0;32mI (477270) ISR: Value: 241[0m
+[0;32mI (478270) PinController: Pin Val 0[0m
+[0;32mI (478270) ISR: Value: 241[0m
+[0;32mI (479270) PinController: Pin Val 0[0m
+[0;32mI (479270) ISR: Value: 241[0m
+[0;32mI (480270) PinController: Pin Val 0[0m
+[0;32mI (480270) ISR: Value: 241[0m
+[0;32mI (481270) PinController: Pin Val 0[0m
+[0;32mI (481270) ISR: Value: 241[0m
+[0;32mI (482270) PinController: Pin Val 0[0m
+[0;32mI (482270) ISR: Value: 241[0m
+[0;32mI (483270) PinController: Pin Val 0[0m
+[0;32mI (483270) ISR: Value: 241[0m
+[0;32mI (484270) PinController: Pin Val 0[0m
+[0;32mI (484270) ISR: Value: 241[0m
+[0;32mI (485270) PinController: Pin Val 0[0m
+[0;32mI (485270) ISR: Value: 241[0m
+[0;32mI (486270) PinController: Pin Val 0[0m
+[0;32mI (486270) ISR: Value: 241[0m
+[0;32mI (487270) PinController: Pin Val 0[0m
+[0;32mI (487270) ISR: Value: 241[0m
+[0;32mI (488270) PinController: Pin Val 0[0m
+[0;32mI (488270) ISR: Value: 241[0m
+[0;32mI (489270) PinController: Pin Val 0[0m
+[0;32mI (489270) ISR: Value: 241[0m
+[0;32mI (490270) PinController: Pin Val 0[0m
+[0;32mI (490270) ISR: Value: 241[0m
+[0;32mI (491270) PinController: Pin Val 0[0m
+[0;32mI (491270) ISR: Value: 241[0m
+[0;32mI (492270) PinController: Pin Val 0[0m
+[0;32mI (492270) ISR: Value: 241[0m
+[0;32mI (493270) PinController: Pin Val 0[0m
+[0;32mI (493270) ISR: Value: 241[0m
+[0;32mI (494270) PinController: Pin Val 0[0m
+[0;32mI (494270) ISR: Value: 241[0m
+[0;32mI (495270) PinController: Pin Val 0[0m
+[0;32mI (495270) ISR: Value: 241[0m
+[0;32mI (496270) PinController: Pin Val 0[0m
+[0;32mI (496270) ISR: Value: 241[0m
+[0;32mI (497270) PinController: Pin Val 0[0m
+[0;32mI (497270) ISR: Value: 241[0m
+[0;32mI (498270) PinController: Pin Val 0[0m
+[0;32mI (498270) ISR: Value: 241[0m
+[0;32mI (499270) PinController: Pin Val 0[0m
+[0;32mI (499270) ISR: Value: 241[0m
+[0;32mI (500270) PinController: Pin Val 0[0m
+[0;32mI (500270) ISR: Value: 241[0m
+[0;32mI (501270) PinController: Pin Val 0[0m
+[0;32mI (501270) ISR: Value: 241[0m
+[0;32mI (502270) PinController: Pin Val 0[0m
+[0;32mI (502270) ISR: Value: 241[0m
+[0;32mI (503270) PinController: Pin Val 0[0m
+[0;32mI (503270) ISR: Value: 241[0m
+[0;32mI (504270) PinController: Pin Val 0[0m
+[0;32mI (504270) ISR: Value: 241[0m
+[0;32mI (505270) PinController: Pin Val 0[0m
+[0;32mI (505270) ISR: Value: 241[0m
+[0;32mI (506270) PinController: Pin Val 0[0m
+[0;32mI (506270) ISR: Value: 241[0m
+[0;32mI (507270) PinController: Pin Val 0[0m
+[0;32mI (507270) ISR: Value: 241[0m
+[0;32mI (508270) PinController: Pin Val 0[0m
+[0;32mI (508270) ISR: Value: 241[0m
+[0;32mI (509270) PinController: Pin Val 0[0m
+[0;32mI (509270) ISR: Value: 241[0m
+[0;32mI (510270) PinController: Pin Val 0[0m
+[0;32mI (510270) ISR: Value: 241[0m
+[0;32mI (511270) PinController: Pin Val 0[0m
+[0;32mI (511270) ISR: Value: 241[0m
+[0;32mI (512270) PinController: Pin Val 0[0m
+[0;32mI (512270) ISR: Value: 241[0m
+[0;32mI (513270) PinController: Pin Val 0[0m
+[0;32mI (513270) ISR: Value: 241[0m
+[0;32mI (514270) PinController: Pin Val 0[0m
+[0;32mI (514270) ISR: Value: 241[0m
+[0;32mI (515270) PinController: Pin Val 0[0m
+[0;32mI (515270) ISR: Value: 241[0m
+[0;32mI (516270) PinController: Pin Val 0[0m
+[0;32mI (516270) ISR: Value: 241[0m
+[0;32mI (517270) PinController: Pin Val 0[0m
+[0;32mI (517270) ISR: Value: 241[0m
+[0;32mI (518270) PinController: Pin Val 0[0m
+[0;32mI (518270) ISR: Value: 241[0m
+[0;32mI (519270) PinController: Pin Val 0[0m
+[0;32mI (519270) ISR: Value: 241[0m
+[0;32mI (520270) PinController: Pin Val 0[0m
+[0;32mI (520270) ISR: Value: 241[0m
+[0;32mI (521270) PinController: Pin Val 0[0m
+[0;32mI (521270) ISR: Value: 241[0m
+[0;32mI (522270) PinController: Pin Val 0[0m
+[0;32mI (522270) ISR: Value: 241[0m
+[0;32mI (523270) PinController: Pin Val 0[0m
+[0;32mI (523270) ISR: Value: 241[0m
+[0;32mI (524270) PinController: Pin Val 0[0m
+[0;32mI (524270) ISR: Value: 241[0m
+[0;32mI (525270) PinController: Pin Val 0[0m
+[0;32mI (525270) ISR: Value: 241[0m
+[0;32mI (526270) PinController: Pin Val 0[0m
+[0;32mI (526270) ISR: Value: 241[0m
+[0;32mI (527270) PinController: Pin Val 0[0m
+[0;32mI (527270) ISR: Value: 241[0m
+[0;32mI (528270) PinController: Pin Val 0[0m
+[0;32mI (528270) ISR: Value: 241[0m
+[0;32mI (529270) PinController: Pin Val 0[0m
+[0;32mI (529270) ISR: Value: 241[0m
+[0;32mI (530270) PinController: Pin Val 0[0m
+[0;32mI (530270) ISR: Value: 241[0m
+[0;32mI (531270) PinController: Pin Val 0[0m
+[0;32mI (531270) ISR: Value: 241[0m
+[0;32mI (532270) PinController: Pin Val 0[0m
+[0;32mI (532270) ISR: Value: 241[0m
+[0;32mI (533270) PinController: Pin Val 0[0m
+[0;32mI (533270) ISR: Value: 241[0m
+[0;32mI (534270) PinController: Pin Val 0[0m
+[0;32mI (534270) ISR: Value: 241[0m
+[0;32mI (535270) PinController: Pin Val 0[0m
+[0;32mI (535270) ISR: Value: 241[0m
+[0;32mI (536270) PinController: Pin Val 0[0m
+[0;32mI (536270) ISR: Value: 241[0m
+[0;32mI (537270) PinController: Pin Val 0[0m
+[0;32mI (537270) ISR: Value: 241[0m
+[0;32mI (538270) PinController: Pin Val 0[0m
+[0;32mI (538270) ISR: Value: 241[0m
+[0;32mI (539270) PinController: Pin Val 0[0m
+[0;32mI (539270) ISR: Value: 241[0m
+[0;32mI (540270) PinController: Pin Val 0[0m
+[0;32mI (540270) ISR: Value: 241[0m
+[0;32mI (541270) PinController: Pin Val 0[0m
+[0;32mI (541270) ISR: Value: 241[0m
+[0;32mI (542270) PinController: Pin Val 0[0m
+[0;32mI (542270) ISR: Value: 241[0m
+[0;32mI (543270) PinController: Pin Val 0[0m
+[0;32mI (543270) ISR: Value: 241[0m
+[0;32mI (544270) PinController: Pin Val 0[0m
+[0;32mI (544270) ISR: Value: 241[0m
+[0;32mI (545270) PinController: Pin Val 0[0m
+[0;32mI (545270) ISR: Value: 241[0m
+[0;32mI (546270) PinController: Pin Val 0[0m
+[0;32mI (546270) ISR: Value: 241[0m
+[0;32mI (547270) PinController: Pin Val 0[0m
+[0;32mI (547270) ISR: Value: 241[0m
+[0;32mI (548270) PinController: Pin Val 0[0m
+[0;32mI (548270) ISR: Value: 241[0m
+[0;32mI (549270) PinController: Pin Val 0[0m
+[0;32mI (549270) ISR: Value: 241[0m
+[0;32mI (550270) PinController: Pin Val 0[0m
+[0;32mI (550270) ISR: Value: 241[0m
+[0;32mI (551270) PinController: Pin Val 0[0m
+[0;32mI (551270) ISR: Value: 241[0m
+[0;32mI (552270) PinController: Pin Val 0[0m
+[0;32mI (552270) ISR: Value: 241[0m
+[0;32mI (553270) PinController: Pin Val 0[0m
+[0;32mI (553270) ISR: Value: 241[0m
+[0;32mI (554270) PinController: Pin Val 0[0m
+[0;32mI (554270) ISR: Value: 241[0m
+[0;32mI (555270) PinController: Pin Val 0[0m
+[0;32mI (555270) ISR: Value: 241[0m
+[0;32mI (556270) PinController: Pin Val 0[0m
+[0;32mI (556270) ISR: Value: 241[0m
+[0;32mI (557270) PinController: Pin Val 0[0m
+[0;32mI (557270) ISR: Value: 241[0m
+[0;32mI (558270) PinController: Pin Val 0[0m
+[0;32mI (558270) ISR: Value: 241[0m
+[0;32mI (559270) PinController: Pin Val 0[0m
+[0;32mI (559270) ISR: Value: 241[0m
+[0;32mI (560270) PinController: Pin Val 0[0m
+[0;32mI (560270) ISR: Value: 241[0m
+[0;32mI (561270) PinController: Pin Val 0[0m
+[0;32mI (561270) ISR: Value: 241[0m
+[0;32mI (562270) PinController: Pin Val 0[0m
+[0;32mI (562270) ISR: Value: 241[0m
+[0;32mI (563270) PinController: Pin Val 0[0m
+[0;32mI (563270) ISR: Value: 241[0m
+[0;32mI (564270) PinController: Pin Val 0[0m
+[0;32mI (564270) ISR: Value: 241[0m
+[0;32mI (565270) PinController: Pin Val 0[0m
+[0;32mI (565270) ISR: Value: 241[0m
+[0;32mI (566270) PinController: Pin Val 0[0m
+[0;32mI (566270) ISR: Value: 241[0m
+[0;32mI (567270) PinController: Pin Val 0[0m
+[0;32mI (567270) ISR: Value: 241[0m
+[0;32mI (568270) PinController: Pin Val 0[0m
+[0;32mI (568270) ISR: Value: 241[0m
+[0;32mI (569270) PinController: Pin Val 0[0m
+[0;32mI (569270) ISR: Value: 241[0m
+[0;32mI (570270) PinController: Pin Val 0[0m
+[0;32mI (570270) ISR: Value: 241[0m
+[0;32mI (571270) PinController: Pin Val 0[0m
+[0;32mI (571270) ISR: Value: 241[0m
+[0;32mI (572270) PinController: Pin Val 0[0m
+[0;32mI (572270) ISR: Value: 241[0m
+[0;32mI (573270) PinController: Pin Val 0[0m
+[0;32mI (573270) ISR: Value: 241[0m
+[0;32mI (574270) PinController: Pin Val 0[0m
+[0;32mI (574270) ISR: Value: 241[0m
+[0;32mI (575270) PinController: Pin Val 0[0m
+[0;32mI (575270) ISR: Value: 241[0m
+[0;32mI (576270) PinController: Pin Val 0[0m
+[0;32mI (576270) ISR: Value: 241[0m
+[0;32mI (577270) PinController: Pin Val 0[0m
+[0;32mI (577270) ISR: Value: 241[0m
+[0;32mI (578270) PinController: Pin Val 0[0m
+[0;32mI (578270) ISR: Value: 241[0m
+[0;32mI (579270) PinController: Pin Val 0[0m
+[0;32mI (579270) ISR: Value: 241[0m
+[0;32mI (580270) PinController: Pin Val 0[0m
+[0;32mI (580270) ISR: Value: 241[0m
+[0;32mI (581270) PinController: Pin Val 0[0m
+[0;32mI (581270) ISR: Value: 241[0m
+[0;32mI (582270) PinController: Pin Val 0[0m
+[0;32mI (582270) ISR: Value: 241[0m
+[0;32mI (583270) PinController: Pin Val 0[0m
+[0;32mI (583270) ISR: Value: 241[0m
+[0;32mI (584270) PinController: Pin Val 0[0m
+[0;32mI (584270) ISR: Value: 241[0m
+[0;32mI (585270) PinController: Pin Val 0[0m
+[0;32mI (585270) ISR: Value: 241[0m
+[0;32mI (586270) PinController: Pin Val 0[0m
+[0;32mI (586270) ISR: Value: 241[0m
+[0;32mI (587270) PinController: Pin Val 0[0m
+[0;32mI (587270) ISR: Value: 241[0m
+[0;32mI (588270) PinController: Pin Val 0[0m
+[0;32mI (588270) ISR: Value: 241[0m
+[0;32mI (589270) PinController: Pin Val 0[0m
+[0;32mI (589270) ISR: Value: 241[0m
+[0;32mI (590270) PinController: Pin Val 0[0m
+[0;32mI (590270) ISR: Value: 241[0m
+[0;32mI (591270) PinController: Pin Val 0[0m
+[0;32mI (591270) ISR: Value: 241[0m
+[0;32mI (592270) PinController: Pin Val 0[0m
+[0;32mI (592270) ISR: Value: 241[0m
+[0;32mI (593270) PinController: Pin Val 0[0m
+[0;32mI (593270) ISR: Value: 241[0m
+[0;32mI (594270) PinController: Pin Val 0[0m
+[0;32mI (594270) ISR: Value: 241[0m
+[0;32mI (595270) PinController: Pin Val 0[0m
+[0;32mI (595270) ISR: Value: 241[0m
+[0;32mI (596270) PinController: Pin Val 0[0m
+[0;32mI (596270) ISR: Value: 241[0m
+[0;32mI (597270) PinController: Pin Val 0[0m
+[0;32mI (597270) ISR: Value: 241[0m
+[0;32mI (598270) PinController: Pin Val 0[0m
+[0;32mI (598270) ISR: Value: 241[0m
+[0;32mI (599270) PinController: Pin Val 0[0m
+[0;32mI (599270) ISR: Value: 241[0m
+[0;32mI (600270) PinController: Pin Val 0[0m
+[0;32mI (600270) ISR: Value: 241[0m
+[0;32mI (601270) PinController: Pin Val 0[0m
+[0;32mI (601270) ISR: Value: 241[0m
+[0;32mI (602270) PinController: Pin Val 0[0m
+[0;32mI (602270) ISR: Value: 241[0m
+[0;32mI (603270) PinController: Pin Val 0[0m
+[0;32mI (603270) ISR: Value: 241[0m
+[0;32mI (604270) PinController: Pin Val 0[0m
+[0;32mI (604270) ISR: Value: 241[0m
+[0;32mI (605270) PinController: Pin Val 0[0m
+[0;32mI (605270) ISR: Value: 241[0m
+[0;32mI (606270) PinController: Pin Val 0[0m
+[0;32mI (606270) ISR: Value: 241[0m
+[0;32mI (607270) PinController: Pin Val 0[0m
+[0;32mI (607270) ISR: Value: 241[0m
+[0;32mI (608270) PinController: Pin Val 0[0m
+[0;32mI (608270) ISR: Value: 241[0m
+[0;32mI (609270) PinController: Pin Val 0[0m
+[0;32mI (609270) ISR: Value: 241[0m
+[0;32mI (610270) PinController: Pin Val 0[0m
+[0;32mI (610270) ISR: Value: 241[0m
+[0;32mI (611270) PinController: Pin Val 0[0m
+[0;32mI (611270) ISR: Value: 241[0m
+[0;32mI (612270) PinController: Pin Val 0[0m
+[0;32mI (612270) ISR: Value: 241[0m
+[0;32mI (613270) PinController: Pin Val 0[0m
+[0;32mI (613270) ISR: Value: 241[0m
+[0;32mI (614270) PinController: Pin Val 0[0m
+[0;32mI (614270) ISR: Value: 241[0m
+[0;32mI (615270) PinController: Pin Val 0[0m
+[0;32mI (615270) ISR: Value: 241[0m
+[0;32mI (616270) PinController: Pin Val 0[0m
+[0;32mI (616270) ISR: Value: 241[0m
+[0;32mI (617270) PinController: Pin Val 0[0m
+[0;32mI (617270) ISR: Value: 241[0m
+[0;32mI (618270) PinController: Pin Val 0[0m
+[0;32mI (618270) ISR: Value: 241[0m
+[0;32mI (619270) PinController: Pin Val 0[0m
+[0;32mI (619270) ISR: Value: 241[0m
+[0;32mI (620270) PinController: Pin Val 0[0m
+[0;32mI (620270) ISR: Value: 241[0m
+[0;32mI (621270) PinController: Pin Val 0[0m
+[0;32mI (621270) ISR: Value: 241[0m
+[0;32mI (622270) PinController: Pin Val 0[0m
+[0;32mI (622270) ISR: Value: 241[0m
+[0;32mI (623270) PinController: Pin Val 0[0m
+[0;32mI (623270) ISR: Value: 241[0m
+[0;32mI (624270) PinController: Pin Val 0[0m
+[0;32mI (624270) ISR: Value: 241[0m
+[0;32mI (625270) PinController: Pin Val 0[0m
+[0;32mI (625270) ISR: Value: 241[0m
+[0;32mI (626270) PinController: Pin Val 0[0m
+[0;32mI (626270) ISR: Value: 241[0m
+[0;32mI (627270) PinController: Pin Val 0[0m
+[0;32mI (627270) ISR: Value: 241[0m
+[0;32mI (628270) PinController: Pin Val 0[0m
+[0;32mI (628270) ISR: Value: 241[0m
+[0;32mI (629270) PinController: Pin Val 0[0m
+[0;32mI (629270) ISR: Value: 241[0m
+[0;32mI (630270) PinController: Pin Val 0[0m
+[0;32mI (630270) ISR: Value: 241[0m
+[0;32mI (631270) PinController: Pin Val 0[0m
+[0;32mI (631270) ISR: Value: 241[0m
+[0;32mI (632270) PinController: Pin Val 0[0m
+[0;32mI (632270) ISR: Value: 241[0m
+[0;32mI (633270) PinController: Pin Val 0[0m
+[0;32mI (633270) ISR: Value: 241[0m
+[0;32mI (634270) PinController: Pin Val 0[0m
+[0;32mI (634270) ISR: Value: 241[0m
+[0;32mI (635270) PinController: Pin Val 0[0m
+[0;32mI (635270) ISR: Value: 241[0m
+[0;32mI (636270) PinController: Pin Val 0[0m
+[0;32mI (636270) ISR: Value: 241[0m
+[0;32mI (637270) PinController: Pin Val 0[0m
+[0;32mI (637270) ISR: Value: 241[0m
+[0;32mI (638270) PinController: Pin Val 0[0m
+[0;32mI (638270) ISR: Value: 241[0m
+[0;32mI (639270) PinController: Pin Val 0[0m
+[0;32mI (639270) ISR: Value: 241[0m
+[0;32mI (640270) PinController: Pin Val 0[0m
+[0;32mI (640270) ISR: Value: 241[0m
+[0;32mI (641270) PinController: Pin Val 0[0m
+[0;32mI (641270) ISR: Value: 241[0m
+[0;32mI (642270) PinController: Pin Val 0[0m
+[0;32mI (642270) ISR: Value: 241[0m
+[0;32mI (643270) PinController: Pin Val 0[0m
+[0;32mI (643270) ISR: Value: 241[0m
+[0;32mI (644270) PinController: Pin Val 0[0m
+[0;32mI (644270) ISR: Value: 241[0m
+[0;32mI (645270) PinController: Pin Val 0[0m
+[0;32mI (645270) ISR: Value: 241[0m
+[0;32mI (646270) PinController: Pin Val 0[0m
+[0;32mI (646270) ISR: Value: 241[0m
+[0;32mI (647270) PinController: Pin Val 0[0m
+[0;32mI (647270) ISR: Value: 241[0m
+[0;32mI (648270) PinController: Pin Val 0[0m
+[0;32mI (648270) ISR: Value: 241[0m
+[0;32mI (649270) PinController: Pin Val 0[0m
+[0;32mI (649270) ISR: Value: 241[0m
+[0;32mI (650270) PinController: Pin Val 0[0m
+[0;32mI (650270) ISR: Value: 241[0m
+[0;32mI (651270) PinController: Pin Val 0[0m
+[0;32mI (651270) ISR: Value: 241[0m
+[0;32mI (652270) PinController: Pin Val 0[0m
+[0;32mI (652270) ISR: Value: 241[0m
+[0;32mI (653270) PinController: Pin Val 0[0m
+[0;32mI (653270) ISR: Value: 241[0m
+[0;32mI (654270) PinController: Pin Val 0[0m
+[0;32mI (654270) ISR: Value: 241[0m
+[0;32mI (655270) PinController: Pin Val 0[0m
+[0;32mI (655270) ISR: Value: 241[0m
+[0;32mI (656270) PinController: Pin Val 0[0m
+[0;32mI (656270) ISR: Value: 241[0m
+[0;32mI (657270) PinController: Pin Val 0[0m
+[0;32mI (657270) ISR: Value: 241[0m
+[0;32mI (658270) PinController: Pin Val 0[0m
+[0;32mI (658270) ISR: Value: 241[0m
+[0;32mI (659270) PinController: Pin Val 0[0m
+[0;32mI (659270) ISR: Value: 241[0m
+[0;32mI (660270) PinController: Pin Val 0[0m
+[0;32mI (660270) ISR: Value: 241[0m
+[0;32mI (661270) PinController: Pin Val 0[0m
+[0;32mI (661270) ISR: Value: 241[0m
+[0;32mI (662270) PinController: Pin Val 0[0m
+[0;32mI (662270) ISR: Value: 241[0m
+[0;32mI (663270) PinController: Pin Val 0[0m
+[0;32mI (663270) ISR: Value: 241[0m
+[0;32mI (664270) PinController: Pin Val 0[0m
+[0;32mI (664270) ISR: Value: 241[0m
+[0;32mI (665270) PinController: Pin Val 0[0m
+[0;32mI (665270) ISR: Value: 241[0m
+[0;32mI (666270) PinController: Pin Val 0[0m
+[0;32mI (666270) ISR: Value: 241[0m
+[0;32mI (667270) PinController: Pin Val 0[0m
+[0;32mI (667270) ISR: Value: 241[0m
+[0;32mI (668270) PinController: Pin Val 0[0m
+[0;32mI (668270) ISR: Value: 241[0m
+[0;32mI (669270) PinController: Pin Val 0[0m
+[0;32mI (669270) ISR: Value: 241[0m
+[0;32mI (670270) PinController: Pin Val 0[0m
+[0;32mI (670270) ISR: Value: 241[0m
+[0;32mI (671270) PinController: Pin Val 0[0m
+[0;32mI (671270) ISR: Value: 241[0m
+[0;32mI (672270) PinController: Pin Val 0[0m
+[0;32mI (672270) ISR: Value: 241[0m
+[0;32mI (673270) PinController: Pin Val 0[0m
+[0;32mI (673270) ISR: Value: 241[0m
+[0;32mI (674270) PinController: Pin Val 0[0m
+[0;32mI (674270) ISR: Value: 241[0m
+[0;32mI (675270) PinController: Pin Val 0[0m
+[0;32mI (675270) ISR: Value: 241[0m
+[0;32mI (676270) PinController: Pin Val 0[0m
+[0;32mI (676270) ISR: Value: 241[0m
+[0;32mI (677270) PinController: Pin Val 0[0m
+[0;32mI (677270) ISR: Value: 241[0m
+[0;32mI (678270) PinController: Pin Val 0[0m
+[0;32mI (678270) ISR: Value: 241[0m
+[0;32mI (679270) PinController: Pin Val 0[0m
+[0;32mI (679270) ISR: Value: 241[0m
+[0;32mI (680270) PinController: Pin Val 0[0m
+[0;32mI (680270) ISR: Value: 241[0m
+[0;32mI (681270) PinController: Pin Val 0[0m
+[0;32mI (681270) ISR: Value: 241[0m
+[0;32mI (682270) PinController: Pin Val 0[0m
+[0;32mI (682270) ISR: Value: 241[0m
+[0;32mI (683270) PinController: Pin Val 0[0m
+[0;32mI (683270) ISR: Value: 241[0m
+[0;32mI (684270) PinController: Pin Val 0[0m
+[0;32mI (684270) ISR: Value: 241[0m
+[0;32mI (685270) PinController: Pin Val 0[0m
+[0;32mI (685270) ISR: Value: 241[0m
+[0;32mI (686270) PinController: Pin Val 0[0m
+[0;32mI (686270) ISR: Value: 241[0m
+[0;32mI (687270) PinController: Pin Val 0[0m
+[0;32mI (687270) ISR: Value: 241[0m
+[0;32mI (688270) PinController: Pin Val 0[0m
+[0;32mI (688270) ISR: Value: 241[0m
+[0;32mI (689270) PinController: Pin Val 0[0m
+[0;32mI (689270) ISR: Value: 241[0m
+[0;32mI (690270) PinController: Pin Val 0[0m
+[0;32mI (690270) ISR: Value: 241[0m
+[0;32mI (691270) PinController: Pin Val 0[0m
+[0;32mI (691270) ISR: Value: 241[0m
+[0;32mI (692270) PinController: Pin Val 0[0m
+[0;32mI (692270) ISR: Value: 241[0m
+[0;32mI (693270) PinController: Pin Val 0[0m
+[0;32mI (693270) ISR: Value: 241[0m
+[0;32mI (694270) PinController: Pin Val 0[0m
+[0;32mI (694270) ISR: Value: 241[0m
+[0;32mI (695270) PinController: Pin Val 0[0m
+[0;32mI (695270) ISR: Value: 241[0m
+[0;32mI (696270) PinController: Pin Val 0[0m
+[0;32mI (696270) ISR: Value: 241[0m
+[0;32mI (697270) PinController: Pin Val 0[0m
+[0;32mI (697270) ISR: Value: 241[0m
+[0;32mI (698270) PinController: Pin Val 0[0m
+[0;32mI (698270) ISR: Value: 241[0m
+[0;32mI (699270) PinController: Pin Val 0[0m
+[0;32mI (699270) ISR: Value: 241[0m
+[0;32mI (700270) PinController: Pin Val 0[0m
+[0;32mI (700270) ISR: Value: 241[0m
+[0;32mI (701270) PinController: Pin Val 0[0m
+[0;32mI (701270) ISR: Value: 241[0m
+[0;32mI (702270) PinController: Pin Val 0[0m
+[0;32mI (702270) ISR: Value: 241[0m
+[0;32mI (703270) PinController: Pin Val 0[0m
+[0;32mI (703270) ISR: Value: 241[0m
+[0;32mI (704270) PinController: Pin Val 0[0m
+[0;32mI (704270) ISR: Value: 241[0m
+[0;32mI (705270) PinController: Pin Val 0[0m
+[0;32mI (705270) ISR: Value: 241[0m
+[0;32mI (706270) PinController: Pin Val 0[0m
+[0;32mI (706270) ISR: Value: 241[0m
+[0;32mI (707270) PinController: Pin Val 0[0m
+[0;32mI (707270) ISR: Value: 241[0m
+[0;32mI (708270) PinController: Pin Val 0[0m
+[0;32mI (708270) ISR: Value: 241[0m
+[0;32mI (709270) PinController: Pin Val 0[0m
+[0;32mI (709270) ISR: Value: 241[0m
+[0;32mI (710270) PinController: Pin Val 0[0m
+[0;32mI (710270) ISR: Value: 241[0m
+[0;32mI (711270) PinController: Pin Val 0[0m
+[0;32mI (711270) ISR: Value: 241[0m
+[0;32mI (712270) PinController: Pin Val 0[0m
+[0;32mI (712270) ISR: Value: 241[0m
+[0;32mI (713270) PinController: Pin Val 0[0m
+[0;32mI (713270) ISR: Value: 241[0m
+[0;32mI (714270) PinController: Pin Val 0[0m
+[0;32mI (714270) ISR: Value: 241[0m
+[0;32mI (715270) PinController: Pin Val 0[0m
+[0;32mI (715270) ISR: Value: 241[0m
+[0;32mI (716270) PinController: Pin Val 0[0m
+[0;32mI (716270) ISR: Value: 241[0m
+[0;32mI (717270) PinController: Pin Val 0[0m
+[0;32mI (717270) ISR: Value: 241[0m
+[0;32mI (718270) PinController: Pin Val 0[0m
+[0;32mI (718270) ISR: Value: 241[0m
+[0;32mI (719270) PinController: Pin Val 0[0m
+[0;32mI (719270) ISR: Value: 241[0m
+[0;32mI (720270) PinController: Pin Val 0[0m
+[0;32mI (720270) ISR: Value: 241[0m
+[0;32mI (721270) PinController: Pin Val 0[0m
+[0;32mI (721270) ISR: Value: 241[0m
+[0;32mI (722270) PinController: Pin Val 0[0m
+[0;32mI (722270) ISR: Value: 241[0m
+[0;32mI (723270) PinController: Pin Val 0[0m
+[0;32mI (723270) ISR: Value: 241[0m
+[0;32mI (724270) PinController: Pin Val 0[0m
+[0;32mI (724270) ISR: Value: 241[0m
+[0;32mI (725270) PinController: Pin Val 0[0m
+[0;32mI (725270) ISR: Value: 241[0m
+[0;32mI (726270) PinController: Pin Val 0[0m
+[0;32mI (726270) ISR: Value: 241[0m
+[0;32mI (727270) PinController: Pin Val 0[0m
+[0;32mI (727270) ISR: Value: 241[0m
+[0;32mI (728270) PinController: Pin Val 0[0m
+[0;32mI (728270) ISR: Value: 241[0m
+[0;32mI (729270) PinController: Pin Val 0[0m
+[0;32mI (729270) ISR: Value: 241[0m
+[0;32mI (730270) PinController: Pin Val 0[0m
+[0;32mI (730270) ISR: Value: 241[0m
+[0;32mI (731270) PinController: Pin Val 0[0m
+[0;32mI (731270) ISR: Value: 241[0m
+[0;32mI (732270) PinController: Pin Val 0[0m
+[0;32mI (732270) ISR: Value: 241[0m
+[0;32mI (733270) PinController: Pin Val 0[0m
+[0;32mI (733270) ISR: Value: 241[0m
+[0;32mI (734270) PinController: Pin Val 0[0m
+[0;32mI (734270) ISR: Value: 241[0m
+[0;32mI (735270) PinController: Pin Val 0[0m
+[0;32mI (735270) ISR: Value: 241[0m
+[0;32mI (736270) PinController: Pin Val 0[0m
+[0;32mI (736270) ISR: Value: 241[0m
+[0;32mI (737270) PinController: Pin Val 0[0m
+[0;32mI (737270) ISR: Value: 241[0m
+[0;32mI (738270) PinController: Pin Val 0[0m
+[0;32mI (738270) ISR: Value: 241[0m
+[0;32mI (739270) PinController: Pin Val 0[0m
+[0;32mI (739270) ISR: Value: 241[0m
+[0;32mI (740270) PinController: Pin Val 0[0m
+[0;32mI (740270) ISR: Value: 241[0m
+[0;32mI (741270) PinController: Pin Val 0[0m
+[0;32mI (741270) ISR: Value: 241[0m
+[0;32mI (742270) PinController: Pin Val 0[0m
+[0;32mI (742270) ISR: Value: 241[0m
+[0;32mI (743270) PinController: Pin Val 0[0m
+[0;32mI (743270) ISR: Value: 241[0m
+[0;32mI (744270) PinController: Pin Val 0[0m
+[0;32mI (744270) ISR: Value: 241[0m
+[0;32mI (745270) PinController: Pin Val 0[0m
+[0;32mI (745270) ISR: Value: 241[0m
+[0;32mI (746270) PinController: Pin Val 0[0m
+[0;32mI (746270) ISR: Value: 241[0m
+[0;32mI (747270) PinController: Pin Val 0[0m
+[0;32mI (747270) ISR: Value: 241[0m
+[0;32mI (748270) PinController: Pin Val 0[0m
+[0;32mI (748270) ISR: Value: 241[0m
+[0;32mI (749270) PinController: Pin Val 0[0m
+[0;32mI (749270) ISR: Value: 241[0m
+[0;32mI (750270) PinController: Pin Val 0[0m
+[0;32mI (750270) ISR: Value: 241[0m
+[0;32mI (751270) PinController: Pin Val 0[0m
+[0;32mI (751270) ISR: Value: 241[0m
+[0;32mI (752270) PinController: Pin Val 0[0m
+[0;32mI (752270) ISR: Value: 241[0m
+[0;32mI (753270) PinController: Pin Val 0[0m
+[0;32mI (753270) ISR: Value: 241[0m
+[0;32mI (754270) PinController: Pin Val 0[0m
+[0;32mI (754270) ISR: Value: 241[0m
+[0;32mI (755270) PinController: Pin Val 0[0m
+[0;32mI (755270) ISR: Value: 241[0m
+[0;32mI (756270) PinController: Pin Val 0[0m
+[0;32mI (756270) ISR: Value: 241[0m
+[0;32mI (757270) PinController: Pin Val 0[0m
+[0;32mI (757270) ISR: Value: 241[0m
+[0;32mI (758270) PinController: Pin Val 0[0m
+[0;32mI (758270) ISR: Value: 241[0m
+[0;32mI (759270) PinController: Pin Val 0[0m
+[0;32mI (759270) ISR: Value: 241[0m
+[0;32mI (760270) PinController: Pin Val 0[0m
+[0;32mI (760270) ISR: Value: 241[0m
+[0;32mI (761270) PinController: Pin Val 0[0m
+[0;32mI (761270) ISR: Value: 241[0m
+[0;32mI (762270) PinController: Pin Val 0[0m
+[0;32mI (762270) ISR: Value: 241[0m
+[0;32mI (763270) PinController: Pin Val 0[0m
+[0;32mI (763270) ISR: Value: 241[0m
+[0;32mI (764270) PinController: Pin Val 0[0m
+[0;32mI (764270) ISR: Value: 241[0m
+[0;32mI (765270) PinController: Pin Val 0[0m
+[0;32mI (765270) ISR: Value: 241[0m
+[0;32mI (766270) PinController: Pin Val 0[0m
+[0;32mI (766270) ISR: Value: 241[0m
+[0;32mI (767270) PinController: Pin Val 0[0m
+[0;32mI (767270) ISR: Value: 241[0m
+[0;32mI (768270) PinController: Pin Val 0[0m
+[0;32mI (768270) ISR: Value: 241[0m
+[0;32mI (769270) PinController: Pin Val 0[0m
+[0;32mI (769270) ISR: Value: 241[0m
+[0;32mI (770270) PinController: Pin Val 0[0m
+[0;32mI (770270) ISR: Value: 241[0m
+[0;32mI (771270) PinController: Pin Val 0[0m
+[0;32mI (771270) ISR: Value: 241[0m
+[0;32mI (772270) PinController: Pin Val 0[0m
+[0;32mI (772270) ISR: Value: 241[0m
+[0;32mI (773270) PinController: Pin Val 0[0m
+[0;32mI (773270) ISR: Value: 241[0m
+[0;32mI (774270) PinController: Pin Val 0[0m
+[0;32mI (774270) ISR: Value: 241[0m
+[0;32mI (775270) PinController: Pin Val 0[0m
+[0;32mI (775270) ISR: Value: 241[0m
+[0;32mI (776270) PinController: Pin Val 0[0m
+[0;32mI (776270) ISR: Value: 241[0m
+[0;32mI (777270) PinController: Pin Val 0[0m
+[0;32mI (777270) ISR: Value: 241[0m
+[0;32mI (778270) PinController: Pin Val 0[0m
+[0;32mI (778270) ISR: Value: 241[0m
+[0;32mI (779270) PinController: Pin Val 0[0m
+[0;32mI (779270) ISR: Value: 241[0m
+[0;32mI (780270) PinController: Pin Val 0[0m
+[0;32mI (780270) ISR: Value: 241[0m
+[0;32mI (781270) PinController: Pin Val 0[0m
+[0;32mI (781270) ISR: Value: 241[0m
+[0;32mI (782270) PinController: Pin Val 0[0m
+[0;32mI (782270) ISR: Value: 241[0m
+[0;32mI (783270) PinController: Pin Val 0[0m
+[0;32mI (783270) ISR: Value: 241[0m
+[0;32mI (784270) PinController: Pin Val 0[0m
+[0;32mI (784270) ISR: Value: 241[0m
+[0;32mI (785270) PinController: Pin Val 0[0m
+[0;32mI (785270) ISR: Value: 241[0m
+[0;32mI (786270) PinController: Pin Val 0[0m
+[0;32mI (786270) ISR: Value: 241[0m
+[0;32mI (787270) PinController: Pin Val 0[0m
+[0;32mI (787270) ISR: Value: 241[0m
+[0;32mI (788270) PinController: Pin Val 0[0m
+[0;32mI (788270) ISR: Value: 241[0m
+[0;32mI (789270) PinController: Pin Val 0[0m
+[0;32mI (789270) ISR: Value: 241[0m
+[0;32mI (790270) PinController: Pin Val 0[0m
+[0;32mI (790270) ISR: Value: 241[0m
+[0;32mI (791270) PinController: Pin Val 0[0m
+[0;32mI (791270) ISR: Value: 241[0m
+[0;32mI (792270) PinController: Pin Val 0[0m
+[0;32mI (792270) ISR: Value: 241[0m
+[0;32mI (793270) PinController: Pin Val 0[0m
+[0;32mI (793270) ISR: Value: 241[0m
+[0;32mI (794270) PinController: Pin Val 0[0m
+[0;32mI (794270) ISR: Value: 241[0m
+[0;32mI (795270) PinController: Pin Val 0[0m
+[0;32mI (795270) ISR: Value: 241[0m
+[0;32mI (796270) PinController: Pin Val 0[0m
+[0;32mI (796270) ISR: Value: 241[0m
+[0;32mI (797270) PinController: Pin Val 0[0m
+[0;32mI (797270) ISR: Value: 241[0m
+[0;32mI (798270) PinController: Pin Val 0[0m
+[0;32mI (798270) ISR: Value: 241[0m
+[0;32mI (799270) PinController: Pin Val 0[0m
+[0;32mI (799270) ISR: Value: 241[0m
+[0;32mI (800270) PinController: Pin Val 0[0m
+[0;32mI (800270) ISR: Value: 241[0m
+[0;32mI (801270) PinController: Pin Val 0[0m
+[0;32mI (801270) ISR: Value: 241[0m
+[0;32mI (802270) PinController: Pin Val 0[0m
+[0;32mI (802270) ISR: Value: 241[0m
+[0;32mI (803270) PinController: Pin Val 0[0m
+[0;32mI (803270) ISR: Value: 241[0m
+[0;32mI (804270) PinController: Pin Val 0[0m
+[0;32mI (804270) ISR: Value: 241[0m
+[0;32mI (805270) PinController: Pin Val 0[0m
+[0;32mI (805270) ISR: Value: 241[0m
+[0;32mI (806270) PinController: Pin Val 0[0m
+[0;32mI (806270) ISR: Value: 241[0m
+[0;32mI (807270) PinController: Pin Val 0[0m
+[0;32mI (807270) ISR: Value: 241[0m
+[0;32mI (808270) PinController: Pin Val 0[0m
+[0;32mI (808270) ISR: Value: 241[0m
+[0;32mI (809270) PinController: Pin Val 0[0m
+[0;32mI (809270) ISR: Value: 241[0m
+[0;32mI (810270) PinController: Pin Val 0[0m
+[0;32mI (810270) ISR: Value: 241[0m
+[0;32mI (811270) PinController: Pin Val 0[0m
+[0;32mI (811270) ISR: Value: 241[0m
+[0;32mI (812270) PinController: Pin Val 0[0m
+[0;32mI (812270) ISR: Value: 241[0m
+[0;32mI (813270) PinController: Pin Val 0[0m
+[0;32mI (813270) ISR: Value: 241[0m
+[0;32mI (814270) PinController: Pin Val 0[0m
+[0;32mI (814270) ISR: Value: 241[0m
+[0;32mI (815270) PinController: Pin Val 0[0m
+[0;32mI (815270) ISR: Value: 241[0m
+[0;32mI (816270) PinController: Pin Val 0[0m
+[0;32mI (816270) ISR: Value: 241[0m
+[0;32mI (817270) PinController: Pin Val 0[0m
+[0;32mI (817270) ISR: Value: 241[0m
+[0;32mI (818270) PinController: Pin Val 0[0m
+[0;32mI (818270) ISR: Value: 241[0m
+[0;32mI (819270) PinController: Pin Val 0[0m
+[0;32mI (819270) ISR: Value: 241[0m
+[0;32mI (820270) PinController: Pin Val 0[0m
+[0;32mI (820270) ISR: Value: 241[0m
+[0;32mI (821270) PinController: Pin Val 0[0m
+[0;32mI (821270) ISR: Value: 241[0m
+[0;32mI (822270) PinController: Pin Val 0[0m
+[0;32mI (822270) ISR: Value: 241[0m
+[0;32mI (823270) PinController: Pin Val 0[0m
+[0;32mI (823270) ISR: Value: 241[0m
+[0;32mI (824270) PinController: Pin Val 0[0m
+[0;32mI (824270) ISR: Value: 241[0m
+[0;32mI (825270) PinController: Pin Val 0[0m
+[0;32mI (825270) ISR: Value: 241[0m
+[0;32mI (826270) PinController: Pin Val 0[0m
+[0;32mI (826270) ISR: Value: 241[0m
+[0;32mI (827270) PinController: Pin Val 0[0m
+[0;32mI (827270) ISR: Value: 241[0m
+[0;32mI (828270) PinController: Pin Val 0[0m
+[0;32mI (828270) ISR: Value: 241[0m
+[0;32mI (829270) PinController: Pin Val 0[0m
+[0;32mI (829270) ISR: Value: 241[0m
+[0;32mI (830270) PinController: Pin Val 0[0m
+[0;32mI (830270) ISR: Value: 241[0m
+[0;32mI (831270) PinController: Pin Val 0[0m
+[0;32mI (831270) ISR: Value: 241[0m
+[0;32mI (832270) PinController: Pin Val 0[0m
+[0;32mI (832270) ISR: Value: 241[0m
+[0;32mI (833270) PinController: Pin Val 0[0m
+[0;32mI (833270) ISR: Value: 241[0m
+[0;32mI (834270) PinController: Pin Val 0[0m
+[0;32mI (834270) ISR: Value: 241[0m
+[0;32mI (835270) PinController: Pin Val 0[0m
+[0;32mI (835270) ISR: Value: 241[0m
+[0;32mI (836270) PinController: Pin Val 0[0m
+[0;32mI (836270) ISR: Value: 241[0m
+[0;32mI (837270) PinController: Pin Val 0[0m
+[0;32mI (837270) ISR: Value: 241[0m
+[0;32mI (838270) PinController: Pin Val 0[0m
+[0;32mI (838270) ISR: Value: 241[0m
+[0;32mI (839270) PinController: Pin Val 0[0m
+[0;32mI (839270) ISR: Value: 241[0m
+[0;32mI (840270) PinController: Pin Val 0[0m
+[0;32mI (840270) ISR: Value: 241[0m
+[0;32mI (841270) PinController: Pin Val 0[0m
+[0;32mI (841270) ISR: Value: 241[0m
+[0;32mI (842270) PinController: Pin Val 0[0m
+[0;32mI (842270) ISR: Value: 241[0m
+[0;32mI (843270) PinController: Pin Val 0[0m
+[0;32mI (843270) ISR: Value: 241[0m
+[0;32mI (844270) PinController: Pin Val 0[0m
+[0;32mI (844270) ISR: Value: 241[0m
+[0;32mI (845270) PinController: Pin Val 0[0m
+[0;32mI (845270) ISR: Value: 241[0m
+[0;32mI (846270) PinController: Pin Val 0[0m
+[0;32mI (846270) ISR: Value: 241[0m
+[0;32mI (847270) PinController: Pin Val 0[0m
+[0;32mI (847270) ISR: Value: 241[0m
+[0;32mI (848270) PinController: Pin Val 0[0m
+[0;32mI (848270) ISR: Value: 241[0m
+[0;32mI (849270) PinController: Pin Val 0[0m
+[0;32mI (849270) ISR: Value: 241[0m
+[0;32mI (850270) PinController: Pin Val 0[0m
+[0;32mI (850270) ISR: Value: 241[0m
+[0;32mI (851270) PinController: Pin Val 0[0m
+[0;32mI (851270) ISR: Value: 241[0m
+[0;32mI (852270) PinController: Pin Val 0[0m
+[0;32mI (852270) ISR: Value: 241[0m
+[0;32mI (853270) PinController: Pin Val 0[0m
+[0;32mI (853270) ISR: Value: 241[0m
+[0;32mI (854270) PinController: Pin Val 0[0m
+[0;32mI (854270) ISR: Value: 241[0m
+[0;32mI (855270) PinController: Pin Val 0[0m
+[0;32mI (855270) ISR: Value: 241[0m
+[0;32mI (856270) PinController: Pin Val 0[0m
+[0;32mI (856270) ISR: Value: 241[0m
+[0;32mI (857270) PinController: Pin Val 0[0m
+[0;32mI (857270) ISR: Value: 241[0m
+[0;32mI (858270) PinController: Pin Val 0[0m
+[0;32mI (858270) ISR: Value: 241[0m
+[0;32mI (859270) PinController: Pin Val 0[0m
+[0;32mI (859270) ISR: Value: 241[0m
+[0;32mI (860270) PinController: Pin Val 0[0m
+[0;32mI (860270) ISR: Value: 241[0m
+[0;32mI (861270) PinController: Pin Val 0[0m
+[0;32mI (861270) ISR: Value: 241[0m
+[0;32mI (862270) PinController: Pin Val 0[0m
+[0;32mI (862270) ISR: Value: 241[0m
+[0;32mI (863270) PinController: Pin Val 0[0m
+[0;32mI (863270) ISR: Value: 241[0m
+[0;32mI (864270) PinController: Pin Val 0[0m
+[0;32mI (864270) ISR: Value: 241[0m
+[0;32mI (865270) PinController: Pin Val 0[0m
+[0;32mI (865270) ISR: Value: 241[0m
+[0;32mI (866270) PinController: Pin Val 0[0m
+[0;32mI (866270) ISR: Value: 241[0m
+[0;32mI (867270) PinController: Pin Val 0[0m
+[0;32mI (867270) ISR: Value: 241[0m
+[0;32mI (868270) PinController: Pin Val 0[0m
+[0;32mI (868270) ISR: Value: 241[0m
+[0;32mI (869270) PinController: Pin Val 0[0m
+[0;32mI (869270) ISR: Value: 241[0m
+[0;32mI (870270) PinController: Pin Val 0[0m
+[0;32mI (870270) ISR: Value: 241[0m
+[0;32mI (871270) PinController: Pin Val 0[0m
+[0;32mI (871270) ISR: Value: 241[0m
+[0;32mI (872270) PinController: Pin Val 0[0m
+[0;32mI (872270) ISR: Value: 241[0m
+[0;32mI (873270) PinController: Pin Val 0[0m
+[0;32mI (873270) ISR: Value: 241[0m
+[0;32mI (874270) PinController: Pin Val 0[0m
+[0;32mI (874270) ISR: Value: 241[0m
+[0;32mI (875270) PinController: Pin Val 0[0m
+[0;32mI (875270) ISR: Value: 241[0m
+[0;32mI (876270) PinController: Pin Val 0[0m
+[0;32mI (876270) ISR: Value: 241[0m
+[0;32mI (877270) PinController: Pin Val 0[0m
+[0;32mI (877270) ISR: Value: 241[0m
+[0;32mI (878270) PinController: Pin Val 0[0m
+[0;32mI (878270) ISR: Value: 241[0m
+[0;32mI (879270) PinController: Pin Val 0[0m
+[0;32mI (879270) ISR: Value: 241[0m
+[0;32mI (880270) PinController: Pin Val 0[0m
+[0;32mI (880270) ISR: Value: 241[0m
+[0;32mI (881270) PinController: Pin Val 0[0m
+[0;32mI (881270) ISR: Value: 241[0m
+[0;32mI (882270) PinController: Pin Val 0[0m
+[0;32mI (882270) ISR: Value: 241[0m
+[0;32mI (883270) PinController: Pin Val 0[0m
+[0;32mI (883270) ISR: Value: 241[0m
+[0;32mI (884270) PinController: Pin Val 0[0m
+[0;32mI (884270) ISR: Value: 241[0m
+[0;32mI (885270) PinController: Pin Val 0[0m
+[0;32mI (885270) ISR: Value: 241[0m
+[0;32mI (886270) PinController: Pin Val 0[0m
+[0;32mI (886270) ISR: Value: 241[0m
+[0;32mI (887270) PinController: Pin Val 0[0m
+[0;32mI (887270) ISR: Value: 241[0m
+[0;32mI (888270) PinController: Pin Val 0[0m
+[0;32mI (888270) ISR: Value: 241[0m
+[0;32mI (889270) PinController: Pin Val 0[0m
+[0;32mI (889270) ISR: Value: 241[0m
+[0;32mI (890270) PinController: Pin Val 0[0m
+[0;32mI (890270) ISR: Value: 241[0m
+[0;32mI (891270) PinController: Pin Val 0[0m
+[0;32mI (891270) ISR: Value: 241[0m
+[0;32mI (892270) PinController: Pin Val 0[0m
+[0;32mI (892270) ISR: Value: 241[0m
+[0;32mI (893270) PinController: Pin Val 0[0m
+[0;32mI (893270) ISR: Value: 241[0m
+[0;32mI (894270) PinController: Pin Val 0[0m
+[0;32mI (894270) ISR: Value: 241[0m
+[0;32mI (895270) PinController: Pin Val 0[0m
+[0;32mI (895270) ISR: Value: 241[0m
+[0;32mI (896270) PinController: Pin Val 0[0m
+[0;32mI (896270) ISR: Value: 241[0m
+[0;32mI (897270) PinController: Pin Val 0[0m
+[0;32mI (897270) ISR: Value: 241[0m
+[0;32mI (898270) PinController: Pin Val 0[0m
+[0;32mI (898270) ISR: Value: 241[0m
+[0;32mI (899270) PinController: Pin Val 0[0m
+[0;32mI (899270) ISR: Value: 241[0m
+[0;32mI (900270) PinController: Pin Val 0[0m
+[0;32mI (900270) ISR: Value: 241[0m
+[0;32mI (901270) PinController: Pin Val 0[0m
+[0;32mI (901270) ISR: Value: 241[0m
+[0;32mI (902270) PinController: Pin Val 0[0m
+[0;32mI (902270) ISR: Value: 241[0m
+[0;32mI (903270) PinController: Pin Val 0[0m
+[0;32mI (903270) ISR: Value: 241[0m
+[0;32mI (904270) PinController: Pin Val 0[0m
+[0;32mI (904270) ISR: Value: 241[0m
+[0;32mI (905270) PinController: Pin Val 0[0m
+[0;32mI (905270) ISR: Value: 241[0m
+[0;32mI (906270) PinController: Pin Val 0[0m
+[0;32mI (906270) ISR: Value: 241[0m
+[0;32mI (907270) PinController: Pin Val 0[0m
+[0;32mI (907270) ISR: Value: 241[0m
+[0;32mI (908270) PinController: Pin Val 0[0m
+[0;32mI (908270) ISR: Value: 241[0m
+[0;32mI (909270) PinController: Pin Val 0[0m
+[0;32mI (909270) ISR: Value: 241[0m
+[0;32mI (910270) PinController: Pin Val 0[0m
+[0;32mI (910270) ISR: Value: 241[0m
+[0;32mI (911270) PinController: Pin Val 0[0m
+[0;32mI (911270) ISR: Value: 241[0m
+[0;32mI (912270) PinController: Pin Val 0[0m
+[0;32mI (912270) ISR: Value: 241[0m
+[0;32mI (913270) PinController: Pin Val 0[0m
+[0;32mI (913270) ISR: Value: 241[0m
+[0;32mI (914270) PinController: Pin Val 0[0m
+[0;32mI (914270) ISR: Value: 241[0m
+[0;32mI (915270) PinController: Pin Val 0[0m
+[0;32mI (915270) ISR: Value: 241[0m
+[0;32mI (916270) PinController: Pin Val 0[0m
+[0;32mI (916270) ISR: Value: 241[0m
+[0;32mI (917270) PinController: Pin Val 0[0m
+[0;32mI (917270) ISR: Value: 241[0m
+[0;32mI (918270) PinController: Pin Val 0[0m
+[0;32mI (918270) ISR: Value: 241[0m
+[0;32mI (919270) PinController: Pin Val 0[0m
+[0;32mI (919270) ISR: Value: 241[0m
+[0;32mI (920270) PinController: Pin Val 0[0m
+[0;32mI (920270) ISR: Value: 241[0m
+[0;32mI (921270) PinController: Pin Val 0[0m
+[0;32mI (921270) ISR: Value: 241[0m
+[0;32mI (922270) PinController: Pin Val 0[0m
+[0;32mI (922270) ISR: Value: 241[0m
+[0;32mI (923270) PinController: Pin Val 0[0m
+[0;32mI (923270) ISR: Value: 241[0m
+[0;32mI (924270) PinController: Pin Val 0[0m
+[0;32mI (924270) ISR: Value: 241[0m
+[0;32mI (925270) PinController: Pin Val 0[0m
+[0;32mI (925270) ISR: Value: 241[0m
+[0;32mI (926270) PinController: Pin Val 0[0m
+[0;32mI (926270) ISR: Value: 241[0m
+[0;32mI (927270) PinController: Pin Val 0[0m
+[0;32mI (927270) ISR: Value: 241[0m
+[0;32mI (928270) PinController: Pin Val 0[0m
+[0;32mI (928270) ISR: Value: 241[0m
+[0;32mI (929270) PinController: Pin Val 0[0m
+[0;32mI (929270) ISR: Value: 241[0m
+[0;32mI (930270) PinController: Pin Val 0[0m
+[0;32mI (930270) ISR: Value: 241[0m
+[0;32mI (931270) PinController: Pin Val 0[0m
+[0;32mI (931270) ISR: Value: 241[0m
+[0;32mI (932270) PinController: Pin Val 0[0m
+[0;32mI (932270) ISR: Value: 241[0m
+[0;32mI (933270) PinController: Pin Val 0[0m
+[0;32mI (933270) ISR: Value: 241[0m
+[0;32mI (934270) PinController: Pin Val 0[0m
+[0;32mI (934270) ISR: Value: 241[0m
+[0;32mI (935270) PinController: Pin Val 0[0m
+[0;32mI (935270) ISR: Value: 241[0m
+[0;32mI (936270) PinController: Pin Val 0[0m
+[0;32mI (936270) ISR: Value: 241[0m
+[0;32mI (937270) PinController: Pin Val 0[0m
+[0;32mI (937270) ISR: Value: 241[0m
+[0;32mI (938270) PinController: Pin Val 0[0m
+[0;32mI (938270) ISR: Value: 241[0m
+[0;32mI (939270) PinController: Pin Val 0[0m
+[0;32mI (939270) ISR: Value: 241[0m
+[0;32mI (940270) PinController: Pin Val 0[0m
+[0;32mI (940270) ISR: Value: 241[0m
+[0;32mI (941270) PinController: Pin Val 0[0m
+[0;32mI (941270) ISR: Value: 241[0m
+[0;32mI (942270) PinController: Pin Val 0[0m
+[0;32mI (942270) ISR: Value: 241[0m
+[0;32mI (943270) PinController: Pin Val 0[0m
+[0;32mI (943270) ISR: Value: 241[0m
+[0;32mI (944270) PinController: Pin Val 0[0m
+[0;32mI (944270) ISR: Value: 241[0m
+[0;32mI (945270) PinController: Pin Val 0[0m
+[0;32mI (945270) ISR: Value: 241[0m
+[0;32mI (946270) PinController: Pin Val 0[0m
+[0;32mI (946270) ISR: Value: 241[0m
+[0;32mI (947270) PinController: Pin Val 0[0m
+[0;32mI (947270) ISR: Value: 241[0m
+[0;32mI (948270) PinController: Pin Val 0[0m
+[0;32mI (948270) ISR: Value: 241[0m
+[0;32mI (949270) PinController: Pin Val 0[0m
+[0;32mI (949270) ISR: Value: 241[0m
+[0;32mI (950270) PinController: Pin Val 0[0m
+[0;32mI (950270) ISR: Value: 241[0m
+[0;32mI (951270) PinController: Pin Val 0[0m
+[0;32mI (951270) ISR: Value: 241[0m
+[0;32mI (952270) PinController: Pin Val 0[0m
+[0;32mI (952270) ISR: Value: 241[0m
+[0;32mI (953270) PinController: Pin Val 0[0m
+[0;32mI (953270) ISR: Value: 241[0m
+[0;32mI (954270) PinController: Pin Val 0[0m
+[0;32mI (954270) ISR: Value: 241[0m
+[0;32mI (955270) PinController: Pin Val 0[0m
+[0;32mI (955270) ISR: Value: 241[0m
+[0;32mI (956270) PinController: Pin Val 0[0m
+[0;32mI (956270) ISR: Value: 241[0m
+[0;32mI (957270) PinController: Pin Val 0[0m
+[0;32mI (957270) ISR: Value: 241[0m
+[0;32mI (958270) PinController: Pin Val 0[0m
+[0;32mI (958270) ISR: Value: 241[0m
+[0;32mI (959270) PinController: Pin Val 0[0m
+[0;32mI (959270) ISR: Value: 241[0m
+[0;32mI (960270) PinController: Pin Val 0[0m
+[0;32mI (960270) ISR: Value: 241[0m
+[0;32mI (961270) PinController: Pin Val 0[0m
+[0;32mI (961270) ISR: Value: 241[0m
+[0;32mI (962270) PinController: Pin Val 0[0m
+[0;32mI (962270) ISR: Value: 241[0m
+[0;32mI (963270) PinController: Pin Val 0[0m
+[0;32mI (963270) ISR: Value: 241[0m
+[0;32mI (964270) PinController: Pin Val 0[0m
+[0;32mI (964270) ISR: Value: 241[0m
+[0;32mI (965270) PinController: Pin Val 0[0m
+[0;32mI (965270) ISR: Value: 241[0m
+[0;32mI (966270) PinController: Pin Val 0[0m
+[0;32mI (966270) ISR: Value: 241[0m
+[0;32mI (967270) PinController: Pin Val 0[0m
+[0;32mI (967270) ISR: Value: 241[0m
+[0;32mI (968270) PinController: Pin Val 0[0m
+[0;32mI (968270) ISR: Value: 241[0m
+[0;32mI (969270) PinController: Pin Val 0[0m
+[0;32mI (969270) ISR: Value: 241[0m
+[0;32mI (970270) PinController: Pin Val 0[0m
+[0;32mI (970270) ISR: Value: 241[0m
+[0;32mI (971270) PinController: Pin Val 0[0m
+[0;32mI (971270) ISR: Value: 241[0m
+[0;32mI (972270) PinController: Pin Val 0[0m
+[0;32mI (972270) ISR: Value: 241[0m
+[0;32mI (973270) PinController: Pin Val 0[0m
+[0;32mI (973270) ISR: Value: 241[0m
+[0;32mI (974270) PinController: Pin Val 0[0m
+[0;32mI (974270) ISR: Value: 241[0m
+[0;32mI (975270) PinController: Pin Val 0[0m
+[0;32mI (975270) ISR: Value: 241[0m
+[0;32mI (976270) PinController: Pin Val 0[0m
+[0;32mI (976270) ISR: Value: 241[0m
+[0;32mI (977270) PinController: Pin Val 0[0m
+[0;32mI (977270) ISR: Value: 241[0m
+[0;32mI (978270) PinController: Pin Val 0[0m
+[0;32mI (978270) ISR: Value: 241[0m
+[0;32mI (979270) PinController: Pin Val 0[0m
+[0;32mI (979270) ISR: Value: 241[0m
+[0;32mI (980270) PinController: Pin Val 0[0m
+[0;32mI (980270) ISR: Value: 241[0m
+[0;32mI (981270) PinController: Pin Val 0[0m
+[0;32mI (981270) ISR: Value: 241[0m
+[0;32mI (982270) PinController: Pin Val 0[0m
+[0;32mI (982270) ISR: Value: 241[0m
+[0;32mI (983270) PinController: Pin Val 0[0m
+[0;32mI (983270) ISR: Value: 241[0m
+[0;32mI (984270) PinController: Pin Val 0[0m
+[0;32mI (984270) ISR: Value: 241[0m
+[0;32mI (985270) PinController: Pin Val 0[0m
+[0;32mI (985270) ISR: Value: 241[0m
+[0;32mI (986270) PinController: Pin Val 0[0m
+[0;32mI (986270) ISR: Value: 241[0m
+[0;32mI (987270) PinController: Pin Val 0[0m
+[0;32mI (987270) ISR: Value: 241[0m
+[0;32mI (988270) PinController: Pin Val 0[0m
+[0;32mI (988270) ISR: Value: 241[0m
+[0;32mI (989270) PinController: Pin Val 0[0m
+[0;32mI (989270) ISR: Value: 241[0m
+[0;32mI (990270) PinController: Pin Val 0[0m
+[0;32mI (990270) ISR: Value: 241[0m
+[0;32mI (991270) PinController: Pin Val 0[0m
+[0;32mI (991270) ISR: Value: 241[0m
+[0;32mI (992270) PinController: Pin Val 0[0m
+[0;32mI (992270) ISR: Value: 241[0m
+[0;32mI (993270) PinController: Pin Val 0[0m
+[0;32mI (993270) ISR: Value: 241[0m
+[0;32mI (994270) PinController: Pin Val 0[0m
+[0;32mI (994270) ISR: Value: 241[0m
+[0;32mI (995270) PinController: Pin Val 0[0m
+[0;32mI (995270) ISR: Value: 241[0m
+[0;32mI (996270) PinController: Pin Val 0[0m
+[0;32mI (996270) ISR: Value: 241[0m
+[0;32mI (997270) PinController: Pin Val 0[0m
+[0;32mI (997270) ISR: Value: 241[0m
+[0;32mI (998270) PinController: Pin Val 0[0m
+[0;32mI (998270) ISR: Value: 241[0m
+[0;32mI (999270) PinController: Pin Val 0[0m
+[0;32mI (999270) ISR: Value: 241[0m
+[0;32mI (1000270) PinController: Pin Val 0[0m
+[0;32mI (1000270) ISR: Value: 241[0m
+[0;32mI (1001270) PinController: Pin Val 0[0m
+[0;32mI (1001270) ISR: Value: 241[0m
+[0;32mI (1002270) PinController: Pin Val 0[0m
+[0;32mI (1002270) ISR: Value: 241[0m
+[0;32mI (1003270) PinController: Pin Val 0[0m
+[0;32mI (1003270) ISR: Value: 241[0m
+[0;32mI (1004270) PinController: Pin Val 0[0m
+[0;32mI (1004270) ISR: Value: 241[0m
+[0;32mI (1005270) PinController: Pin Val 0[0m
+[0;32mI (1005270) ISR: Value: 241[0m
+[0;32mI (1006270) PinController: Pin Val 0[0m
+[0;32mI (1006270) ISR: Value: 241[0m
+[0;32mI (1007270) PinController: Pin Val 0[0m
+[0;32mI (1007270) ISR: Value: 241[0m
+[0;32mI (1008270) PinController: Pin Val 0[0m
+[0;32mI (1008270) ISR: Value: 241[0m
+[0;32mI (1009270) PinController: Pin Val 0[0m
+[0;32mI (1009270) ISR: Value: 241[0m
+[0;32mI (1010270) PinController: Pin Val 0[0m
+[0;32mI (1010270) ISR: Value: 241[0m
+[0;32mI (1011270) PinController: Pin Val 0[0m
+[0;32mI (1011270) ISR: Value: 241[0m
+[0;32mI (1012270) PinController: Pin Val 0[0m
+[0;32mI (1012270) ISR: Value: 241[0m
+[0;32mI (1013270) PinController: Pin Val 0[0m
+[0;32mI (1013270) ISR: Value: 241[0m
+[0;32mI (1014270) PinController: Pin Val 0[0m
+[0;32mI (1014270) ISR: Value: 241[0m
+[0;32mI (1015270) PinController: Pin Val 0[0m
+[0;32mI (1015270) ISR: Value: 241[0m
+[0;32mI (1016270) PinController: Pin Val 0[0m
+[0;32mI (1016270) ISR: Value: 241[0m
+[0;32mI (1017270) PinController: Pin Val 0[0m
+[0;32mI (1017270) ISR: Value: 241[0m
+[0;32mI (1018270) PinController: Pin Val 0[0m
+[0;32mI (1018270) ISR: Value: 241[0m
+[0;32mI (1019270) PinController: Pin Val 0[0m
+[0;32mI (1019270) ISR: Value: 241[0m
+[0;32mI (1020270) PinController: Pin Val 0[0m
+[0;32mI (1020270) ISR: Value: 241[0m
+[0;32mI (1021270) PinController: Pin Val 0[0m
+[0;32mI (1021270) ISR: Value: 241[0m
+[0;32mI (1022270) PinController: Pin Val 0[0m
+[0;32mI (1022270) ISR: Value: 241[0m
+[0;32mI (1023270) PinController: Pin Val 0[0m
+[0;32mI (1023270) ISR: Value: 241[0m
+[0;32mI (1024270) PinController: Pin Val 0[0m
+[0;32mI (1024270) ISR: Value: 241[0m
+[0;32mI (1025270) PinController: Pin Val 0[0m
+[0;32mI (1025270) ISR: Value: 241[0m
+[0;32mI (1026270) PinController: Pin Val 0[0m
+[0;32mI (1026270) ISR: Value: 241[0m
+[0;32mI (1027270) PinController: Pin Val 0[0m
+[0;32mI (1027270) ISR: Value: 241[0m
+[0;32mI (1028270) PinController: Pin Val 0[0m
+[0;32mI (1028270) ISR: Value: 241[0m
+[0;32mI (1029270) PinController: Pin Val 0[0m
+[0;32mI (1029270) ISR: Value: 241[0m
+[0;32mI (1030270) PinController: Pin Val 0[0m
+[0;32mI (1030270) ISR: Value: 241[0m
+[0;32mI (1031270) PinController: Pin Val 0[0m
+[0;32mI (1031270) ISR: Value: 241[0m
+[0;32mI (1032270) PinController: Pin Val 0[0m
+[0;32mI (1032270) ISR: Value: 241[0m
+[0;32mI (1033270) PinController: Pin Val 0[0m
+[0;32mI (1033270) ISR: Value: 241[0m
+[0;32mI (1034270) PinController: Pin Val 0[0m
+[0;32mI (1034270) ISR: Value: 241[0m
+[0;32mI (1035270) PinController: Pin Val 0[0m
+[0;32mI (1035270) ISR: Value: 241[0m
+[0;32mI (1036270) PinController: Pin Val 0[0m
+[0;32mI (1036270) ISR: Value: 241[0m
+[0;32mI (1037270) PinController: Pin Val 0[0m
+[0;32mI (1037270) ISR: Value: 241[0m
+[0;32mI (1038270) PinController: Pin Val 0[0m
+[0;32mI (1038270) ISR: Value: 241[0m
+[0;32mI (1039270) PinController: Pin Val 0[0m
+[0;32mI (1039270) ISR: Value: 241[0m
+[0;32mI (1040270) PinController: Pin Val 0[0m
+[0;32mI (1040270) ISR: Value: 241[0m
+[0;32mI (1041270) PinController: Pin Val 0[0m
+[0;32mI (1041270) ISR: Value: 241[0m
+[0;32mI (1042270) PinController: Pin Val 0[0m
+[0;32mI (1042270) ISR: Value: 241[0m
+[0;32mI (1043270) PinController: Pin Val 0[0m
+[0;32mI (1043270) ISR: Value: 241[0m
+[0;32mI (1044270) PinController: Pin Val 0[0m
+[0;32mI (1044270) ISR: Value: 241[0m
+[0;32mI (1045270) PinController: Pin Val 0[0m
+[0;32mI (1045270) ISR: Value: 241[0m
+[0;32mI (1046270) PinController: Pin Val 0[0m
+[0;32mI (1046270) ISR: Value: 241[0m
+[0;32mI (1047270) PinController: Pin Val 0[0m
+[0;32mI (1047270) ISR: Value: 241[0m
+[0;32mI (1048270) PinController: Pin Val 0[0m
+[0;32mI (1048270) ISR: Value: 241[0m
+[0;32mI (1049270) PinController: Pin Val 0[0m
+[0;32mI (1049270) ISR: Value: 241[0m
+[0;32mI (1050270) PinController: Pin Val 0[0m
+[0;32mI (1050270) ISR: Value: 241[0m
+[0;32mI (1051270) PinController: Pin Val 0[0m
+[0;32mI (1051270) ISR: Value: 241[0m
+[0;32mI (1052270) PinController: Pin Val 0[0m
+[0;32mI (1052270) ISR: Value: 241[0m
+[0;32mI (1053270) PinController: Pin Val 0[0m
+[0;32mI (1053270) ISR: Value: 241[0m
+[0;32mI (1054270) PinController: Pin Val 0[0m
+[0;32mI (1054270) ISR: Value: 241[0m
+[0;32mI (1055270) PinController: Pin Val 0[0m
+[0;32mI (1055270) ISR: Value: 241[0m
+[0;32mI (1056270) PinController: Pin Val 0[0m
+[0;32mI (1056270) ISR: Value: 241[0m
+[0;32mI (1057270) PinController: Pin Val 0[0m
+[0;32mI (1057270) ISR: Value: 241[0m
+[0;32mI (1058270) PinController: Pin Val 0[0m
+[0;32mI (1058270) ISR: Value: 241[0m
+[0;32mI (1059270) PinController: Pin Val 0[0m
+[0;32mI (1059270) ISR: Value: 241[0m
+[0;32mI (1060270) PinController: Pin Val 0[0m
+[0;32mI (1060270) ISR: Value: 241[0m
+[0;32mI (1061270) PinController: Pin Val 0[0m
+[0;32mI (1061270) ISR: Value: 241[0m
+[0;32mI (1062270) PinController: Pin Val 0[0m
+[0;32mI (1062270) ISR: Value: 241[0m
+[0;32mI (1063270) PinController: Pin Val 0[0m
+[0;32mI (1063270) ISR: Value: 241[0m
+[0;32mI (1064270) PinController: Pin Val 0[0m
+[0;32mI (1064270) ISR: Value: 241[0m
+[0;32mI (1065270) PinController: Pin Val 0[0m
+[0;32mI (1065270) ISR: Value: 241[0m
+[0;32mI (1066270) PinController: Pin Val 0[0m
+[0;32mI (1066270) ISR: Value: 241[0m
+[0;32mI (1067270) PinController: Pin Val 0[0m
+[0;32mI (1067270) ISR: Value: 241[0m
+[0;32mI (1068270) PinController: Pin Val 0[0m
+[0;32mI (1068270) ISR: Value: 241[0m
+[0;32mI (1069270) PinController: Pin Val 0[0m
+[0;32mI (1069270) ISR: Value: 241[0m
+[0;32mI (1070270) PinController: Pin Val 0[0m
+[0;32mI (1070270) ISR: Value: 241[0m
+[0;32mI (1071270) PinController: Pin Val 0[0m
+[0;32mI (1071270) ISR: Value: 241[0m
+[0;32mI (1072270) PinController: Pin Val 0[0m
+[0;32mI (1072270) ISR: Value: 241[0m
+[0;32mI (1073270) PinController: Pin Val 0[0m
+[0;32mI (1073270) ISR: Value: 241[0m
+[0;32mI (1074270) PinController: Pin Val 0[0m
+[0;32mI (1074270) ISR: Value: 241[0m
+[0;32mI (1075270) PinController: Pin Val 0[0m
+[0;32mI (1075270) ISR: Value: 241[0m
+[0;32mI (1076270) PinController: Pin Val 0[0m
+[0;32mI (1076270) ISR: Value: 241[0m
+[0;32mI (1077270) PinController: Pin Val 0[0m
+[0;32mI (1077270) ISR: Value: 241[0m
+[0;32mI (1078270) PinController: Pin Val 0[0m
+[0;32mI (1078270) ISR: Value: 241[0m
+[0;32mI (1079270) PinController: Pin Val 0[0m
+[0;32mI (1079270) ISR: Value: 241[0m
+[0;32mI (1080270) PinController: Pin Val 0[0m
+[0;32mI (1080270) ISR: Value: 241[0m
+[0;32mI (1081270) PinController: Pin Val 0[0m
+[0;32mI (1081270) ISR: Value: 241[0m
+[0;32mI (1082270) PinController: Pin Val 0[0m
+[0;32mI (1082270) ISR: Value: 241[0m
+[0;32mI (1083270) PinController: Pin Val 0[0m
+[0;32mI (1083270) ISR: Value: 241[0m
+[0;32mI (1084270) PinController: Pin Val 0[0m
+[0;32mI (1084270) ISR: Value: 241[0m
+[0;32mI (1085270) PinController: Pin Val 0[0m
+[0;32mI (1085270) ISR: Value: 241[0m
+[0;32mI (1086270) PinController: Pin Val 0[0m
+[0;32mI (1086270) ISR: Value: 241[0m
+[0;32mI (1087270) PinController: Pin Val 0[0m
+[0;32mI (1087270) ISR: Value: 241[0m
+[0;32mI (1088270) PinController: Pin Val 0[0m
+[0;32mI (1088270) ISR: Value: 241[0m
+[0;32mI (1089270) PinController: Pin Val 0[0m
+[0;32mI (1089270) ISR: Value: 241[0m
+[0;32mI (1090270) PinController: Pin Val 0[0m
+[0;32mI (1090270) ISR: Value: 241[0m
+[0;32mI (1091270) PinController: Pin Val 0[0m
+[0;32mI (1091270) ISR: Value: 241[0m
+[0;32mI (1092270) PinController: Pin Val 0[0m
+[0;32mI (1092270) ISR: Value: 241[0m
+[0;32mI (1093270) PinController: Pin Val 0[0m
+[0;32mI (1093270) ISR: Value: 241[0m
+[0;32mI (1094270) PinController: Pin Val 0[0m
+[0;32mI (1094270) ISR: Value: 241[0m
+[0;32mI (1095270) PinController: Pin Val 0[0m
+[0;32mI (1095270) ISR: Value: 241[0m
+[0;32mI (1096270) PinController: Pin Val 0[0m
+[0;32mI (1096270) ISR: Value: 241[0m
+[0;32mI (1097270) PinController: Pin Val 0[0m
+[0;32mI (1097270) ISR: Value: 241[0m
+[0;32mI (1098270) PinController: Pin Val 0[0m
+[0;32mI (1098270) ISR: Value: 241[0m
+[0;32mI (1099270) PinController: Pin Val 0[0m
+[0;32mI (1099270) ISR: Value: 241[0m
+[0;32mI (1100270) PinController: Pin Val 0[0m
+[0;32mI (1100270) ISR: Value: 241[0m
+[0;32mI (1101270) PinController: Pin Val 0[0m
+[0;32mI (1101270) ISR: Value: 241[0m
+[0;32mI (1102270) PinController: Pin Val 0[0m
+[0;32mI (1102270) ISR: Value: 241[0m
+[0;32mI (1103270) PinController: Pin Val 0[0m
+[0;32mI (1103270) ISR: Value: 241[0m
+[0;32mI (1104270) PinController: Pin Val 0[0m
+[0;32mI (1104270) ISR: Value: 241[0m
+[0;32mI (1105270) PinController: Pin Val 0[0m
+[0;32mI (1105270) ISR: Value: 241[0m
+[0;32mI (1106270) PinController: Pin Val 0[0m
+[0;32mI (1106270) ISR: Value: 241[0m
+[0;32mI (1107270) PinController: Pin Val 0[0m
+[0;32mI (1107270) ISR: Value: 241[0m
+[0;32mI (1108270) PinController: Pin Val 0[0m
+[0;32mI (1108270) ISR: Value: 241[0m
+[0;32mI (1109270) PinController: Pin Val 0[0m
+[0;32mI (1109270) ISR: Value: 241[0m
+[0;32mI (1110270) PinController: Pin Val 0[0m
+[0;32mI (1110270) ISR: Value: 241[0m
+[0;32mI (1111270) PinController: Pin Val 0[0m
+[0;32mI (1111270) ISR: Value: 241[0m
+[0;32mI (1112270) PinController: Pin Val 0[0m
+[0;32mI (1112270) ISR: Value: 241[0m
+[0;32mI (1113270) PinController: Pin Val 0[0m
+[0;32mI (1113270) ISR: Value: 241[0m
+[0;32mI (1114270) PinController: Pin Val 0[0m
+[0;32mI (1114270) ISR: Value: 241[0m
+[0;32mI (1115270) PinController: Pin Val 0[0m
+[0;32mI (1115270) ISR: Value: 241[0m
+[0;32mI (1116270) PinController: Pin Val 0[0m
+[0;32mI (1116270) ISR: Value: 241[0m
+[0;32mI (1117270) PinController: Pin Val 0[0m
+[0;32mI (1117270) ISR: Value: 241[0m
+[0;32mI (1118270) PinController: Pin Val 0[0m
+[0;32mI (1118270) ISR: Value: 241[0m
+[0;32mI (1119270) PinController: Pin Val 0[0m
+[0;32mI (1119270) ISR: Value: 241[0m
+[0;32mI (1120270) PinController: Pin Val 0[0m
+[0;32mI (1120270) ISR: Value: 241[0m
+[0;32mI (1121270) PinController: Pin Val 0[0m
+[0;32mI (1121270) ISR: Value: 241[0m
+[0;32mI (1122270) PinController: Pin Val 0[0m
+[0;32mI (1122270) ISR: Value: 241[0m
+[0;32mI (1123270) PinController: Pin Val 0[0m
+[0;32mI (1123270) ISR: Value: 241[0m
+[0;32mI (1124270) PinController: Pin Val 0[0m
+[0;32mI (1124270) ISR: Value: 241[0m
+[0;32mI (1125270) PinController: Pin Val 0[0m
+[0;32mI (1125270) ISR: Value: 241[0m
+[0;32mI (1126270) PinController: Pin Val 0[0m
+[0;32mI (1126270) ISR: Value: 241[0m
+[0;32mI (1127270) PinController: Pin Val 0[0m
+[0;32mI (1127270) ISR: Value: 241[0m
+[0;32mI (1128270) PinController: Pin Val 0[0m
+[0;32mI (1128270) ISR: Value: 241[0m
+[0;32mI (1129270) PinController: Pin Val 0[0m
+[0;32mI (1129270) ISR: Value: 241[0m
+[0;32mI (1130270) PinController: Pin Val 0[0m
+[0;32mI (1130270) ISR: Value: 241[0m
+[0;32mI (1131270) PinController: Pin Val 0[0m
+[0;32mI (1131270) ISR: Value: 241[0m
+[0;32mI (1132270) PinController: Pin Val 0[0m
+[0;32mI (1132270) ISR: Value: 241[0m
+[0;32mI (1133270) PinController: Pin Val 0[0m
+[0;32mI (1133270) ISR: Value: 241[0m
+[0;32mI (1134270) PinController: Pin Val 0[0m
+[0;32mI (1134270) ISR: Value: 241[0m
+[0;32mI (1135270) PinController: Pin Val 0[0m
+[0;32mI (1135270) ISR: Value: 241[0m
+[0;32mI (1136270) PinController: Pin Val 0[0m
+[0;32mI (1136270) ISR: Value: 241[0m
+[0;32mI (1137270) PinController: Pin Val 0[0m
+[0;32mI (1137270) ISR: Value: 241[0m
+[0;32mI (1138270) PinController: Pin Val 0[0m
+[0;32mI (1138270) ISR: Value: 241[0m
+[0;32mI (1139270) PinController: Pin Val 0[0m
+[0;32mI (1139270) ISR: Value: 241[0m
+[0;32mI (1140270) PinController: Pin Val 0[0m
+[0;32mI (1140270) ISR: Value: 241[0m
+[0;32mI (1141270) PinController: Pin Val 0[0m
+[0;32mI (1141270) ISR: Value: 241[0m
+[0;32mI (1142270) PinController: Pin Val 0[0m
+[0;32mI (1142270) ISR: Value: 241[0m
+[0;32mI (1143270) PinController: Pin Val 0[0m
+[0;32mI (1143270) ISR: Value: 241[0m
+[0;32mI (1144270) PinController: Pin Val 0[0m
+[0;32mI (1144270) ISR: Value: 241[0m
+[0;32mI (1145270) PinController: Pin Val 0[0m
+[0;32mI (1145270) ISR: Value: 241[0m
+[0;32mI (1146270) PinController: Pin Val 0[0m
+[0;32mI (1146270) ISR: Value: 241[0m
+[0;32mI (1147270) PinController: Pin Val 0[0m
+[0;32mI (1147270) ISR: Value: 241[0m
+[0;32mI (1148270) PinController: Pin Val 0[0m
+[0;32mI (1148270) ISR: Value: 241[0m
+[0;32mI (1149270) PinController: Pin Val 0[0m
+[0;32mI (1149270) ISR: Value: 241[0m
+[0;32mI (1150270) PinController: Pin Val 0[0m
+[0;32mI (1150270) ISR: Value: 241[0m
+[0;32mI (1151270) PinController: Pin Val 0[0m
+[0;32mI (1151270) ISR: Value: 241[0m
+[0;32mI (1152270) PinController: Pin Val 0[0m
+[0;32mI (1152270) ISR: Value: 241[0m
+[0;32mI (1153270) PinController: Pin Val 0[0m
+[0;32mI (1153270) ISR: Value: 241[0m
+[0;32mI (1154270) PinController: Pin Val 0[0m
+[0;32mI (1154270) ISR: Value: 241[0m
+[0;32mI (1155270) PinController: Pin Val 0[0m
+[0;32mI (1155270) ISR: Value: 241[0m
+[0;32mI (1156270) PinController: Pin Val 0[0m
+[0;32mI (1156270) ISR: Value: 241[0m
+[0;32mI (1157270) PinController: Pin Val 0[0m
+[0;32mI (1157270) ISR: Value: 241[0m
+[0;32mI (1158270) PinController: Pin Val 0[0m
+[0;32mI (1158270) ISR: Value: 241[0m
+[0;32mI (1159270) PinController: Pin Val 0[0m
+[0;32mI (1159270) ISR: Value: 241[0m
+[0;32mI (1160270) PinController: Pin Val 0[0m
+[0;32mI (1160270) ISR: Value: 241[0m
+[0;32mI (1161270) PinController: Pin Val 0[0m
+[0;32mI (1161270) ISR: Value: 241[0m
+[0;32mI (1162270) PinController: Pin Val 0[0m
+[0;32mI (1162270) ISR: Value: 241[0m
+[0;32mI (1163270) PinController: Pin Val 0[0m
+[0;32mI (1163270) ISR: Value: 241[0m
+[0;32mI (1164270) PinController: Pin Val 0[0m
+[0;32mI (1164270) ISR: Value: 241[0m
+[0;32mI (1165270) PinController: Pin Val 0[0m
+[0;32mI (1165270) ISR: Value: 241[0m
+[0;32mI (1166270) PinController: Pin Val 0[0m
+[0;32mI (1166270) ISR: Value: 241[0m
+[0;32mI (1167270) PinController: Pin Val 0[0m
+[0;32mI (1167270) ISR: Value: 241[0m
+[0;32mI (1168270) PinController: Pin Val 0[0m
+[0;32mI (1168270) ISR: Value: 241[0m
+[0;32mI (1169270) PinController: Pin Val 0[0m
+[0;32mI (1169270) ISR: Value: 241[0m
+[0;32mI (1170270) PinController: Pin Val 0[0m
+[0;32mI (1170270) ISR: Value: 241[0m
+[0;32mI (1171270) PinController: Pin Val 0[0m
+[0;32mI (1171270) ISR: Value: 241[0m
+[0;32mI (1172270) PinController: Pin Val 0[0m
+[0;32mI (1172270) ISR: Value: 241[0m
+[0;32mI (1173270) PinController: Pin Val 0[0m
+[0;32mI (1173270) ISR: Value: 241[0m
+[0;32mI (1174270) PinController: Pin Val 0[0m
+[0;32mI (1174270) ISR: Value: 241[0m
+[0;32mI (1175270) PinController: Pin Val 0[0m
+[0;32mI (1175270) ISR: Value: 241[0m
+[0;32mI (1176270) PinController: Pin Val 0[0m
+[0;32mI (1176270) ISR: Value: 241[0m
+[0;32mI (1177270) PinController: Pin Val 0[0m
+[0;32mI (1177270) ISR: Value: 241[0m
+[0;32mI (1178270) PinController: Pin Val 0[0m
+[0;32mI (1178270) ISR: Value: 241[0m
+[0;32mI (1179270) PinController: Pin Val 0[0m
+[0;32mI (1179270) ISR: Value: 241[0m
+[0;32mI (1180270) PinController: Pin Val 0[0m
+[0;32mI (1180270) ISR: Value: 241[0m
+[0;32mI (1181270) PinController: Pin Val 0[0m
+[0;32mI (1181270) ISR: Value: 241[0m
+[0;32mI (1182270) PinController: Pin Val 0[0m
+[0;32mI (1182270) ISR: Value: 241[0m
+[0;32mI (1183270) PinController: Pin Val 0[0m
+[0;32mI (1183270) ISR: Value: 241[0m
+[0;32mI (1184270) PinController: Pin Val 0[0m
+[0;32mI (1184270) ISR: Value: 241[0m
+[0;32mI (1185270) PinController: Pin Val 0[0m
+[0;32mI (1185270) ISR: Value: 241[0m
+[0;32mI (1186270) PinController: Pin Val 0[0m
+[0;32mI (1186270) ISR: Value: 241[0m
+[0;32mI (1187270) PinController: Pin Val 0[0m
+[0;32mI (1187270) ISR: Value: 241[0m
+[0;32mI (1188270) PinController: Pin Val 0[0m
+[0;32mI (1188270) ISR: Value: 241[0m
+[0;32mI (1189270) PinController: Pin Val 0[0m
+[0;32mI (1189270) ISR: Value: 241[0m
+[0;32mI (1190270) PinController: Pin Val 0[0m
+[0;32mI (1190270) ISR: Value: 241[0m
+[0;32mI (1191270) PinController: Pin Val 0[0m
+[0;32mI (1191270) ISR: Value: 241[0m
+[0;32mI (1192270) PinController: Pin Val 0[0m
+[0;32mI (1192270) ISR: Value: 241[0m
+[0;32mI (1193270) PinController: Pin Val 0[0m
+[0;32mI (1193270) ISR: Value: 241[0m
+[0;32mI (1194270) PinController: Pin Val 0[0m
+[0;32mI (1194270) ISR: Value: 241[0m
+[0;32mI (1195270) PinController: Pin Val 0[0m
+[0;32mI (1195270) ISR: Value: 241[0m
+[0;32mI (1196270) PinController: Pin Val 0[0m
+[0;32mI (1196270) ISR: Value: 241[0m
+[0;32mI (1197270) PinController: Pin Val 0[0m
+[0;32mI (1197270) ISR: Value: 241[0m
+[0;32mI (1198270) PinController: Pin Val 0[0m
+[0;32mI (1198270) ISR: Value: 241[0m
+[0;32mI (1199270) PinController: Pin Val 0[0m
+[0;32mI (1199270) ISR: Value: 241[0m
+[0;32mI (1200270) PinController: Pin Val 0[0m
+[0;32mI (1200270) ISR: Value: 241[0m
+[0;32mI (1201270) PinController: Pin Val 0[0m
+[0;32mI (1201270) ISR: Value: 241[0m
+[0;32mI (1202270) PinController: Pin Val 0[0m
+[0;32mI (1202270) ISR: Value: 241[0m
+[0;32mI (1203270) PinController: Pin Val 0[0m
+[0;32mI (1203270) ISR: Value: 241[0m
+[0;32mI (1204270) PinController: Pin Val 0[0m
+[0;32mI (1204270) ISR: Value: 241[0m
+[0;32mI (1205270) PinController: Pin Val 0[0m
+[0;32mI (1205270) ISR: Value: 241[0m
+[0;32mI (1206270) PinController: Pin Val 0[0m
+[0;32mI (1206270) ISR: Value: 241[0m
+[0;32mI (1207270) PinController: Pin Val 0[0m
+[0;32mI (1207270) ISR: Value: 241[0m
+[0;32mI (1208270) PinController: Pin Val 0[0m
+[0;32mI (1208270) ISR: Value: 241[0m
+[0;32mI (1209270) PinController: Pin Val 0[0m
+[0;32mI (1209270) ISR: Value: 241[0m
+[0;32mI (1210270) PinController: Pin Val 0[0m
+[0;32mI (1210270) ISR: Value: 241[0m
+[0;32mI (1211270) PinController: Pin Val 0[0m
+[0;32mI (1211270) ISR: Value: 241[0m
+[0;32mI (1212270) PinController: Pin Val 0[0m
+[0;32mI (1212270) ISR: Value: 241[0m
+[0;32mI (1213270) PinController: Pin Val 0[0m
+[0;32mI (1213270) ISR: Value: 241[0m
+[0;32mI (1214270) PinController: Pin Val 0[0m
+[0;32mI (1214270) ISR: Value: 241[0m
+[0;32mI (1215270) PinController: Pin Val 0[0m
+[0;32mI (1215270) ISR: Value: 241[0m
+[0;32mI (1216270) PinController: Pin Val 0[0m
+[0;32mI (1216270) ISR: Value: 241[0m
+[0;32mI (1217270) PinController: Pin Val 0[0m
+[0;32mI (1217270) ISR: Value: 241[0m
+[0;32mI (1218270) PinController: Pin Val 0[0m
+[0;32mI (1218270) ISR: Value: 241[0m
+[0;32mI (1219270) PinController: Pin Val 0[0m
+[0;32mI (1219270) ISR: Value: 241[0m
+[0;32mI (1220270) PinController: Pin Val 0[0m
+[0;32mI (1220270) ISR: Value: 241[0m
+[0;32mI (1221270) PinController: Pin Val 0[0m
+[0;32mI (1221270) ISR: Value: 241[0m
+[0;32mI (1222270) PinController: Pin Val 0[0m
+[0;32mI (1222270) ISR: Value: 241[0m
+[0;32mI (1223270) PinController: Pin Val 0[0m
+[0;32mI (1223270) ISR: Value: 241[0m
+[0;32mI (1224270) PinController: Pin Val 0[0m
+[0;32mI (1224270) ISR: Value: 241[0m
+[0;32mI (1225270) PinController: Pin Val 0[0m
+[0;32mI (1225270) ISR: Value: 241[0m
+[0;32mI (1226270) PinController: Pin Val 0[0m
+[0;32mI (1226270) ISR: Value: 241[0m
+[0;32mI (1227270) PinController: Pin Val 0[0m
+[0;32mI (1227270) ISR: Value: 241[0m
+[0;32mI (1228270) PinController: Pin Val 0[0m
+[0;32mI (1228270) ISR: Value: 241[0m
+[0;32mI (1229270) PinController: Pin Val 0[0m
+[0;32mI (1229270) ISR: Value: 241[0m
+[0;32mI (1230270) PinController: Pin Val 0[0m
+[0;32mI (1230270) ISR: Value: 241[0m
+[0;32mI (1231270) PinController: Pin Val 0[0m
+[0;32mI (1231270) ISR: Value: 241[0m
+[0;32mI (1232270) PinController: Pin Val 0[0m
+[0;32mI (1232270) ISR: Value: 241[0m
+[0;32mI (1233270) PinController: Pin Val 0[0m
+[0;32mI (1233270) ISR: Value: 241[0m
+[0;32mI (1234270) PinController: Pin Val 0[0m
+[0;32mI (1234270) ISR: Value: 241[0m
+[0;32mI (1235270) PinController: Pin Val 0[0m
+[0;32mI (1235270) ISR: Value: 241[0m
+[0;32mI (1236270) PinController: Pin Val 0[0m
+[0;32mI (1236270) ISR: Value: 241[0m
+[0;32mI (1237270) PinController: Pin Val 0[0m
+[0;32mI (1237270) ISR: Value: 241[0m
+[0;32mI (1238270) PinController: Pin Val 0[0m
+[0;32mI (1238270) ISR: Value: 241[0m
+[0;32mI (1239270) PinController: Pin Val 0[0m
+[0;32mI (1239270) ISR: Value: 241[0m
+[0;32mI (1240270) PinController: Pin Val 0[0m
+[0;32mI (1240270) ISR: Value: 241[0m
+[0;32mI (1241270) PinController: Pin Val 0[0m
+[0;32mI (1241270) ISR: Value: 241[0m
+[0;32mI (1242270) PinController: Pin Val 0[0m
+[0;32mI (1242270) ISR: Value: 241[0m
+[0;32mI (1243270) PinController: Pin Val 0[0m
+[0;32mI (1243270) ISR: Value: 241[0m
+[0;32mI (1244270) PinController: Pin Val 0[0m
+[0;32mI (1244270) ISR: Value: 241[0m
+[0;32mI (1245270) PinController: Pin Val 0[0m
+[0;32mI (1245270) ISR: Value: 241[0m
+[0;32mI (1246270) PinController: Pin Val 0[0m
+[0;32mI (1246270) ISR: Value: 241[0m
+[0;32mI (1247270) PinController: Pin Val 0[0m
+[0;32mI (1247270) ISR: Value: 241[0m
+[0;32mI (1248270) PinController: Pin Val 0[0m
+[0;32mI (1248270) ISR: Value: 241[0m
+[0;32mI (1249270) PinController: Pin Val 0[0m
+[0;32mI (1249270) ISR: Value: 241[0m
+[0;32mI (1250270) PinController: Pin Val 0[0m
+[0;32mI (1250270) ISR: Value: 241[0m
+[0;32mI (1251270) PinController: Pin Val 0[0m
+[0;32mI (1251270) ISR: Value: 241[0m
+[0;32mI (1252270) PinController: Pin Val 0[0m
+[0;32mI (1252270) ISR: Value: 241[0m
+[0;32mI (1253270) PinController: Pin Val 0[0m
+[0;32mI (1253270) ISR: Value: 241[0m
+[0;32mI (1254270) PinController: Pin Val 0[0m
+[0;32mI (1254270) ISR: Value: 241[0m
+[0;32mI (1255270) PinController: Pin Val 0[0m
+[0;32mI (1255270) ISR: Value: 241[0m
+[0;32mI (1256270) PinController: Pin Val 0[0m
+[0;32mI (1256270) ISR: Value: 241[0m
+[0;32mI (1257270) PinController: Pin Val 0[0m
+[0;32mI (1257270) ISR: Value: 241[0m
+[0;32mI (1258270) PinController: Pin Val 0[0m
+[0;32mI (1258270) ISR: Value: 241[0m
+[0;32mI (1259270) PinController: Pin Val 0[0m
+[0;32mI (1259270) ISR: Value: 241[0m
+[0;32mI (1260270) PinController: Pin Val 0[0m
+[0;32mI (1260270) ISR: Value: 241[0m
+[0;32mI (1261270) PinController: Pin Val 0[0m
+[0;32mI (1261270) ISR: Value: 241[0m
+[0;32mI (1262270) PinController: Pin Val 0[0m
+[0;32mI (1262270) ISR: Value: 241[0m
+[0;32mI (1263270) PinController: Pin Val 0[0m
+[0;32mI (1263270) ISR: Value: 241[0m
+[0;32mI (1264270) PinController: Pin Val 0[0m
+[0;32mI (1264270) ISR: Value: 241[0m
+[0;32mI (1265270) PinController: Pin Val 0[0m
+[0;32mI (1265270) ISR: Value: 241[0m
+[0;32mI (1266270) PinController: Pin Val 0[0m
+[0;32mI (1266270) ISR: Value: 241[0m
+[0;32mI (1267270) PinController: Pin Val 0[0m
+[0;32mI (1267270) ISR: Value: 241[0m
+[0;32mI (1268270) PinController: Pin Val 0[0m
+[0;32mI (1268270) ISR: Value: 241[0m
+[0;32mI (1269270) PinController: Pin Val 0[0m
+[0;32mI (1269270) ISR: Value: 241[0m
+[0;32mI (1270270) PinController: Pin Val 0[0m
+[0;32mI (1270270) ISR: Value: 241[0m
+[0;32mI (1271270) PinController: Pin Val 0[0m
+[0;32mI (1271270) ISR: Value: 241[0m
+[0;32mI (1272270) PinController: Pin Val 0[0m
+[0;32mI (1272270) ISR: Value: 241[0m
+[0;32mI (1273270) PinController: Pin Val 0[0m
+[0;32mI (1273270) ISR: Value: 241[0m
+[0;32mI (1274270) PinController: Pin Val 0[0m
+[0;32mI (1274270) ISR: Value: 241[0m
+[0;32mI (1275270) PinController: Pin Val 0[0m
+[0;32mI (1275270) ISR: Value: 241[0m
+[0;32mI (1276270) PinController: Pin Val 0[0m
+[0;32mI (1276270) ISR: Value: 241[0m
+[0;32mI (1277270) PinController: Pin Val 0[0m
+[0;32mI (1277270) ISR: Value: 241[0m
+[0;32mI (1278270) PinController: Pin Val 0[0m
+[0;32mI (1278270) ISR: Value: 241[0m
+[0;32mI (1279270) PinController: Pin Val 0[0m
+[0;32mI (1279270) ISR: Value: 241[0m
+[0;32mI (1280270) PinController: Pin Val 0[0m
+[0;32mI (1280270) ISR: Value: 241[0m
+[0;32mI (1281270) PinController: Pin Val 0[0m
+[0;32mI (1281270) ISR: Value: 241[0m
+[0;32mI (1282270) PinController: Pin Val 0[0m
+[0;32mI (1282270) ISR: Value: 241[0m
+[0;32mI (1283270) PinController: Pin Val 0[0m
+[0;32mI (1283270) ISR: Value: 241[0m
+[0;32mI (1284270) PinController: Pin Val 0[0m
+[0;32mI (1284270) ISR: Value: 241[0m
+[0;32mI (1285270) PinController: Pin Val 0[0m
+[0;32mI (1285270) ISR: Value: 241[0m
+[0;32mI (1286270) PinController: Pin Val 0[0m
+[0;32mI (1286270) ISR: Value: 241[0m
+[0;32mI (1287270) PinController: Pin Val 0[0m
+[0;32mI (1287270) ISR: Value: 241[0m
+[0;32mI (1288270) PinController: Pin Val 0[0m
+[0;32mI (1288270) ISR: Value: 241[0m
+[0;32mI (1289270) PinController: Pin Val 0[0m
+[0;32mI (1289270) ISR: Value: 241[0m
+[0;32mI (1290270) PinController: Pin Val 0[0m
+[0;32mI (1290270) ISR: Value: 241[0m
+[0;32mI (1291270) PinController: Pin Val 0[0m
+[0;32mI (1291270) ISR: Value: 241[0m
+[0;32mI (1292270) PinController: Pin Val 0[0m
+[0;32mI (1292270) ISR: Value: 241[0m
+[0;32mI (1293270) PinController: Pin Val 0[0m
+[0;32mI (1293270) ISR: Value: 241[0m
+[0;32mI (1294270) PinController: Pin Val 0[0m
+[0;32mI (1294270) ISR: Value: 241[0m
+[0;32mI (1295270) PinController: Pin Val 0[0m
+[0;32mI (1295270) ISR: Value: 241[0m
+[0;32mI (1296270) PinController: Pin Val 0[0m
+[0;32mI (1296270) ISR: Value: 241[0m
+[0;32mI (1297270) PinController: Pin Val 0[0m
+[0;32mI (1297270) ISR: Value: 241[0m
+[0;32mI (1298270) PinController: Pin Val 0[0m
+[0;32mI (1298270) ISR: Value: 241[0m
+[0;32mI (1299270) PinController: Pin Val 0[0m
+[0;32mI (1299270) ISR: Value: 241[0m
+[0;32mI (1300270) PinController: Pin Val 0[0m
+[0;32mI (1300270) ISR: Value: 241[0m
+[0;32mI (1301270) PinController: Pin Val 0[0m
+[0;32mI (1301270) ISR: Value: 241[0m
+[0;32mI (1302270) PinController: Pin Val 0[0m
+[0;32mI (1302270) ISR: Value: 241[0m
+[0;32mI (1303270) PinController: Pin Val 0[0m
+[0;32mI (1303270) ISR: Value: 241[0m
+[0;32mI (1304270) PinController: Pin Val 0[0m
+[0;32mI (1304270) ISR: Value: 241[0m
+[0;32mI (1305270) PinController: Pin Val 0[0m
+[0;32mI (1305270) ISR: Value: 241[0m
+[0;32mI (1306270) PinController: Pin Val 0[0m
+[0;32mI (1306270) ISR: Value: 241[0m
+[0;32mI (1307270) PinController: Pin Val 0[0m
+[0;32mI (1307270) ISR: Value: 241[0m
+[0;32mI (1308270) PinController: Pin Val 0[0m
+[0;32mI (1308270) ISR: Value: 241[0m
+[0;32mI (1309270) PinController: Pin Val 0[0m
+[0;32mI (1309270) ISR: Value: 241[0m
+[0;32mI (1310270) PinController: Pin Val 0[0m
+[0;32mI (1310270) ISR: Value: 241[0m
+[0;32mI (1311270) PinController: Pin Val 0[0m
+[0;32mI (1311270) ISR: Value: 241[0m
+[0;32mI (1312270) PinController: Pin Val 0[0m
+[0;32mI (1312270) ISR: Value: 241[0m
+[0;32mI (1313270) PinController: Pin Val 0[0m
+[0;32mI (1313270) ISR: Value: 241[0m
+[0;32mI (1314270) PinController: Pin Val 0[0m
+[0;32mI (1314270) ISR: Value: 241[0m
+[0;32mI (1315270) PinController: Pin Val 0[0m
+[0;32mI (1315270) ISR: Value: 241[0m
+[0;32mI (1316270) PinController: Pin Val 0[0m
+[0;32mI (1316270) ISR: Value: 241[0m
+[0;32mI (1317270) PinController: Pin Val 0[0m
+[0;32mI (1317270) ISR: Value: 241[0m
+[0;32mI (1318270) PinController: Pin Val 0[0m
+[0;32mI (1318270) ISR: Value: 241[0m
+[0;32mI (1319270) PinController: Pin Val 0[0m
+[0;32mI (1319270) ISR: Value: 241[0m
+[0;32mI (1320270) PinController: Pin Val 0[0m
+[0;32mI (1320270) ISR: Value: 241[0m
+[0;32mI (1321270) PinController: Pin Val 0[0m
+[0;32mI (1321270) ISR: Value: 241[0m
+[0;32mI (1322270) PinController: Pin Val 0[0m
+[0;32mI (1322270) ISR: Value: 241[0m
+[0;32mI (1323270) PinController: Pin Val 0[0m
+[0;32mI (1323270) ISR: Value: 241[0m
+[0;32mI (1324270) PinController: Pin Val 0[0m
+[0;32mI (1324270) ISR: Value: 241[0m
+[0;32mI (1325270) PinController: Pin Val 0[0m
+[0;32mI (1325270) ISR: Value: 241[0m
+[0;32mI (1326270) PinController: Pin Val 0[0m
+[0;32mI (1326270) ISR: Value: 241[0m
+[0;32mI (1327270) PinController: Pin Val 0[0m
+[0;32mI (1327270) ISR: Value: 241[0m
+[0;32mI (1328270) PinController: Pin Val 0[0m
+[0;32mI (1328270) ISR: Value: 241[0m
+[0;32mI (1329270) PinController: Pin Val 0[0m
+[0;32mI (1329270) ISR: Value: 241[0m
+[0;32mI (1330270) PinController: Pin Val 0[0m
+[0;32mI (1330270) ISR: Value: 241[0m
+[0;32mI (1331270) PinController: Pin Val 0[0m
+[0;32mI (1331270) ISR: Value: 241[0m
+[0;32mI (1332270) PinController: Pin Val 0[0m
+[0;32mI (1332270) ISR: Value: 241[0m
+[0;32mI (1333270) PinController: Pin Val 0[0m
+[0;32mI (1333270) ISR: Value: 241[0m
+[0;32mI (1334270) PinController: Pin Val 0[0m
+[0;32mI (1334270) ISR: Value: 241[0m
+[0;32mI (1335270) PinController: Pin Val 0[0m
+[0;32mI (1335270) ISR: Value: 241[0m
+[0;32mI (1336270) PinController: Pin Val 0[0m
+[0;32mI (1336270) ISR: Value: 241[0m
+[0;32mI (1337270) PinController: Pin Val 0[0m
+[0;32mI (1337270) ISR: Value: 241[0m
+[0;32mI (1338270) PinController: Pin Val 0[0m
+[0;32mI (1338270) ISR: Value: 241[0m
+[0;32mI (1339270) PinController: Pin Val 0[0m
+[0;32mI (1339270) ISR: Value: 241[0m
+[0;32mI (1340270) PinController: Pin Val 0[0m
+[0;32mI (1340270) ISR: Value: 241[0m
+[0;32mI (1341270) PinController: Pin Val 0[0m
+[0;32mI (1341270) ISR: Value: 241[0m
+[0;32mI (1342270) PinController: Pin Val 0[0m
+[0;32mI (1342270) ISR: Value: 241[0m
+[0;32mI (1343270) PinController: Pin Val 0[0m
+[0;32mI (1343270) ISR: Value: 241[0m
+[0;32mI (1344270) PinController: Pin Val 0[0m
+[0;32mI (1344270) ISR: Value: 241[0m
+[0;32mI (1345270) PinController: Pin Val 0[0m
+[0;32mI (1345270) ISR: Value: 241[0m
+[0;32mI (1346270) PinController: Pin Val 0[0m
+[0;32mI (1346270) ISR: Value: 241[0m
+[0;32mI (1347270) PinController: Pin Val 0[0m
+[0;32mI (1347270) ISR: Value: 241[0m
+[0;32mI (1348270) PinController: Pin Val 0[0m
+[0;32mI (1348270) ISR: Value: 241[0m
+[0;32mI (1349270) PinController: Pin Val 0[0m
+[0;32mI (1349270) ISR: Value: 241[0m
+[0;32mI (1350270) PinController: Pin Val 0[0m
+[0;32mI (1350270) ISR: Value: 241[0m
+[0;32mI (1351270) PinController: Pin Val 0[0m
+[0;32mI (1351270) ISR: Value: 241[0m
+[0;32mI (1352270) PinController: Pin Val 0[0m
+[0;32mI (1352270) ISR: Value: 241[0m
+[0;32mI (1353270) PinController: Pin Val 0[0m
+[0;32mI (1353270) ISR: Value: 241[0m
+[0;32mI (1354270) PinController: Pin Val 0[0m
+[0;32mI (1354270) ISR: Value: 241[0m
+[0;32mI (1355270) PinController: Pin Val 0[0m
+[0;32mI (1355270) ISR: Value: 241[0m
+[0;32mI (1356270) PinController: Pin Val 0[0m
+[0;32mI (1356270) ISR: Value: 241[0m
+[0;32mI (1357270) PinController: Pin Val 0[0m
+[0;32mI (1357270) ISR: Value: 241[0m
+[0;32mI (1358270) PinController: Pin Val 0[0m
+[0;32mI (1358270) ISR: Value: 241[0m
+[0;32mI (1359270) PinController: Pin Val 0[0m
+[0;32mI (1359270) ISR: Value: 241[0m
+[0;32mI (1360270) PinController: Pin Val 0[0m
+[0;32mI (1360270) ISR: Value: 241[0m
+[0;32mI (1361270) PinController: Pin Val 0[0m
+[0;32mI (1361270) ISR: Value: 241[0m
+[0;32mI (1362270) PinController: Pin Val 0[0m
+[0;32mI (1362270) ISR: Value: 241[0m
+[0;32mI (1363270) PinController: Pin Val 0[0m
+[0;32mI (1363270) ISR: Value: 241[0m
+[0;32mI (1364270) PinController: Pin Val 0[0m
+[0;32mI (1364270) ISR: Value: 241[0m
+[0;32mI (1365270) PinController: Pin Val 0[0m
+[0;32mI (1365270) ISR: Value: 241[0m
+[0;32mI (1366270) PinController: Pin Val 0[0m
+[0;32mI (1366270) ISR: Value: 241[0m
+[0;32mI (1367270) PinController: Pin Val 0[0m
+[0;32mI (1367270) ISR: Value: 241[0m
+[0;32mI (1368270) PinController: Pin Val 0[0m
+[0;32mI (1368270) ISR: Value: 241[0m
+[0;32mI (1369270) PinController: Pin Val 0[0m
+[0;32mI (1369270) ISR: Value: 241[0m
+[0;32mI (1370270) PinController: Pin Val 0[0m
+[0;32mI (1370270) ISR: Value: 241[0m
+[0;32mI (1371270) PinController: Pin Val 0[0m
+[0;32mI (1371270) ISR: Value: 241[0m
+[0;32mI (1372270) PinController: Pin Val 0[0m
+[0;32mI (1372270) ISR: Value: 241[0m
+[0;32mI (1373270) PinController: Pin Val 0[0m
+[0;32mI (1373270) ISR: Value: 241[0m
+[0;32mI (1374270) PinController: Pin Val 0[0m
+[0;32mI (1374270) ISR: Value: 241[0m
+[0;32mI (1375270) PinController: Pin Val 0[0m
+[0;32mI (1375270) ISR: Value: 241[0m
+[0;32mI (1376270) PinController: Pin Val 0[0m
+[0;32mI (1376270) ISR: Value: 241[0m
+[0;32mI (1377270) PinController: Pin Val 0[0m
+[0;32mI (1377270) ISR: Value: 241[0m
+[0;32mI (1378270) PinController: Pin Val 0[0m
+[0;32mI (1378270) ISR: Value: 241[0m
+[0;32mI (1379270) PinController: Pin Val 0[0m
+[0;32mI (1379270) ISR: Value: 241[0m
+[0;32mI (1380270) PinController: Pin Val 0[0m
+[0;32mI (1380270) ISR: Value: 241[0m
+[0;32mI (1381270) PinController: Pin Val 0[0m
+[0;32mI (1381270) ISR: Value: 241[0m
+[0;32mI (1382270) PinController: Pin Val 0[0m
+[0;32mI (1382270) ISR: Value: 241[0m
+[0;32mI (1383270) PinController: Pin Val 0[0m
+[0;32mI (1383270) ISR: Value: 241[0m
+[0;32mI (1384270) PinController: Pin Val 0[0m
+[0;32mI (1384270) ISR: Value: 241[0m
+[0;32mI (1385270) PinController: Pin Val 0[0m
+[0;32mI (1385270) ISR: Value: 241[0m
+[0;32mI (1386270) PinController: Pin Val 0[0m
+[0;32mI (1386270) ISR: Value: 241[0m
+[0;32mI (1387270) PinController: Pin Val 0[0m
+[0;32mI (1387270) ISR: Value: 241[0m
+[0;32mI (1388270) PinController: Pin Val 0[0m
+[0;32mI (1388270) ISR: Value: 241[0m
+[0;32mI (1389270) PinController: Pin Val 0[0m
+[0;32mI (1389270) ISR: Value: 241[0m
+[0;32mI (1390270) PinController: Pin Val 0[0m
+[0;32mI (1390270) ISR: Value: 241[0m
+[0;32mI (1391270) PinController: Pin Val 0[0m
+[0;32mI (1391270) ISR: Value: 241[0m
+[0;32mI (1392270) PinController: Pin Val 0[0m
+[0;32mI (1392270) ISR: Value: 241[0m
+[0;32mI (1393270) PinController: Pin Val 0[0m
+[0;32mI (1393270) ISR: Value: 241[0m
+[0;32mI (1394270) PinController: Pin Val 0[0m
+[0;32mI (1394270) ISR: Value: 241[0m
+[0;32mI (1395270) PinController: Pin Val 0[0m
+[0;32mI (1395270) ISR: Value: 241[0m
+[0;32mI (1396270) PinController: Pin Val 0[0m
+[0;32mI (1396270) ISR: Value: 241[0m
+[0;32mI (1397270) PinController: Pin Val 0[0m
+[0;32mI (1397270) ISR: Value: 241[0m
+[0;32mI (1398270) PinController: Pin Val 0[0m
+[0;32mI (1398270) ISR: Value: 241[0m
+[0;32mI (1399270) PinController: Pin Val 0[0m
+[0;32mI (1399270) ISR: Value: 241[0m
+[0;32mI (1400270) PinController: Pin Val 0[0m
+[0;32mI (1400270) ISR: Value: 241[0m
+[0;32mI (1401270) PinController: Pin Val 0[0m
+[0;32mI (1401270) ISR: Value: 241[0m
+[0;32mI (1402270) PinController: Pin Val 0[0m
+[0;32mI (1402270) ISR: Value: 241[0m
+[0;32mI (1403270) PinController: Pin Val 0[0m
+[0;32mI (1403270) ISR: Value: 241[0m
+[0;32mI (1404270) PinController: Pin Val 0[0m
+[0;32mI (1404270) ISR: Value: 241[0m
+[0;32mI (1405270) PinController: Pin Val 0[0m
+[0;32mI (1405270) ISR: Value: 241[0m
+[0;32mI (1406270) PinController: Pin Val 0[0m
+[0;32mI (1406270) ISR: Value: 241[0m
+[0;32mI (1407270) PinController: Pin Val 0[0m
+[0;32mI (1407270) ISR: Value: 241[0m
+[0;32mI (1408270) PinController: Pin Val 0[0m
+[0;32mI (1408270) ISR: Value: 241[0m
+[0;32mI (1409270) PinController: Pin Val 0[0m
+[0;32mI (1409270) ISR: Value: 241[0m
+[0;32mI (1410270) PinController: Pin Val 0[0m
+[0;32mI (1410270) ISR: Value: 241[0m
+[0;32mI (1411270) PinController: Pin Val 0[0m
+[0;32mI (1411270) ISR: Value: 241[0m
+[0;32mI (1412270) PinController: Pin Val 0[0m
+[0;32mI (1412270) ISR: Value: 241[0m
+[0;32mI (1413270) PinController: Pin Val 0[0m
+[0;32mI (1413270) ISR: Value: 241[0m
+[0;32mI (1414270) PinController: Pin Val 0[0m
+[0;32mI (1414270) ISR: Value: 241[0m
+[0;32mI (1415270) PinController: Pin Val 0[0m
+[0;32mI (1415270) ISR: Value: 241[0m
+[0;32mI (1416270) PinController: Pin Val 0[0m
+[0;32mI (1416270) ISR: Value: 241[0m
+[0;32mI (1417270) PinController: Pin Val 0[0m
+[0;32mI (1417270) ISR: Value: 241[0m
+[0;32mI (1418270) PinController: Pin Val 0[0m
+[0;32mI (1418270) ISR: Value: 241[0m
+[0;32mI (1419270) PinController: Pin Val 0[0m
+[0;32mI (1419270) ISR: Value: 241[0m
+[0;32mI (1420270) PinController: Pin Val 0[0m
+[0;32mI (1420270) ISR: Value: 241[0m
+[0;32mI (1421270) PinController: Pin Val 0[0m
+[0;32mI (1421270) ISR: Value: 241[0m
+[0;32mI (1422270) PinController: Pin Val 0[0m
+[0;32mI (1422270) ISR: Value: 241[0m
+[0;32mI (1423270) PinController: Pin Val 0[0m
+[0;32mI (1423270) ISR: Value: 241[0m
+[0;32mI (1424270) PinController: Pin Val 0[0m
+[0;32mI (1424270) ISR: Value: 241[0m
+[0;32mI (1425270) PinController: Pin Val 0[0m
+[0;32mI (1425270) ISR: Value: 241[0m
+[0;32mI (1426270) PinController: Pin Val 0[0m
+[0;32mI (1426270) ISR: Value: 241[0m
+[0;32mI (1427270) PinController: Pin Val 0[0m
+[0;32mI (1427270) ISR: Value: 241[0m
+[0;32mI (1428270) PinController: Pin Val 0[0m
+[0;32mI (1428270) ISR: Value: 241[0m
+[0;32mI (1429270) PinController: Pin Val 0[0m
+[0;32mI (1429270) ISR: Value: 241[0m
+[0;32mI (1430270) PinController: Pin Val 0[0m
+[0;32mI (1430270) ISR: Value: 241[0m
+[0;32mI (1431270) PinController: Pin Val 0[0m
+[0;32mI (1431270) ISR: Value: 241[0m
+[0;32mI (1432270) PinController: Pin Val 0[0m
+[0;32mI (1432270) ISR: Value: 241[0m
+[0;32mI (1433270) PinController: Pin Val 0[0m
+[0;32mI (1433270) ISR: Value: 241[0m
+[0;32mI (1434270) PinController: Pin Val 0[0m
+[0;32mI (1434270) ISR: Value: 241[0m
+[0;32mI (1435270) PinController: Pin Val 0[0m
+[0;32mI (1435270) ISR: Value: 241[0m
+[0;32mI (1436270) PinController: Pin Val 0[0m
+[0;32mI (1436270) ISR: Value: 241[0m
+[0;32mI (1437270) PinController: Pin Val 0[0m
+[0;32mI (1437270) ISR: Value: 241[0m
+[0;32mI (1438270) PinController: Pin Val 0[0m
+[0;32mI (1438270) ISR: Value: 241[0m
+[0;32mI (1439270) PinController: Pin Val 0[0m
+[0;32mI (1439270) ISR: Value: 241[0m
+[0;32mI (1440270) PinController: Pin Val 0[0m
+[0;32mI (1440270) ISR: Value: 241[0m
+[0;32mI (1441270) PinController: Pin Val 0[0m
+[0;32mI (1441270) ISR: Value: 241[0m
+[0;32mI (1442270) PinController: Pin Val 0[0m
+[0;32mI (1442270) ISR: Value: 241[0m
+[0;32mI (1443270) PinController: Pin Val 0[0m
+[0;32mI (1443270) ISR: Value: 241[0m
+[0;32mI (1444270) PinController: Pin Val 0[0m
+[0;32mI (1444270) ISR: Value: 241[0m
+[0;32mI (1445270) PinController: Pin Val 0[0m
+[0;32mI (1445270) ISR: Value: 241[0m
+[0;32mI (1446270) PinController: Pin Val 0[0m
+[0;32mI (1446270) ISR: Value: 241[0m
+[0;32mI (1447270) PinController: Pin Val 0[0m
+[0;32mI (1447270) ISR: Value: 241[0m
+[0;32mI (1448270) PinController: Pin Val 0[0m
+[0;32mI (1448270) ISR: Value: 241[0m
+[0;32mI (1449270) PinController: Pin Val 0[0m
+[0;32mI (1449270) ISR: Value: 241[0m
+[0;32mI (1450270) PinController: Pin Val 0[0m
+[0;32mI (1450270) ISR: Value: 241[0m
+[0;32mI (1451270) PinController: Pin Val 0[0m
+[0;32mI (1451270) ISR: Value: 241[0m
+[0;32mI (1452270) PinController: Pin Val 0[0m
+[0;32mI (1452270) ISR: Value: 241[0m
+[0;32mI (1453270) PinController: Pin Val 0[0m
+[0;32mI (1453270) ISR: Value: 241[0m
+[0;32mI (1454270) PinController: Pin Val 0[0m
+[0;32mI (1454270) ISR: Value: 241[0m
+[0;32mI (1455270) PinController: Pin Val 0[0m
+[0;32mI (1455270) ISR: Value: 241[0m
+[0;32mI (1456270) PinController: Pin Val 0[0m
+[0;32mI (1456270) ISR: Value: 241[0m
+[0;32mI (1457270) PinController: Pin Val 0[0m
+[0;32mI (1457270) ISR: Value: 241[0m
+[0;32mI (1458270) PinController: Pin Val 0[0m
+[0;32mI (1458270) ISR: Value: 241[0m
+[0;32mI (1459270) PinController: Pin Val 0[0m
+[0;32mI (1459270) ISR: Value: 241[0m
+[0;32mI (1460270) PinController: Pin Val 0[0m
+[0;32mI (1460270) ISR: Value: 241[0m
+[0;32mI (1461270) PinController: Pin Val 0[0m
+[0;32mI (1461270) ISR: Value: 241[0m
+[0;32mI (1462270) PinController: Pin Val 0[0m
+[0;32mI (1462270) ISR: Value: 241[0m
+[0;32mI (1463270) PinController: Pin Val 0[0m
+[0;32mI (1463270) ISR: Value: 241[0m
+[0;32mI (1464270) PinController: Pin Val 0[0m
+[0;32mI (1464270) ISR: Value: 241[0m
+[0;32mI (1465270) PinController: Pin Val 0[0m
+[0;32mI (1465270) ISR: Value: 241[0m
+[0;32mI (1466270) PinController: Pin Val 0[0m
+[0;32mI (1466270) ISR: Value: 241[0m
+[0;32mI (1467270) PinController: Pin Val 0[0m
+[0;32mI (1467270) ISR: Value: 241[0m
+[0;32mI (1468270) PinController: Pin Val 0[0m
+[0;32mI (1468270) ISR: Value: 241[0m
+[0;32mI (1469270) PinController: Pin Val 0[0m
+[0;32mI (1469270) ISR: Value: 241[0m
+[0;32mI (1470270) PinController: Pin Val 0[0m
+[0;32mI (1470270) ISR: Value: 241[0m
+[0;32mI (1471270) PinController: Pin Val 0[0m
+[0;32mI (1471270) ISR: Value: 241[0m
+[0;32mI (1472270) PinController: Pin Val 0[0m
+[0;32mI (1472270) ISR: Value: 241[0m
+[0;32mI (1473270) PinController: Pin Val 0[0m
+[0;32mI (1473270) ISR: Value: 241[0m
+[0;32mI (1474270) PinController: Pin Val 0[0m
+[0;32mI (1474270) ISR: Value: 241[0m
+[0;32mI (1475270) PinController: Pin Val 0[0m
+[0;32mI (1475270) ISR: Value: 241[0m
+[0;32mI (1476270) PinController: Pin Val 0[0m
+[0;32mI (1476270) ISR: Value: 241[0m
+[0;32mI (1477270) PinController: Pin Val 0[0m
+[0;32mI (1477270) ISR: Value: 241[0m
+[0;32mI (1478270) PinController: Pin Val 0[0m
+[0;32mI (1478270) ISR: Value: 241[0m
+[0;32mI (1479270) PinController: Pin Val 0[0m
+[0;32mI (1479270) ISR: Value: 241[0m
+[0;32mI (1480270) PinController: Pin Val 0[0m
+[0;32mI (1480270) ISR: Value: 241[0m
+[0;32mI (1481270) PinController: Pin Val 0[0m
+[0;32mI (1481270) ISR: Value: 241[0m
+[0;32mI (1482270) PinController: Pin Val 0[0m
+[0;32mI (1482270) ISR: Value: 241[0m
+[0;32mI (1483270) PinController: Pin Val 0[0m
+[0;32mI (1483270) ISR: Value: 241[0m
+[0;32mI (1484270) PinController: Pin Val 0[0m
+[0;32mI (1484270) ISR: Value: 241[0m
+[0;32mI (1485270) PinController: Pin Val 0[0m
+[0;32mI (1485270) ISR: Value: 241[0m
+[0;32mI (1486270) PinController: Pin Val 0[0m
+[0;32mI (1486270) ISR: Value: 241[0m
+[0;32mI (1487270) PinController: Pin Val 0[0m
+[0;32mI (1487270) ISR: Value: 241[0m
+[0;32mI (1488270) PinController: Pin Val 0[0m
+[0;32mI (1488270) ISR: Value: 241[0m
+[0;32mI (1489270) PinController: Pin Val 0[0m
+[0;32mI (1489270) ISR: Value: 241[0m
+[0;32mI (1490270) PinController: Pin Val 0[0m
+[0;32mI (1490270) ISR: Value: 241[0m
+[0;32mI (1491270) PinController: Pin Val 0[0m
+[0;32mI (1491270) ISR: Value: 241[0m
+[0;32mI (1492270) PinController: Pin Val 0[0m
+[0;32mI (1492270) ISR: Value: 241[0m
+[0;32mI (1493270) PinController: Pin Val 0[0m
+[0;32mI (1493270) ISR: Value: 241[0m
+[0;32mI (1494270) PinController: Pin Val 0[0m
+[0;32mI (1494270) ISR: Value: 241[0m
+[0;32mI (1495270) PinController: Pin Val 0[0m
+[0;32mI (1495270) ISR: Value: 241[0m
+[0;32mI (1496270) PinController: Pin Val 0[0m
+[0;32mI (1496270) ISR: Value: 241[0m
+[0;32mI (1497270) PinController: Pin Val 0[0m
+[0;32mI (1497270) ISR: Value: 241[0m
+[0;32mI (1498270) PinController: Pin Val 0[0m
+[0;32mI (1498270) ISR: Value: 241[0m
+[0;32mI (1499270) PinController: Pin Val 0[0m
+[0;32mI (1499270) ISR: Value: 241[0m
+[0;32mI (1500270) PinController: Pin Val 0[0m
+[0;32mI (1500270) ISR: Value: 241[0m
+[0;32mI (1501270) PinController: Pin Val 0[0m
+[0;32mI (1501270) ISR: Value: 241[0m
+[0;32mI (1502270) PinController: Pin Val 0[0m
+[0;32mI (1502270) ISR: Value: 241[0m
+[0;32mI (1503270) PinController: Pin Val 0[0m
+[0;32mI (1503270) ISR: Value: 241[0m
+[0;32mI (1504270) PinController: Pin Val 0[0m
+[0;32mI (1504270) ISR: Value: 241[0m
+[0;32mI (1505270) PinController: Pin Val 0[0m
+[0;32mI (1505270) ISR: Value: 241[0m
+[0;32mI (1506270) PinController: Pin Val 0[0m
+[0;32mI (1506270) ISR: Value: 241[0m
+[0;32mI (1507270) PinController: Pin Val 0[0m
+[0;32mI (1507270) ISR: Value: 241[0m
+[0;32mI (1508270) PinController: Pin Val 0[0m
+[0;32mI (1508270) ISR: Value: 241[0m
+[0;32mI (1509270) PinController: Pin Val 0[0m
+[0;32mI (1509270) ISR: Value: 241[0m
+[0;32mI (1510270) PinController: Pin Val 0[0m
+[0;32mI (1510270) ISR: Value: 241[0m
+[0;32mI (1511270) PinController: Pin Val 0[0m
+[0;32mI (1511270) ISR: Value: 241[0m
+[0;32mI (1512270) PinController: Pin Val 0[0m
+[0;32mI (1512270) ISR: Value: 241[0m
+[0;32mI (1513270) PinController: Pin Val 0[0m
+[0;32mI (1513270) ISR: Value: 241[0m
+[0;32mI (1514270) PinController: Pin Val 0[0m
+[0;32mI (1514270) ISR: Value: 241[0m
+[0;32mI (1515270) PinController: Pin Val 0[0m
+[0;32mI (1515270) ISR: Value: 241[0m
+[0;32mI (1516270) PinController: Pin Val 0[0m
+[0;32mI (1516270) ISR: Value: 241[0m
+[0;32mI (1517270) PinController: Pin Val 0[0m
+[0;32mI (1517270) ISR: Value: 241[0m
+[0;32mI (1518270) PinController: Pin Val 0[0m
+[0;32mI (1518270) ISR: Value: 241[0m
+[0;32mI (1519270) PinController: Pin Val 0[0m
+[0;32mI (1519270) ISR: Value: 241[0m
+[0;32mI (1520270) PinController: Pin Val 0[0m
+[0;32mI (1520270) ISR: Value: 241[0m
+[0;32mI (1521270) PinController: Pin Val 0[0m
+[0;32mI (1521270) ISR: Value: 241[0m
+[0;32mI (1522270) PinController: Pin Val 0[0m
+[0;32mI (1522270) ISR: Value: 241[0m
+[0;32mI (1523270) PinController: Pin Val 0[0m
+[0;32mI (1523270) ISR: Value: 241[0m
+[0;32mI (1524270) PinController: Pin Val 0[0m
+[0;32mI (1524270) ISR: Value: 241[0m
+[0;32mI (1525270) PinController: Pin Val 0[0m
+[0;32mI (1525270) ISR: Value: 241[0m
+[0;32mI (1526270) PinController: Pin Val 0[0m
+[0;32mI (1526270) ISR: Value: 241[0m
+[0;32mI (1527270) PinController: Pin Val 0[0m
+[0;32mI (1527270) ISR: Value: 241[0m
+[0;32mI (1528270) PinController: Pin Val 0[0m
+[0;32mI (1528270) ISR: Value: 241[0m
+[0;32mI (1529270) PinController: Pin Val 0[0m
+[0;32mI (1529270) ISR: Value: 241[0m
+[0;32mI (1530270) PinController: Pin Val 0[0m
+[0;32mI (1530270) ISR: Value: 241[0m
+[0;32mI (1531270) PinController: Pin Val 0[0m
+[0;32mI (1531270) ISR: Value: 241[0m
+[0;32mI (1532270) PinController: Pin Val 0[0m
+[0;32mI (1532270) ISR: Value: 241[0m
+[0;32mI (1533270) PinController: Pin Val 0[0m
+[0;32mI (1533270) ISR: Value: 241[0m
+[0;32mI (1534270) PinController: Pin Val 0[0m
+[0;32mI (1534270) ISR: Value: 241[0m
+[0;32mI (1535270) PinController: Pin Val 0[0m
+[0;32mI (1535270) ISR: Value: 241[0m
+[0;32mI (1536270) PinController: Pin Val 0[0m
+[0;32mI (1536270) ISR: Value: 241[0m
+[0;32mI (1537270) PinController: Pin Val 0[0m
+[0;32mI (1537270) ISR: Value: 241[0m
+[0;32mI (1538270) PinController: Pin Val 0[0m
+[0;32mI (1538270) ISR: Value: 241[0m
+[0;32mI (1539270) PinController: Pin Val 0[0m
+[0;32mI (1539270) ISR: Value: 241[0m
+[0;32mI (1540270) PinController: Pin Val 0[0m
+[0;32mI (1540270) ISR: Value: 241[0m
+[0;32mI (1541270) PinController: Pin Val 0[0m
+[0;32mI (1541270) ISR: Value: 241[0m
+[0;32mI (1542270) PinController: Pin Val 0[0m
+[0;32mI (1542270) ISR: Value: 241[0m
+[0;32mI (1543270) PinController: Pin Val 0[0m
+[0;32mI (1543270) ISR: Value: 241[0m
+[0;32mI (1544270) PinController: Pin Val 0[0m
+[0;32mI (1544270) ISR: Value: 241[0m
+[0;32mI (1545270) PinController: Pin Val 0[0m
+[0;32mI (1545270) ISR: Value: 241[0m
+[0;32mI (1546270) PinController: Pin Val 0[0m
+[0;32mI (1546270) ISR: Value: 241[0m
+[0;32mI (1547270) PinController: Pin Val 0[0m
+[0;32mI (1547270) ISR: Value: 241[0m
+[0;32mI (1548270) PinController: Pin Val 0[0m
+[0;32mI (1548270) ISR: Value: 241[0m
+[0;32mI (1549270) PinController: Pin Val 0[0m
+[0;32mI (1549270) ISR: Value: 241[0m
+[0;32mI (1550270) PinController: Pin Val 0[0m
+[0;32mI (1550270) ISR: Value: 241[0m
+[0;32mI (1551270) PinController: Pin Val 0[0m
+[0;32mI (1551270) ISR: Value: 241[0m
+[0;32mI (1552270) PinController: Pin Val 0[0m
+[0;32mI (1552270) ISR: Value: 241[0m
+[0;32mI (1553270) PinController: Pin Val 0[0m
+[0;32mI (1553270) ISR: Value: 241[0m
+[0;32mI (1554270) PinController: Pin Val 0[0m
+[0;32mI (1554270) ISR: Value: 241[0m
+[0;32mI (1555270) PinController: Pin Val 0[0m
+[0;32mI (1555270) ISR: Value: 241[0m
+[0;32mI (1556270) PinController: Pin Val 0[0m
+[0;32mI (1556270) ISR: Value: 241[0m
+[0;32mI (1557270) PinController: Pin Val 0[0m
+[0;32mI (1557270) ISR: Value: 241[0m
+[0;32mI (1558270) PinController: Pin Val 0[0m
+[0;32mI (1558270) ISR: Value: 241[0m
+[0;32mI (1559270) PinController: Pin Val 0[0m
+[0;32mI (1559270) ISR: Value: 241[0m
+[0;32mI (1560270) PinController: Pin Val 0[0m
+[0;32mI (1560270) ISR: Value: 241[0m
+[0;32mI (1561270) PinController: Pin Val 0[0m
+[0;32mI (1561270) ISR: Value: 241[0m
+[0;32mI (1562270) PinController: Pin Val 0[0m
+[0;32mI (1562270) ISR: Value: 241[0m
+[0;32mI (1563270) PinController: Pin Val 0[0m
+[0;32mI (1563270) ISR: Value: 241[0m
+[0;32mI (1564270) PinController: Pin Val 0[0m
+[0;32mI (1564270) ISR: Value: 241[0m
+[0;32mI (1565270) PinController: Pin Val 0[0m
+[0;32mI (1565270) ISR: Value: 241[0m
+[0;32mI (1566270) PinController: Pin Val 0[0m
+[0;32mI (1566270) ISR: Value: 241[0m
+[0;32mI (1567270) PinController: Pin Val 0[0m
+[0;32mI (1567270) ISR: Value: 241[0m
+[0;32mI (1568270) PinController: Pin Val 0[0m
+[0;32mI (1568270) ISR: Value: 241[0m
+[0;32mI (1569270) PinController: Pin Val 0[0m
+[0;32mI (1569270) ISR: Value: 241[0m
+[0;32mI (1570270) PinController: Pin Val 0[0m
+[0;32mI (1570270) ISR: Value: 241[0m
+[0;32mI (1571270) PinController: Pin Val 0[0m
+[0;32mI (1571270) ISR: Value: 241[0m
+[0;32mI (1572270) PinController: Pin Val 0[0m
+[0;32mI (1572270) ISR: Value: 241[0m
+[0;32mI (1573270) PinController: Pin Val 0[0m
+[0;32mI (1573270) ISR: Value: 241[0m
+[0;32mI (1574270) PinController: Pin Val 0[0m
+[0;32mI (1574270) ISR: Value: 241[0m
+[0;32mI (1575270) PinController: Pin Val 0[0m
+[0;32mI (1575270) ISR: Value: 241[0m
+[0;32mI (1576270) PinController: Pin Val 0[0m
+[0;32mI (1576270) ISR: Value: 241[0m
+[0;32mI (1577270) PinController: Pin Val 0[0m
+[0;32mI (1577270) ISR: Value: 241[0m
+[0;32mI (1578270) PinController: Pin Val 0[0m
+[0;32mI (1578270) ISR: Value: 241[0m
+[0;32mI (1579270) PinController: Pin Val 0[0m
+[0;32mI (1579270) ISR: Value: 241[0m
+[0;32mI (1580270) PinController: Pin Val 0[0m
+[0;32mI (1580270) ISR: Value: 241[0m
+[0;32mI (1581270) PinController: Pin Val 0[0m
+[0;32mI (1581270) ISR: Value: 241[0m
+[0;32mI (1582270) PinController: Pin Val 0[0m
+[0;32mI (1582270) ISR: Value: 241[0m
+[0;32mI (1583270) PinController: Pin Val 0[0m
+[0;32mI (1583270) ISR: Value: 241[0m
+[0;32mI (1584270) PinController: Pin Val 0[0m
+[0;32mI (1584270) ISR: Value: 241[0m
+[0;32mI (1585270) PinController: Pin Val 0[0m
+[0;32mI (1585270) ISR: Value: 241[0m
+[0;32mI (1586270) PinController: Pin Val 0[0m
+[0;32mI (1586270) ISR: Value: 241[0m
+[0;32mI (1587270) PinController: Pin Val 0[0m
+[0;32mI (1587270) ISR: Value: 241[0m
+[0;32mI (1588270) PinController: Pin Val 0[0m
+[0;32mI (1588270) ISR: Value: 241[0m
+[0;32mI (1589270) PinController: Pin Val 0[0m
+[0;32mI (1589270) ISR: Value: 241[0m
+[0;32mI (1590270) PinController: Pin Val 0[0m
+[0;32mI (1590270) ISR: Value: 241[0m
+[0;32mI (1591270) PinController: Pin Val 0[0m
+[0;32mI (1591270) ISR: Value: 241[0m
+[0;32mI (1592270) PinController: Pin Val 0[0m
+[0;32mI (1592270) ISR: Value: 241[0m
+[0;32mI (1593270) PinController: Pin Val 0[0m
+[0;32mI (1593270) ISR: Value: 241[0m
+[0;32mI (1594270) PinController: Pin Val 0[0m
+[0;32mI (1594270) ISR: Value: 241[0m
+[0;32mI (1595270) PinController: Pin Val 0[0m
+[0;32mI (1595270) ISR: Value: 241[0m
+[0;32mI (1596270) PinController: Pin Val 0[0m
+[0;32mI (1596270) ISR: Value: 241[0m
+[0;32mI (1597270) PinController: Pin Val 0[0m
+[0;32mI (1597270) ISR: Value: 241[0m
+[0;32mI (1598270) PinController: Pin Val 0[0m
+[0;32mI (1598270) ISR: Value: 241[0m
+[0;32mI (1599270) PinController: Pin Val 0[0m
+[0;32mI (1599270) ISR: Value: 241[0m

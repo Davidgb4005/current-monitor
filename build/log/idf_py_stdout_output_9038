@@ -1,0 +1,334 @@
+Command: ninja flash
+[1/96] Linking C static library esp-idf/esp_driver_sdspi/libesp_driver_sdspi.a
+[2/96] Linking C static library esp-idf/esp_driver_sd_intf/libesp_driver_sd_intf.a
+[3/96] Building CXX object esp-idf/LcdDisplay/CMakeFiles/__idf_LcdDisplay.dir/LcdDisplay.cpp.obj
+[4/96] Building C object esp-idf/esp_driver_tsens/CMakeFiles/__idf_esp_driver_tsens.dir/src/temperature_sensor_etm.c.obj
+[5/96] Building C object esp-idf/esp_driver_sdm/CMakeFiles/__idf_esp_driver_sdm.dir/src/sdm.c.obj
+[6/96] Building C object esp-idf/esp_driver_twai/CMakeFiles/__idf_esp_driver_twai.dir/esp_twai.c.obj
+[7/96] Building C object esp-idf/esp_driver_rmt/CMakeFiles/__idf_esp_driver_rmt.dir/src/rmt_rx.c.obj
+[8/96] Building C object esp-idf/esp_driver_tsens/CMakeFiles/__idf_esp_driver_tsens.dir/src/temperature_sensor.c.obj
+[9/96] Building C object esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/src/esp_eth_netif_glue.c.obj
+[10/96] Linking C static library esp-idf/esp_https_server/libesp_https_server.a
+[11/96] Building C object esp-idf/esp_hid/CMakeFiles/__idf_esp_hid.dir/src/esp_hidd.c.obj
+[12/96] Building C object esp-idf/esp_driver_rmt/CMakeFiles/__idf_esp_driver_rmt.dir/src/rmt_tx.c.obj
+[13/96] Building C object esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_common.c.obj
+[14/96] Building C object esp-idf/esp_driver_sdio/CMakeFiles/__idf_esp_driver_sdio.dir/src/sdio_slave.c.obj
+[15/96] Building C object esp-idf/esp_driver_twai/CMakeFiles/__idf_esp_driver_twai.dir/esp_twai_onchip.c.obj
+[16/96] Building C object esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/src/esp_eth.c.obj
+[17/96] Building C object esp-idf/esp_hid/CMakeFiles/__idf_esp_hid.dir/src/esp_hid_common.c.obj
+[18/96] Building C object esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_io.c.obj
+[19/96] Building C object esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/src/phy/esp_eth_phy_802_3.c.obj
+[20/96] Linking C static library esp-idf/protocomm/libprotocomm.a
+[21/96] Building C object esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_ops.c.obj
+[22/96] Building C object esp-idf/esp_hid/CMakeFiles/__idf_esp_hid.dir/src/esp_hidh.c.obj
+[23/96] Building C object esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_ssd1306.c.obj
+[24/96] Linking C static library esp-idf/wear_levelling/libwear_levelling.a
+[25/96] Building C object esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_st7789.c.obj
+[26/96] Building C object esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/i2c/esp_lcd_panel_io_i2c.c.obj
+[27/96] Building C object esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/src/esp_local_ctrl_transport_httpd.c.obj
+[28/96] Building C object esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/src/esp_local_ctrl_handler.c.obj
+[29/96] Building C object esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/diskio/diskio.c.obj
+[30/96] Building C object esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/diskio/diskio_wl.c.obj
+[31/96] Building C object esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/proto-c/esp_local_ctrl.pb-c.c.obj
+[32/96] Building C object esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/spi/esp_lcd_panel_io_spi.c.obj
+[33/96] Building C object esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/diskio/diskio_rawflash.c.obj
+[34/96] Building C object esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/src/esp_local_ctrl.c.obj
+[35/96] Building C object esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/src/ffunicode.c.obj
+[36/96] Building C object esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/port/freertos/ffsystem.c.obj
+[37/96] Building C object esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/diskio/diskio_sdmmc.c.obj
+[38/96] Building C object esp-idf/ieee802154/CMakeFiles/__idf_ieee802154.dir/driver/esp_ieee802154_ack.c.obj
+[39/96] Building C object esp-idf/ieee802154/CMakeFiles/__idf_ieee802154.dir/driver/esp_ieee802154_event.c.obj
+[40/96] Building C object esp-idf/ieee802154/CMakeFiles/__idf_ieee802154.dir/esp_ieee802154.c.obj
+[41/96] Building C object esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/vfs/vfs_fat_sdmmc.c.obj
+[42/96] Building C object esp-idf/ieee802154/CMakeFiles/__idf_ieee802154.dir/driver/esp_ieee802154_sec.c.obj
+[43/96] Building C object esp-idf/ieee802154/CMakeFiles/__idf_ieee802154.dir/driver/esp_ieee802154_util.c.obj
+[44/96] Building C object esp-idf/ieee802154/CMakeFiles/__idf_ieee802154.dir/driver/esp_ieee802154_frame.c.obj
+[45/96] Building C object esp-idf/ieee802154/CMakeFiles/__idf_ieee802154.dir/driver/esp_ieee802154_timer.c.obj
+[46/96] Building C object esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/vfs/vfs_fat_spiflash.c.obj
+[47/96] Building C object esp-idf/ieee802154/CMakeFiles/__idf_ieee802154.dir/driver/esp_ieee802154_pib.c.obj
+[48/96] Building C object esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/vfs/vfs_fat.c.obj
+[49/96] Building C object esp-idf/mqtt/CMakeFiles/__idf_mqtt.dir/esp-mqtt/lib/platform_esp32_idf.c.obj
+[50/96] Building C object esp-idf/ieee802154/CMakeFiles/__idf_ieee802154.dir/driver/esp_ieee802154_dev.c.obj
+[51/96] Building C object esp-idf/rt/CMakeFiles/__idf_rt.dir/FreeRTOS_POSIX_utils.c.obj
+[52/96] Building C object esp-idf/mqtt/CMakeFiles/__idf_mqtt.dir/esp-mqtt/lib/mqtt_outbox.c.obj
+[53/96] Building C object esp-idf/mqtt/CMakeFiles/__idf_mqtt.dir/esp-mqtt/lib/mqtt_msg.c.obj
+[54/96] Building C object esp-idf/rt/CMakeFiles/__idf_rt.dir/FreeRTOS_POSIX_mqueue.c.obj
+[55/96] Linking C static library esp-idf/PinController/libPinController.a
+[56/96] Linking C static library esp-idf/LcdDisplay/libLcdDisplay.a
+[57/96] Building C object esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/spiffs/src/spiffs_cache.c.obj
+[58/96] Building C object esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/spiffs_api.c.obj
+[59/96] Linking C static library esp-idf/esp_driver_gptimer/libesp_driver_gptimer.a
+[60/96] Linking C static library esp-idf/cmock/libcmock.a
+[61/96] Linking C static library esp-idf/esp_driver_cam/libesp_driver_cam.a
+[62/96] Linking C static library esp-idf/driver/libdriver.a
+[63/96] Building C object esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/src/ff.c.obj
+[64/96] Building C object esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/spiffs/src/spiffs_gc.c.obj
+[65/96] Linking C static library esp-idf/esp_driver_pcnt/libesp_driver_pcnt.a
+[66/96] Linking C static library esp-idf/esp_driver_sdio/libesp_driver_sdio.a
+[67/96] Linking C static library esp-idf/esp_driver_mcpwm/libesp_driver_mcpwm.a
+[68/96] Linking C static library esp-idf/esp_driver_sdm/libesp_driver_sdm.a
+[69/96] Linking C static library esp-idf/esp_driver_rmt/libesp_driver_rmt.a
+[70/96] Linking C static library esp-idf/esp_driver_tsens/libesp_driver_tsens.a
+[71/96] Building C object esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/spiffs/src/spiffs_check.c.obj
+[72/96] Linking C static library esp-idf/esp_driver_twai/libesp_driver_twai.a
+[73/96] Linking C static library esp-idf/esp_eth/libesp_eth.a
+[74/96] Linking C static library esp-idf/esp_hid/libesp_hid.a
+[75/96] Linking C static library esp-idf/esp_lcd/libesp_lcd.a
+[76/96] Linking C static library esp-idf/esp_local_ctrl/libesp_local_ctrl.a
+[77/96] Linking C static library esp-idf/rt/librt.a
+[78/96] Linking C static library esp-idf/fatfs/libfatfs.a
+[79/96] Linking C static library esp-idf/ieee802154/libieee802154.a
+[80/96] Building C object esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/esp_spiffs.c.obj
+[81/96] Building C object esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/spiffs/src/spiffs_hydrogen.c.obj
+[82/96] Building C object esp-idf/mqtt/CMakeFiles/__idf_mqtt.dir/esp-mqtt/mqtt_client.c.obj
+[83/96] Linking C static library esp-idf/mqtt/libmqtt.a
+[84/96] Performing build step for 'bootloader'
+[1/3] Linking C executable bootloader.elf
+[2/3] Generating binary image from built executable
+esptool v5.1.0
+Creating ESP32C6 image...
+Merged 2 ELF sections.
+Successfully created ESP32C6 image.
+Generated /home/esp/esp/CurrentMonitor/build/bootloader/bootloader.bin
+[3/3] cd /home/esp/esp/CurrentMonitor/build/bootloader && /home/esp/.espressif/python_env/idf6.1_py3.13_env/bin/python /home/esp/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/esp/esp/CurrentMonitor/build/bootloader/bootloader.bin
+Bootloader binary size 0x58d0 bytes. 0x2730 bytes (31%) free.
+[85/96] Building C object esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/spiffs/src/spiffs_nucleus.c.obj
+[86/96] No install step for 'bootloader'
+[87/96] Linking C static library esp-idf/spiffs/libspiffs.a
+[88/96] Completed 'bootloader'
+[89/96] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/CurrentMonitor.cpp.obj
+[31mFAILED: [0mesp-idf/main/CMakeFiles/__idf_main.dir/CurrentMonitor.cpp.obj 
+/home/esp/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/riscv32-esp-elf-g++ -DESP_PLATFORM -DIDF_VER=\"v6.1-dev-1-gff97953b32-dirty\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -I/home/esp/esp/CurrentMonitor/build/config -I/home/esp/esp/CurrentMonitor/main -I/home/esp/esp/esp-idf/components/esp_libc/platform_include -I/home/esp/esp/esp-idf/components/freertos/config/include -I/home/esp/esp/esp-idf/components/freertos/config/include/freertos -I/home/esp/esp/esp-idf/components/freertos/config/riscv/include -I/home/esp/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include -I/home/esp/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/include -I/home/esp/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/include/freertos -I/home/esp/esp/esp-idf/components/freertos/esp_additions/include -I/home/esp/esp/esp-idf/components/esp_hw_support/include -I/home/esp/esp/esp-idf/components/esp_hw_support/include/soc -I/home/esp/esp/esp-idf/components/esp_hw_support/dma/include -I/home/esp/esp/esp-idf/components/esp_hw_support/ldo/include -I/home/esp/esp/esp-idf/components/esp_hw_support/debug_probe/include -I/home/esp/esp/esp-idf/components/esp_hw_support/etm/include -I/home/esp/esp/esp-idf/components/esp_hw_support/mspi_timing_tuning/include -I/home/esp/esp/esp-idf/components/esp_hw_support/mspi_timing_tuning/tuning_scheme_impl/include -I/home/esp/esp/esp-idf/components/esp_hw_support/power_supply/include -I/home/esp/esp/esp-idf/components/esp_hw_support/modem/include -I/home/esp/esp/esp-idf/components/esp_hw_support/port/esp32c6/. -I/home/esp/esp/esp-idf/components/esp_hw_support/port/esp32c6/include -I/home/esp/esp/esp-idf/components/esp_hw_support/port/esp32c6/private_include -I/home/esp/esp/esp-idf/components/heap/include -I/home/esp/esp/esp-idf/components/heap/tlsf -I/home/esp/esp/esp-idf/components/log/include -I/home/esp/esp/esp-idf/components/soc/include -I/home/esp/esp/esp-idf/components/soc/esp32c6 -I/home/esp/esp/esp-idf/components/soc/esp32c6/include -I/home/esp/esp/esp-idf/components/soc/esp32c6/register -I/home/esp/esp/esp-idf/components/hal/platform_port/include -I/home/esp/esp/esp-idf/components/hal/esp32c6/include -I/home/esp/esp/esp-idf/components/hal/include -I/home/esp/esp/esp-idf/components/esp_rom/include -I/home/esp/esp/esp-idf/components/esp_rom/esp32c6/include -I/home/esp/esp/esp-idf/components/esp_rom/esp32c6/include/esp32c6 -I/home/esp/esp/esp-idf/components/esp_rom/esp32c6 -I/home/esp/esp/esp-idf/components/esp_common/include -I/home/esp/esp/esp-idf/components/esp_system/include -I/home/esp/esp/esp-idf/components/esp_system/port/soc -I/home/esp/esp/esp-idf/components/esp_system/port/include/riscv -I/home/esp/esp/esp-idf/components/esp_system/port/include/private -I/home/esp/esp/esp-idf/components/esp_stdio/include -I/home/esp/esp/esp-idf/components/riscv/include -I/home/esp/esp/esp-idf/components/esp_hal_dma/include -I/home/esp/esp/esp-idf/components/esp_hal_dma/esp32c6/include -I/home/esp/esp/esp-idf/components/lwip/include -I/home/esp/esp/esp-idf/components/lwip/include/apps -I/home/esp/esp/esp-idf/components/lwip/lwip/src/include -I/home/esp/esp/esp-idf/components/lwip/port/include -I/home/esp/esp/esp-idf/components/lwip/port/freertos/include -I/home/esp/esp/esp-idf/components/lwip/port/esp32xx/include -I/home/esp/esp/esp-idf/components/lwip/port/esp32xx/include/arch -I/home/esp/esp/esp-idf/components/lwip/port/esp32xx/include/sys -I/home/esp/esp/esp-idf/components/esp_driver_i2c/include -I/home/esp/esp/esp-idf/components/esp_hal_i2c/esp32c6/include -I/home/esp/esp/esp-idf/components/esp_hal_i2c/include -I/home/esp/esp/CurrentMonitor/components/PinController -I/home/esp/esp/esp-idf/components/esp_driver_gpio/include -I/home/esp/esp/esp-idf/components/esp_event/include -I/home/esp/esp/esp-idf/components/esp_adc/include -I/home/esp/esp/esp-idf/components/esp_adc/interface -I/home/esp/esp/esp-idf/components/esp_adc/esp32c6/include -I/home/esp/esp/esp-idf/components/esp_driver_ledc/include -I/home/esp/esp/esp-idf/components/esp_driver_uart/include -I/home/esp/esp/esp-idf/components/vfs/include -I/home/esp/esp/CurrentMonitor/components/LcdDisplay -march=rv32imac_zicsr_zifencei_zaamo_zalrsc  -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-error=extra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -nostartfiles -Og -fno-shrink-wrap -fmacro-prefix-map=/home/esp/esp/CurrentMonitor=. -fmacro-prefix-map=/home/esp/esp/esp-idf=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -std=gnu++26 -fno-exceptions -fno-rtti -fuse-cxa-atexit -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/CurrentMonitor.cpp.obj -MF esp-idf/main/CMakeFiles/__idf_main.dir/CurrentMonitor.cpp.obj.d -o esp-idf/main/CMakeFiles/__idf_main.dir/CurrentMonitor.cpp.obj -c /home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:1:9:[m[K [01;31m[Kerror: [m[K'[01m[K#pragma once[m[K' in main file [[01;31m[K-Werror=pragma-once-outside-header[m[K]
+    1 | #pragma [01;31m[Konce[m[K
+      |         [01;31m[K^~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:[m[K In function '[01m[Kint[01;32m[K app_main[m[K()[m[K':
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:48:9:[m[K [01;31m[Kerror: [m[K'[01m[Kdev_handle[m[K' was not declared in this scope
+   48 |         [01;31m[Kdev_handle[m[K,
+      |         [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:105:33:[m[K [01;31m[Kerror: [m[K'[01m[Kdatatest[m[K' was not declared in this scope
+  105 |         display.WriteRightAlign([01;31m[Kdatatest[m[K,sizeof(datatest),1,7)
+      |                                 [01;31m[K^~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:23:13:[m[K [01;35m[Kwarning: [m[Kunused variable '[01m[Kfreq[m[K' [[01;35m[K-Wunused-variable[m[K]
+   23 |     uint8_t [01;35m[Kfreq[m[K = 0;
+      |             [01;35m[K^~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:42:10:[m[K [01;35m[Kwarning: [m[Kunused variable '[01m[Kflip[m[K' [[01;35m[K-Wunused-variable[m[K]
+   42 |     bool [01;35m[Kflip[m[K = true;
+      |          [01;35m[K^~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:61:6:[m[K [01;35m[Kwarning: [m[Kunused variable '[01m[Ktestdatat[m[K' [[01;35m[K-Wunused-variable[m[K]
+   61 | char [01;35m[Ktestdatat[m[K[] = {'t','e','s','t'};
+      |      [01;35m[K^~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:[m[K At global scope:
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:115:6:[m[K [01;31m[Kerror: [m[Kambiguating new declaration of '[01m[Kvoid[01;32m[K app_main[m[K()[m[K'
+  115 | void [01;31m[Kapp_main[m[K(void)
+      |      [01;31m[K^~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:17:16:[m[K [01;36m[Knote: [m[Kold declaration '[01m[Kint[01;32m[K app_main[m[K()[m[K'
+   17 | extern "C" int [01;36m[Kapp_main[m[K(void)
+      |                [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/home/esp/esp/CurrentMonitor/components/PinController/PinController.hpp:6[m[K,
+                 from [01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:4[m[K:
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:[m[K In function '[01m[Kvoid[01;32m[K app_main[m[K()[m[K':
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:118:14:[m[K [01;31m[Kerror: [m[K'[01m[KTAG[m[K' was not declared in this scope
+  118 |     ESP_LOGI([01;31m[KTAG[m[K, "Initializing I2C...");
+      |              [01;31m[K^~~[m[K
+[01m[K/home/esp/esp/esp-idf/components/log/include/esp_log.h:194:111:[m[K [01;36m[Knote: [m[Kin definition of macro '[01m[KESP_LOG_LEVEL[m[K'
+  194 |         if (ESP_LOG_GET_LEVEL(configs)==ESP_LOG_ERROR)        { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_ERROR),   [01;36m[Ktag[m[K, LOG_FORMAT(E, format), esp_log_timestamp(), tag __VA_OPT__(,) __VA_ARGS__); } \
+      |                                                                                                               [01;36m[K^~~[m[K
+[01m[K/home/esp/esp/esp-idf/components/log/include/esp_log.h:79:41:[m[K [01;36m[Knote: [m[Kin expansion of macro '[01m[KESP_LOG_LEVEL_LOCAL[m[K'
+   79 | #define ESP_LOGI(tag, format, ...) do { [01;36m[KESP_LOG_LEVEL_LOCAL[m[K(ESP_LOG_INFO, tag, format __VA_OPT__(,) __VA_ARGS__); } while(0)
+      |                                         [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:118:5:[m[K [01;36m[Knote: [m[Kin expansion of macro '[01m[KESP_LOGI[m[K'
+  118 |     [01;36m[KESP_LOGI[m[K(TAG, "Initializing I2C...");
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:118:14:[m[K [01;31m[Kerror: [m[K'[01m[KTAG[m[K' was not declared in this scope
+  118 |     ESP_LOGI([01;31m[KTAG[m[K, "Initializing I2C...");
+      |              [01;31m[K^~~[m[K
+[01m[K/home/esp/esp/esp-idf/components/log/include/esp_log.h:195:111:[m[K [01;36m[Knote: [m[Kin definition of macro '[01m[KESP_LOG_LEVEL[m[K'
+  195 |         else if (ESP_LOG_GET_LEVEL(configs)==ESP_LOG_WARN)    { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_WARN),    [01;36m[Ktag[m[K, LOG_FORMAT(W, format), esp_log_timestamp(), tag __VA_OPT__(,) __VA_ARGS__); } \
+      |                                                                                                               [01;36m[K^~~[m[K
+[01m[K/home/esp/esp/esp-idf/components/log/include/esp_log.h:79:41:[m[K [01;36m[Knote: [m[Kin expansion of macro '[01m[KESP_LOG_LEVEL_LOCAL[m[K'
+   79 | #define ESP_LOGI(tag, format, ...) do { [01;36m[KESP_LOG_LEVEL_LOCAL[m[K(ESP_LOG_INFO, tag, format __VA_OPT__(,) __VA_ARGS__); } while(0)
+      |                                         [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:118:5:[m[K [01;36m[Knote: [m[Kin expansion of macro '[01m[KESP_LOGI[m[K'
+  118 |     [01;36m[KESP_LOGI[m[K(TAG, "Initializing I2C...");
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:118:14:[m[K [01;31m[Kerror: [m[K'[01m[KTAG[m[K' was not declared in this scope
+  118 |     ESP_LOGI([01;31m[KTAG[m[K, "Initializing I2C...");
+      |              [01;31m[K^~~[m[K
+[01m[K/home/esp/esp/esp-idf/components/log/include/esp_log.h:196:111:[m[K [01;36m[Knote: [m[Kin definition of macro '[01m[KESP_LOG_LEVEL[m[K'
+  196 |         else if (ESP_LOG_GET_LEVEL(configs)==ESP_LOG_DEBUG)   { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_DEBUG),   [01;36m[Ktag[m[K, LOG_FORMAT(D, format), esp_log_timestamp(), tag __VA_OPT__(,) __VA_ARGS__); } \
+      |                                                                                                               [01;36m[K^~~[m[K
+[01m[K/home/esp/esp/esp-idf/components/log/include/esp_log.h:79:41:[m[K [01;36m[Knote: [m[Kin expansion of macro '[01m[KESP_LOG_LEVEL_LOCAL[m[K'
+   79 | #define ESP_LOGI(tag, format, ...) do { [01;36m[KESP_LOG_LEVEL_LOCAL[m[K(ESP_LOG_INFO, tag, format __VA_OPT__(,) __VA_ARGS__); } while(0)
+      |                                         [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:118:5:[m[K [01;36m[Knote: [m[Kin expansion of macro '[01m[KESP_LOGI[m[K'
+  118 |     [01;36m[KESP_LOGI[m[K(TAG, "Initializing I2C...");
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:118:14:[m[K [01;31m[Kerror: [m[K'[01m[KTAG[m[K' was not declared in this scope
+  118 |     ESP_LOGI([01;31m[KTAG[m[K, "Initializing I2C...");
+      |              [01;31m[K^~~[m[K
+[01m[K/home/esp/esp/esp-idf/components/log/include/esp_log.h:197:111:[m[K [01;36m[Knote: [m[Kin definition of macro '[01m[KESP_LOG_LEVEL[m[K'
+  197 |         else if (ESP_LOG_GET_LEVEL(configs)==ESP_LOG_VERBOSE) { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_VERBOSE), [01;36m[Ktag[m[K, LOG_FORMAT(V, format), esp_log_timestamp(), tag __VA_OPT__(,) __VA_ARGS__); } \
+      |                                                                                                               [01;36m[K^~~[m[K
+[01m[K/home/esp/esp/esp-idf/components/log/include/esp_log.h:79:41:[m[K [01;36m[Knote: [m[Kin expansion of macro '[01m[KESP_LOG_LEVEL_LOCAL[m[K'
+   79 | #define ESP_LOGI(tag, format, ...) do { [01;36m[KESP_LOG_LEVEL_LOCAL[m[K(ESP_LOG_INFO, tag, format __VA_OPT__(,) __VA_ARGS__); } while(0)
+      |                                         [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:118:5:[m[K [01;36m[Knote: [m[Kin expansion of macro '[01m[KESP_LOGI[m[K'
+  118 |     [01;36m[KESP_LOGI[m[K(TAG, "Initializing I2C...");
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:118:14:[m[K [01;31m[Kerror: [m[K'[01m[KTAG[m[K' was not declared in this scope
+  118 |     ESP_LOGI([01;31m[KTAG[m[K, "Initializing I2C...");
+      |              [01;31m[K^~~[m[K
+[01m[K/home/esp/esp/esp-idf/components/log/include/esp_log.h:198:111:[m[K [01;36m[Knote: [m[Kin definition of macro '[01m[KESP_LOG_LEVEL[m[K'
+  198 |         else                                                  { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_INFO),    [01;36m[Ktag[m[K, LOG_FORMAT(I, format), esp_log_timestamp(), tag __VA_OPT__(,) __VA_ARGS__); } \
+      |                                                                                                               [01;36m[K^~~[m[K
+[01m[K/home/esp/esp/esp-idf/components/log/include/esp_log.h:79:41:[m[K [01;36m[Knote: [m[Kin expansion of macro '[01m[KESP_LOG_LEVEL_LOCAL[m[K'
+   79 | #define ESP_LOGI(tag, format, ...) do { [01;36m[KESP_LOG_LEVEL_LOCAL[m[K(ESP_LOG_INFO, tag, format __VA_OPT__(,) __VA_ARGS__); } while(0)
+      |                                         [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:118:5:[m[K [01;36m[Knote: [m[Kin expansion of macro '[01m[KESP_LOGI[m[K'
+  118 |     [01;36m[KESP_LOGI[m[K(TAG, "Initializing I2C...");
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:120:30:[m[K [01;31m[Kerror: [m[K'[01m[Kbus_handle[m[K' was not declared in this scope
+  120 |     i2c_master_init_generic(&[01;31m[Kbus_handle[m[K, &dev_handle);
+      |                              [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:120:43:[m[K [01;31m[Kerror: [m[K'[01m[Kdev_handle[m[K' was not declared in this scope
+  120 |     i2c_master_init_generic(&bus_handle, &[01;31m[Kdev_handle[m[K);
+      |                                           [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:120:5:[m[K [01;31m[Kerror: [m[K'[01m[Ki2c_master_init_generic[m[K' was not declared in this scope
+  120 |     [01;31m[Ki2c_master_init_generic[m[K(&bus_handle, &dev_handle);
+      |     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:121:14:[m[K [01;31m[Kerror: [m[K'[01m[KTAG[m[K' was not declared in this scope
+  121 |     ESP_LOGI([01;31m[KTAG[m[K, "Initializing LCD...");
+      |              [01;31m[K^~~[m[K
+[01m[K/home/esp/esp/esp-idf/components/log/include/esp_log.h:194:111:[m[K [01;36m[Knote: [m[Kin definition of macro '[01m[KESP_LOG_LEVEL[m[K'
+  194 |         if (ESP_LOG_GET_LEVEL(configs)==ESP_LOG_ERROR)        { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_ERROR),   [01;36m[Ktag[m[K, LOG_FORMAT(E, format), esp_log_timestamp(), tag __VA_OPT__(,) __VA_ARGS__); } \
+      |                                                                                                               [01;36m[K^~~[m[K
+[01m[K/home/esp/esp/esp-idf/components/log/include/esp_log.h:79:41:[m[K [01;36m[Knote: [m[Kin expansion of macro '[01m[KESP_LOG_LEVEL_LOCAL[m[K'
+   79 | #define ESP_LOGI(tag, format, ...) do { [01;36m[KESP_LOG_LEVEL_LOCAL[m[K(ESP_LOG_INFO, tag, format __VA_OPT__(,) __VA_ARGS__); } while(0)
+      |                                         [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:121:5:[m[K [01;36m[Knote: [m[Kin expansion of macro '[01m[KESP_LOGI[m[K'
+  121 |     [01;36m[KESP_LOGI[m[K(TAG, "Initializing LCD...");
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:121:14:[m[K [01;31m[Kerror: [m[K'[01m[KTAG[m[K' was not declared in this scope
+  121 |     ESP_LOGI([01;31m[KTAG[m[K, "Initializing LCD...");
+      |              [01;31m[K^~~[m[K
+[01m[K/home/esp/esp/esp-idf/components/log/include/esp_log.h:195:111:[m[K [01;36m[Knote: [m[Kin definition of macro '[01m[KESP_LOG_LEVEL[m[K'
+  195 |         else if (ESP_LOG_GET_LEVEL(configs)==ESP_LOG_WARN)    { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_WARN),    [01;36m[Ktag[m[K, LOG_FORMAT(W, format), esp_log_timestamp(), tag __VA_OPT__(,) __VA_ARGS__); } \
+      |                                                                                                               [01;36m[K^~~[m[K
+[01m[K/home/esp/esp/esp-idf/components/log/include/esp_log.h:79:41:[m[K [01;36m[Knote: [m[Kin expansion of macro '[01m[KESP_LOG_LEVEL_LOCAL[m[K'
+   79 | #define ESP_LOGI(tag, format, ...) do { [01;36m[KESP_LOG_LEVEL_LOCAL[m[K(ESP_LOG_INFO, tag, format __VA_OPT__(,) __VA_ARGS__); } while(0)
+      |                                         [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:121:5:[m[K [01;36m[Knote: [m[Kin expansion of macro '[01m[KESP_LOGI[m[K'
+  121 |     [01;36m[KESP_LOGI[m[K(TAG, "Initializing LCD...");
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:121:14:[m[K [01;31m[Kerror: [m[K'[01m[KTAG[m[K' was not declared in this scope
+  121 |     ESP_LOGI([01;31m[KTAG[m[K, "Initializing LCD...");
+      |              [01;31m[K^~~[m[K
+[01m[K/home/esp/esp/esp-idf/components/log/include/esp_log.h:196:111:[m[K [01;36m[Knote: [m[Kin definition of macro '[01m[KESP_LOG_LEVEL[m[K'
+  196 |         else if (ESP_LOG_GET_LEVEL(configs)==ESP_LOG_DEBUG)   { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_DEBUG),   [01;36m[Ktag[m[K, LOG_FORMAT(D, format), esp_log_timestamp(), tag __VA_OPT__(,) __VA_ARGS__); } \
+      |                                                                                                               [01;36m[K^~~[m[K
+[01m[K/home/esp/esp/esp-idf/components/log/include/esp_log.h:79:41:[m[K [01;36m[Knote: [m[Kin expansion of macro '[01m[KESP_LOG_LEVEL_LOCAL[m[K'
+   79 | #define ESP_LOGI(tag, format, ...) do { [01;36m[KESP_LOG_LEVEL_LOCAL[m[K(ESP_LOG_INFO, tag, format __VA_OPT__(,) __VA_ARGS__); } while(0)
+      |                                         [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:121:5:[m[K [01;36m[Knote: [m[Kin expansion of macro '[01m[KESP_LOGI[m[K'
+  121 |     [01;36m[KESP_LOGI[m[K(TAG, "Initializing LCD...");
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:121:14:[m[K [01;31m[Kerror: [m[K'[01m[KTAG[m[K' was not declared in this scope
+  121 |     ESP_LOGI([01;31m[KTAG[m[K, "Initializing LCD...");
+      |              [01;31m[K^~~[m[K
+[01m[K/home/esp/esp/esp-idf/components/log/include/esp_log.h:197:111:[m[K [01;36m[Knote: [m[Kin definition of macro '[01m[KESP_LOG_LEVEL[m[K'
+  197 |         else if (ESP_LOG_GET_LEVEL(configs)==ESP_LOG_VERBOSE) { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_VERBOSE), [01;36m[Ktag[m[K, LOG_FORMAT(V, format), esp_log_timestamp(), tag __VA_OPT__(,) __VA_ARGS__); } \
+      |                                                                                                               [01;36m[K^~~[m[K
+[01m[K/home/esp/esp/esp-idf/components/log/include/esp_log.h:79:41:[m[K [01;36m[Knote: [m[Kin expansion of macro '[01m[KESP_LOG_LEVEL_LOCAL[m[K'
+   79 | #define ESP_LOGI(tag, format, ...) do { [01;36m[KESP_LOG_LEVEL_LOCAL[m[K(ESP_LOG_INFO, tag, format __VA_OPT__(,) __VA_ARGS__); } while(0)
+      |                                         [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:121:5:[m[K [01;36m[Knote: [m[Kin expansion of macro '[01m[KESP_LOGI[m[K'
+  121 |     [01;36m[KESP_LOGI[m[K(TAG, "Initializing LCD...");
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:121:14:[m[K [01;31m[Kerror: [m[K'[01m[KTAG[m[K' was not declared in this scope
+  121 |     ESP_LOGI([01;31m[KTAG[m[K, "Initializing LCD...");
+      |              [01;31m[K^~~[m[K
+[01m[K/home/esp/esp/esp-idf/components/log/include/esp_log.h:198:111:[m[K [01;36m[Knote: [m[Kin definition of macro '[01m[KESP_LOG_LEVEL[m[K'
+  198 |         else                                                  { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_INFO),    [01;36m[Ktag[m[K, LOG_FORMAT(I, format), esp_log_timestamp(), tag __VA_OPT__(,) __VA_ARGS__); } \
+      |                                                                                                               [01;36m[K^~~[m[K
+[01m[K/home/esp/esp/esp-idf/components/log/include/esp_log.h:79:41:[m[K [01;36m[Knote: [m[Kin expansion of macro '[01m[KESP_LOG_LEVEL_LOCAL[m[K'
+   79 | #define ESP_LOGI(tag, format, ...) do { [01;36m[KESP_LOG_LEVEL_LOCAL[m[K(ESP_LOG_INFO, tag, format __VA_OPT__(,) __VA_ARGS__); } while(0)
+      |                                         [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:121:5:[m[K [01;36m[Knote: [m[Kin expansion of macro '[01m[KESP_LOGI[m[K'
+  121 |     [01;36m[KESP_LOGI[m[K(TAG, "Initializing LCD...");
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:122:5:[m[K [01;31m[Kerror: [m[K'[01m[Klcd_init[m[K' was not declared in this scope; did you mean '[01m[K_lock_init[m[K'?
+  122 |     [01;31m[Klcd_init[m[K();
+      |     [01;31m[K^~~~~~~~[m[K
+      |     [32m[K_lock_init[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:124:14:[m[K [01;31m[Kerror: [m[K'[01m[KTAG[m[K' was not declared in this scope
+  124 |     ESP_LOGI([01;31m[KTAG[m[K, "Printing to LCD...");
+      |              [01;31m[K^~~[m[K
+[01m[K/home/esp/esp/esp-idf/components/log/include/esp_log.h:194:111:[m[K [01;36m[Knote: [m[Kin definition of macro '[01m[KESP_LOG_LEVEL[m[K'
+  194 |         if (ESP_LOG_GET_LEVEL(configs)==ESP_LOG_ERROR)        { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_ERROR),   [01;36m[Ktag[m[K, LOG_FORMAT(E, format), esp_log_timestamp(), tag __VA_OPT__(,) __VA_ARGS__); } \
+      |                                                                                                               [01;36m[K^~~[m[K
+[01m[K/home/esp/esp/esp-idf/components/log/include/esp_log.h:79:41:[m[K [01;36m[Knote: [m[Kin expansion of macro '[01m[KESP_LOG_LEVEL_LOCAL[m[K'
+   79 | #define ESP_LOGI(tag, format, ...) do { [01;36m[KESP_LOG_LEVEL_LOCAL[m[K(ESP_LOG_INFO, tag, format __VA_OPT__(,) __VA_ARGS__); } while(0)
+      |                                         [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:124:5:[m[K [01;36m[Knote: [m[Kin expansion of macro '[01m[KESP_LOGI[m[K'
+  124 |     [01;36m[KESP_LOGI[m[K(TAG, "Printing to LCD...");
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:124:14:[m[K [01;31m[Kerror: [m[K'[01m[KTAG[m[K' was not declared in this scope
+  124 |     ESP_LOGI([01;31m[KTAG[m[K, "Printing to LCD...");
+      |              [01;31m[K^~~[m[K
+[01m[K/home/esp/esp/esp-idf/components/log/include/esp_log.h:195:111:[m[K [01;36m[Knote: [m[Kin definition of macro '[01m[KESP_LOG_LEVEL[m[K'
+  195 |         else if (ESP_LOG_GET_LEVEL(configs)==ESP_LOG_WARN)    { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_WARN),    [01;36m[Ktag[m[K, LOG_FORMAT(W, format), esp_log_timestamp(), tag __VA_OPT__(,) __VA_ARGS__); } \
+      |                                                                                                               [01;36m[K^~~[m[K
+[01m[K/home/esp/esp/esp-idf/components/log/include/esp_log.h:79:41:[m[K [01;36m[Knote: [m[Kin expansion of macro '[01m[KESP_LOG_LEVEL_LOCAL[m[K'
+   79 | #define ESP_LOGI(tag, format, ...) do { [01;36m[KESP_LOG_LEVEL_LOCAL[m[K(ESP_LOG_INFO, tag, format __VA_OPT__(,) __VA_ARGS__); } while(0)
+      |                                         [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:124:5:[m[K [01;36m[Knote: [m[Kin expansion of macro '[01m[KESP_LOGI[m[K'
+  124 |     [01;36m[KESP_LOGI[m[K(TAG, "Printing to LCD...");
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:124:14:[m[K [01;31m[Kerror: [m[K'[01m[KTAG[m[K' was not declared in this scope
+  124 |     ESP_LOGI([01;31m[KTAG[m[K, "Printing to LCD...");
+      |              [01;31m[K^~~[m[K
+[01m[K/home/esp/esp/esp-idf/components/log/include/esp_log.h:196:111:[m[K [01;36m[Knote: [m[Kin definition of macro '[01m[KESP_LOG_LEVEL[m[K'
+  196 |         else if (ESP_LOG_GET_LEVEL(configs)==ESP_LOG_DEBUG)   { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_DEBUG),   [01;36m[Ktag[m[K, LOG_FORMAT(D, format), esp_log_timestamp(), tag __VA_OPT__(,) __VA_ARGS__); } \
+      |                                                                                                               [01;36m[K^~~[m[K
+[01m[K/home/esp/esp/esp-idf/components/log/include/esp_log.h:79:41:[m[K [01;36m[Knote: [m[Kin expansion of macro '[01m[KESP_LOG_LEVEL_LOCAL[m[K'
+   79 | #define ESP_LOGI(tag, format, ...) do { [01;36m[KESP_LOG_LEVEL_LOCAL[m[K(ESP_LOG_INFO, tag, format __VA_OPT__(,) __VA_ARGS__); } while(0)
+      |                                         [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:124:5:[m[K [01;36m[Knote: [m[Kin expansion of macro '[01m[KESP_LOGI[m[K'
+  124 |     [01;36m[KESP_LOGI[m[K(TAG, "Printing to LCD...");
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:124:14:[m[K [01;31m[Kerror: [m[K'[01m[KTAG[m[K' was not declared in this scope
+  124 |     ESP_LOGI([01;31m[KTAG[m[K, "Printing to LCD...");
+      |              [01;31m[K^~~[m[K
+[01m[K/home/esp/esp/esp-idf/components/log/include/esp_log.h:197:111:[m[K [01;36m[Knote: [m[Kin definition of macro '[01m[KESP_LOG_LEVEL[m[K'
+  197 |         else if (ESP_LOG_GET_LEVEL(configs)==ESP_LOG_VERBOSE) { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_VERBOSE), [01;36m[Ktag[m[K, LOG_FORMAT(V, format), esp_log_timestamp(), tag __VA_OPT__(,) __VA_ARGS__); } \
+      |                                                                                                               [01;36m[K^~~[m[K
+[01m[K/home/esp/esp/esp-idf/components/log/include/esp_log.h:79:41:[m[K [01;36m[Knote: [m[Kin expansion of macro '[01m[KESP_LOG_LEVEL_LOCAL[m[K'
+   79 | #define ESP_LOGI(tag, format, ...) do { [01;36m[KESP_LOG_LEVEL_LOCAL[m[K(ESP_LOG_INFO, tag, format __VA_OPT__(,) __VA_ARGS__); } while(0)
+      |                                         [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:124:5:[m[K [01;36m[Knote: [m[Kin expansion of macro '[01m[KESP_LOGI[m[K'
+  124 |     [01;36m[KESP_LOGI[m[K(TAG, "Printing to LCD...");
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:124:14:[m[K [01;31m[Kerror: [m[K'[01m[KTAG[m[K' was not declared in this scope
+  124 |     ESP_LOGI([01;31m[KTAG[m[K, "Printing to LCD...");
+      |              [01;31m[K^~~[m[K
+[01m[K/home/esp/esp/esp-idf/components/log/include/esp_log.h:198:111:[m[K [01;36m[Knote: [m[Kin definition of macro '[01m[KESP_LOG_LEVEL[m[K'
+  198 |         else                                                  { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_INFO),    [01;36m[Ktag[m[K, LOG_FORMAT(I, format), esp_log_timestamp(), tag __VA_OPT__(,) __VA_ARGS__); } \
+      |                                                                                                               [01;36m[K^~~[m[K
+[01m[K/home/esp/esp/esp-idf/components/log/include/esp_log.h:79:41:[m[K [01;36m[Knote: [m[Kin expansion of macro '[01m[KESP_LOG_LEVEL_LOCAL[m[K'
+   79 | #define ESP_LOGI(tag, format, ...) do { [01;36m[KESP_LOG_LEVEL_LOCAL[m[K(ESP_LOG_INFO, tag, format __VA_OPT__(,) __VA_ARGS__); } while(0)
+      |                                         [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:124:5:[m[K [01;36m[Knote: [m[Kin expansion of macro '[01m[KESP_LOGI[m[K'
+  124 |     [01;36m[KESP_LOGI[m[K(TAG, "Printing to LCD...");
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:125:5:[m[K [01;31m[Kerror: [m[K'[01m[Klcd_print[m[K' was not declared in this scope
+  125 |     [01;31m[Klcd_print[m[K("Fuck MY life");
+      |     [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:126:5:[m[K [01;31m[Kerror: [m[K'[01m[Klcd_send_command[m[K' was not declared in this scope
+  126 |     [01;31m[Klcd_send_command[m[K(0x0c);
+      |     [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:130:9:[m[K [01;31m[Kerror: [m[K'[01m[Kupdate_lcd[m[K' was not declared in this scope
+  130 |         [01;31m[Kupdate_lcd[m[K();
+      |         [01;31m[K^~~~~~~~~~[m[K
+cc1plus: all warnings being treated as errors
+ninja: build stopped: subcommand failed.

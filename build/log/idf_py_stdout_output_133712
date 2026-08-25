@@ -1,0 +1,129 @@
+Command: ninja flash
+[1/10] Performing build step for 'bootloader'
+[1/1] cd /home/esp/esp/CurrentMonitor/build/bootloader && /home/esp/.espressif/python_env/idf6.1_py3.13_env/bin/python /home/esp/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/esp/esp/CurrentMonitor/build/bootloader/bootloader.bin
+Bootloader binary size 0x58d0 bytes. 0x2730 bytes (31%) free.
+[2/10] No install step for 'bootloader'
+[3/10] Completed 'bootloader'
+[4/10] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/CurrentMonitor.cpp.obj
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:[m[K In function '[01m[Kint[01;32m[K app_main[m[K()[m[K':
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:176:14:[m[K [01;35m[Kwarning: [m[Kunused variable '[01m[Ktesetdata[m[K' [[01;35m[K-Wunused-variable[m[K]
+  176 |         char [01;35m[Ktesetdata[m[K[] = "OhAthatAmakesAsense!";
+      |              [01;35m[K^~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:177:14:[m[K [01;35m[Kwarning: [m[Kunused variable '[01m[Ktesetdata2[m[K' [[01;35m[K-Wunused-variable[m[K]
+  177 |         char [01;35m[Ktesetdata2[m[K[] = "237.52";
+      |              [01;35m[K^~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:178:14:[m[K [01;35m[Kwarning: [m[Kunused variable '[01m[Ktestdatat[m[K' [[01;35m[K-Wunused-variable[m[K]
+  178 |         char [01;35m[Ktestdatat[m[K[] = {'b', 'u', 't', ' ', 'd', 'o', 'e', 's', ' ', 't', 'h', 'i', 's', ' ', 'w', 'o', 'r', 'k'};
+      |              [01;35m[K^~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:179:14:[m[K [01;35m[Kwarning: [m[Kunused variable '[01m[Kbuffer[m[K' [[01;35m[K-Wunused-variable[m[K]
+  179 |         char [01;35m[Kbuffer[m[K[20];
+      |              [01;35m[K^~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:181:20:[m[K [01;35m[Kwarning: [m[Kunused variable '[01m[Kx[m[K' [[01;35m[K-Wunused-variable[m[K]
+  181 |         static int [01;35m[Kx[m[K = 0;
+      |                    [01;35m[K^[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:54:10:[m[K [01;35m[Kwarning: [m[Kunused variable '[01m[Kleft_button_ons[m[K' [[01;35m[K-Wunused-variable[m[K]
+   54 |     bool [01;35m[Kleft_button_ons[m[K = false;
+      |          [01;35m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:55:10:[m[K [01;35m[Kwarning: [m[Kunused variable '[01m[Kright_button_ons[m[K' [[01;35m[K-Wunused-variable[m[K]
+   55 |     bool [01;35m[Kright_button_ons[m[K = false;
+      |          [01;35m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:57:13:[m[K [01;35m[Kwarning: [m[Kunused variable '[01m[Kdata[m[K' [[01;35m[K-Wunused-variable[m[K]
+   57 |     uint8_t [01;35m[Kdata[m[K[2]; // Example: read 14 bytes
+      |             [01;35m[K^~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:59:13:[m[K [01;35m[Kwarning: [m[Kunused variable '[01m[Kvalue[m[K' [[01;35m[K-Wunused-variable[m[K]
+   59 |     uint8_t [01;35m[Kvalue[m[K = 0;
+      |             [01;35m[K^~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:60:13:[m[K [01;35m[Kwarning: [m[Kunused variable '[01m[Kfreq[m[K' [[01;35m[K-Wunused-variable[m[K]
+   60 |     uint8_t [01;35m[Kfreq[m[K = 0;
+      |             [01;35m[K^~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:65:13:[m[K [01;35m[Kwarning: [m[Kunused variable '[01m[Kpin5rx[m[K' [[01;35m[K-Wunused-variable[m[K]
+   65 |     uint8_t [01;35m[Kpin5rx[m[K = 5;
+      |             [01;35m[K^~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:66:13:[m[K [01;35m[Kwarning: [m[Kunused variable '[01m[Kpin6tx[m[K' [[01;35m[K-Wunused-variable[m[K]
+   66 |     uint8_t [01;35m[Kpin6tx[m[K = 6;
+      |             [01;35m[K^~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:67:13:[m[K [01;35m[Kwarning: [m[Kunused variable '[01m[Kpin7sda[m[K' [[01;35m[K-Wunused-variable[m[K]
+   67 |     uint8_t [01;35m[Kpin7sda[m[K = 21;
+      |             [01;35m[K^~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:68:13:[m[K [01;35m[Kwarning: [m[Kunused variable '[01m[Kpin8scl[m[K' [[01;35m[K-Wunused-variable[m[K]
+   68 |     uint8_t [01;35m[Kpin8scl[m[K = 20;
+      |             [01;35m[K^~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:81:10:[m[K [01;35m[Kwarning: [m[Kunused variable '[01m[Kflip[m[K' [[01;35m[K-Wunused-variable[m[K]
+   81 |     bool [01;35m[Kflip[m[K = true;
+      |          [01;35m[K^~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:82:13:[m[K [01;35m[Kwarning: [m[Kunused variable '[01m[Kcounter[m[K' [[01;35m[K-Wunused-variable[m[K]
+   82 |     int16_t [01;35m[Kcounter[m[K = 0;
+      |             [01;35m[K^~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:84:9:[m[K [01;35m[Kwarning: [m[Kunused variable '[01m[Kposition1[m[K' [[01;35m[K-Wunused-variable[m[K]
+   84 |     int [01;35m[Kposition1[m[K = 20;
+      |         [01;35m[K^~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:85:9:[m[K [01;35m[Kwarning: [m[Kunused variable '[01m[Kposition2[m[K' [[01;35m[K-Wunused-variable[m[K]
+   85 |     int [01;35m[Kposition2[m[K = 0;
+      |         [01;35m[K^~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:86:14:[m[K [01;35m[Kwarning: [m[Kunused variable '[01m[Klast[m[K' [[01;35m[K-Wunused-variable[m[K]
+   86 |     uint64_t [01;35m[Klast[m[K = 0;
+      |              [01;35m[K^~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:87:14:[m[K [01;35m[Kwarning: [m[Kunused variable '[01m[Klast_2[m[K' [[01;35m[K-Wunused-variable[m[K]
+   87 |     uint64_t [01;35m[Klast_2[m[K = 0;
+      |              [01;35m[K^~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:88:10:[m[K [01;35m[Kwarning: [m[Kunused variable '[01m[Kone_shot_2[m[K' [[01;35m[K-Wunused-variable[m[K]
+   88 |     bool [01;35m[Kone_shot_2[m[K = false;
+      |          [01;35m[K^~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:89:10:[m[K [01;35m[Kwarning: [m[Kunused variable '[01m[Kone_shot[m[K' [[01;35m[K-Wunused-variable[m[K]
+   89 |     bool [01;35m[Kone_shot[m[K = false;
+      |          [01;35m[K^~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:90:13:[m[K [01;35m[Kwarning: [m[Kunused variable '[01m[Klevel_a[m[K' [[01;35m[K-Wunused-variable[m[K]
+   90 |     uint8_t [01;35m[Klevel_a[m[K = false;
+      |             [01;35m[K^~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:91:13:[m[K [01;35m[Kwarning: [m[Kunused variable '[01m[Klevel_b[m[K' [[01;35m[K-Wunused-variable[m[K]
+   91 |     uint8_t [01;35m[Klevel_b[m[K = false;
+      |             [01;35m[K^~~~~~~[m[K
+[5/10] Linking C static library esp-idf/main/libmain.a
+[6/10] Generating esp-idf/esp_system/ld/sections.ld
+[7/10] Linking CXX executable CurrentMonitor.elf
+[8/10] Generating binary image from built executable
+esptool v5.1.0
+Creating ESP32C6 image...
+Merged 1 ELF section.
+Successfully created ESP32C6 image.
+Generated /home/esp/esp/CurrentMonitor/build/CurrentMonitor.bin
+[9/10] cd /home/esp/esp/CurrentMonitor/build && /home/esp/.espressif/python_env/idf6.1_py3.13_env/bin/python /home/esp/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/esp/esp/CurrentMonitor/build/partition_table/partition-table.bin /home/esp/esp/CurrentMonitor/build/CurrentMonitor.bin
+CurrentMonitor.bin binary size 0x31790 bytes. Smallest app partition is 0x100000 bytes. 0xce870 bytes (81%) free.
+[9/10] Running utility command for flash
+esptool --chip esp32c6 -p /dev/ttyUSB0 -b 460800 --before=default-reset --after=hard-reset write-flash --flash-mode dio --flash-freq 80m --flash-size 2MB 0x0 bootloader/bootloader.bin 0x8000 partition_table/partition-table.bin 0x10000 CurrentMonitor.bin
+esptool v5.1.0
+Serial port /dev/ttyUSB0:
+Connecting....
+[1A[2K[1A[2KConnected to ESP32-C6 on /dev/ttyUSB0:
+Chip type:          ESP32-C6 (QFN40) (revision v0.2)
+Features:           Wi-Fi 6, BT 5 (LE), IEEE802.15.4, Single Core + LP Core, 160MHz
+Crystal frequency:  40MHz
+MAC:                10:51:db:ff:fe:01:30:e8
+BASE MAC:           10:51:db:01:30:e8
+MAC_EXT:            ff:fe
+
+Uploading stub flasher...
+Running stub flasher...
+[1A[2K[1A[2KStub flasher running.
+Changing baud rate to 460800...
+Changed.
+
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Flash will be erased from 0x00010000 to 0x00041fff...
+SHA digest in image updated.
+Compressed 22736 bytes to 14178...
+[KWriting at 0x00000000 [                              ]   0.0% 0/14178 bytes... [KWriting at 0x000058d0 [==============================] 100.0% 14178/14178 bytes... 
+[1A[2K[1A[2KWrote 22736 bytes (14178 compressed) at 0x00000000 in 0.6 seconds (321.2 kbit/s).
+Hash of data verified.
+Compressed 3072 bytes to 103...
+[KWriting at 0x00008000 [                              ]   0.0% 0/103 bytes... [KWriting at 0x00008c00 [==============================] 100.0% 103/103 bytes... 
+[1A[2K[1A[2KWrote 3072 bytes (103 compressed) at 0x00008000 in 0.0 seconds (697.5 kbit/s).
+Hash of data verified.
+Compressed 202640 bytes to 103191...
+[KWriting at 0x00010000 [                              ]   0.0% 0/103191 bytes... [KWriting at 0x0001b2a3 [===>                          ]  15.9% 16384/103191 bytes... [KWriting at 0x0002193a [========>                     ]  31.8% 32768/103191 bytes... [KWriting at 0x00028d05 [=============>                ]  47.6% 49152/103191 bytes... [KWriting at 0x000309ce [==================>           ]  63.5% 65536/103191 bytes... [KWriting at 0x000379ce [======================>       ]  79.4% 81920/103191 bytes... [KWriting at 0x0003eaca [===========================>  ]  95.3% 98304/103191 bytes... [KWriting at 0x00041790 [==============================] 100.0% 103191/103191 bytes... 
+[1A[2K[1A[2KWrote 202640 bytes (103191 compressed) at 0x00010000 in 2.6 seconds (614.4 kbit/s).
+Hash of data verified.
+
+Hard resetting via RTS pin...

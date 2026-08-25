@@ -1,0 +1,202 @@
+Command: ninja flash
+[0/1] Re-running CMake...
+-- Component directory /home/esp/esp/CurrentMonitor/components/component2 does not contain a CMakeLists.txt file. No component will be added
+-- Minimal build - OFF
+-- git rev-parse returned 'fatal: not a git repository (or any of the parent directories): .git'
+-- Could not use 'git describe' to determine PROJECT_VER.
+-- Building ESP-IDF components for target esp32c6
+-- Project sdkconfig file /home/esp/esp/CurrentMonitor/sdkconfig
+-- Adding linker script /home/esp/esp/esp-idf/components/riscv/ld/rom.api.ld
+-- App "CurrentMonitor" version: 1
+-- USING O3
+-- Adding linker script /home/esp/esp/esp-idf/components/esp_system/ld/esp32c6/memory.ld.in
+--   -> Preprocessing .in script: /home/esp/esp/esp-idf/components/esp_system/ld/esp32c6/memory.ld.in
+-- Adding linker script /home/esp/esp/esp-idf/components/esp_system/ld/esp32c6/sections.ld.in
+--   -> Preprocessing .in script: /home/esp/esp/esp-idf/components/esp_system/ld/esp32c6/sections.ld.in
+--   -> Applying ldgen processing: /home/esp/esp/CurrentMonitor/build/esp-idf/esp_system/ld/sections.ld.in
+-- Adding linker script /home/esp/esp/esp-idf/components/esp_rom/esp32c6/ld/esp32c6.rom.ld
+-- Adding linker script /home/esp/esp/esp-idf/components/esp_rom/esp32c6/ld/esp32c6.rom.api.ld
+-- Adding linker script /home/esp/esp/esp-idf/components/esp_rom/esp32c6/ld/esp32c6.rom.rvfp.ld
+-- Adding linker script /home/esp/esp/esp-idf/components/esp_rom/esp32c6/ld/esp32c6.rom.wdt.ld
+-- Adding linker script /home/esp/esp/esp-idf/components/esp_rom/esp32c6/ld/esp32c6.rom.systimer.ld
+-- Adding linker script /home/esp/esp/esp-idf/components/esp_rom/esp32c6/ld/esp32c6.rom.version.ld
+-- Adding linker script /home/esp/esp/esp-idf/components/esp_rom/esp32c6/ld/esp32c6.rom.phy.ld
+-- Adding linker script /home/esp/esp/esp-idf/components/esp_rom/esp32c6/ld/esp32c6.rom.coexist.ld
+-- Adding linker script /home/esp/esp/esp-idf/components/esp_rom/esp32c6/ld/esp32c6.rom.net80211.ld
+-- Adding linker script /home/esp/esp/esp-idf/components/esp_rom/esp32c6/ld/esp32c6.rom.pp.ld
+-- Adding linker script /home/esp/esp/esp-idf/components/esp_rom/esp32c6/ld/esp32c6.rom.libc.ld
+-- Adding linker script /home/esp/esp/esp-idf/components/esp_rom/esp32c6/ld/esp32c6.rom.newlib.ld
+-- Adding linker script /home/esp/esp/esp-idf/components/esp_rom/esp32c6/ld/esp32c6.rom.newlib-normal.ld
+-- Adding linker script /home/esp/esp/esp-idf/components/esp_rom/esp32c6/ld/esp32c6.rom.heap.ld
+-- Adding linker script /home/esp/esp/esp-idf/components/soc/esp32c6/ld/esp32c6.peripherals.ld
+-- Components: PinController app_trace app_update bootloader bootloader_support bt cmock console cxx driver efuse esp-tls esp_adc esp_app_format esp_blockdev esp_bootloader_format esp_coex esp_common esp_driver_ana_cmpr esp_driver_bitscrambler esp_driver_cam esp_driver_dac esp_driver_gpio esp_driver_gptimer esp_driver_i2c esp_driver_i2s esp_driver_i3c esp_driver_isp esp_driver_jpeg esp_driver_ledc esp_driver_mcpwm esp_driver_parlio esp_driver_pcnt esp_driver_ppa esp_driver_rmt esp_driver_sd_intf esp_driver_sdio esp_driver_sdm esp_driver_sdmmc esp_driver_sdspi esp_driver_spi esp_driver_touch_sens esp_driver_tsens esp_driver_twai esp_driver_uart esp_driver_usb_serial_jtag esp_eth esp_event esp_gdbstub esp_hal_dma esp_hal_i2c esp_hal_lcd esp_hal_mspi esp_hal_timg esp_hal_wdt esp_hid esp_http_client esp_http_server esp_https_ota esp_https_server esp_hw_support esp_lcd esp_libc esp_local_ctrl esp_mm esp_netif esp_netif_stack esp_partition esp_phy esp_pm esp_psram esp_ringbuf esp_rom esp_security esp_stdio esp_system esp_tee esp_timer esp_usb_cdc_rom_console esp_wifi espcoredump esptool_py fatfs freertos hal heap http_parser idf_test ieee802154 log lwip main mbedtls mqtt nvs_flash nvs_sec_provider openthread partition_table protobuf-c protocomm pthread riscv rt sdmmc soc spi_flash spiffs tcp_transport ulp unity vfs wear_levelling wpa_supplicant
+-- Component paths: /home/esp/esp/CurrentMonitor/components/PinController /home/esp/esp/esp-idf/components/app_trace /home/esp/esp/esp-idf/components/app_update /home/esp/esp/esp-idf/components/bootloader /home/esp/esp/esp-idf/components/bootloader_support /home/esp/esp/esp-idf/components/bt /home/esp/esp/esp-idf/components/cmock /home/esp/esp/esp-idf/components/console /home/esp/esp/esp-idf/components/cxx /home/esp/esp/esp-idf/components/driver /home/esp/esp/esp-idf/components/efuse /home/esp/esp/esp-idf/components/esp-tls /home/esp/esp/esp-idf/components/esp_adc /home/esp/esp/esp-idf/components/esp_app_format /home/esp/esp/esp-idf/components/esp_blockdev /home/esp/esp/esp-idf/components/esp_bootloader_format /home/esp/esp/esp-idf/components/esp_coex /home/esp/esp/esp-idf/components/esp_common /home/esp/esp/esp-idf/components/esp_driver_ana_cmpr /home/esp/esp/esp-idf/components/esp_driver_bitscrambler /home/esp/esp/esp-idf/components/esp_driver_cam /home/esp/esp/esp-idf/components/esp_driver_dac /home/esp/esp/esp-idf/components/esp_driver_gpio /home/esp/esp/esp-idf/components/esp_driver_gptimer /home/esp/esp/esp-idf/components/esp_driver_i2c /home/esp/esp/esp-idf/components/esp_driver_i2s /home/esp/esp/esp-idf/components/esp_driver_i3c /home/esp/esp/esp-idf/components/esp_driver_isp /home/esp/esp/esp-idf/components/esp_driver_jpeg /home/esp/esp/esp-idf/components/esp_driver_ledc /home/esp/esp/esp-idf/components/esp_driver_mcpwm /home/esp/esp/esp-idf/components/esp_driver_parlio /home/esp/esp/esp-idf/components/esp_driver_pcnt /home/esp/esp/esp-idf/components/esp_driver_ppa /home/esp/esp/esp-idf/components/esp_driver_rmt /home/esp/esp/esp-idf/components/esp_driver_sd_intf /home/esp/esp/esp-idf/components/esp_driver_sdio /home/esp/esp/esp-idf/components/esp_driver_sdm /home/esp/esp/esp-idf/components/esp_driver_sdmmc /home/esp/esp/esp-idf/components/esp_driver_sdspi /home/esp/esp/esp-idf/components/esp_driver_spi /home/esp/esp/esp-idf/components/esp_driver_touch_sens /home/esp/esp/esp-idf/components/esp_driver_tsens /home/esp/esp/esp-idf/components/esp_driver_twai /home/esp/esp/esp-idf/components/esp_driver_uart /home/esp/esp/esp-idf/components/esp_driver_usb_serial_jtag /home/esp/esp/esp-idf/components/esp_eth /home/esp/esp/esp-idf/components/esp_event /home/esp/esp/esp-idf/components/esp_gdbstub /home/esp/esp/esp-idf/components/esp_hal_dma /home/esp/esp/esp-idf/components/esp_hal_i2c /home/esp/esp/esp-idf/components/esp_hal_lcd /home/esp/esp/esp-idf/components/esp_hal_mspi /home/esp/esp/esp-idf/components/esp_hal_timg /home/esp/esp/esp-idf/components/esp_hal_wdt /home/esp/esp/esp-idf/components/esp_hid /home/esp/esp/esp-idf/components/esp_http_client /home/esp/esp/esp-idf/components/esp_http_server /home/esp/esp/esp-idf/components/esp_https_ota /home/esp/esp/esp-idf/components/esp_https_server /home/esp/esp/esp-idf/components/esp_hw_support /home/esp/esp/esp-idf/components/esp_lcd /home/esp/esp/esp-idf/components/esp_libc /home/esp/esp/esp-idf/components/esp_local_ctrl /home/esp/esp/esp-idf/components/esp_mm /home/esp/esp/esp-idf/components/esp_netif /home/esp/esp/esp-idf/components/esp_netif_stack /home/esp/esp/esp-idf/components/esp_partition /home/esp/esp/esp-idf/components/esp_phy /home/esp/esp/esp-idf/components/esp_pm /home/esp/esp/esp-idf/components/esp_psram /home/esp/esp/esp-idf/components/esp_ringbuf /home/esp/esp/esp-idf/components/esp_rom /home/esp/esp/esp-idf/components/esp_security /home/esp/esp/esp-idf/components/esp_stdio /home/esp/esp/esp-idf/components/esp_system /home/esp/esp/esp-idf/components/esp_tee /home/esp/esp/esp-idf/components/esp_timer /home/esp/esp/esp-idf/components/esp_usb_cdc_rom_console /home/esp/esp/esp-idf/components/esp_wifi /home/esp/esp/esp-idf/components/espcoredump /home/esp/esp/esp-idf/components/esptool_py /home/esp/esp/esp-idf/components/fatfs /home/esp/esp/esp-idf/components/freertos /home/esp/esp/esp-idf/components/hal /home/esp/esp/esp-idf/components/heap /home/esp/esp/esp-idf/components/http_parser /home/esp/esp/esp-idf/components/idf_test /home/esp/esp/esp-idf/components/ieee802154 /home/esp/esp/esp-idf/components/log /home/esp/esp/esp-idf/components/lwip /home/esp/esp/CurrentMonitor/main /home/esp/esp/esp-idf/components/mbedtls /home/esp/esp/esp-idf/components/mqtt /home/esp/esp/esp-idf/components/nvs_flash /home/esp/esp/esp-idf/components/nvs_sec_provider /home/esp/esp/esp-idf/components/openthread /home/esp/esp/esp-idf/components/partition_table /home/esp/esp/esp-idf/components/protobuf-c /home/esp/esp/esp-idf/components/protocomm /home/esp/esp/esp-idf/components/pthread /home/esp/esp/esp-idf/components/riscv /home/esp/esp/esp-idf/components/rt /home/esp/esp/esp-idf/components/sdmmc /home/esp/esp/esp-idf/components/soc /home/esp/esp/esp-idf/components/spi_flash /home/esp/esp/esp-idf/components/spiffs /home/esp/esp/esp-idf/components/tcp_transport /home/esp/esp/esp-idf/components/ulp /home/esp/esp/esp-idf/components/unity /home/esp/esp/esp-idf/components/vfs /home/esp/esp/esp-idf/components/wear_levelling /home/esp/esp/esp-idf/components/wpa_supplicant
+-- Configuring done (8.5s)
+-- Generating done (0.9s)
+-- Build files have been written to: /home/esp/esp/CurrentMonitor/build
+[1/13] Performing build step for 'bootloader'
+[1/1] cd /home/esp/esp/CurrentMonitor/build/bootloader && /home/esp/.espressif/python_env/idf6.1_py3.13_env/bin/python /home/esp/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/esp/esp/CurrentMonitor/build/bootloader/bootloader.bin
+Bootloader binary size 0x58d0 bytes. 0x2730 bytes (31%) free.
+[2/13] No install step for 'bootloader'
+[3/13] Completed 'bootloader'
+[4/13] Building CXX object esp-idf/PinController/CMakeFiles/__idf_PinController.dir/PinController.cpp.obj
+[31mFAILED: [0mesp-idf/PinController/CMakeFiles/__idf_PinController.dir/PinController.cpp.obj 
+/home/esp/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/riscv32-esp-elf-g++ -DESP_PLATFORM -DIDF_VER=\"v6.1-dev-1-gff97953b32-dirty\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -I/home/esp/esp/CurrentMonitor/build/config -I/home/esp/esp/CurrentMonitor/components/PinController -I/home/esp/esp/esp-idf/components/esp_libc/platform_include -I/home/esp/esp/esp-idf/components/freertos/config/include -I/home/esp/esp/esp-idf/components/freertos/config/include/freertos -I/home/esp/esp/esp-idf/components/freertos/config/riscv/include -I/home/esp/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include -I/home/esp/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/include -I/home/esp/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/include/freertos -I/home/esp/esp/esp-idf/components/freertos/esp_additions/include -I/home/esp/esp/esp-idf/components/esp_hw_support/include -I/home/esp/esp/esp-idf/components/esp_hw_support/include/soc -I/home/esp/esp/esp-idf/components/esp_hw_support/dma/include -I/home/esp/esp/esp-idf/components/esp_hw_support/ldo/include -I/home/esp/esp/esp-idf/components/esp_hw_support/debug_probe/include -I/home/esp/esp/esp-idf/components/esp_hw_support/etm/include -I/home/esp/esp/esp-idf/components/esp_hw_support/mspi_timing_tuning/include -I/home/esp/esp/esp-idf/components/esp_hw_support/mspi_timing_tuning/tuning_scheme_impl/include -I/home/esp/esp/esp-idf/components/esp_hw_support/power_supply/include -I/home/esp/esp/esp-idf/components/esp_hw_support/modem/include -I/home/esp/esp/esp-idf/components/esp_hw_support/port/esp32c6/. -I/home/esp/esp/esp-idf/components/esp_hw_support/port/esp32c6/include -I/home/esp/esp/esp-idf/components/esp_hw_support/port/esp32c6/private_include -I/home/esp/esp/esp-idf/components/heap/include -I/home/esp/esp/esp-idf/components/heap/tlsf -I/home/esp/esp/esp-idf/components/log/include -I/home/esp/esp/esp-idf/components/soc/include -I/home/esp/esp/esp-idf/components/soc/esp32c6 -I/home/esp/esp/esp-idf/components/soc/esp32c6/include -I/home/esp/esp/esp-idf/components/soc/esp32c6/register -I/home/esp/esp/esp-idf/components/hal/platform_port/include -I/home/esp/esp/esp-idf/components/hal/esp32c6/include -I/home/esp/esp/esp-idf/components/hal/include -I/home/esp/esp/esp-idf/components/esp_rom/include -I/home/esp/esp/esp-idf/components/esp_rom/esp32c6/include -I/home/esp/esp/esp-idf/components/esp_rom/esp32c6/include/esp32c6 -I/home/esp/esp/esp-idf/components/esp_rom/esp32c6 -I/home/esp/esp/esp-idf/components/esp_common/include -I/home/esp/esp/esp-idf/components/esp_system/include -I/home/esp/esp/esp-idf/components/esp_system/port/soc -I/home/esp/esp/esp-idf/components/esp_system/port/include/riscv -I/home/esp/esp/esp-idf/components/esp_system/port/include/private -I/home/esp/esp/esp-idf/components/esp_stdio/include -I/home/esp/esp/esp-idf/components/riscv/include -I/home/esp/esp/esp-idf/components/esp_hal_dma/include -I/home/esp/esp/esp-idf/components/esp_hal_dma/esp32c6/include -I/home/esp/esp/esp-idf/components/lwip/include -I/home/esp/esp/esp-idf/components/lwip/include/apps -I/home/esp/esp/esp-idf/components/lwip/lwip/src/include -I/home/esp/esp/esp-idf/components/lwip/port/include -I/home/esp/esp/esp-idf/components/lwip/port/freertos/include -I/home/esp/esp/esp-idf/components/lwip/port/esp32xx/include -I/home/esp/esp/esp-idf/components/lwip/port/esp32xx/include/arch -I/home/esp/esp/esp-idf/components/lwip/port/esp32xx/include/sys -I/home/esp/esp/esp-idf/components/esp_driver_gpio/include -I/home/esp/esp/esp-idf/components/esp_event/include -I/home/esp/esp/esp-idf/components/esp_adc/include -I/home/esp/esp/esp-idf/components/esp_adc/interface -I/home/esp/esp/esp-idf/components/esp_adc/esp32c6/include -I/home/esp/esp/esp-idf/components/esp_driver_ledc/include -I/home/esp/esp/esp-idf/components/esp_driver_uart/include -I/home/esp/esp/esp-idf/components/vfs/include -I/home/esp/esp/esp-idf/components/esp_driver_i2c/include -I/home/esp/esp/esp-idf/components/esp_hal_i2c/esp32c6/include -I/home/esp/esp/esp-idf/components/esp_hal_i2c/include -march=rv32imac_zicsr_zifencei_zaamo_zalrsc  -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-error=extra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -nostartfiles -Og -fno-shrink-wrap -fmacro-prefix-map=/home/esp/esp/CurrentMonitor=. -fmacro-prefix-map=/home/esp/esp/esp-idf=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -std=gnu++26 -fno-exceptions -fno-rtti -fuse-cxa-atexit -MD -MT esp-idf/PinController/CMakeFiles/__idf_PinController.dir/PinController.cpp.obj -MF esp-idf/PinController/CMakeFiles/__idf_PinController.dir/PinController.cpp.obj.d -o esp-idf/PinController/CMakeFiles/__idf_PinController.dir/PinController.cpp.obj -c /home/esp/esp/CurrentMonitor/components/PinController/PinController.cpp
+In file included from [01m[K/home/esp/esp/CurrentMonitor/components/PinController/PinController.cpp:1[m[K:
+[01m[K/home/esp/esp/CurrentMonitor/components/PinController/PinController.hpp:66:39:[m[K [01;31m[Kerror: [m[K'[01m[KDC_ATTEN_DB_12[m[K' has not been declared
+   66 |     int8_t SetAnalogInPin(uint8_t pin,[01;31m[KDC_ATTEN_DB_12[m[K, // default
+      |                                       [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/PinController/PinController.hpp:70:27:[m[K [01;31m[Kerror: [m[Kexpected '[01m[K,[m[K' or '[01m[K...[m[K' before '[01m[Kadc_atten_t[m[K'
+   70 |                           [01;31m[Kadc_atten_t[m[K atten = Aype = DIGITAL_IN_PULLUP,
+      |                           [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/PinController/PinController.cpp:[m[K In constructor '[01m[KPinController::[01;32m[KPinController[m[K()[m[K':
+[01m[K/home/esp/esp/CurrentMonitor/components/PinController/PinController.cpp:22:47:[m[K [01;31m[Kerror: [m[K'[01m[Kdev_handle[m[K' was not declared in this scope; did you mean '[01m[Kadc_handle[m[K'?
+   22 |         i2c_master_init_generic(&bus_handle, &[01;31m[Kdev_handle[m[K);
+      |                                               [01;31m[K^~~~~~~~~~[m[K
+      |                                               [32m[Kadc_handle[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/PinController/PinController.cpp:22:9:[m[K [01;31m[Kerror: [m[K'[01m[Ki2c_master_init_generic[m[K' was not declared in this scope
+   22 |         [01;31m[Ki2c_master_init_generic[m[K(&bus_handle, &dev_handle);
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/PinController/PinController.cpp:[m[K At global scope:
+[01m[K/home/esp/esp/CurrentMonitor/components/PinController/PinController.cpp:57:8:[m[K [01;31m[Kerror: [m[Kno declaration matches '[01m[Kint8_t PinController::[01;32m[KSetAnalogInPin[m[K(uint8_t, adc_atten_t, adc_bitwidth_t)[m[K'
+   57 | int8_t [01;31m[KPinController[m[K::SetAnalogInPin(uint8_t pin,
+      |        [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/PinController/PinController.hpp:66:12:[m[K [01;36m[Knote: [m[Kcandidate is: '[01m[Kint8_t PinController::[01;32m[KSetAnalogInPin[m[K(uint8_t, int, adc_bitwidth_t)[m[K'
+   66 |     int8_t [01;36m[KSetAnalogInPin[m[K(uint8_t pin,DC_ATTEN_DB_12, // default
+      |            [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/PinController/PinController.hpp:54:7:[m[K [01;36m[Knote: [m[K'[01m[Kclass PinController[m[K' defined here
+   54 | class [01;36m[KPinController[m[K
+      |       [01;36m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/PinController/PinController.cpp:264:8:[m[K [01;31m[Kerror: [m[Kno declaration matches '[01m[Kint8_t PinController::[01;32m[KSetDigitalInPin[m[K(uint8_t, PIN_TYPE, INTERUPT_TYPE)[m[K'
+  264 | int8_t [01;31m[KPinController[m[K::SetDigitalInPin(uint8_t pin, PIN_TYPE type, INTERUPT_TYPE interupt)
+      |        [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/PinController/PinController.hpp:68:12:[m[K [01;36m[Knote: [m[Kcandidate is: '[01m[Kint8_t PinController::[01;32m[KSetDigitalInPin[m[K(uint8_t, PIN_TYPE)[m[K'
+   68 |     int8_t [01;36m[KSetDigitalInPin[m[K(uint8_t pin,
+      |            [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/PinController/PinController.hpp:54:7:[m[K [01;36m[Knote: [m[K'[01m[Kclass PinController[m[K' defined here
+   54 | class [01;36m[KPinController[m[K
+      |       [01;36m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/PinController/PinController.cpp:[m[K In member function '[01m[Kint8_t PinController::[01;32m[KSetPwmPin[m[K(uint8_t, PIN_TYPE, ledc_timer_bit_t, uint16_t, uint8_t)[m[K':
+[01m[K/home/esp/esp/CurrentMonitor/components/PinController/PinController.cpp:572:22:[m[K [01;35m[Kwarning: [m[K'[01m[Kledc_channel_config_t::intr_type[m[K' is deprecated [[01;35m[K-Wdeprecated-declarations[m[K]
+  572 |         ledc_channel.[01;35m[Kintr_type[m[K = LEDC_INTR_DISABLE;
+      |                      [01;35m[K^~~~~~~~~[m[K
+In file included from [01m[K/home/esp/esp/CurrentMonitor/components/PinController/PinController.hpp:8[m[K:
+[01m[K/home/esp/esp/esp-idf/components/esp_driver_ledc/include/driver/ledc.h:39:22:[m[K [01;36m[Knote: [m[Kdeclared here
+   39 |     ledc_intr_type_t [01;36m[Kintr_type[m[K __attribute__((deprecated));     /*!< @deprecated, no need to explicitly configure interrupt, handled in the driver */
+      |                      [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/PinController/PinController.cpp:572:22:[m[K [01;35m[Kwarning: [m[K'[01m[Kledc_channel_config_t::intr_type[m[K' is deprecated [[01;35m[K-Wdeprecated-declarations[m[K]
+  572 |         ledc_channel.[01;35m[Kintr_type[m[K = LEDC_INTR_DISABLE;
+      |                      [01;35m[K^~~~~~~~~[m[K
+[01m[K/home/esp/esp/esp-idf/components/esp_driver_ledc/include/driver/ledc.h:39:22:[m[K [01;36m[Knote: [m[Kdeclared here
+   39 |     ledc_intr_type_t [01;36m[Kintr_type[m[K __attribute__((deprecated));     /*!< @deprecated, no need to explicitly configure interrupt, handled in the driver */
+      |                      [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/PinController/PinController.cpp:572:22:[m[K [01;35m[Kwarning: [m[K'[01m[Kledc_channel_config_t::intr_type[m[K' is deprecated [[01;35m[K-Wdeprecated-declarations[m[K]
+  572 |         ledc_channel.[01;35m[Kintr_type[m[K = LEDC_INTR_DISABLE;
+      |                      [01;35m[K^~~~~~~~~[m[K
+[01m[K/home/esp/esp/esp-idf/components/esp_driver_ledc/include/driver/ledc.h:39:22:[m[K [01;36m[Knote: [m[Kdeclared here
+   39 |     ledc_intr_type_t [01;36m[Kintr_type[m[K __attribute__((deprecated));     /*!< @deprecated, no need to explicitly configure interrupt, handled in the driver */
+      |                      [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/PinController/PinController.cpp:[m[K In member function '[01m[Kint8_t PinController::[01;32m[KSetI2CPin[m[K(uint8_t, uint8_t)[m[K':
+[01m[K/home/esp/esp/CurrentMonitor/components/PinController/PinController.cpp:635:33:[m[K [01;31m[Kerror: [m[Kinvalid conversion from '[01m[K[01;32m[Kuint8_t[m[K' {aka '[01m[K[01;32m[Kunsigned char[m[K'} to '[01m[K[01;34m[Kgpio_num_t[m[K[m[K' [[01;31m[K-fpermissive[m[K]
+  635 |         bus_config.sda_io_num = [01;32m[Ks[m[K[01;32m[Kd[m[K[01;32m[Ka[m[K[01;32m[K_[m[K[01;32m[Kp[m[K[01;32m[Ki[m[K[01;32m[Kn[m[K;
+      |                                 [01;32m[K^[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K
+      |                                 [01;32m[K|[m[K
+      |                                 [01;32m[Kuint8_t {aka unsigned char}[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/PinController/PinController.cpp:636:33:[m[K [01;31m[Kerror: [m[Kinvalid conversion from '[01m[K[01;32m[Kuint8_t[m[K' {aka '[01m[K[01;32m[Kunsigned char[m[K'} to '[01m[K[01;34m[Kgpio_num_t[m[K[m[K' [[01;31m[K-fpermissive[m[K]
+  636 |         bus_config.scl_io_num = [01;32m[Ks[m[K[01;32m[Kc[m[K[01;32m[Kl[m[K[01;32m[K_[m[K[01;32m[Kp[m[K[01;32m[Ki[m[K[01;32m[Kn[m[K;
+      |                                 [01;32m[K^[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K
+      |                                 [01;32m[K|[m[K
+      |                                 [01;32m[Kuint8_t {aka unsigned char}[m[K
+In file included from [01m[K/home/esp/esp/esp-idf/components/esp_driver_gpio/include/driver/gpio.h:12[m[K,
+                 from [01m[K/home/esp/esp/CurrentMonitor/components/PinController/PinController.hpp:4[m[K:
+[01m[K/home/esp/esp/CurrentMonitor/components/PinController/PinController.cpp:[m[K In member function '[01m[Kint8_t PinController::[01;32m[KSetI2CDevice[m[K(uint8_t, i2c_master_dev_handle_t, uint16_t)[m[K':
+[01m[K/home/esp/esp/esp-idf/components/esp_common/include/esp_err.h:115:28:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before '[01m[Kdo[m[K'
+  115 | #define ESP_ERROR_CHECK(x) [01;31m[Kdo[m[K {                                         \
+      |                            [01;31m[K^~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/PinController/PinController.cpp:653:21:[m[K [01;36m[Knote: [m[Kin expansion of macro '[01m[KESP_ERROR_CHECK[m[K'
+  653 |     esp_err_t err = [01;36m[KESP_ERROR_CHECK[m[K(i2c_master_bus_add_device(*bus_handle, &dev_config, dev_handle));
+      |                     [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/PinController/PinController.cpp:657:18:[m[K [01;31m[Kerror: [m[Kexpected '[01m[K;[m[K' before '[01m[K}[m[K' token
+  657 |         return -1
+      |                  [01;31m[K^[m[K
+      |                  [32m[K;[m[K
+  658 |     [32m[K}[m[K
+      |     [32m[K~[m[K             
+[01m[K/home/esp/esp/CurrentMonitor/components/PinController/PinController.cpp:661:17:[m[K [01;31m[Kerror: [m[Kexpected '[01m[K;[m[K' before '[01m[K}[m[K' token
+  661 |         return 0
+      |                 [01;31m[K^[m[K
+      |                 [32m[K;[m[K
+  662 |     [32m[K}[m[K
+      |     [32m[K~[m[K            
+[5/13] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/CurrentMonitor.cpp.obj
+[31mFAILED: [0mesp-idf/main/CMakeFiles/__idf_main.dir/CurrentMonitor.cpp.obj 
+/home/esp/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/riscv32-esp-elf-g++ -DESP_PLATFORM -DIDF_VER=\"v6.1-dev-1-gff97953b32-dirty\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -I/home/esp/esp/CurrentMonitor/build/config -I/home/esp/esp/CurrentMonitor/main -I/home/esp/esp/esp-idf/components/esp_libc/platform_include -I/home/esp/esp/esp-idf/components/freertos/config/include -I/home/esp/esp/esp-idf/components/freertos/config/include/freertos -I/home/esp/esp/esp-idf/components/freertos/config/riscv/include -I/home/esp/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include -I/home/esp/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/include -I/home/esp/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/include/freertos -I/home/esp/esp/esp-idf/components/freertos/esp_additions/include -I/home/esp/esp/esp-idf/components/esp_hw_support/include -I/home/esp/esp/esp-idf/components/esp_hw_support/include/soc -I/home/esp/esp/esp-idf/components/esp_hw_support/dma/include -I/home/esp/esp/esp-idf/components/esp_hw_support/ldo/include -I/home/esp/esp/esp-idf/components/esp_hw_support/debug_probe/include -I/home/esp/esp/esp-idf/components/esp_hw_support/etm/include -I/home/esp/esp/esp-idf/components/esp_hw_support/mspi_timing_tuning/include -I/home/esp/esp/esp-idf/components/esp_hw_support/mspi_timing_tuning/tuning_scheme_impl/include -I/home/esp/esp/esp-idf/components/esp_hw_support/power_supply/include -I/home/esp/esp/esp-idf/components/esp_hw_support/modem/include -I/home/esp/esp/esp-idf/components/esp_hw_support/port/esp32c6/. -I/home/esp/esp/esp-idf/components/esp_hw_support/port/esp32c6/include -I/home/esp/esp/esp-idf/components/esp_hw_support/port/esp32c6/private_include -I/home/esp/esp/esp-idf/components/heap/include -I/home/esp/esp/esp-idf/components/heap/tlsf -I/home/esp/esp/esp-idf/components/log/include -I/home/esp/esp/esp-idf/components/soc/include -I/home/esp/esp/esp-idf/components/soc/esp32c6 -I/home/esp/esp/esp-idf/components/soc/esp32c6/include -I/home/esp/esp/esp-idf/components/soc/esp32c6/register -I/home/esp/esp/esp-idf/components/hal/platform_port/include -I/home/esp/esp/esp-idf/components/hal/esp32c6/include -I/home/esp/esp/esp-idf/components/hal/include -I/home/esp/esp/esp-idf/components/esp_rom/include -I/home/esp/esp/esp-idf/components/esp_rom/esp32c6/include -I/home/esp/esp/esp-idf/components/esp_rom/esp32c6/include/esp32c6 -I/home/esp/esp/esp-idf/components/esp_rom/esp32c6 -I/home/esp/esp/esp-idf/components/esp_common/include -I/home/esp/esp/esp-idf/components/esp_system/include -I/home/esp/esp/esp-idf/components/esp_system/port/soc -I/home/esp/esp/esp-idf/components/esp_system/port/include/riscv -I/home/esp/esp/esp-idf/components/esp_system/port/include/private -I/home/esp/esp/esp-idf/components/esp_stdio/include -I/home/esp/esp/esp-idf/components/riscv/include -I/home/esp/esp/esp-idf/components/esp_hal_dma/include -I/home/esp/esp/esp-idf/components/esp_hal_dma/esp32c6/include -I/home/esp/esp/esp-idf/components/lwip/include -I/home/esp/esp/esp-idf/components/lwip/include/apps -I/home/esp/esp/esp-idf/components/lwip/lwip/src/include -I/home/esp/esp/esp-idf/components/lwip/port/include -I/home/esp/esp/esp-idf/components/lwip/port/freertos/include -I/home/esp/esp/esp-idf/components/lwip/port/esp32xx/include -I/home/esp/esp/esp-idf/components/lwip/port/esp32xx/include/arch -I/home/esp/esp/esp-idf/components/lwip/port/esp32xx/include/sys -I/home/esp/esp/CurrentMonitor/components/PinController -I/home/esp/esp/esp-idf/components/esp_driver_gpio/include -I/home/esp/esp/esp-idf/components/esp_event/include -I/home/esp/esp/esp-idf/components/esp_adc/include -I/home/esp/esp/esp-idf/components/esp_adc/interface -I/home/esp/esp/esp-idf/components/esp_adc/esp32c6/include -I/home/esp/esp/esp-idf/components/esp_driver_ledc/include -I/home/esp/esp/esp-idf/components/esp_driver_uart/include -I/home/esp/esp/esp-idf/components/vfs/include -I/home/esp/esp/esp-idf/components/esp_driver_i2c/include -I/home/esp/esp/esp-idf/components/esp_hal_i2c/esp32c6/include -I/home/esp/esp/esp-idf/components/esp_hal_i2c/include -march=rv32imac_zicsr_zifencei_zaamo_zalrsc  -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-error=extra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -nostartfiles -Og -fno-shrink-wrap -fmacro-prefix-map=/home/esp/esp/CurrentMonitor=. -fmacro-prefix-map=/home/esp/esp/esp-idf=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -std=gnu++26 -fno-exceptions -fno-rtti -fuse-cxa-atexit -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/CurrentMonitor.cpp.obj -MF esp-idf/main/CMakeFiles/__idf_main.dir/CurrentMonitor.cpp.obj.d -o esp-idf/main/CMakeFiles/__idf_main.dir/CurrentMonitor.cpp.obj -c /home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp
+In file included from [01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:3[m[K:
+[01m[K/home/esp/esp/CurrentMonitor/components/PinController/PinController.hpp:66:39:[m[K [01;31m[Kerror: [m[K'[01m[KDC_ATTEN_DB_12[m[K' has not been declared
+   66 |     int8_t SetAnalogInPin(uint8_t pin,[01;31m[KDC_ATTEN_DB_12[m[K, // default
+      |                                       [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/PinController/PinController.hpp:70:27:[m[K [01;31m[Kerror: [m[Kexpected '[01m[K,[m[K' or '[01m[K...[m[K' before '[01m[Kadc_atten_t[m[K'
+   70 |                           [01;31m[Kadc_atten_t[m[K atten = Aype = DIGITAL_IN_PULLUP,
+      |                           [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:[m[K In function '[01m[Kint[01;32m[K app_main[m[K()[m[K':
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:34:22:[m[K [01;31m[Kerror: [m[Kno matching function for call to '[01m[KPinController::SetAnalogInPin(uint8_t&)[m[K'
+   34 |     [01;31m[Kpc.SetAnalogInPin(pin)[m[K;
+      |     [01;31m[K~~~~~~~~~~~~~~~~~^~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:34:22:[m[K [01;36m[Knote: [m[Kthere is 1 candidate
+[01m[K/home/esp/esp/CurrentMonitor/components/PinController/PinController.hpp:66:12:[m[K [01;36m[Knote: [m[Kcandidate 1: '[01m[Kint8_t PinController::[01;32m[KSetAnalogInPin[m[K(uint8_t, int, adc_bitwidth_t)[m[K'
+   66 |     int8_t [01;36m[KSetAnalogInPin[m[K(uint8_t pin,DC_ATTEN_DB_12, // default
+      |            [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/PinController/PinController.hpp:66:12:[m[K [01;36m[Knote: [m[Kcandidate expects 3 arguments, 1 provided
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:35:22:[m[K [01;31m[Kerror: [m[Kno matching function for call to '[01m[KPinController::SetAnalogInPin(uint8_t&)[m[K'
+   35 |     [01;31m[Kpc.SetAnalogInPin(pin)[m[K;
+      |     [01;31m[K~~~~~~~~~~~~~~~~~^~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:35:22:[m[K [01;36m[Knote: [m[Kthere is 1 candidate
+[01m[K/home/esp/esp/CurrentMonitor/components/PinController/PinController.hpp:66:12:[m[K [01;36m[Knote: [m[Kcandidate 1: '[01m[Kint8_t PinController::[01;32m[KSetAnalogInPin[m[K(uint8_t, int, adc_bitwidth_t)[m[K'
+   66 |     int8_t [01;36m[KSetAnalogInPin[m[K(uint8_t pin,DC_ATTEN_DB_12, // default
+      |            [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/PinController/PinController.hpp:66:12:[m[K [01;36m[Knote: [m[Kcandidate expects 3 arguments, 1 provided
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:36:23:[m[K [01;31m[Kerror: [m[Kno matching function for call to '[01m[KPinController::SetDigitalInPin(uint8_t&, PIN_TYPE, INTERUPT_TYPE)[m[K'
+   36 |     [01;31m[Kpc.SetDigitalInPin(pin2, DIGITAL_IN_PULLDOWN, RISING_EDGE)[m[K;
+      |     [01;31m[K~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:36:23:[m[K [01;36m[Knote: [m[Kthere is 1 candidate
+[01m[K/home/esp/esp/CurrentMonitor/components/PinController/PinController.hpp:68:12:[m[K [01;36m[Knote: [m[Kcandidate 1: '[01m[Kint8_t PinController::[01;32m[KSetDigitalInPin[m[K(uint8_t, PIN_TYPE)[m[K'
+   68 |     int8_t [01;36m[KSetDigitalInPin[m[K(uint8_t pin,
+      |            [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/components/PinController/PinController.hpp:68:12:[m[K [01;36m[Knote: [m[Kcandidate expects 2 arguments, 3 provided
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:47:9:[m[K [01;31m[Kerror: [m[K'[01m[Kdata[m[K' was not declared in this scope
+   47 |         [01;31m[Kdata[m[K, // read buffer
+      |         [01;31m[K^~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:47:9:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+In file included from [01m[K/home/esp/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/riscv32-esp-elf/include/c++/15.2.0/string:55[m[K,
+                 from [01m[K/home/esp/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/riscv32-esp-elf/include/c++/15.2.0/bits/locale_classes.h:42[m[K,
+                 from [01m[K/home/esp/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/riscv32-esp-elf/include/c++/15.2.0/bits/ios_base.h:43[m[K,
+                 from [01m[K/home/esp/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/riscv32-esp-elf/include/c++/15.2.0/ios:46[m[K,
+                 from [01m[K/home/esp/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/riscv32-esp-elf/include/c++/15.2.0/bits/ostream.h:43[m[K,
+                 from [01m[K/home/esp/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/riscv32-esp-elf/include/c++/15.2.0/ostream:42[m[K,
+                 from [01m[K/home/esp/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/riscv32-esp-elf/include/c++/15.2.0/iostream:43[m[K,
+                 from [01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:2[m[K:
+[01m[K/home/esp/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/riscv32-esp-elf/include/c++/15.2.0/bits/range_access.h:356:5:[m[K [01;36m[Knote: [m[K  '[01m[Kstd::data[m[K'
+  356 |     [01;36m[Kdata[m[K(initializer_list<_Tp> __il) noexcept
+      |     [01;36m[K^~~~[m[K
+In file included from [01m[K/home/esp/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/riscv32-esp-elf/include/c++/15.2.0/string_view:58[m[K,
+                 from [01m[K/home/esp/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/riscv32-esp-elf/include/c++/15.2.0/bits/basic_string.h:51[m[K,
+                 from [01m[K/home/esp/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/riscv32-esp-elf/include/c++/15.2.0/string:56[m[K:
+[01m[K/home/esp/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/riscv32-esp-elf/include/c++/15.2.0/bits/ranges_base.h:509:46:[m[K [01;36m[Knote: [m[K  '[01m[Kstd::ranges::_Cpo::data[m[K'
+  509 |     inline constexpr ranges::__access::_Data [01;36m[Kdata[m[K{};
+      |                                              [01;36m[K^~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:66:13:[m[K [01;31m[Kerror: [m[K'[01m[KI2C_MASTER_TIMEOUT_MS[m[K' was not declared in this scope
+   66 |             [01;31m[KI2C_MASTER_TIMEOUT_MS[m[K / portTICK_PERIOD_MS);
+      |             [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:60:19:[m[K [01;35m[Kwarning: [m[Kunused variable '[01m[Kret[m[K' [[01;35m[K-Wunused-variable[m[K]
+   60 |         esp_err_t [01;35m[Kret[m[K = i2c_master_transmit_receive(
+      |                   [01;35m[K^~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:84:17:[m[K [01;35m[Kwarning: [m[Kunused variable '[01m[Kval[m[K' [[01;35m[K-Wunused-variable[m[K]
+   84 |         int16_t [01;35m[Kval[m[K = pc.ReadAnalogPin(pin);
+      |                 [01;35m[K^~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:42:13:[m[K [01;35m[Kwarning: [m[Kunused variable '[01m[Kbuffer1[m[K' [[01;35m[K-Wunused-variable[m[K]
+   42 |     uint8_t [01;35m[Kbuffer1[m[K[] = {reg, dummy_data};
+      |             [01;35m[K^~~~~~~[m[K
+[01m[K/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:43:15:[m[K [01;35m[Kwarning: [m[Kunused variable '[01m[Kret[m[K' [[01;35m[K-Wunused-variable[m[K]
+   43 |     esp_err_t [01;35m[Kret[m[K = i2c_master_transmit_receive(
+      |               [01;35m[K^~~[m[K
+ninja: build stopped: subcommand failed.

@@ -1,0 +1,2183 @@
+Command: /home/esp/.espressif/python_env/idf6.1_py3.13_env/bin/python /home/esp/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c6 --revision 0 --decode-panic backtrace /home/esp/esp/CurrentMonitor/build/CurrentMonitor.elf /home/esp/esp/CurrentMonitor/build/bootloader/bootloader.elf -m '/home/esp/.espressif/python_env/idf6.1_py3.13_env/bin/python' '/home/esp/esp/esp-idf/tools/idf.py'
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0xc (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875730,len:0x175c
+load:0x4086b910,len:0xed4
+load:0x4086e610,len:0x3244
+entry 0x4086b91a
+[0;32mI (23) boot: ESP-IDF v6.1-dev-1-gff97953b32-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Dec  4 2025 14:13:05[0m
+[0;32mI (24) boot: chip revision: v0.2[0m
+[0;32mI (25) boot: efuse block revision: v0.3[0m
+[0;32mI (29) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (33) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (37) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (40) boot: Enabling RNG early entropy source...[0m
+[0;32mI (45) boot: Partition Table:[0m
+[0;32mI (47) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (54) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (60) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (67) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (73) boot: End of partition table[0m
+[0;32mI (77) esp_image: segment 0: paddr=00010020 vaddr=42020020 size=0bee8h ( 48872) map[0m
+[0;32mI (93) esp_image: segment 1: paddr=0001bf10 vaddr=40800000 size=04108h ( 16648) load[0m
+[0;32mI (98) esp_image: segment 2: paddr=00020020 vaddr=42000020 size=1e04ch (122956) map[0m
+[0;32mI (122) esp_image: segment 3: paddr=0003e074 vaddr=40804108 size=06f2ch ( 28460) load[0m
+[0;32mI (129) esp_image: segment 4: paddr=00044fa8 vaddr=4080b040 size=01c4ch (  7244) load[0m
+[0;32mI (131) esp_image: segment 5: paddr=00046bfc vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (136) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (138) boot: Disabling RNG early entropy source...[0m
+[0;32mI (155) cpu_start: Unicore app[0m
+[0;32mI (163) cpu_start: GPIO 17 and 16 are used as console UART I/O pins[0m
+[0;32mI (164) cpu_start: Pro cpu start user code[0m
+[0;32mI (164) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (166) app_init: Application information:[0m
+[0;32mI (169) app_init: Project name:     CurrentMonitor[0m
+[0;32mI (174) app_init: App version:      1[0m
+[0;32mI (177) app_init: Compile time:     Dec  8 2025 17:05:14[0m
+[0;32mI (182) app_init: ELF file SHA256:  56951d6e1...[0m
+[0;32mI (187) app_init: ESP-IDF:          v6.1-dev-1-gff97953b32-dirty[0m
+[0;32mI (192) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (196) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (200) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (204) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (210) heap_init: At 4080DCD0 len 0006E940 (442 KiB): RAM[0m
+[0;32mI (215) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (221) heap_init: At 50000020 len 00003FC8 (15 KiB): RTCRAM[0m
+[0;32mI (227) spi_flash: detected chip: generic[0m
+[0;32mI (230) spi_flash: flash io: dio[0m
+[0;33mW (233) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (245) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (251) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (258) coexist: coex firmware version: 0cec0ed[0m
+[0;32mI (276) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (277) main_task: Started on CPU0[0m
+[0;32mI (277) main_task: Calling app_main()[0m
+[0;32mI (277) PinController: Pin Already Used: 1[0m
+[0;32mI (347) Lcd Controller: input value: 12425[0m
+[0;32mI (347) Lcd Controller: value: 1242[0m
+[0;32mI (347) Lcd Controller: value: 124[0m
+[0;32mI (347) Lcd Controller: value: 12[0m
+[0;32mI (357) Lcd Controller: value: 1[0m
+[0;32mI (357) Lcd Controller: value: 0[0m
+[0;32mI (1697) Lcd Controller: input value: 12425[0m
+[0;32mI (1697) Lcd Controller: value: 1242[0m
+[0;32mI (1697) Lcd Controller: value: 124[0m
+[0;32mI (1697) Lcd Controller: value: 12[0m
+[0;32mI (1697) Lcd Controller: value: 1[0m
+[0;32mI (1697) Lcd Controller: value: 0[0m
+[0;32mI (3037) Lcd Controller: input value: 12425[0m
+[0;32mI (3037) Lcd Controller: value: 1242[0m
+[0;32mI (3037) Lcd Controller: value: 124[0m
+[0;32mI (3037) Lcd Controller: value: 12[0m
+[0;32mI (3037) Lcd Controller: value: 1[0m
+[0;32mI (3037) Lcd Controller: value: 0[0m
+[0;32mI (4377) Lcd Controller: input value: 12425[0m
+[0;32mI (4377) Lcd Controller: value: 1242[0m
+[0;32mI (4377) Lcd Controller: value: 124[0m
+[0;32mI (4377) Lcd Controller: value: 12[0m
+[0;32mI (4377) Lcd Controller: value: 1[0m
+[0;32mI (4377) Lcd Controller: value: 0[0m
+[0;32mI (5717) Lcd Controller: input value: 12425[0m
+[0;32mI (5717) Lcd Controller: value: 1242[0m
+[0;32mI (5717) Lcd Controller: value: 124[0m
+[0;32mI (5717) Lcd Controller: value: 12[0m
+[0;32mI (5717) Lcd Controller: value: 1[0m
+[0;32mI (5717) Lcd Controller: value: 0[0m
+[0;32mI (7057) Lcd Controller: input value: 12425[0m
+[0;32mI (7057) Lcd Controller: value: 1242[0m
+[0;32mI (7057) Lcd Controller: value: 124[0m
+[0;32mI (7057) Lcd Controller: value: 12[0m
+[0;32mI (7057) Lcd Controller: value: 1[0m
+[0;32mI (7057) Lcd Controller: value: 0[0m
+[0;32mI (8397) Lcd Controller: input value: 12425[0m
+[0;32mI (8397) Lcd Controller: value: 1242[0m
+[0;32mI (8397) Lcd Controller: value: 124[0m
+[0;32mI (8397) Lcd Controller: value: 12[0m
+[0;32mI (8397) Lcd Controller: value: 1[0m
+[0;32mI (8397) Lcd Controller: value: 0[0m
+[0;32mI (9737) Lcd Controller: input value: 12425[0m
+[0;32mI (9737) Lcd Controller: value: 1242[0m
+[0;32mI (9737) Lcd Controller: value: 124[0m
+[0;32mI (9737) Lcd Controller: value: 12[0m
+[0;32mI (9737) Lcd Controller: value: 1[0m
+[0;32mI (9737) Lcd Controller: value: 0[0m
+[0;32mI (11077) Lcd Controller: input value: 12425[0m
+[0;32mI (11077) Lcd Controller: value: 1242[0m
+[0;32mI (11077) Lcd Controller: value: 124[0m
+[0;32mI (11077) Lcd Controller: value: 12[0m
+[0;32mI (11077) Lcd Controller: value: 1[0m
+[0;32mI (11077) Lcd Controller: value: 0[0m
+[0;32mI (12417) Lcd Controller: input value: 12425[0m
+[0;32mI (12417) Lcd Controller: value: 1242[0m
+[0;32mI (12417) Lcd Controller: value: 124[0m
+[0;32mI (12417) Lcd Controller: value: 12[0m
+[0;32mI (12417) Lcd Controller: value: 1[0m
+[0;32mI (12417) Lcd Controller: value: 0[0m
+[0;32mI (13757) Lcd Controller: input value: 12425[0m
+[0;32mI (13757) Lcd Controller: value: 1242[0m
+[0;32mI (13757) Lcd Controller: value: 124[0m
+[0;32mI (13757) Lcd Controller: value: 12[0m
+[0;32mI (13757) Lcd Controller: value: 1[0m
+[0;32mI (13757) Lcd Controller: value: 0[0m
+[0;32mI (15097) Lcd Controller: input value: 12425[0m
+[0;32mI (15097) Lcd Controller: value: 1242[0m
+[0;32mI (15097) Lcd Controller: value: 124[0m
+[0;32mI (15097) Lcd Controller: value: 12[0m
+[0;32mI (15097) Lcd Controller: value: 1[0m
+[0;32mI (15097) Lcd Controller: value: 0[0m
+[0;32mI (16437) Lcd Controller: input value: 12425[0m
+[0;32mI (16437) Lcd Controller: value: 1242[0m
+[0;32mI (16437) Lcd Controller: value: 124[0m
+[0;32mI (16437) Lcd Controller: value: 12[0m
+[0;32mI (16437) Lcd Controller: value: 1[0m
+[0;32mI (16437) Lcd Controller: value: 0[0m
+[0;32mI (17777) Lcd Controller: input value: 12425[0m
+[0;32mI (17777) Lcd Controller: value: 1242[0m
+[0;32mI (17777) Lcd Controller: value: 124[0m
+[0;32mI (17777) Lcd Controller: value: 12[0m
+[0;32mI (17777) Lcd Controller: value: 1[0m
+[0;32mI (17777) Lcd Controller: value: 0[0m
+[0;32mI (19117) Lcd Controller: input value: 12425[0m
+[0;32mI (19117) Lcd Controller: value: 1242[0m
+[0;32mI (19117) Lcd Controller: value: 124[0m
+[0;32mI (19117) Lcd Controller: value: 12[0m
+[0;32mI (19117) Lcd Controller: value: 1[0m
+[0;32mI (19117) Lcd Controller: value: 0[0m
+[0;32mI (20457) Lcd Controller: input value: 12425[0m
+[0;32mI (20457) Lcd Controller: value: 1242[0m
+[0;32mI (20457) Lcd Controller: value: 124[0m
+[0;32mI (20457) Lcd Controller: value: 12[0m
+[0;32mI (20457) Lcd Controller: value: 1[0m
+[0;32mI (20457) Lcd Controller: value: 0[0m
+[0;32mI (21797) Lcd Controller: input value: 12425[0m
+[0;32mI (21797) Lcd Controller: value: 1242[0m
+[0;32mI (21797) Lcd Controller: value: 124[0m
+[0;32mI (21797) Lcd Controller: value: 12[0m
+[0;32mI (21797) Lcd Controller: value: 1[0m
+[0;32mI (21797) Lcd Controller: value: 0[0m
+[0;32mI (23137) Lcd Controller: input value: 12425[0m
+[0;32mI (23137) Lcd Controller: value: 1242[0m
+[0;32mI (23137) Lcd Controller: value: 124[0m
+[0;32mI (23137) Lcd Controller: value: 12[0m
+[0;32mI (23137) Lcd Controller: value: 1[0m
+[0;32mI (23137) Lcd Controller: value: 0[0m
+[0;32mI (24477) Lcd Controller: input value: 12425[0m
+[0;32mI (24477) Lcd Controller: value: 1242[0m
+[0;32mI (24477) Lcd Controller: value: 124[0m
+[0;32mI (24477) Lcd Controller: value: 12[0m
+[0;32mI (24477) Lcd Controller: value: 1[0m
+[0;32mI (24477) Lcd Controller: value: 0[0m
+[0;32mI (25817) Lcd Controller: input value: 12425[0m
+[0;32mI (25817) Lcd Controller: value: 1242[0m
+[0;32mI (25817) Lcd Controller: value: 124[0m
+[0;32mI (25817) Lcd Controller: value: 12[0m
+[0;32mI (25817) Lcd Controller: value: 1[0m
+[0;32mI (25817) Lcd Controller: value: 0[0m
+[0;32mI (27157) Lcd Controller: input value: 12425[0m
+[0;32mI (27157) Lcd Controller: value: 1242[0m
+[0;32mI (27157) Lcd Controller: value: 124[0m
+[0;32mI (27157) Lcd Controller: value: 12[0m
+[0;32mI (27157) Lcd Controller: value: 1[0m
+[0;32mI (27157) Lcd Controller: value: 0[0m
+[0;32mI (28497) Lcd Controller: input value: 12425[0m
+[0;32mI (28497) Lcd Controller: value: 1242[0m
+[0;32mI (28497) Lcd Controller: value: 124[0m
+[0;32mI (28497) Lcd Controller: value: 12[0m
+[0;32mI (28497) Lcd Controller: value: 1[0m
+[0;32mI (28497) Lcd Controller: value: 0[0m
+[0;32mI (29837) Lcd Controller: input value: 12425[0m
+[0;32mI (29837) Lcd Controller: value: 1242[0m
+[0;32mI (29837) Lcd Controller: value: 124[0m
+[0;32mI (29837) Lcd Controller: value: 12[0m
+[0;32mI (29837) Lcd Controller: value: 1[0m
+[0;32mI (29837) Lcd Controller: value: 0[0m
+[0;32mI (31177) Lcd Controller: input value: 12425[0m
+[0;32mI (31177) Lcd Controller: value: 1242[0m
+[0;32mI (31177) Lcd Controller: value: 124[0m
+[0;32mI (31177) Lcd Controller: value: 12[0m
+[0;32mI (31177) Lcd Controller: value: 1[0m
+[0;32mI (31177) Lcd Controller: value: 0[0m
+[0;32mI (32517) Lcd Controller: input value: 12425[0m
+[0;32mI (32517) Lcd Controller: value: 1242[0m
+[0;32mI (32517) Lcd Controller: value: 124[0m
+[0;32mI (32517) Lcd Controller: value: 12[0m
+[0;32mI (32517) Lcd Controller: value: 1[0m
+[0;32mI (32517) Lcd Controller: value: 0[0m
+[0;32mI (33857) Lcd Controller: input value: 12425[0m
+[0;32mI (33857) Lcd Controller: value: 1242[0m
+[0;32mI (33857) Lcd Controller: value: 124[0m
+[0;32mI (33857) Lcd Controller: value: 12[0m
+[0;32mI (33857) Lcd Controller: value: 1[0m
+[0;32mI (33857) Lcd Controller: value: 0[0m
+[0;32mI (35197) Lcd Controller: input value: 12425[0m
+[0;32mI (35197) Lcd Controller: value: 1242[0m
+[0;32mI (35197) Lcd Controller: value: 124[0m
+[0;32mI (35197) Lcd Controller: value: 12[0m
+[0;32mI (35197) Lcd Controller: value: 1[0m
+[0;32mI (35197) Lcd Controller: value: 0[0m
+[0;32mI (36537) Lcd Controller: input value: 12425[0m
+[0;32mI (36537) Lcd Controller: value: 1242[0m
+[0;32mI (36537) Lcd Controller: value: 124[0m
+[0;32mI (36537) Lcd Controller: value: 12[0m
+[0;32mI (36537) Lcd Controller: value: 1[0m
+[0;32mI (36537) Lcd Controller: value: 0[0m
+[0;32mI (37877) Lcd Controller: input value: 12425[0m
+[0;32mI (37877) Lcd Controller: value: 1242[0m
+[0;32mI (37877) Lcd Controller: value: 124[0m
+[0;32mI (37877) Lcd Controller: value: 12[0m
+[0;32mI (37877) Lcd Controller: value: 1[0m
+[0;32mI (37877) Lcd Controller: value: 0[0m
+[0;32mI (39217) Lcd Controller: input value: 12425[0m
+[0;32mI (39217) Lcd Controller: value: 1242[0m
+[0;32mI (39217) Lcd Controller: value: 124[0m
+[0;32mI (39217) Lcd Controller: value: 12[0m
+[0;32mI (39217) Lcd Controller: value: 1[0m
+[0;32mI (39217) Lcd Controller: value: 0[0m
+[0;32mI (40557) Lcd Controller: input value: 12425[0m
+[0;32mI (40557) Lcd Controller: value: 1242[0m
+[0;32mI (40557) Lcd Controller: value: 124[0m
+[0;32mI (40557) Lcd Controller: value: 12[0m
+[0;32mI (40557) Lcd Controller: value: 1[0m
+[0;32mI (40557) Lcd Controller: value: 0[0m
+[0;32mI (41897) Lcd Controller: input value: 12425[0m
+[0;32mI (41897) Lcd Controller: value: 1242[0m
+[0;32mI (41897) Lcd Controller: value: 124[0m
+[0;32mI (41897) Lcd Controller: value: 12[0m
+[0;32mI (41897) Lcd Controller: value: 1[0m
+[0;32mI (41897) Lcd Controller: value: 0[0m
+[0;32mI (43237) Lcd Controller: input value: 12425[0m
+[0;32mI (43237) Lcd Controller: value: 1242[0m
+[0;32mI (43237) Lcd Controller: value: 124[0m
+[0;32mI (43237) Lcd Controller: value: 12[0m
+[0;32mI (43237) Lcd Controller: value: 1[0m
+[0;32mI (43237) Lcd Controller: value: 0[0m
+[0;32mI (44577) Lcd Controller: input value: 12425[0m
+[0;32mI (44577) Lcd Controller: value: 1242[0m
+[0;32mI (44577) Lcd Controller: value: 124[0m
+[0;32mI (44577) Lcd Controller: value: 12[0m
+[0;32mI (44577) Lcd Controller: value: 1[0m
+[0;32mI (44577) Lcd Controller: value: 0[0m
+[0;32mI (45917) Lcd Controller: input value: 12425[0m
+[0;32mI (45917) Lcd Controller: value: 1242[0m
+[0;32mI (45917) Lcd Controller: value: 124[0m
+[0;32mI (45917) Lcd Controller: value: 12[0m
+[0;32mI (45917) Lcd Controller: value: 1[0m
+[0;32mI (45917) Lcd Controller: value: 0[0m
+[0;32mI (47257) Lcd Controller: input value: 12425[0m
+[0;32mI (47257) Lcd Controller: value: 1242[0m
+[0;32mI (47257) Lcd Controller: value: 124[0m
+[0;32mI (47257) Lcd Controller: value: 12[0m
+[0;32mI (47257) Lcd Controller: value: 1[0m
+[0;32mI (47257) Lcd Controller: value: 0[0m
+[0;32mI (48597) Lcd Controller: input value: 12425[0m
+[0;32mI (48597) Lcd Controller: value: 1242[0m
+[0;32mI (48597) Lcd Controller: value: 124[0m
+[0;32mI (48597) Lcd Controller: value: 12[0m
+[0;32mI (48597) Lcd Controller: value: 1[0m
+[0;32mI (48597) Lcd Controller: value: 0[0m
+[0;32mI (49937) Lcd Controller: input value: 12425[0m
+[0;32mI (49937) Lcd Controller: value: 1242[0m
+[0;32mI (49937) Lcd Controller: value: 124[0m
+[0;32mI (49937) Lcd Controller: value: 12[0m
+[0;32mI (49937) Lcd Controller: value: 1[0m
+[0;32mI (49937) Lcd Controller: value: 0[0m
+[0;32mI (51277) Lcd Controller: input value: 12425[0m
+[0;32mI (51277) Lcd Controller: value: 1242[0m
+[0;32mI (51277) Lcd Controller: value: 124[0m
+[0;32mI (51277) Lcd Controller: value: 12[0m
+[0;32mI (51277) Lcd Controller: value: 1[0m
+[0;32mI (51277) Lcd Controller: value: 0[0m
+[0;32mI (52617) Lcd Controller: input value: 12425[0m
+[0;32mI (52617) Lcd Controller: value: 1242[0m
+[0;32mI (52617) Lcd Controller: value: 124[0m
+[0;32mI (52617) Lcd Controller: value: 12[0m
+[0;32mI (52617) Lcd Controller: value: 1[0m
+[0;32mI (52617) Lcd Controller: value: 0[0m
+[0;32mI (53957) Lcd Controller: input value: 12425[0m
+[0;32mI (53957) Lcd Controller: value: 1242[0m
+[0;32mI (53957) Lcd Controller: value: 124[0m
+[0;32mI (53957) Lcd Controller: value: 12[0m
+[0;32mI (53957) Lcd Controller: value: 1[0m
+[0;32mI (53957) Lcd Controller: value: 0[0m
+[0;32mI (55297) Lcd Controller: input value: 12425[0m
+[0;32mI (55297) Lcd Controller: value: 1242[0m
+[0;32mI (55297) Lcd Controller: value: 124[0m
+[0;32mI (55297) Lcd Controller: value: 12[0m
+[0;32mI (55297) Lcd Controller: value: 1[0m
+[0;32mI (55297) Lcd Controller: value: 0[0m
+[0;32mI (56637) Lcd Controller: input value: 12425[0m
+[0;32mI (56637) Lcd Controller: value: 1242[0m
+[0;32mI (56637) Lcd Controller: value: 124[0m
+[0;32mI (56637) Lcd Controller: value: 12[0m
+[0;32mI (56637) Lcd Controller: value: 1[0m
+[0;32mI (56637) Lcd Controller: value: 0[0m
+[0;32mI (57977) Lcd Controller: input value: 12425[0m
+[0;32mI (57977) Lcd Controller: value: 1242[0m
+[0;32mI (57977) Lcd Controller: value: 124[0m
+[0;32mI (57977) Lcd Controller: value: 12[0m
+[0;32mI (57977) Lcd Controller: value: 1[0m
+[0;32mI (57977) Lcd Controller: value: 0[0m
+[0;32mI (59317) Lcd Controller: input value: 12425[0m
+[0;32mI (59317) Lcd Controller: value: 1242[0m
+[0;32mI (59317) Lcd Controller: value: 124[0m
+[0;32mI (59317) Lcd Controller: value: 12[0m
+[0;32mI (59317) Lcd Controller: value: 1[0m
+[0;32mI (59317) Lcd Controller: value: 0[0m
+[0;32mI (60657) Lcd Controller: input value: 12425[0m
+[0;32mI (60657) Lcd Controller: value: 1242[0m
+[0;32mI (60657) Lcd Controller: value: 124[0m
+[0;32mI (60657) Lcd Controller: value: 12[0m
+[0;32mI (60657) Lcd Controller: value: 1[0m
+[0;32mI (60657) Lcd Controller: value: 0[0m
+[0;32mI (61997) Lcd Controller: input value: 12425[0m
+[0;32mI (61997) Lcd Controller: value: 1242[0m
+[0;32mI (61997) Lcd Controller: value: 124[0m
+[0;32mI (61997) Lcd Controller: value: 12[0m
+[0;32mI (61997) Lcd Controller: value: 1[0m
+[0;32mI (61997) Lcd Controller: value: 0[0m
+[0;32mI (63337) Lcd Controller: input value: 12425[0m
+[0;32mI (63337) Lcd Controller: value: 1242[0m
+[0;32mI (63337) Lcd Controller: value: 124[0m
+[0;32mI (63337) Lcd Controller: value: 12[0m
+[0;32mI (63337) Lcd Controller: value: 1[0m
+[0;32mI (63337) Lcd Controller: value: 0[0m
+[0;32mI (64677) Lcd Controller: input value: 12425[0m
+[0;32mI (64677) Lcd Controller: value: 1242[0m
+[0;32mI (64677) Lcd Controller: value: 124[0m
+[0;32mI (64677) Lcd Controller: value: 12[0m
+[0;32mI (64677) Lcd Controller: value: 1[0m
+[0;32mI (64677) Lcd Controller: value: 0[0m
+[0;32mI (66017) Lcd Controller: input value: 12425[0m
+[0;32mI (66017) Lcd Controller: value: 1242[0m
+[0;32mI (66017) Lcd Controller: value: 124[0m
+[0;32mI (66017) Lcd Controller: value: 12[0m
+[0;32mI (66017) Lcd Controller: value: 1[0m
+[0;32mI (66017) Lcd Controller: value: 0[0m
+[0;32mI (67357) Lcd Controller: input value: 12425[0m
+[0;32mI (67357) Lcd Controller: value: 1242[0m
+[0;32mI (67357) Lcd Controller: value: 124[0m
+[0;32mI (67357) Lcd Controller: value: 12[0m
+[0;32mI (67357) Lcd Controller: value: 1[0m
+[0;32mI (67357) Lcd Controller: value: 0[0m
+[0;32mI (68697) Lcd Controller: input value: 12425[0m
+[0;32mI (68697) Lcd Controller: value: 1242[0m
+[0;32mI (68697) Lcd Controller: value: 124[0m
+[0;32mI (68697) Lcd Controller: value: 12[0m
+[0;32mI (68697) Lcd Controller: value: 1[0m
+[0;32mI (68697) Lcd Controller: value: 0[0m
+[0;32mI (70037) Lcd Controller: input value: 12425[0m
+[0;32mI (70037) Lcd Controller: value: 1242[0m
+[0;32mI (70037) Lcd Controller: value: 124[0m
+[0;32mI (70037) Lcd Controller: value: 12[0m
+[0;32mI (70037) Lcd Controller: value: 1[0m
+[0;32mI (70037) Lcd Controller: value: 0[0m
+[0;32mI (71377) Lcd Controller: input value: 12425[0m
+[0;32mI (71377) Lcd Controller: value: 1242[0m
+[0;32mI (71377) Lcd Controller: value: 124[0m
+[0;32mI (71377) Lcd Controller: value: 12[0m
+[0;32mI (71377) Lcd Controller: value: 1[0m
+[0;32mI (71377) Lcd Controller: value: 0[0m
+[0;32mI (72717) Lcd Controller: input value: 12425[0m
+[0;32mI (72717) Lcd Controller: value: 1242[0m
+[0;32mI (72717) Lcd Controller: value: 124[0m
+[0;32mI (72717) Lcd Controller: value: 12[0m
+[0;32mI (72717) Lcd Controller: value: 1[0m
+[0;32mI (72717) Lcd Controller: value: 0[0m
+[0;32mI (74057) Lcd Controller: input value: 12425[0m
+[0;32mI (74057) Lcd Controller: value: 1242[0m
+[0;32mI (74057) Lcd Controller: value: 124[0m
+[0;32mI (74057) Lcd Controller: value: 12[0m
+[0;32mI (74057) Lcd Controller: value: 1[0m
+[0;32mI (74057) Lcd Controller: value: 0[0m
+[0;32mI (75397) Lcd Controller: input value: 12425[0m
+[0;32mI (75397) Lcd Controller: value: 1242[0m
+[0;32mI (75397) Lcd Controller: value: 124[0m
+[0;32mI (75397) Lcd Controller: value: 12[0m
+[0;32mI (75397) Lcd Controller: value: 1[0m
+[0;32mI (75397) Lcd Controller: value: 0[0m
+[0;32mI (76737) Lcd Controller: input value: 12425[0m
+[0;32mI (76737) Lcd Controller: value: 1242[0m
+[0;32mI (76737) Lcd Controller: value: 124[0m
+[0;32mI (76737) Lcd Controller: value: 12[0m
+[0;32mI (76737) Lcd Controller: value: 1[0m
+[0;32mI (76737) Lcd Controller: value: 0[0m
+[0;32mI (78077) Lcd Controller: input value: 12425[0m
+[0;32mI (78077) Lcd Controller: value: 1242[0m
+[0;32mI (78077) Lcd Controller: value: 124[0m
+[0;32mI (78077) Lcd Controller: value: 12[0m
+[0;32mI (78077) Lcd Controller: value: 1[0m
+[0;32mI (78077) Lcd Controller: value: 0[0m
+[0;32mI (79417) Lcd Controller: input value: 12425[0m
+[0;32mI (79417) Lcd Controller: value: 1242[0m
+[0;32mI (79417) Lcd Controller: value: 124[0m
+[0;32mI (79417) Lcd Controller: value: 12[0m
+[0;32mI (79417) Lcd Controller: value: 1[0m
+[0;32mI (79417) Lcd Controller: value: 0[0m
+[0;32mI (80757) Lcd Controller: input value: 12425[0m
+[0;32mI (80757) Lcd Controller: value: 1242[0m
+[0;32mI (80757) Lcd Controller: value: 124[0m
+[0;32mI (80757) Lcd Controller: value: 12[0m
+[0;32mI (80757) Lcd Controller: value: 1[0m
+[0;32mI (80757) Lcd Controller: value: 0[0m
+[0;32mI (82097) Lcd Controller: input value: 12425[0m
+[0;32mI (82097) Lcd Controller: value: 1242[0m
+[0;32mI (82097) Lcd Controller: value: 124[0m
+[0;32mI (82097) Lcd Controller: value: 12[0m
+[0;32mI (82097) Lcd Controller: value: 1[0m
+[0;32mI (82097) Lcd Controller: value: 0[0m
+[0;32mI (83437) Lcd Controller: input value: 12425[0m
+[0;32mI (83437) Lcd Controller: value: 1242[0m
+[0;32mI (83437) Lcd Controller: value: 124[0m
+[0;32mI (83437) Lcd Controller: value: 12[0m
+[0;32mI (83437) Lcd Controller: value: 1[0m
+[0;32mI (83437) Lcd Controller: value: 0[0m
+[0;32mI (84777) Lcd Controller: input value: 12425[0m
+[0;32mI (84777) Lcd Controller: value: 1242[0m
+[0;32mI (84777) Lcd Controller: value: 124[0m
+[0;32mI (84777) Lcd Controller: value: 12[0m
+[0;32mI (84777) Lcd Controller: value: 1[0m
+[0;32mI (84777) Lcd Controller: value: 0[0m
+[0;32mI (86117) Lcd Controller: input value: 12425[0m
+[0;32mI (86117) Lcd Controller: value: 1242[0m
+[0;32mI (86117) Lcd Controller: value: 124[0m
+[0;32mI (86117) Lcd Controller: value: 12[0m
+[0;32mI (86117) Lcd Controller: value: 1[0m
+[0;32mI (86117) Lcd Controller: value: 0[0m
+[0;32mI (87457) Lcd Controller: input value: 12425[0m
+[0;32mI (87457) Lcd Controller: value: 1242[0m
+[0;32mI (87457) Lcd Controller: value: 124[0m
+[0;32mI (87457) Lcd Controller: value: 12[0m
+[0;32mI (87457) Lcd Controller: value: 1[0m
+[0;32mI (87457) Lcd Controller: value: 0[0m
+[0;32mI (88797) Lcd Controller: input value: 12425[0m
+[0;32mI (88797) Lcd Controller: value: 1242[0m
+[0;32mI (88797) Lcd Controller: value: 124[0m
+[0;32mI (88797) Lcd Controller: value: 12[0m
+[0;32mI (88797) Lcd Controller: value: 1[0m
+[0;32mI (88797) Lcd Controller: value: 0[0m
+[0;32mI (90137) Lcd Controller: input value: 12425[0m
+[0;32mI (90137) Lcd Controller: value: 1242[0m
+[0;32mI (90137) Lcd Controller: value: 124[0m
+[0;32mI (90137) Lcd Controller: value: 12[0m
+[0;32mI (90137) Lcd Controller: value: 1[0m
+[0;32mI (90137) Lcd Controller: value: 0[0m
+[0;32mI (91477) Lcd Controller: input value: 12425[0m
+[0;32mI (91477) Lcd Controller: value: 1242[0m
+[0;32mI (91477) Lcd Controller: value: 124[0m
+[0;32mI (91477) Lcd Controller: value: 12[0m
+[0;32mI (91477) Lcd Controller: value: 1[0m
+[0;32mI (91477) Lcd Controller: value: 0[0m
+[0;32mI (92817) Lcd Controller: input value: 12425[0m
+[0;32mI (92817) Lcd Controller: value: 1242[0m
+[0;32mI (92817) Lcd Controller: value: 124[0m
+[0;32mI (92817) Lcd Controller: value: 12[0m
+[0;32mI (92817) Lcd Controller: value: 1[0m
+[0;32mI (92817) Lcd Controller: value: 0[0m
+[0;32mI (94157) Lcd Controller: input value: 12425[0m
+[0;32mI (94157) Lcd Controller: value: 1242[0m
+[0;32mI (94157) Lcd Controller: value: 124[0m
+[0;32mI (94157) Lcd Controller: value: 12[0m
+[0;32mI (94157) Lcd Controller: value: 1[0m
+[0;32mI (94157) Lcd Controller: value: 0[0m
+[0;32mI (95497) Lcd Controller: input value: 12425[0m
+[0;32mI (95497) Lcd Controller: value: 1242[0m
+[0;32mI (95497) Lcd Controller: value: 124[0m
+[0;32mI (95497) Lcd Controller: value: 12[0m
+[0;32mI (95497) Lcd Controller: value: 1[0m
+[0;32mI (95497) Lcd Controller: value: 0[0m
+[0;32mI (96837) Lcd Controller: input value: 12425[0m
+[0;32mI (96837) Lcd Controller: value: 1242[0m
+[0;32mI (96837) Lcd Controller: value: 124[0m
+[0;32mI (96837) Lcd Controller: value: 12[0m
+[0;32mI (96837) Lcd Controller: value: 1[0m
+[0;32mI (96837) Lcd Controller: value: 0[0m
+[0;32mI (98177) Lcd Controller: input value: 12425[0m
+[0;32mI (98177) Lcd Controller: value: 1242[0m
+[0;32mI (98177) Lcd Controller: value: 124[0m
+[0;32mI (98177) Lcd Controller: value: 12[0m
+[0;32mI (98177) Lcd Controller: value: 1[0m
+[0;32mI (98177) Lcd Controller: value: 0[0m
+[0;32mI (99517) Lcd Controller: input value: 12425[0m
+[0;32mI (99517) Lcd Controller: value: 1242[0m
+[0;32mI (99517) Lcd Controller: value: 124[0m
+[0;32mI (99517) Lcd Controller: value: 12[0m
+[0;32mI (99517) Lcd Controller: value: 1[0m
+[0;32mI (99517) Lcd Controller: value: 0[0m
+[0;32mI (100857) Lcd Controller: input value: 12425[0m
+[0;32mI (100857) Lcd Controller: value: 1242[0m
+[0;32mI (100857) Lcd Controller: value: 124[0m
+[0;32mI (100857) Lcd Controller: value: 12[0m
+[0;32mI (100857) Lcd Controller: value: 1[0m
+[0;32mI (100857) Lcd Controller: value: 0[0m
+[0;32mI (102197) Lcd Controller: input value: 12425[0m
+[0;32mI (102197) Lcd Controller: value: 1242[0m
+[0;32mI (102197) Lcd Controller: value: 124[0m
+[0;32mI (102197) Lcd Controller: value: 12[0m
+[0;32mI (102197) Lcd Controller: value: 1[0m
+[0;32mI (102197) Lcd Controller: value: 0[0m
+[0;32mI (103537) Lcd Controller: input value: 12425[0m
+[0;32mI (103537) Lcd Controller: value: 1242[0m
+[0;32mI (103537) Lcd Controller: value: 124[0m
+[0;32mI (103537) Lcd Controller: value: 12[0m
+[0;32mI (103537) Lcd Controller: value: 1[0m
+[0;32mI (103537) Lcd Controller: value: 0[0m
+[0;32mI (104877) Lcd Controller: input value: 12425[0m
+[0;32mI (104877) Lcd Controller: value: 1242[0m
+[0;32mI (104877) Lcd Controller: value: 124[0m
+[0;32mI (104877) Lcd Controller: value: 12[0m
+[0;32mI (104877) Lcd Controller: value: 1[0m
+[0;32mI (104877) Lcd Controller: value: 0[0m
+[0;32mI (106217) Lcd Controller: input value: 12425[0m
+[0;32mI (106217) Lcd Controller: value: 1242[0m
+[0;32mI (106217) Lcd Controller: value: 124[0m
+[0;32mI (106217) Lcd Controller: value: 12[0m
+[0;32mI (106217) Lcd Controller: value: 1[0m
+[0;32mI (106217) Lcd Controller: value: 0[0m
+[0;32mI (107557) Lcd Controller: input value: 12425[0m
+[0;32mI (107557) Lcd Controller: value: 1242[0m
+[0;32mI (107557) Lcd Controller: value: 124[0m
+[0;32mI (107557) Lcd Controller: value: 12[0m
+[0;32mI (107557) Lcd Controller: value: 1[0m
+[0;32mI (107557) Lcd Controller: value: 0[0m
+[0;32mI (108897) Lcd Controller: input value: 12425[0m
+[0;32mI (108897) Lcd Controller: value: 1242[0m
+[0;32mI (108897) Lcd Controller: value: 124[0m
+[0;32mI (108897) Lcd Controller: value: 12[0m
+[0;32mI (108897) Lcd Controller: value: 1[0m
+[0;32mI (108897) Lcd Controller: value: 0[0m
+[0;32mI (110237) Lcd Controller: input value: 12425[0m
+[0;32mI (110237) Lcd Controller: value: 1242[0m
+[0;32mI (110237) Lcd Controller: value: 124[0m
+[0;32mI (110237) Lcd Controller: value: 12[0m
+[0;32mI (110237) Lcd Controller: value: 1[0m
+[0;32mI (110237) Lcd Controller: value: 0[0m
+[0;32mI (111577) Lcd Controller: input value: 12425[0m
+[0;32mI (111577) Lcd Controller: value: 1242[0m
+[0;32mI (111577) Lcd Controller: value: 124[0m
+[0;32mI (111577) Lcd Controller: value: 12[0m
+[0;32mI (111577) Lcd Controller: value: 1[0m
+[0;32mI (111577) Lcd Controller: value: 0[0m
+[0;32mI (112917) Lcd Controller: input value: 12425[0m
+[0;32mI (112917) Lcd Controller: value: 1242[0m
+[0;32mI (112917) Lcd Controller: value: 124[0m
+[0;32mI (112917) Lcd Controller: value: 12[0m
+[0;32mI (112917) Lcd Controller: value: 1[0m
+[0;32mI (112917) Lcd Controller: value: 0[0m
+[0;32mI (114257) Lcd Controller: input value: 12425[0m
+[0;32mI (114257) Lcd Controller: value: 1242[0m
+[0;32mI (114257) Lcd Controller: value: 124[0m
+[0;32mI (114257) Lcd Controller: value: 12[0m
+[0;32mI (114257) Lcd Controller: value: 1[0m
+[0;32mI (114257) Lcd Controller: value: 0[0m
+[0;32mI (115597) Lcd Controller: input value: 12425[0m
+[0;32mI (115597) Lcd Controller: value: 1242[0m
+[0;32mI (115597) Lcd Controller: value: 124[0m
+[0;32mI (115597) Lcd Controller: value: 12[0m
+[0;32mI (115597) Lcd Controller: value: 1[0m
+[0;32mI (115597) Lcd Controller: value: 0[0m
+[0;32mI (116937) Lcd Controller: input value: 12425[0m
+[0;32mI (116937) Lcd Controller: value: 1242[0m
+[0;32mI (116937) Lcd Controller: value: 124[0m
+[0;32mI (116937) Lcd Controller: value: 12[0m
+[0;32mI (116937) Lcd Controller: value: 1[0m
+[0;32mI (116937) Lcd Controller: value: 0[0m
+[0;32mI (118277) Lcd Controller: input value: 12425[0m
+[0;32mI (118277) Lcd Controller: value: 1242[0m
+[0;32mI (118277) Lcd Controller: value: 124[0m
+[0;32mI (118277) Lcd Controller: value: 12[0m
+[0;32mI (118277) Lcd Controller: value: 1[0m
+[0;32mI (118277) Lcd Controller: value: 0[0m
+[0;32mI (119617) Lcd Controller: input value: 12425[0m
+[0;32mI (119617) Lcd Controller: value: 1242[0m
+[0;32mI (119617) Lcd Controller: value: 124[0m
+[0;32mI (119617) Lcd Controller: value: 12[0m
+[0;32mI (119617) Lcd Controller: value: 1[0m
+[0;32mI (119617) Lcd Controller: value: 0[0m
+[0;32mI (120957) Lcd Controller: input value: 12425[0m
+[0;32mI (120957) Lcd Controller: value: 1242[0m
+[0;32mI (120957) Lcd Controller: value: 124[0m
+[0;32mI (120957) Lcd Controller: value: 12[0m
+[0;32mI (120957) Lcd Controller: value: 1[0m
+[0;32mI (120957) Lcd Controller: value: 0[0m
+[0;32mI (122297) Lcd Controller: input value: 12425[0m
+[0;32mI (122297) Lcd Controller: value: 1242[0m
+[0;32mI (122297) Lcd Controller: value: 124[0m
+[0;32mI (122297) Lcd Controller: value: 12[0m
+[0;32mI (122297) Lcd Controller: value: 1[0m
+[0;32mI (122297) Lcd Controller: value: 0[0m
+[0;32mI (123637) Lcd Controller: input value: 12425[0m
+[0;32mI (123637) Lcd Controller: value: 1242[0m
+[0;32mI (123637) Lcd Controller: value: 124[0m
+[0;32mI (123637) Lcd Controller: value: 12[0m
+[0;32mI (123637) Lcd Controller: value: 1[0m
+[0;32mI (123637) Lcd Controller: value: 0[0m
+[0;32mI (124977) Lcd Controller: input value: 12425[0m
+[0;32mI (124977) Lcd Controller: value: 1242[0m
+[0;32mI (124977) Lcd Controller: value: 124[0m
+[0;32mI (124977) Lcd Controller: value: 12[0m
+[0;32mI (124977) Lcd Controller: value: 1[0m
+[0;32mI (124977) Lcd Controller: value: 0[0m
+[0;32mI (126317) Lcd Controller: input value: 12425[0m
+[0;32mI (126317) Lcd Controller: value: 1242[0m
+[0;32mI (126317) Lcd Controller: value: 124[0m
+[0;32mI (126317) Lcd Controller: value: 12[0m
+[0;32mI (126317) Lcd Controller: value: 1[0m
+[0;32mI (126317) Lcd Controller: value: 0[0m
+[0;32mI (127657) Lcd Controller: input value: 12425[0m
+[0;32mI (127657) Lcd Controller: value: 1242[0m
+[0;32mI (127657) Lcd Controller: value: 124[0m
+[0;32mI (127657) Lcd Controller: value: 12[0m
+[0;32mI (127657) Lcd Controller: value: 1[0m
+[0;32mI (127657) Lcd Controller: value: 0[0m
+[0;32mI (128997) Lcd Controller: input value: 12425[0m
+[0;32mI (128997) Lcd Controller: value: 1242[0m
+[0;32mI (128997) Lcd Controller: value: 124[0m
+[0;32mI (128997) Lcd Controller: value: 12[0m
+[0;32mI (128997) Lcd Controller: value: 1[0m
+[0;32mI (128997) Lcd Controller: value: 0[0m
+[0;32mI (130337) Lcd Controller: input value: 12425[0m
+[0;32mI (130337) Lcd Controller: value: 1242[0m
+[0;32mI (130337) Lcd Controller: value: 124[0m
+[0;32mI (130337) Lcd Controller: value: 12[0m
+[0;32mI (130337) Lcd Controller: value: 1[0m
+[0;32mI (130337) Lcd Controller: value: 0[0m
+[0;32mI (131677) Lcd Controller: input value: 12425[0m
+[0;32mI (131677) Lcd Controller: value: 1242[0m
+[0;32mI (131677) Lcd Controller: value: 124[0m
+[0;32mI (131677) Lcd Controller: value: 12[0m
+[0;32mI (131677) Lcd Controller: value: 1[0m
+[0;32mI (131677) Lcd Controller: value: 0[0m
+[0;32mI (133017) Lcd Controller: input value: 12425[0m
+[0;32mI (133017) Lcd Controller: value: 1242[0m
+[0;32mI (133017) Lcd Controller: value: 124[0m
+[0;32mI (133017) Lcd Controller: value: 12[0m
+[0;32mI (133017) Lcd Controller: value: 1[0m
+[0;32mI (133017) Lcd Controller: value: 0[0m
+[0;32mI (134357) Lcd Controller: input value: 12425[0m
+[0;32mI (134357) Lcd Controller: value: 1242[0m
+[0;32mI (134357) Lcd Controller: value: 124[0m
+[0;32mI (134357) Lcd Controller: value: 12[0m
+[0;32mI (134357) Lcd Controller: value: 1[0m
+[0;32mI (134357) Lcd Controller: value: 0[0m
+[0;32mI (135697) Lcd Controller: input value: 12425[0m
+[0;32mI (135697) Lcd Controller: value: 1242[0m
+[0;32mI (135697) Lcd Controller: value: 124[0m
+[0;32mI (135697) Lcd Controller: value: 12[0m
+[0;32mI (135697) Lcd Controller: value: 1[0m
+[0;32mI (135697) Lcd Controller: value: 0[0m
+[0;32mI (137037) Lcd Controller: input value: 12425[0m
+[0;32mI (137037) Lcd Controller: value: 1242[0m
+[0;32mI (137037) Lcd Controller: value: 124[0m
+[0;32mI (137037) Lcd Controller: value: 12[0m
+[0;32mI (137037) Lcd Controller: value: 1[0m
+[0;32mI (137037) Lcd Controller: value: 0[0m
+[0;32mI (138377) Lcd Controller: input value: 12425[0m
+[0;32mI (138377) Lcd Controller: value: 1242[0m
+[0;32mI (138377) Lcd Controller: value: 124[0m
+[0;32mI (138377) Lcd Controller: value: 12[0m
+[0;32mI (138377) Lcd Controller: value: 1[0m
+[0;32mI (138377) Lcd Controller: value: 0[0m
+[0;32mI (139717) Lcd Controller: input value: 12425[0m
+[0;32mI (139717) Lcd Controller: value: 1242[0m
+[0;32mI (139717) Lcd Controller: value: 124[0m
+[0;32mI (139717) Lcd Controller: value: 12[0m
+[0;32mI (139717) Lcd Controller: value: 1[0m
+[0;32mI (139717) Lcd Controller: value: 0[0m
+[0;32mI (141057) Lcd Controller: input value: 12425[0m
+[0;32mI (141057) Lcd Controller: value: 1242[0m
+[0;32mI (141057) Lcd Controller: value: 124[0m
+[0;32mI (141057) Lcd Controller: value: 12[0m
+[0;32mI (141057) Lcd Controller: value: 1[0m
+[0;32mI (141057) Lcd Controller: value: 0[0m
+[0;32mI (142397) Lcd Controller: input value: 12425[0m
+[0;32mI (142397) Lcd Controller: value: 1242[0m
+[0;32mI (142397) Lcd Controller: value: 124[0m
+[0;32mI (142397) Lcd Controller: value: 12[0m
+[0;32mI (142397) Lcd Controller: value: 1[0m
+[0;32mI (142397) Lcd Controller: value: 0[0m
+[0;32mI (143737) Lcd Controller: input value: 12425[0m
+[0;32mI (143737) Lcd Controller: value: 1242[0m
+[0;32mI (143737) Lcd Controller: value: 124[0m
+[0;32mI (143737) Lcd Controller: value: 12[0m
+[0;32mI (143737) Lcd Controller: value: 1[0m
+[0;32mI (143737) Lcd Controller: value: 0[0m
+[0;32mI (145077) Lcd Controller: input value: 12425[0m
+[0;32mI (145077) Lcd Controller: value: 1242[0m
+[0;32mI (145077) Lcd Controller: value: 124[0m
+[0;32mI (145077) Lcd Controller: value: 12[0m
+[0;32mI (145077) Lcd Controller: value: 1[0m
+[0;32mI (145077) Lcd Controller: value: 0[0m
+[0;32mI (146417) Lcd Controller: input value: 12425[0m
+[0;32mI (146417) Lcd Controller: value: 1242[0m
+[0;32mI (146417) Lcd Controller: value: 124[0m
+[0;32mI (146417) Lcd Controller: value: 12[0m
+[0;32mI (146417) Lcd Controller: value: 1[0m
+[0;32mI (146417) Lcd Controller: value: 0[0m
+[0;32mI (147757) Lcd Controller: input value: 12425[0m
+[0;32mI (147757) Lcd Controller: value: 1242[0m
+[0;32mI (147757) Lcd Controller: value: 124[0m
+[0;32mI (147757) Lcd Controller: value: 12[0m
+[0;32mI (147757) Lcd Controller: value: 1[0m
+[0;32mI (147757) Lcd Controller: value: 0[0m
+[0;32mI (149097) Lcd Controller: input value: 12425[0m
+[0;32mI (149097) Lcd Controller: value: 1242[0m
+[0;32mI (149097) Lcd Controller: value: 124[0m
+[0;32mI (149097) Lcd Controller: value: 12[0m
+[0;32mI (149097) Lcd Controller: value: 1[0m
+[0;32mI (149097) Lcd Controller: value: 0[0m
+[0;32mI (150437) Lcd Controller: input value: 12425[0m
+[0;32mI (150437) Lcd Controller: value: 1242[0m
+[0;32mI (150437) Lcd Controller: value: 124[0m
+[0;32mI (150437) Lcd Controller: value: 12[0m
+[0;32mI (150437) Lcd Controller: value: 1[0m
+[0;32mI (150437) Lcd Controller: value: 0[0m
+[0;32mI (151777) Lcd Controller: input value: 12425[0m
+[0;32mI (151777) Lcd Controller: value: 1242[0m
+[0;32mI (151777) Lcd Controller: value: 124[0m
+[0;32mI (151777) Lcd Controller: value: 12[0m
+[0;32mI (151777) Lcd Controller: value: 1[0m
+[0;32mI (151777) Lcd Controller: value: 0[0m
+[0;32mI (153117) Lcd Controller: input value: 12425[0m
+[0;32mI (153117) Lcd Controller: value: 1242[0m
+[0;32mI (153117) Lcd Controller: value: 124[0m
+[0;32mI (153117) Lcd Controller: value: 12[0m
+[0;32mI (153117) Lcd Controller: value: 1[0m
+[0;32mI (153117) Lcd Controller: value: 0[0m
+[0;32mI (154457) Lcd Controller: input value: 12425[0m
+[0;32mI (154457) Lcd Controller: value: 1242[0m
+[0;32mI (154457) Lcd Controller: value: 124[0m
+[0;32mI (154457) Lcd Controller: value: 12[0m
+[0;32mI (154457) Lcd Controller: value: 1[0m
+[0;32mI (154457) Lcd Controller: value: 0[0m
+[0;32mI (155797) Lcd Controller: input value: 12425[0m
+[0;32mI (155797) Lcd Controller: value: 1242[0m
+[0;32mI (155797) Lcd Controller: value: 124[0m
+[0;32mI (155797) Lcd Controller: value: 12[0m
+[0;32mI (155797) Lcd Controller: value: 1[0m
+[0;32mI (155797) Lcd Controller: value: 0[0m
+[0;32mI (157137) Lcd Controller: input value: 12425[0m
+[0;32mI (157137) Lcd Controller: value: 1242[0m
+[0;32mI (157137) Lcd Controller: value: 124[0m
+[0;32mI (157137) Lcd Controller: value: 12[0m
+[0;32mI (157137) Lcd Controller: value: 1[0m
+[0;32mI (157137) Lcd Controller: value: 0[0m
+[0;32mI (158477) Lcd Controller: input value: 12425[0m
+[0;32mI (158477) Lcd Controller: value: 1242[0m
+[0;32mI (158477) Lcd Controller: value: 124[0m
+[0;32mI (158477) Lcd Controller: value: 12[0m
+[0;32mI (158477) Lcd Controller: value: 1[0m
+[0;32mI (158477) Lcd Controller: value: 0[0m
+[0;32mI (159817) Lcd Controller: input value: 12425[0m
+[0;32mI (159817) Lcd Controller: value: 1242[0m
+[0;32mI (159817) Lcd Controller: value: 124[0m
+[0;32mI (159817) Lcd Controller: value: 12[0m
+[0;32mI (159817) Lcd Controller: value: 1[0m
+[0;32mI (159817) Lcd Controller: value: 0[0m
+[0;32mI (161157) Lcd Controller: input value: 12425[0m
+[0;32mI (161157) Lcd Controller: value: 1242[0m
+[0;32mI (161157) Lcd Controller: value: 124[0m
+[0;32mI (161157) Lcd Controller: value: 12[0m
+[0;32mI (161157) Lcd Controller: value: 1[0m
+[0;32mI (161157) Lcd Controller: value: 0[0m
+[0;32mI (162497) Lcd Controller: input value: 12425[0m
+[0;32mI (162497) Lcd Controller: value: 1242[0m
+[0;32mI (162497) Lcd Controller: value: 124[0m
+[0;32mI (162497) Lcd Controller: value: 12[0m
+[0;32mI (162497) Lcd Controller: value: 1[0m
+[0;32mI (162497) Lcd Controller: value: 0[0m
+[0;32mI (163837) Lcd Controller: input value: 12425[0m
+[0;32mI (163837) Lcd Controller: value: 1242[0m
+[0;32mI (163837) Lcd Controller: value: 124[0m
+[0;32mI (163837) Lcd Controller: value: 12[0m
+[0;32mI (163837) Lcd Controller: value: 1[0m
+[0;32mI (163837) Lcd Controller: value: 0[0m
+[0;32mI (165177) Lcd Controller: input value: 12425[0m
+[0;32mI (165177) Lcd Controller: value: 1242[0m
+[0;32mI (165177) Lcd Controller: value: 124[0m
+[0;32mI (165177) Lcd Controller: value: 12[0m
+[0;32mI (165177) Lcd Controller: value: 1[0m
+[0;32mI (165177) Lcd Controller: value: 0[0m
+[0;32mI (166517) Lcd Controller: input value: 12425[0m
+[0;32mI (166517) Lcd Controller: value: 1242[0m
+[0;32mI (166517) Lcd Controller: value: 124[0m
+[0;32mI (166517) Lcd Controller: value: 12[0m
+[0;32mI (166517) Lcd Controller: value: 1[0m
+[0;32mI (166517) Lcd Controller: value: 0[0m
+[0;32mI (167857) Lcd Controller: input value: 12425[0m
+[0;32mI (167857) Lcd Controller: value: 1242[0m
+[0;32mI (167857) Lcd Controller: value: 124[0m
+[0;32mI (167857) Lcd Controller: value: 12[0m
+[0;32mI (167857) Lcd Controller: value: 1[0m
+[0;32mI (167857) Lcd Controller: value: 0[0m
+[0;32mI (169197) Lcd Controller: input value: 12425[0m
+[0;32mI (169197) Lcd Controller: value: 1242[0m
+[0;32mI (169197) Lcd Controller: value: 124[0m
+[0;32mI (169197) Lcd Controller: value: 12[0m
+[0;32mI (169197) Lcd Controller: value: 1[0m
+[0;32mI (169197) Lcd Controller: value: 0[0m
+[0;32mI (170537) Lcd Controller: input value: 12425[0m
+[0;32mI (170537) Lcd Controller: value: 1242[0m
+[0;32mI (170537) Lcd Controller: value: 124[0m
+[0;32mI (170537) Lcd Controller: value: 12[0m
+[0;32mI (170537) Lcd Controller: value: 1[0m
+[0;32mI (170537) Lcd Controller: value: 0[0m
+[0;32mI (171877) Lcd Controller: input value: 12425[0m
+[0;32mI (171877) Lcd Controller: value: 1242[0m
+[0;32mI (171877) Lcd Controller: value: 124[0m
+[0;32mI (171877) Lcd Controller: value: 12[0m
+[0;32mI (171877) Lcd Controller: value: 1[0m
+[0;32mI (171877) Lcd Controller: value: 0[0m
+[0;32mI (173217) Lcd Controller: input value: 12425[0m
+[0;32mI (173217) Lcd Controller: value: 1242[0m
+[0;32mI (173217) Lcd Controller: value: 124[0m
+[0;32mI (173217) Lcd Controller: value: 12[0m
+[0;32mI (173217) Lcd Controller: value: 1[0m
+[0;32mI (173217) Lcd Controller: value: 0[0m
+[0;32mI (174557) Lcd Controller: input value: 12425[0m
+[0;32mI (174557) Lcd Controller: value: 1242[0m
+[0;32mI (174557) Lcd Controller: value: 124[0m
+[0;32mI (174557) Lcd Controller: value: 12[0m
+[0;32mI (174557) Lcd Controller: value: 1[0m
+[0;32mI (174557) Lcd Controller: value: 0[0m
+[0;32mI (175897) Lcd Controller: input value: 12425[0m
+[0;32mI (175897) Lcd Controller: value: 1242[0m
+[0;32mI (175897) Lcd Controller: value: 124[0m
+[0;32mI (175897) Lcd Controller: value: 12[0m
+[0;32mI (175897) Lcd Controller: value: 1[0m
+[0;32mI (175897) Lcd Controller: value: 0[0m
+[0;32mI (177237) Lcd Controller: input value: 12425[0m
+[0;32mI (177237) Lcd Controller: value: 1242[0m
+[0;32mI (177237) Lcd Controller: value: 124[0m
+[0;32mI (177237) Lcd Controller: value: 12[0m
+[0;32mI (177237) Lcd Controller: value: 1[0m
+[0;32mI (177237) Lcd Controller: value: 0[0m
+[0;32mI (178577) Lcd Controller: input value: 12425[0m
+[0;32mI (178577) Lcd Controller: value: 1242[0m
+[0;32mI (178577) Lcd Controller: value: 124[0m
+[0;32mI (178577) Lcd Controller: value: 12[0m
+[0;32mI (178577) Lcd Controller: value: 1[0m
+[0;32mI (178577) Lcd Controller: value: 0[0m
+[0;32mI (179917) Lcd Controller: input value: 12425[0m
+[0;32mI (179917) Lcd Controller: value: 1242[0m
+[0;32mI (179917) Lcd Controller: value: 124[0m
+[0;32mI (179917) Lcd Controller: value: 12[0m
+[0;32mI (179917) Lcd Controller: value: 1[0m
+[0;32mI (179917) Lcd Controller: value: 0[0m
+[0;32mI (181257) Lcd Controller: input value: 12425[0m
+[0;32mI (181257) Lcd Controller: value: 1242[0m
+[0;32mI (181257) Lcd Controller: value: 124[0m
+[0;32mI (181257) Lcd Controller: value: 12[0m
+[0;32mI (181257) Lcd Controller: value: 1[0m
+[0;32mI (181257) Lcd Controller: value: 0[0m
+[0;32mI (182597) Lcd Controller: input value: 12425[0m
+[0;32mI (182597) Lcd Controller: value: 1242[0m
+[0;32mI (182597) Lcd Controller: value: 124[0m
+[0;32mI (182597) Lcd Controller: value: 12[0m
+[0;32mI (182597) Lcd Controller: value: 1[0m
+[0;32mI (182597) Lcd Controller: value: 0[0m
+[0;32mI (183937) Lcd Controller: input value: 12425[0m
+[0;32mI (183937) Lcd Controller: value: 1242[0m
+[0;32mI (183937) Lcd Controller: value: 124[0m
+[0;32mI (183937) Lcd Controller: value: 12[0m
+[0;32mI (183937) Lcd Controller: value: 1[0m
+[0;32mI (183937) Lcd Controller: value: 0[0m
+[0;32mI (185277) Lcd Controller: input value: 12425[0m
+[0;32mI (185277) Lcd Controller: value: 1242[0m
+[0;32mI (185277) Lcd Controller: value: 124[0m
+[0;32mI (185277) Lcd Controller: value: 12[0m
+[0;32mI (185277) Lcd Controller: value: 1[0m
+[0;32mI (185277) Lcd Controller: value: 0[0m
+[0;32mI (186617) Lcd Controller: input value: 12425[0m
+[0;32mI (186617) Lcd Controller: value: 1242[0m
+[0;32mI (186617) Lcd Controller: value: 124[0m
+[0;32mI (186617) Lcd Controller: value: 12[0m
+[0;32mI (186617) Lcd Controller: value: 1[0m
+[0;32mI (186617) Lcd Controller: value: 0[0m
+[0;32mI (187957) Lcd Controller: input value: 12425[0m
+[0;32mI (187957) Lcd Controller: value: 1242[0m
+[0;32mI (187957) Lcd Controller: value: 124[0m
+[0;32mI (187957) Lcd Controller: value: 12[0m
+[0;32mI (187957) Lcd Controller: value: 1[0m
+[0;32mI (187957) Lcd Controller: value: 0[0m
+[0;32mI (189297) Lcd Controller: input value: 12425[0m
+[0;32mI (189297) Lcd Controller: value: 1242[0m
+[0;32mI (189297) Lcd Controller: value: 124[0m
+[0;32mI (189297) Lcd Controller: value: 12[0m
+[0;32mI (189297) Lcd Controller: value: 1[0m
+[0;32mI (189297) Lcd Controller: value: 0[0m
+[0;32mI (190637) Lcd Controller: input value: 12425[0m
+[0;32mI (190637) Lcd Controller: value: 1242[0m
+[0;32mI (190637) Lcd Controller: value: 124[0m
+[0;32mI (190637) Lcd Controller: value: 12[0m
+[0;32mI (190637) Lcd Controller: value: 1[0m
+[0;32mI (190637) Lcd Controller: value: 0[0m
+[0;32mI (191977) Lcd Controller: input value: 12425[0m
+[0;32mI (191977) Lcd Controller: value: 1242[0m
+[0;32mI (191977) Lcd Controller: value: 124[0m
+[0;32mI (191977) Lcd Controller: value: 12[0m
+[0;32mI (191977) Lcd Controller: value: 1[0m
+[0;32mI (191977) Lcd Controller: value: 0[0m
+[0;32mI (193317) Lcd Controller: input value: 12425[0m
+[0;32mI (193317) Lcd Controller: value: 1242[0m
+[0;32mI (193317) Lcd Controller: value: 124[0m
+[0;32mI (193317) Lcd Controller: value: 12[0m
+[0;32mI (193317) Lcd Controller: value: 1[0m
+[0;32mI (193317) Lcd Controller: value: 0[0m
+[0;32mI (194657) Lcd Controller: input value: 12425[0m
+[0;32mI (194657) Lcd Controller: value: 1242[0m
+[0;32mI (194657) Lcd Controller: value: 124[0m
+[0;32mI (194657) Lcd Controller: value: 12[0m
+[0;32mI (194657) Lcd Controller: value: 1[0m
+[0;32mI (194657) Lcd Controller: value: 0[0m
+[0;32mI (195997) Lcd Controller: input value: 12425[0m
+[0;32mI (195997) Lcd Controller: value: 1242[0m
+[0;32mI (195997) Lcd Controller: value: 124[0m
+[0;32mI (195997) Lcd Controller: value: 12[0m
+[0;32mI (195997) Lcd Controller: value: 1[0m
+[0;32mI (195997) Lcd Controller: value: 0[0m
+[0;32mI (197337) Lcd Controller: input value: 12425[0m
+[0;32mI (197337) Lcd Controller: value: 1242[0m
+[0;32mI (197337) Lcd Controller: value: 124[0m
+[0;32mI (197337) Lcd Controller: value: 12[0m
+[0;32mI (197337) Lcd Controller: value: 1[0m
+[0;32mI (197337) Lcd Controller: value: 0[0m
+[0;32mI (198677) Lcd Controller: input value: 12425[0m
+[0;32mI (198677) Lcd Controller: value: 1242[0m
+[0;32mI (198677) Lcd Controller: value: 124[0m
+[0;32mI (198677) Lcd Controller: value: 12[0m
+[0;32mI (198677) Lcd Controller: value: 1[0m
+[0;32mI (198677) Lcd Controller: value: 0[0m
+[0;32mI (200017) Lcd Controller: input value: 12425[0m
+[0;32mI (200017) Lcd Controller: value: 1242[0m
+[0;32mI (200017) Lcd Controller: value: 124[0m
+[0;32mI (200017) Lcd Controller: value: 12[0m
+[0;32mI (200017) Lcd Controller: value: 1[0m
+[0;32mI (200017) Lcd Controller: value: 0[0m
+[0;32mI (201357) Lcd Controller: input value: 12425[0m
+[0;32mI (201357) Lcd Controller: value: 1242[0m
+[0;32mI (201357) Lcd Controller: value: 124[0m
+[0;32mI (201357) Lcd Controller: value: 12[0m
+[0;32mI (201357) Lcd Controller: value: 1[0m
+[0;32mI (201357) Lcd Controller: value: 0[0m
+[0;32mI (202697) Lcd Controller: input value: 12425[0m
+[0;32mI (202697) Lcd Controller: value: 1242[0m
+[0;32mI (202697) Lcd Controller: value: 124[0m
+[0;32mI (202697) Lcd Controller: value: 12[0m
+[0;32mI (202697) Lcd Controller: value: 1[0m
+[0;32mI (202697) Lcd Controller: value: 0[0m
+[0;32mI (204037) Lcd Controller: input value: 12425[0m
+[0;32mI (204037) Lcd Controller: value: 1242[0m
+[0;32mI (204037) Lcd Controller: value: 124[0m
+[0;32mI (204037) Lcd Controller: value: 12[0m
+[0;32mI (204037) Lcd Controller: value: 1[0m
+[0;32mI (204037) Lcd Controller: value: 0[0m
+[0;32mI (205377) Lcd Controller: input value: 12425[0m
+[0;32mI (205377) Lcd Controller: value: 1242[0m
+[0;32mI (205377) Lcd Controller: value: 124[0m
+[0;32mI (205377) Lcd Controller: value: 12[0m
+[0;32mI (205377) Lcd Controller: value: 1[0m
+[0;32mI (205377) Lcd Controller: value: 0[0m
+[0;32mI (206717) Lcd Controller: input value: 12425[0m
+[0;32mI (206717) Lcd Controller: value: 1242[0m
+[0;32mI (206717) Lcd Controller: value: 124[0m
+[0;32mI (206717) Lcd Controller: value: 12[0m
+[0;32mI (206717) Lcd Controller: value: 1[0m
+[0;32mI (206717) Lcd Controller: value: 0[0m
+[0;32mI (208057) Lcd Controller: input value: 12425[0m
+[0;32mI (208057) Lcd Controller: value: 1242[0m
+[0;32mI (208057) Lcd Controller: value: 124[0m
+[0;32mI (208057) Lcd Controller: value: 12[0m
+[0;32mI (208057) Lcd Controller: value: 1[0m
+[0;32mI (208057) Lcd Controller: value: 0[0m
+[0;32mI (209397) Lcd Controller: input value: 12425[0m
+[0;32mI (209397) Lcd Controller: value: 1242[0m
+[0;32mI (209397) Lcd Controller: value: 124[0m
+[0;32mI (209397) Lcd Controller: value: 12[0m
+[0;32mI (209397) Lcd Controller: value: 1[0m
+[0;32mI (209397) Lcd Controller: value: 0[0m
+[0;32mI (210737) Lcd Controller: input value: 12425[0m
+[0;32mI (210737) Lcd Controller: value: 1242[0m
+[0;32mI (210737) Lcd Controller: value: 124[0m
+[0;32mI (210737) Lcd Controller: value: 12[0m
+[0;32mI (210737) Lcd Controller: value: 1[0m
+[0;32mI (210737) Lcd Controller: value: 0[0m
+[0;32mI (212077) Lcd Controller: input value: 12425[0m
+[0;32mI (212077) Lcd Controller: value: 1242[0m
+[0;32mI (212077) Lcd Controller: value: 124[0m
+[0;32mI (212077) Lcd Controller: value: 12[0m
+[0;32mI (212077) Lcd Controller: value: 1[0m
+[0;32mI (212077) Lcd Controller: value: 0[0m
+[0;32mI (213417) Lcd Controller: input value: 12425[0m
+[0;32mI (213417) Lcd Controller: value: 1242[0m
+[0;32mI (213417) Lcd Controller: value: 124[0m
+[0;32mI (213417) Lcd Controller: value: 12[0m
+[0;32mI (213417) Lcd Controller: value: 1[0m
+[0;32mI (213417) Lcd Controller: value: 0[0m
+[0;32mI (214757) Lcd Controller: input value: 12425[0m
+[0;32mI (214757) Lcd Controller: value: 1242[0m
+[0;32mI (214757) Lcd Controller: value: 124[0m
+[0;32mI (214757) Lcd Controller: value: 12[0m
+[0;32mI (214757) Lcd Controller: value: 1[0m
+[0;32mI (214757) Lcd Controller: value: 0[0m
+[0;32mI (216097) Lcd Controller: input value: 12425[0m
+[0;32mI (216097) Lcd Controller: value: 1242[0m
+[0;32mI (216097) Lcd Controller: value: 124[0m
+[0;32mI (216097) Lcd Controller: value: 12[0m
+[0;32mI (216097) Lcd Controller: value: 1[0m
+[0;32mI (216097) Lcd Controller: value: 0[0m
+[0;32mI (217437) Lcd Controller: input value: 12425[0m
+[0;32mI (217437) Lcd Controller: value: 1242[0m
+[0;32mI (217437) Lcd Controller: value: 124[0m
+[0;32mI (217437) Lcd Controller: value: 12[0m
+[0;32mI (217437) Lcd Controller: value: 1[0m
+[0;32mI (217437) Lcd Controller: value: 0[0m
+[0;32mI (218777) Lcd Controller: input value: 12425[0m
+[0;32mI (218777) Lcd Controller: value: 1242[0m
+[0;32mI (218777) Lcd Controller: value: 124[0m
+[0;32mI (218777) Lcd Controller: value: 12[0m
+[0;32mI (218777) Lcd Controller: value: 1[0m
+[0;32mI (218777) Lcd Controller: value: 0[0m
+[0;32mI (220117) Lcd Controller: input value: 12425[0m
+[0;32mI (220117) Lcd Controller: value: 1242[0m
+[0;32mI (220117) Lcd Controller: value: 124[0m
+[0;32mI (220117) Lcd Controller: value: 12[0m
+[0;32mI (220117) Lcd Controller: value: 1[0m
+[0;32mI (220117) Lcd Controller: value: 0[0m
+[0;32mI (221457) Lcd Controller: input value: 12425[0m
+[0;32mI (221457) Lcd Controller: value: 1242[0m
+[0;32mI (221457) Lcd Controller: value: 124[0m
+[0;32mI (221457) Lcd Controller: value: 12[0m
+[0;32mI (221457) Lcd Controller: value: 1[0m
+[0;32mI (221457) Lcd Controller: value: 0[0m
+[0;32mI (222797) Lcd Controller: input value: 12425[0m
+[0;32mI (222797) Lcd Controller: value: 1242[0m
+[0;32mI (222797) Lcd Controller: value: 124[0m
+[0;32mI (222797) Lcd Controller: value: 12[0m
+[0;32mI (222797) Lcd Controller: value: 1[0m
+[0;32mI (222797) Lcd Controller: value: 0[0m
+[0;32mI (224137) Lcd Controller: input value: 12425[0m
+[0;32mI (224137) Lcd Controller: value: 1242[0m
+[0;32mI (224137) Lcd Controller: value: 124[0m
+[0;32mI (224137) Lcd Controller: value: 12[0m
+[0;32mI (224137) Lcd Controller: value: 1[0m
+[0;32mI (224137) Lcd Controller: value: 0[0m
+[0;32mI (225477) Lcd Controller: input value: 12425[0m
+[0;32mI (225477) Lcd Controller: value: 1242[0m
+[0;32mI (225477) Lcd Controller: value: 124[0m
+[0;32mI (225477) Lcd Controller: value: 12[0m
+[0;32mI (225477) Lcd Controller: value: 1[0m
+[0;32mI (225477) Lcd Controller: value: 0[0m
+[0;32mI (226817) Lcd Controller: input value: 12425[0m
+[0;32mI (226817) Lcd Controller: value: 1242[0m
+[0;32mI (226817) Lcd Controller: value: 124[0m
+[0;32mI (226817) Lcd Controller: value: 12[0m
+[0;32mI (226817) Lcd Controller: value: 1[0m
+[0;32mI (226817) Lcd Controller: value: 0[0m
+[0;32mI (228157) Lcd Controller: input value: 12425[0m
+[0;32mI (228157) Lcd Controller: value: 1242[0m
+[0;32mI (228157) Lcd Controller: value: 124[0m
+[0;32mI (228157) Lcd Controller: value: 12[0m
+[0;32mI (228157) Lcd Controller: value: 1[0m
+[0;32mI (228157) Lcd Controller: value: 0[0m
+[0;32mI (229497) Lcd Controller: input value: 12425[0m
+[0;32mI (229497) Lcd Controller: value: 1242[0m
+[0;32mI (229497) Lcd Controller: value: 124[0m
+[0;32mI (229497) Lcd Controller: value: 12[0m
+[0;32mI (229497) Lcd Controller: value: 1[0m
+[0;32mI (229497) Lcd Controller: value: 0[0m
+[0;32mI (230837) Lcd Controller: input value: 12425[0m
+[0;32mI (230837) Lcd Controller: value: 1242[0m
+[0;32mI (230837) Lcd Controller: value: 124[0m
+[0;32mI (230837) Lcd Controller: value: 12[0m
+[0;32mI (230837) Lcd Controller: value: 1[0m
+[0;32mI (230837) Lcd Controller: value: 0[0m
+[0;32mI (232177) Lcd Controller: input value: 12425[0m
+[0;32mI (232177) Lcd Controller: value: 1242[0m
+[0;32mI (232177) Lcd Controller: value: 124[0m
+[0;32mI (232177) Lcd Controller: value: 12[0m
+[0;32mI (232177) Lcd Controller: value: 1[0m
+[0;32mI (232177) Lcd Controller: value: 0[0m
+[0;32mI (233517) Lcd Controller: input value: 12425[0m
+[0;32mI (233517) Lcd Controller: value: 1242[0m
+[0;32mI (233517) Lcd Controller: value: 124[0m
+[0;32mI (233517) Lcd Controller: value: 12[0m
+[0;32mI (233517) Lcd Controller: value: 1[0m
+[0;32mI (233517) Lcd Controller: value: 0[0m
+[0;32mI (234857) Lcd Controller: input value: 12425[0m
+[0;32mI (234857) Lcd Controller: value: 1242[0m
+[0;32mI (234857) Lcd Controller: value: 124[0m
+[0;32mI (234857) Lcd Controller: value: 12[0m
+[0;32mI (234857) Lcd Controller: value: 1[0m
+[0;32mI (234857) Lcd Controller: value: 0[0m
+[0;32mI (236197) Lcd Controller: input value: 12425[0m
+[0;32mI (236197) Lcd Controller: value: 1242[0m
+[0;32mI (236197) Lcd Controller: value: 124[0m
+[0;32mI (236197) Lcd Controller: value: 12[0m
+[0;32mI (236197) Lcd Controller: value: 1[0m
+[0;32mI (236197) Lcd Controller: value: 0[0m
+[0;32mI (237537) Lcd Controller: input value: 12425[0m
+[0;32mI (237537) Lcd Controller: value: 1242[0m
+[0;32mI (237537) Lcd Controller: value: 124[0m
+[0;32mI (237537) Lcd Controller: value: 12[0m
+[0;32mI (237537) Lcd Controller: value: 1[0m
+[0;32mI (237537) Lcd Controller: value: 0[0m
+[0;32mI (238877) Lcd Controller: input value: 12425[0m
+[0;32mI (238877) Lcd Controller: value: 1242[0m
+[0;32mI (238877) Lcd Controller: value: 124[0m
+[0;32mI (238877) Lcd Controller: value: 12[0m
+[0;32mI (238877) Lcd Controller: value: 1[0m
+[0;32mI (238877) Lcd Controller: value: 0[0m
+[0;32mI (240217) Lcd Controller: input value: 12425[0m
+[0;32mI (240217) Lcd Controller: value: 1242[0m
+[0;32mI (240217) Lcd Controller: value: 124[0m
+[0;32mI (240217) Lcd Controller: value: 12[0m
+[0;32mI (240217) Lcd Controller: value: 1[0m
+[0;32mI (240217) Lcd Controller: value: 0[0m
+[0;32mI (241557) Lcd Controller: input value: 12425[0m
+[0;32mI (241557) Lcd Controller: value: 1242[0m
+[0;32mI (241557) Lcd Controller: value: 124[0m
+[0;32mI (241557) Lcd Controller: value: 12[0m
+[0;32mI (241557) Lcd Controller: value: 1[0m
+[0;32mI (241557) Lcd Controller: value: 0[0m
+[0;32mI (242897) Lcd Controller: input value: 12425[0m
+[0;32mI (242897) Lcd Controller: value: 1242[0m
+[0;32mI (242897) Lcd Controller: value: 124[0m
+[0;32mI (242897) Lcd Controller: value: 12[0m
+[0;32mI (242897) Lcd Controller: value: 1[0m
+[0;32mI (242897) Lcd Controller: value: 0[0m
+[0;32mI (244237) Lcd Controller: input value: 12425[0m
+[0;32mI (244237) Lcd Controller: value: 1242[0m
+[0;32mI (244237) Lcd Controller: value: 124[0m
+[0;32mI (244237) Lcd Controller: value: 12[0m
+[0;32mI (244237) Lcd Controller: value: 1[0m
+[0;32mI (244237) Lcd Controller: value: 0[0m
+[0;32mI (245577) Lcd Controller: input value: 12425[0m
+[0;32mI (245577) Lcd Controller: value: 1242[0m
+[0;32mI (245577) Lcd Controller: value: 124[0m
+[0;32mI (245577) Lcd Controller: value: 12[0m
+[0;32mI (245577) Lcd Controller: value: 1[0m
+[0;32mI (245577) Lcd Controller: value: 0[0m
+[0;32mI (246917) Lcd Controller: input value: 12425[0m
+[0;32mI (246917) Lcd Controller: value: 1242[0m
+[0;32mI (246917) Lcd Controller: value: 124[0m
+[0;32mI (246917) Lcd Controller: value: 12[0m
+[0;32mI (246917) Lcd Controller: value: 1[0m
+[0;32mI (246917) Lcd Controller: value: 0[0m
+[0;32mI (248257) Lcd Controller: input value: 12425[0m
+[0;32mI (248257) Lcd Controller: value: 1242[0m
+[0;32mI (248257) Lcd Controller: value: 124[0m
+[0;32mI (248257) Lcd Controller: value: 12[0m
+[0;32mI (248257) Lcd Controller: value: 1[0m
+[0;32mI (248257) Lcd Controller: value: 0[0m
+[0;32mI (249597) Lcd Controller: input value: 12425[0m
+[0;32mI (249597) Lcd Controller: value: 1242[0m
+[0;32mI (249597) Lcd Controller: value: 124[0m
+[0;32mI (249597) Lcd Controller: value: 12[0m
+[0;32mI (249597) Lcd Controller: value: 1[0m
+[0;32mI (249597) Lcd Controller: value: 0[0m
+[0;32mI (250937) Lcd Controller: input value: 12425[0m
+[0;32mI (250937) Lcd Controller: value: 1242[0m
+[0;32mI (250937) Lcd Controller: value: 124[0m
+[0;32mI (250937) Lcd Controller: value: 12[0m
+[0;32mI (250937) Lcd Controller: value: 1[0m
+[0;32mI (250937) Lcd Controller: value: 0[0m
+[0;32mI (252277) Lcd Controller: input value: 12425[0m
+[0;32mI (252277) Lcd Controller: value: 1242[0m
+[0;32mI (252277) Lcd Controller: value: 124[0m
+[0;32mI (252277) Lcd Controller: value: 12[0m
+[0;32mI (252277) Lcd Controller: value: 1[0m
+[0;32mI (252277) Lcd Controller: value: 0[0m
+[0;32mI (253617) Lcd Controller: input value: 12425[0m
+[0;32mI (253617) Lcd Controller: value: 1242[0m
+[0;32mI (253617) Lcd Controller: value: 124[0m
+[0;32mI (253617) Lcd Controller: value: 12[0m
+[0;32mI (253617) Lcd Controller: value: 1[0m
+[0;32mI (253617) Lcd Controller: value: 0[0m
+[0;32mI (254957) Lcd Controller: input value: 12425[0m
+[0;32mI (254957) Lcd Controller: value: 1242[0m
+[0;32mI (254957) Lcd Controller: value: 124[0m
+[0;32mI (254957) Lcd Controller: value: 12[0m
+[0;32mI (254957) Lcd Controller: value: 1[0m
+[0;32mI (254957) Lcd Controller: value: 0[0m
+[0;32mI (256297) Lcd Controller: input value: 12425[0m
+[0;32mI (256297) Lcd Controller: value: 1242[0m
+[0;32mI (256297) Lcd Controller: value: 124[0m
+[0;32mI (256297) Lcd Controller: value: 12[0m
+[0;32mI (256297) Lcd Controller: value: 1[0m
+[0;32mI (256297) Lcd Controller: value: 0[0m
+[0;32mI (257637) Lcd Controller: input value: 12425[0m
+[0;32mI (257637) Lcd Controller: value: 1242[0m
+[0;32mI (257637) Lcd Controller: value: 124[0m
+[0;32mI (257637) Lcd Controller: value: 12[0m
+[0;32mI (257637) Lcd Controller: value: 1[0m
+[0;32mI (257637) Lcd Controller: value: 0[0m
+[0;32mI (258977) Lcd Controller: input value: 12425[0m
+[0;32mI (258977) Lcd Controller: value: 1242[0m
+[0;32mI (258977) Lcd Controller: value: 124[0m
+[0;32mI (258977) Lcd Controller: value: 12[0m
+[0;32mI (258977) Lcd Controller: value: 1[0m
+[0;32mI (258977) Lcd Controller: value: 0[0m
+[0;32mI (260317) Lcd Controller: input value: 12425[0m
+[0;32mI (260317) Lcd Controller: value: 1242[0m
+[0;32mI (260317) Lcd Controller: value: 124[0m
+[0;32mI (260317) Lcd Controller: value: 12[0m
+[0;32mI (260317) Lcd Controller: value: 1[0m
+[0;32mI (260317) Lcd Controller: value: 0[0m
+[0;32mI (261657) Lcd Controller: input value: 12425[0m
+[0;32mI (261657) Lcd Controller: value: 1242[0m
+[0;32mI (261657) Lcd Controller: value: 124[0m
+[0;32mI (261657) Lcd Controller: value: 12[0m
+[0;32mI (261657) Lcd Controller: value: 1[0m
+[0;32mI (261657) Lcd Controller: value: 0[0m
+[0;32mI (262997) Lcd Controller: input value: 12425[0m
+[0;32mI (262997) Lcd Controller: value: 1242[0m
+[0;32mI (262997) Lcd Controller: value: 124[0m
+[0;32mI (262997) Lcd Controller: value: 12[0m
+[0;32mI (262997) Lcd Controller: value: 1[0m
+[0;32mI (262997) Lcd Controller: value: 0[0m
+[0;32mI (264337) Lcd Controller: input value: 12425[0m
+[0;32mI (264337) Lcd Controller: value: 1242[0m
+[0;32mI (264337) Lcd Controller: value: 124[0m
+[0;32mI (264337) Lcd Controller: value: 12[0m
+[0;32mI (264337) Lcd Controller: value: 1[0m
+[0;32mI (264337) Lcd Controller: value: 0[0m
+[0;32mI (265677) Lcd Controller: input value: 12425[0m
+[0;32mI (265677) Lcd Controller: value: 1242[0m
+[0;32mI (265677) Lcd Controller: value: 124[0m
+[0;32mI (265677) Lcd Controller: value: 12[0m
+[0;32mI (265677) Lcd Controller: value: 1[0m
+[0;32mI (265677) Lcd Controller: value: 0[0m
+[0;32mI (267017) Lcd Controller: input value: 12425[0m
+[0;32mI (267017) Lcd Controller: value: 1242[0m
+[0;32mI (267017) Lcd Controller: value: 124[0m
+[0;32mI (267017) Lcd Controller: value: 12[0m
+[0;32mI (267017) Lcd Controller: value: 1[0m
+[0;32mI (267017) Lcd Controller: value: 0[0m
+[0;32mI (268357) Lcd Controller: input value: 12425[0m
+[0;32mI (268357) Lcd Controller: value: 1242[0m
+[0;32mI (268357) Lcd Controller: value: 124[0m
+[0;32mI (268357) Lcd Controller: value: 12[0m
+[0;32mI (268357) Lcd Controller: value: 1[0m
+[0;32mI (268357) Lcd Controller: value: 0[0m
+[0;32mI (269697) Lcd Controller: input value: 12425[0m
+[0;32mI (269697) Lcd Controller: value: 1242[0m
+[0;32mI (269697) Lcd Controller: value: 124[0m
+[0;32mI (269697) Lcd Controller: value: 12[0m
+[0;32mI (269697) Lcd Controller: value: 1[0m
+[0;32mI (269697) Lcd Controller: value: 0[0m
+[0;32mI (271037) Lcd Controller: input value: 12425[0m
+[0;32mI (271037) Lcd Controller: value: 1242[0m
+[0;32mI (271037) Lcd Controller: value: 124[0m
+[0;32mI (271037) Lcd Controller: value: 12[0m
+[0;32mI (271037) Lcd Controller: value: 1[0m
+[0;32mI (271037) Lcd Controller: value: 0[0m
+[0;32mI (272377) Lcd Controller: input value: 12425[0m
+[0;32mI (272377) Lcd Controller: value: 1242[0m
+[0;32mI (272377) Lcd Controller: value: 124[0m
+[0;32mI (272377) Lcd Controller: value: 12[0m
+[0;32mI (272377) Lcd Controller: value: 1[0m
+[0;32mI (272377) Lcd Controller: value: 0[0m
+[0;32mI (273717) Lcd Controller: input value: 12425[0m
+[0;32mI (273717) Lcd Controller: value: 1242[0m
+[0;32mI (273717) Lcd Controller: value: 124[0m
+[0;32mI (273717) Lcd Controller: value: 12[0m
+[0;32mI (273717) Lcd Controller: value: 1[0m
+[0;32mI (273717) Lcd Controller: value: 0[0m
+[0;32mI (275057) Lcd Controller: input value: 12425[0m
+[0;32mI (275057) Lcd Controller: value: 1242[0m
+[0;32mI (275057) Lcd Controller: value: 124[0m
+[0;32mI (275057) Lcd Controller: value: 12[0m
+[0;32mI (275057) Lcd Controller: value: 1[0m
+[0;32mI (275057) Lcd Controller: value: 0[0m
+[0;32mI (276397) Lcd Controller: input value: 12425[0m
+[0;32mI (276397) Lcd Controller: value: 1242[0m
+[0;32mI (276397) Lcd Controller: value: 124[0m
+[0;32mI (276397) Lcd Controller: value: 12[0m
+[0;32mI (276397) Lcd Controller: value: 1[0m
+[0;32mI (276397) Lcd Controller: value: 0[0m
+[0;32mI (277737) Lcd Controller: input value: 12425[0m
+[0;32mI (277737) Lcd Controller: value: 1242[0m
+[0;32mI (277737) Lcd Controller: value: 124[0m
+[0;32mI (277737) Lcd Controller: value: 12[0m
+[0;32mI (277737) Lcd Controller: value: 1[0m
+[0;32mI (277737) Lcd Controller: value: 0[0m
+[0;32mI (279077) Lcd Controller: input value: 12425[0m
+[0;32mI (279077) Lcd Controller: value: 1242[0m
+[0;32mI (279077) Lcd Controller: value: 124[0m
+[0;32mI (279077) Lcd Controller: value: 12[0m
+[0;32mI (279077) Lcd Controller: value: 1[0m
+[0;32mI (279077) Lcd Controller: value: 0[0m
+[0;32mI (280417) Lcd Controller: input value: 12425[0m
+[0;32mI (280417) Lcd Controller: value: 1242[0m
+[0;32mI (280417) Lcd Controller: value: 124[0m
+[0;32mI (280417) Lcd Controller: value: 12[0m
+[0;32mI (280417) Lcd Controller: value: 1[0m
+[0;32mI (280417) Lcd Controller: value: 0[0m
+[0;32mI (281757) Lcd Controller: input value: 12425[0m
+[0;32mI (281757) Lcd Controller: value: 1242[0m
+[0;32mI (281757) Lcd Controller: value: 124[0m
+[0;32mI (281757) Lcd Controller: value: 12[0m
+[0;32mI (281757) Lcd Controller: value: 1[0m
+[0;32mI (281757) Lcd Controller: value: 0[0m
+[0;32mI (283097) Lcd Controller: input value: 12425[0m
+[0;32mI (283097) Lcd Controller: value: 1242[0m
+[0;32mI (283097) Lcd Controller: value: 124[0m
+[0;32mI (283097) Lcd Controller: value: 12[0m
+[0;32mI (283097) Lcd Controller: value: 1[0m
+[0;32mI (283097) Lcd Controller: value: 0[0m
+[0;32mI (284437) Lcd Controller: input value: 12425[0m
+[0;32mI (284437) Lcd Controller: value: 1242[0m
+[0;32mI (284437) Lcd Controller: value: 124[0m
+[0;32mI (284437) Lcd Controller: value: 12[0m
+[0;32mI (284437) Lcd Controller: value: 1[0m
+[0;32mI (284437) Lcd Controller: value: 0[0m
+[0;32mI (285777) Lcd Controller: input value: 12425[0m
+[0;32mI (285777) Lcd Controller: value: 1242[0m
+[0;32mI (285777) Lcd Controller: value: 124[0m
+[0;32mI (285777) Lcd Controller: value: 12[0m
+[0;32mI (285777) Lcd Controller: value: 1[0m
+[0;32mI (285777) Lcd Controller: value: 0[0m
+[0;32mI (287117) Lcd Controller: input value: 12425[0m
+[0;32mI (287117) Lcd Controller: value: 1242[0m
+[0;32mI (287117) Lcd Controller: value: 124[0m
+[0;32mI (287117) Lcd Controller: value: 12[0m
+[0;32mI (287117) Lcd Controller: value: 1[0m
+[0;32mI (287117) Lcd Controller: value: 0[0m
+[0;32mI (288457) Lcd Controller: input value: 12425[0m
+[0;32mI (288457) Lcd Controller: value: 1242[0m
+[0;32mI (288457) Lcd Controller: value: 124[0m
+[0;32mI (288457) Lcd Controller: value: 12[0m
+[0;32mI (288457) Lcd Controller: value: 1[0m
+[0;32mI (288457) Lcd Controller: value: 0[0m
+[0;32mI (289797) Lcd Controller: input value: 12425[0m
+[0;32mI (289797) Lcd Controller: value: 1242[0m
+[0;32mI (289797) Lcd Controller: value: 124[0m
+[0;32mI (289797) Lcd Controller: value: 12[0m
+[0;32mI (289797) Lcd Controller: value: 1[0m
+[0;32mI (289797) Lcd Controller: value: 0[0m
+[0;32mI (291137) Lcd Controller: input value: 12425[0m
+[0;32mI (291137) Lcd Controller: value: 1242[0m
+[0;32mI (291137) Lcd Controller: value: 124[0m
+[0;32mI (291137) Lcd Controller: value: 12[0m
+[0;32mI (291137) Lcd Controller: value: 1[0m
+[0;32mI (291137) Lcd Controller: value: 0[0m
+[0;32mI (292477) Lcd Controller: input value: 12425[0m
+[0;32mI (292477) Lcd Controller: value: 1242[0m
+[0;32mI (292477) Lcd Controller: value: 124[0m
+[0;32mI (292477) Lcd Controller: value: 12[0m
+[0;32mI (292477) Lcd Controller: value: 1[0m
+[0;32mI (292477) Lcd Controller: value: 0[0m
+[0;32mI (293817) Lcd Controller: input value: 12425[0m
+[0;32mI (293817) Lcd Controller: value: 1242[0m
+[0;32mI (293817) Lcd Controller: value: 124[0m
+[0;32mI (293817) Lcd Controller: value: 12[0m
+[0;32mI (293817) Lcd Controller: value: 1[0m
+[0;32mI (293817) Lcd Controller: value: 0[0m
+[0;32mI (295157) Lcd Controller: input value: 12425[0m
+[0;32mI (295157) Lcd Controller: value: 1242[0m
+[0;32mI (295157) Lcd Controller: value: 124[0m
+[0;32mI (295157) Lcd Controller: value: 12[0m
+[0;32mI (295157) Lcd Controller: value: 1[0m
+[0;32mI (295157) Lcd Controller: value: 0[0m
+[0;32mI (296497) Lcd Controller: input value: 12425[0m
+[0;32mI (296497) Lcd Controller: value: 1242[0m
+[0;32mI (296497) Lcd Controller: value: 124[0m
+[0;32mI (296497) Lcd Controller: value: 12[0m
+[0;32mI (296497) Lcd Controller: value: 1[0m
+[0;32mI (296497) Lcd Controller: value: 0[0m
+[0;32mI (297837) Lcd Controller: input value: 12425[0m
+[0;32mI (297837) Lcd Controller: value: 1242[0m
+[0;32mI (297837) Lcd Controller: value: 124[0m
+[0;32mI (297837) Lcd Controller: value: 12[0m
+[0;32mI (297837) Lcd Controller: value: 1[0m
+[0;32mI (297837) Lcd Controller: value: 0[0m
+[0;32mI (299177) Lcd Controller: input value: 12425[0m
+[0;32mI (299177) Lcd Controller: value: 1242[0m
+[0;32mI (299177) Lcd Controller: value: 124[0m
+[0;32mI (299177) Lcd Controller: value: 12[0m
+[0;32mI (299177) Lcd Controller: value: 1[0m
+[0;32mI (299177) Lcd Controller: value: 0[0m
+[0;32mI (300517) Lcd Controller: input value: 12425[0m
+[0;32mI (300517) Lcd Controller: value: 1242[0m
+[0;32mI (300517) Lcd Controller: value: 124[0m
+[0;32mI (300517) Lcd Controller: value: 12[0m
+[0;32mI (300517) Lcd Controller: value: 1[0m
+[0;32mI (300517) Lcd Controller: value: 0[0m
+[0;32mI (301857) Lcd Controller: input value: 12425[0m
+[0;32mI (301857) Lcd Controller: value: 1242[0m
+[0;32mI (301857) Lcd Controller: value: 124[0m
+[0;32mI (301857) Lcd Controller: value: 12[0m
+[0;32mI (301857) Lcd Controller: value: 1[0m
+[0;32mI (301857) Lcd Controller: value: 0[0m
+[0;32mI (303197) Lcd Controller: input value: 12425[0m
+[0;32mI (303197) Lcd Controller: value: 1242[0m
+[0;32mI (303197) Lcd Controller: value: 124[0m
+[0;32mI (303197) Lcd Controller: value: 12[0m
+[0;32mI (303197) Lcd Controller: value: 1[0m
+[0;32mI (303197) Lcd Controller: value: 0[0m
+[0;32mI (304537) Lcd Controller: input value: 12425[0m
+[0;32mI (304537) Lcd Controller: value: 1242[0m
+[0;32mI (304537) Lcd Controller: value: 124[0m
+[0;32mI (304537) Lcd Controller: value: 12[0m
+[0;32mI (304537) Lcd Controller: value: 1[0m
+[0;32mI (304537) Lcd Controller: value: 0[0m
+[0;32mI (305877) Lcd Controller: input value: 12425[0m
+[0;32mI (305877) Lcd Controller: value: 1242[0m
+[0;32mI (305877) Lcd Controller: value: 124[0m
+[0;32mI (305877) Lcd Controller: value: 12[0m
+[0;32mI (305877) Lcd Controller: value: 1[0m
+[0;32mI (305877) Lcd Controller: value: 0[0m
+[0;32mI (307217) Lcd Controller: input value: 12425[0m
+[0;32mI (307217) Lcd Controller: value: 1242[0m
+[0;32mI (307217) Lcd Controller: value: 124[0m
+[0;32mI (307217) Lcd Controller: value: 12[0m
+[0;32mI (307217) Lcd Controller: value: 1[0m
+[0;32mI (307217) Lcd Controller: value: 0[0m
+[0;32mI (308557) Lcd Controller: input value: 12425[0m
+[0;32mI (308557) Lcd Controller: value: 1242[0m
+[0;32mI (308557) Lcd Controller: value: 124[0m
+[0;32mI (308557) Lcd Controller: value: 12[0m
+[0;32mI (308557) Lcd Controller: value: 1[0m
+[0;32mI (308557) Lcd Controller: value: 0[0m
+[0;32mI (309897) Lcd Controller: input value: 12425[0m
+[0;32mI (309897) Lcd Controller: value: 1242[0m
+[0;32mI (309897) Lcd Controller: value: 124[0m
+[0;32mI (309897) Lcd Controller: value: 12[0m
+[0;32mI (309897) Lcd Controller: value: 1[0m
+[0;32mI (309897) Lcd Controller: value: 0[0m
+[0;32mI (311237) Lcd Controller: input value: 12425[0m
+[0;32mI (311237) Lcd Controller: value: 1242[0m
+[0;32mI (311237) Lcd Controller: value: 124[0m
+[0;32mI (311237) Lcd Controller: value: 12[0m
+[0;32mI (311237) Lcd Controller: value: 1[0m
+[0;32mI (311237) Lcd Controller: value: 0[0m
+[0;32mI (312577) Lcd Controller: input value: 12425[0m
+[0;32mI (312577) Lcd Controller: value: 1242[0m
+[0;32mI (312577) Lcd Controller: value: 124[0m
+[0;32mI (312577) Lcd Controller: value: 12[0m
+[0;32mI (312577) Lcd Controller: value: 1[0m
+[0;32mI (312577) Lcd Controller: value: 0[0m
+[0;32mI (313917) Lcd Controller: input value: 12425[0m
+[0;32mI (313917) Lcd Controller: value: 1242[0m
+[0;32mI (313917) Lcd Controller: value: 124[0m
+[0;32mI (313917) Lcd Controller: value: 12[0m
+[0;32mI (313917) Lcd Controller: value: 1[0m
+[0;32mI (313917) Lcd Controller: value: 0[0m
+[0;32mI (315257) Lcd Controller: input value: 12425[0m
+[0;32mI (315257) Lcd Controller: value: 1242[0m
+[0;32mI (315257) Lcd Controller: value: 124[0m
+[0;32mI (315257) Lcd Controller: value: 12[0m
+[0;32mI (315257) Lcd Controller: value: 1[0m
+[0;32mI (315257) Lcd Controller: value: 0[0m
+[0;32mI (316597) Lcd Controller: input value: 12425[0m
+[0;32mI (316597) Lcd Controller: value: 1242[0m
+[0;32mI (316597) Lcd Controller: value: 124[0m
+[0;32mI (316597) Lcd Controller: value: 12[0m
+[0;32mI (316597) Lcd Controller: value: 1[0m
+[0;32mI (316597) Lcd Controller: value: 0[0m
+[0;32mI (317937) Lcd Controller: input value: 12425[0m
+[0;32mI (317937) Lcd Controller: value: 1242[0m
+[0;32mI (317937) Lcd Controller: value: 124[0m
+[0;32mI (317937) Lcd Controller: value: 12[0m
+[0;32mI (317937) Lcd Controller: value: 1[0m
+[0;32mI (317937) Lcd Controller: value: 0[0m
+[0;32mI (319277) Lcd Controller: input value: 12425[0m
+[0;32mI (319277) Lcd Controller: value: 1242[0m
+[0;32mI (319277) Lcd Controller: value: 124[0m
+[0;32mI (319277) Lcd Controller: value: 12[0m
+[0;32mI (319277) Lcd Controller: value: 1[0m
+[0;32mI (319277) Lcd Controller: value: 0[0m
+[0;32mI (320617) Lcd Controller: input value: 12425[0m
+[0;32mI (320617) Lcd Controller: value: 1242[0m
+[0;32mI (320617) Lcd Controller: value: 124[0m
+[0;32mI (320617) Lcd Controller: value: 12[0m
+[0;32mI (320617) Lcd Controller: value: 1[0m
+[0;32mI (320617) Lcd Controller: value: 0[0m
+[0;32mI (321957) Lcd Controller: input value: 12425[0m
+[0;32mI (321957) Lcd Controller: value: 1242[0m
+[0;32mI (321957) Lcd Controller: value: 124[0m
+[0;32mI (321957) Lcd Controller: value: 12[0m
+[0;32mI (321957) Lcd Controller: value: 1[0m
+[0;32mI (321957) Lcd Controller: value: 0[0m
+[0;32mI (323297) Lcd Controller: input value: 12425[0m
+[0;32mI (323297) Lcd Controller: value: 1242[0m
+[0;32mI (323297) Lcd Controller: value: 124[0m
+[0;32mI (323297) Lcd Controller: value: 12[0m
+[0;32mI (323297) Lcd Controller: value: 1[0m
+[0;32mI (323297) Lcd Controller: value: 0[0m
+[0;32mI (324637) Lcd Controller: input value: 12425[0m
+[0;32mI (324637) Lcd Controller: value: 1242[0m
+[0;32mI (324637) Lcd Controller: value: 124[0m
+[0;32mI (324637) Lcd Controller: value: 12[0m
+[0;32mI (324637) Lcd Controller: value: 1[0m
+[0;32mI (324637) Lcd Controller: value: 0[0m
+[0;32mI (325977) Lcd Controller: input value: 12425[0m
+[0;32mI (325977) Lcd Controller: value: 1242[0m
+[0;32mI (325977) Lcd Controller: value: 124[0m
+[0;32mI (325977) Lcd Controller: value: 12[0m
+[0;32mI (325977) Lcd Controller: value: 1[0m
+[0;32mI (325977) Lcd Controller: value: 0[0m
+[0;32mI (327317) Lcd Controller: input value: 12425[0m
+[0;32mI (327317) Lcd Controller: value: 1242[0m
+[0;32mI (327317) Lcd Controller: value: 124[0m
+[0;32mI (327317) Lcd Controller: value: 12[0m
+[0;32mI (327317) Lcd Controller: value: 1[0m
+[0;32mI (327317) Lcd Controller: value: 0[0m
+[0;32mI (328657) Lcd Controller: input value: 12425[0m
+[0;32mI (328657) Lcd Controller: value: 1242[0m
+[0;32mI (328657) Lcd Controller: value: 124[0m
+[0;32mI (328657) Lcd Controller: value: 12[0m
+[0;32mI (328657) Lcd Controller: value: 1[0m
+[0;32mI (328657) Lcd Controller: value: 0[0m
+[0;32mI (329997) Lcd Controller: input value: 12425[0m
+[0;32mI (329997) Lcd Controller: value: 1242[0m
+[0;32mI (329997) Lcd Controller: value: 124[0m
+[0;32mI (329997) Lcd Controller: value: 12[0m
+[0;32mI (329997) Lcd Controller: value: 1[0m
+[0;32mI (329997) Lcd Controller: value: 0[0m
+[0;32mI (331337) Lcd Controller: input value: 12425[0m
+[0;32mI (331337) Lcd Controller: value: 1242[0m
+[0;32mI (331337) Lcd Controller: value: 124[0m
+[0;32mI (331337) Lcd Controller: value: 12[0m
+[0;32mI (331337) Lcd Controller: value: 1[0m
+[0;32mI (331337) Lcd Controller: value: 0[0m
+[0;32mI (332677) Lcd Controller: input value: 12425[0m
+[0;32mI (332677) Lcd Controller: value: 1242[0m
+[0;32mI (332677) Lcd Controller: value: 124[0m
+[0;32mI (332677) Lcd Controller: value: 12[0m
+[0;32mI (332677) Lcd Controller: value: 1[0m
+[0;32mI (332677) Lcd Controller: value: 0[0m
+[0;32mI (334017) Lcd Controller: input value: 12425[0m
+[0;32mI (334017) Lcd Controller: value: 1242[0m
+[0;32mI (334017) Lcd Controller: value: 124[0m
+[0;32mI (334017) Lcd Controller: value: 12[0m
+[0;32mI (334017) Lcd Controller: value: 1[0m
+[0;32mI (334017) Lcd Controller: value: 0[0m
+[0;32mI (335357) Lcd Controller: input value: 12425[0m
+[0;32mI (335357) Lcd Controller: value: 1242[0m
+[0;32mI (335357) Lcd Controller: value: 124[0m
+[0;32mI (335357) Lcd Controller: value: 12[0m
+[0;32mI (335357) Lcd Controller: value: 1[0m
+[0;32mI (335357) Lcd Controller: value: 0[0m
+[0;32mI (336697) Lcd Controller: input value: 12425[0m
+[0;32mI (336697) Lcd Controller: value: 1242[0m
+[0;32mI (336697) Lcd Controller: value: 124[0m
+[0;32mI (336697) Lcd Controller: value: 12[0m
+[0;32mI (336697) Lcd Controller: value: 1[0m
+[0;32mI (336697) Lcd Controller: value: 0[0m
+[0;32mI (338037) Lcd Controller: input value: 12425[0m
+[0;32mI (338037) Lcd Controller: value: 1242[0m
+[0;32mI (338037) Lcd Controller: value: 124[0m
+[0;32mI (338037) Lcd Controller: value: 12[0m
+[0;32mI (338037) Lcd Controller: value: 1[0m
+[0;32mI (338037) Lcd Controller: value: 0[0m
+[0;32mI (339377) Lcd Controller: input value: 12425[0m
+[0;32mI (339377) Lcd Controller: value: 1242[0m
+[0;32mI (339377) Lcd Controller: value: 124[0m
+[0;32mI (339377) Lcd Controller: value: 12[0m
+[0;32mI (339377) Lcd Controller: value: 1[0m
+[0;32mI (339377) Lcd Controller: value: 0[0m
+[0;32mI (340717) Lcd Controller: input value: 12425[0m
+[0;32mI (340717) Lcd Controller: value: 1242[0m
+[0;32mI (340717) Lcd Controller: value: 124[0m
+[0;32mI (340717) Lcd Controller: value: 12[0m
+[0;32mI (340717) Lcd Controller: value: 1[0m
+[0;32mI (340717) Lcd Controller: value: 0[0m
+[0;32mI (342057) Lcd Controller: input value: 12425[0m
+[0;32mI (342057) Lcd Controller: value: 1242[0m
+[0;32mI (342057) Lcd Controller: value: 124[0m
+[0;32mI (342057) Lcd Controller: value: 12[0m
+[0;32mI (342057) Lcd Controller: value: 1[0m
+[0;32mI (342057) Lcd Controller: value: 0[0m
+[0;32mI (343397) Lcd Controller: input value: 12425[0m
+[0;32mI (343397) Lcd Controller: value: 1242[0m
+[0;32mI (343397) Lcd Controller: value: 124[0m
+[0;32mI (343397) Lcd Controller: value: 12[0m
+[0;32mI (343397) Lcd Controller: value: 1[0m
+[0;32mI (343397) Lcd Controller: value: 0[0m
+[0;32mI (344737) Lcd Controller: input value: 12425[0m
+[0;32mI (344737) Lcd Controller: value: 1242[0m
+[0;32mI (344737) Lcd Controller: value: 124[0m
+[0;32mI (344737) Lcd Controller: value: 12[0m
+[0;32mI (344737) Lcd Controller: value: 1[0m
+[0;32mI (344737) Lcd Controller: value: 0[0m
+[0;32mI (346077) Lcd Controller: input value: 12425[0m
+[0;32mI (346077) Lcd Controller: value: 1242[0m
+[0;32mI (346077) Lcd Controller: value: 124[0m
+[0;32mI (346077) Lcd Controller: value: 12[0m
+[0;32mI (346077) Lcd Controller: value: 1[0m
+[0;32mI (346077) Lcd Controller: value: 0[0m
+[0;32mI (347417) Lcd Controller: input value: 12425[0m
+[0;32mI (347417) Lcd Controller: value: 1242[0m
+[0;32mI (347417) Lcd Controller: value: 124[0m
+[0;32mI (347417) Lcd Controller: value: 12[0m
+[0;32mI (347417) Lcd Controller: value: 1[0m
+[0;32mI (347417) Lcd Controller: value: 0[0m
+[0;32mI (348757) Lcd Controller: input value: 12425[0m
+[0;32mI (348757) Lcd Controller: value: 1242[0m
+[0;32mI (348757) Lcd Controller: value: 124[0m
+[0;32mI (348757) Lcd Controller: value: 12[0m
+[0;32mI (348757) Lcd Controller: value: 1[0m
+[0;32mI (348757) Lcd Controller: value: 0[0m
+[0;32mI (350097) Lcd Controller: input value: 12425[0m
+[0;32mI (350097) Lcd Controller: value: 1242[0m
+[0;32mI (350097) Lcd Controller: value: 124[0m
+[0;32mI (350097) Lcd Controller: value: 12[0m
+[0;32mI (350097) Lcd Controller: value: 1[0m
+[0;32mI (350097) Lcd Controller: value: 0[0m
+[0;32mI (351437) Lcd Controller: input value: 12425[0m
+[0;32mI (351437) Lcd Controller: value: 1242[0m
+[0;32mI (351437) Lcd Controller: value: 124[0m
+[0;32mI (351437) Lcd Controller: value: 12[0m
+[0;32mI (351437) Lcd Controller: value: 1[0m
+[0;32mI (351437) Lcd Controller: value: 0[0m
+[0;32mI (352777) Lcd Controller: input value: 12425[0m
+[0;32mI (352777) Lcd Controller: value: 1242[0m
+[0;32mI (352777) Lcd Controller: value: 124[0m
+[0;32mI (352777) Lcd Controller: value: 12[0m
+[0;32mI (352777) Lcd Controller: value: 1[0m
+[0;32mI (352777) Lcd Controller: value: 0[0m
+[0;32mI (354117) Lcd Controller: input value: 12425[0m
+[0;32mI (354117) Lcd Controller: value: 1242[0m
+[0;32mI (354117) Lcd Controller: value: 124[0m
+[0;32mI (354117) Lcd Controller: value: 12[0m
+[0;32mI (354117) Lcd Controller: value: 1[0m
+[0;32mI (354117) Lcd Controller: value: 0[0m
+[0;32mI (355457) Lcd Controller: input value: 12425[0m
+[0;32mI (355457) Lcd Controller: value: 1242[0m
+[0;32mI (355457) Lcd Controller: value: 124[0m
+[0;32mI (355457) Lcd Controller: value: 12[0m
+[0;32mI (355457) Lcd Controller: value: 1[0m
+[0;32mI (355457) Lcd Controller: value: 0[0m
+[0;32mI (356797) Lcd Controller: input value: 12425[0m
+[0;32mI (356797) Lcd Controller: value: 1242[0m
+[0;32mI (356797) Lcd Controller: value: 124[0m
+[0;32mI (356797) Lcd Controller: value: 12[0m
+[0;32mI (356797) Lcd Controller: value: 1[0m
+[0;32mI (356797) Lcd Controller: value: 0[0m
+[0;32mI (358137) Lcd Controller: input value: 12425[0m
+[0;32mI (358137) Lcd Controller: value: 1242[0m
+[0;32mI (358137) Lcd Controller: value: 124[0m
+[0;32mI (358137) Lcd Controller: value: 12[0m
+[0;32mI (358137) Lcd Controller: value: 1[0m
+[0;32mI (358137) Lcd Controller: value: 0[0m
+[0;32mI (359477) Lcd Controller: input value: 12425[0m
+[0;32mI (359477) Lcd Controller: value: 1242[0m
+[0;32mI (359477) Lcd Controller: value: 124[0m
+[0;32mI (359477) Lcd Controller: value: 12[0m
+[0;32mI (359477) Lcd Controller: value: 1[0m
+[0;32mI (359477) Lcd Controller: value: 0[0m
+[0;32mI (360817) Lcd Controller: input value: 12425[0m
+[0;32mI (360817) Lcd Controller: value: 1242[0m
+[0;32mI (360817) Lcd Controller: value: 124[0m
+[0;32mI (360817) Lcd Controller: value: 12[0m
+[0;32mI (360817) Lcd Controller: value: 1[0m
+[0;32mI (360817) Lcd Controller: value: 0[0m
+[0;32mI (362157) Lcd Controller: input value: 12425[0m
+[0;32mI (362157) Lcd Controller: value: 1242[0m
+[0;32mI (362157) Lcd Controller: value: 124[0m
+[0;32mI (362157) Lcd Controller: value: 12[0m
+[0;32mI (362157) Lcd Controller: value: 1[0m
+[0;32mI (362157) Lcd Controller: value: 0[0m
+[0;32mI (363497) Lcd Controller: input value: 12425[0m
+[0;32mI (363497) Lcd Controller: value: 1242[0m
+[0;32mI (363497) Lcd Controller: value: 124[0m
+[0;32mI (363497) Lcd Controller: value: 12[0m
+[0;32mI (363497) Lcd Controller: value: 1[0m
+[0;32mI (363497) Lcd Controller: value: 0[0m
+[0;32mI (364837) Lcd Controller: input value: 12425[0m
+[0;32mI (364837) Lcd Controller: value: 1242[0m
+[0;32mI (364837) Lcd Controller: value: 124[0m
+[0;32mI (364837) Lcd Controller: value: 12[0m
+[0;32mI (364837) Lcd Controller: value: 1[0m
+[0;32mI (364837) Lcd Controller: value: 0[0m
+[0;32mI (366177) Lcd Controller: input value: 12425[0m
+[0;32mI (366177) Lcd Controller: value: 1242[0m
+[0;32mI (366177) Lcd Controller: value: 124[0m
+[0;32mI (366177) Lcd Controller: value: 12[0m
+[0;32mI (366177) Lcd Controller: value: 1[0m
+[0;32mI (366177) Lcd Controller: value: 0[0m
+[0;32mI (367517) Lcd Controller: input value: 12425[0m
+[0;32mI (367517) Lcd Controller: value: 1242[0m
+[0;32mI (367517) Lcd Controller: value: 124[0m
+[0;32mI (367517) Lcd Controller: value: 12[0m
+[0;32mI (367517) Lcd Controller: value: 1[0m
+[0;32mI (367517) Lcd Controller: value: 0[0m
+[0;32mI (368857) Lcd Controller: input value: 12425[0m
+[0;32mI (368857) Lcd Controller: value: 1242[0m
+[0;32mI (368857) Lcd Controller: value: 124[0m
+[0;32mI (368857) Lcd Controller: value: 12[0m
+[0;32mI (368857) Lcd Controller: value: 1[0m
+[0;32mI (368857) Lcd Controller: value: 0[0m
+[0;32mI (370197) Lcd Controller: input value: 12425[0m
+[0;32mI (370197) Lcd Controller: value: 1242[0m
+[0;32mI (370197) Lcd Controller: value: 124[0m
+[0;32mI (370197) Lcd Controller: value: 12[0m
+[0;32mI (370197) Lcd Controller: value: 1[0m
+[0;32mI (370197) Lcd Controller: value: 0[0m
+[0;32mI (371537) Lcd Controller: input value: 12425[0m
+[0;32mI (371537) Lcd Controller: value: 1242[0m
+[0;32mI (371537) Lcd Controller: value: 124[0m
+[0;32mI (371537) Lcd Controller: value: 12[0m
+[0;32mI (371537) Lcd Controller: value: 1[0m
+[0;32mI (371537) Lcd Controller: value: 0[0m
+[0;32mI (372877) Lcd Controller: input value: 12425[0m
+[0;32mI (372877) Lcd Controller: value: 1242[0m
+[0;32mI (372877) Lcd Controller: value: 124[0m
+[0;32mI (372877) Lcd Controller: value: 12[0m
+[0;32mI (372877) Lcd Controller: value: 1[0m
+[0;32mI (372877) Lcd Controller: value: 0[0m
+[0;32mI (374217) Lcd Controller: input value: 12425[0m
+[0;32mI (374217) Lcd Controller: value: 1242[0m
+[0;32mI (374217) Lcd Controller: value: 124[0m
+[0;32mI (374217) Lcd Controller: value: 12[0m
+[0;32mI (374217) Lcd Controller: value: 1[0m
+[0;32mI (374217) Lcd Controller: value: 0[0m
+[0;32mI (375557) Lcd Controller: input value: 12425[0m
+[0;32mI (375557) Lcd Controller: value: 1242[0m
+[0;32mI (375557) Lcd Controller: value: 124[0m
+[0;32mI (375557) Lcd Controller: value: 12[0m
+[0;32mI (375557) Lcd Controller: value: 1[0m
+[0;32mI (375557) Lcd Controller: value: 0[0m
+[0;32mI (376897) Lcd Controller: input value: 12425[0m
+[0;32mI (376897) Lcd Controller: value: 1242[0m
+[0;32mI (376897) Lcd Controller: value: 124[0m
+[0;32mI (376897) Lcd Controller: value: 12[0m
+[0;32mI (376897) Lcd Controller: value: 1[0m
+[0;32mI (376897) Lcd Controller: value: 0[0m
+[0;32mI (378237) Lcd Controller: input value: 12425[0m
+[0;32mI (378237) Lcd Controller: value: 1242[0m
+[0;32mI (378237) Lcd Controller: value: 124[0m
+[0;32mI (378237) Lcd Controller: value: 12[0m
+[0;32mI (378237) Lcd Controller: value: 1[0m
+[0;32mI (378237) Lcd Controller: value: 0[0m
+[0;32mI (379577) Lcd Controller: input value: 12425[0m
+[0;32mI (379577) Lcd Controller: value: 1242[0m
+[0;32mI (379577) Lcd Controller: value: 124[0m
+[0;32mI (379577) Lcd Controller: value: 12[0m
+[0;32mI (379577) Lcd Controller: value: 1[0m
+[0;32mI (379577) Lcd Controller: value: 0[0m
+[0;32mI (380917) Lcd Controller: input value: 12425[0m
+[0;32mI (380917) Lcd Controller: value: 1242[0m
+[0;32mI (380917) Lcd Controller: value: 124[0m
+[0;32mI (380917) Lcd Controller: value: 12[0m
+[0;32mI (380917) Lcd Controller: value: 1[0m
+[0;32mI (380917) Lcd Controller: value: 0[0m
+[0;32mI (382257) Lcd Controller: input value: 12425[0m
+[0;32mI (382257) Lcd Controller: value: 1242[0m
+[0;32mI (382257) Lcd Controller: value: 124[0m
+[0;32mI (382257) Lcd Controller: value: 12[0m
+[0;32mI (382257) Lcd Controller: value: 1[0m
+[0;32mI (382257) Lcd Controller: value: 0[0m
+[0;32mI (383597) Lcd Controller: input value: 12425[0m
+[0;32mI (383597) Lcd Controller: value: 1242[0m
+[0;32mI (383597) Lcd Controller: value: 124[0m
+[0;32mI (383597) Lcd Controller: value: 12[0m
+[0;32mI (383597) Lcd Controller: value: 1[0m
+[0;32mI (383597) Lcd Controller: value: 0[0m
+[0;32mI (384937) Lcd Controller: input value: 12425[0m
+[0;32mI (384937) Lcd Controller: value: 1242[0m
+[0;32mI (384937) Lcd Controller: value: 124[0m
+[0;32mI (384937) Lcd Controller: value: 12[0m
+[0;32mI (384937) Lcd Controller: value: 1[0m
+[0;32mI (384937) Lcd Controller: value: 0[0m
+[0;32mI (386277) Lcd Controller: input value: 12425[0m
+[0;32mI (386277) Lcd Controller: value: 1242[0m
+[0;32mI (386277) Lcd Controller: value: 124[0m
+[0;32mI (386277) Lcd Controller: value: 12[0m
+[0;32mI (386277) Lcd Controller: value: 1[0m
+[0;32mI (386277) Lcd Controller: value: 0[0m
+[0;32mI (387617) Lcd Controller: input value: 12425[0m
+[0;32mI (387617) Lcd Controller: value: 1242[0m
+[0;32mI (387617) Lcd Controller: value: 124[0m
+[0;32mI (387617) Lcd Controller: value: 12[0m
+[0;32mI (387617) Lcd Controller: value: 1[0m
+[0;32mI (387617) Lcd Controller: value: 0[0m
+[0;32mI (388957) Lcd Controller: input value: 12425[0m
+[0;32mI (388957) Lcd Controller: value: 1242[0m
+[0;32mI (388957) Lcd Controller: value: 124[0m
+[0;32mI (388957) Lcd Controller: value: 12[0m
+[0;32mI (388957) Lcd Controller: value: 1[0m
+[0;32mI (388957) Lcd Controller: value: 0[0m
+[0;32mI (390297) Lcd Controller: input value: 12425[0m
+[0;32mI (390297) Lcd Controller: value: 1242[0m
+[0;32mI (390297) Lcd Controller: value: 124[0m
+[0;32mI (390297) Lcd Controller: value: 12[0m
+[0;32mI (390297) Lcd Controller: value: 1[0m
+[0;32mI (390297) Lcd Controller: value: 0[0m
+[0;32mI (391637) Lcd Controller: input value: 12425[0m
+[0;32mI (391637) Lcd Controller: value: 1242[0m
+[0;32mI (391637) Lcd Controller: value: 124[0m
+[0;32mI (391637) Lcd Controller: value: 12[0m
+[0;32mI (391637) Lcd Controller: value: 1[0m
+[0;32mI (391637) Lcd Controller: value: 0[0m
+[0;32mI (392977) Lcd Controller: input value: 12425[0m
+[0;32mI (392977) Lcd Controller: value: 1242[0m
+[0;32mI (392977) Lcd Controller: value: 124[0m
+[0;32mI (392977) Lcd Controller: value: 12[0m
+[0;32mI (392977) Lcd Controller: value: 1[0m
+[0;32mI (392977) Lcd Controller: value: 0[0m
+[0;32mI (394317) Lcd Controller: input value: 12425[0m
+[0;32mI (394317) Lcd Controller: value: 1242[0m
+[0;32mI (394317) Lcd Controller: value: 124[0m
+[0;32mI (394317) Lcd Controller: value: 12[0m
+[0;32mI (394317) Lcd Controller: value: 1[0m
+[0;32mI (394317) Lcd Controller: value: 0[0m
+[0;32mI (395657) Lcd Controller: input value: 12425[0m
+[0;32mI (395657) Lcd Controller: value: 1242[0m
+[0;32mI (395657) Lcd Controller: value: 124[0m
+[0;32mI (395657) Lcd Controller: value: 12[0m
+[0;32mI (395657) Lcd Controller: value: 1[0m
+[0;32mI (395657) Lcd Controller: value: 0[0m
+[0;32mI (396997) Lcd Controller: input value: 12425[0m
+[0;32mI (396997) Lcd Controller: value: 1242[0m
+[0;32mI (396997) Lcd Controller: value: 124[0m
+[0;32mI (396997) Lcd Controller: value: 12[0m
+[0;32mI (396997) Lcd Controller: value: 1[0m
+[0;32mI (396997) Lcd Controller: value: 0[0m
+[0;32mI (398337) Lcd Controller: input value: 12425[0m
+[0;32mI (398337) Lcd Controller: value: 1242[0m
+[0;32mI (398337) Lcd Controller: value: 124[0m
+[0;32mI (398337) Lcd Controller: value: 12[0m
+[0;32mI (398337) Lcd Controller: value: 1[0m
+[0;32mI (398337) Lcd Controller: value: 0[0m
+[0;32mI (399677) Lcd Controller: input value: 12425[0m
+[0;32mI (399677) Lcd Controller: value: 1242[0m
+[0;32mI (399677) Lcd Controller: value: 124[0m
+[0;32mI (399677) Lcd Controller: value: 12[0m
+[0;32mI (399677) Lcd Controller: value: 1[0m
+[0;32mI (399677) Lcd Controller: value: 0[0m
+[0;32mI (401017) Lcd Controller: input value: 12425[0m
+[0;32mI (401017) Lcd Controller: value: 1242[0m
+[0;32mI (401017) Lcd Controller: value: 124[0m
+[0;32mI (401017) Lcd Controller: value: 12[0m
+[0;32mI (401017) Lcd Controller: value: 1[0m
+[0;32mI (401017) Lcd Controller: value: 0[0m
+[0;32mI (402357) Lcd Controller: input value: 12425[0m
+[0;32mI (402357) Lcd Controller: value: 1242[0m
+[0;32mI (402357) Lcd Controller: value: 124[0m
+[0;32mI (402357) Lcd Controller: value: 12[0m
+[0;32mI (402357) Lcd Controller: value: 1[0m
+[0;32mI (402357) Lcd Controller: value: 0[0m
+[0;32mI (403697) Lcd Controller: input value: 12425[0m
+[0;32mI (403697) Lcd Controller: value: 1242[0m
+[0;32mI (403697) Lcd Controller: value: 124[0m
+[0;32mI (403697) Lcd Controller: value: 12[0m
+[0;32mI (403697) Lcd Controller: value: 1[0m
+[0;32mI (403697) Lcd Controller: value: 0[0m
+[0;32mI (405037) Lcd Controller: input value: 12425[0m
+[0;32mI (405037) Lcd Controller: value: 1242[0m
+[0;32mI (405037) Lcd Controller: value: 124[0m
+[0;32mI (405037) Lcd Controller: value: 12[0m
+[0;32mI (405037) Lcd Controller: value: 1[0m
+[0;32mI (405037) Lcd Controller: value: 0[0m
+[0;32mI (406377) Lcd Controller: input value: 12425[0m
+[0;32mI (406377) Lcd Controller: value: 1242[0m
+[0;32mI (406377) Lcd Controller: value: 124[0m
+[0;32mI (406377) Lcd Controller: value: 12[0m
+[0;32mI (406377) Lcd Controller: value: 1[0m
+[0;32mI (406377) Lcd Controller: value: 0[0m
+[0;32mI (407717) Lcd Controller: input value: 12425[0m
+[0;32mI (407717) Lcd Controller: value: 1242[0m
+[0;32mI (407717) Lcd Controller: value: 124[0m
+[0;32mI (407717) Lcd Controller: value: 12[0m
+[0;32mI (407717) Lcd Controller: value: 1[0m
+[0;32mI (407717) Lcd Controller: value: 0[0m
+[0;32mI (409057) Lcd Controller: input value: 12425[0m
+[0;32mI (409057) Lcd Controller: value: 1242[0m
+[0;32mI (409057) Lcd Controller: value: 124[0m
+[0;32mI (409057) Lcd Controller: value: 12[0m
+[0;32mI (409057) Lcd Controller: value: 1[0m
+[0;32mI (409057) Lcd Controller: value: 0[0m
+[0;32mI (410397) Lcd Controller: input value: 12425[0m
+[0;32mI (410397) Lcd Controller: value: 1242[0m
+[0;32mI (410397) Lcd Controller: value: 124[0m
+[0;32mI (410397) Lcd Controller: value: 12[0m
+[0;32mI (410397) Lcd Controller: value: 1[0m
+[0;32mI (410397) Lcd Controller: value: 0[0m
+[0;32mI (411737) Lcd Controller: input value: 12425[0m
+[0;32mI (411737) Lcd Controller: value: 1242[0m
+[0;32mI (411737) Lcd Controller: value: 124[0m
+[0;32mI (411737) Lcd Controller: value: 12[0m
+[0;32mI (411737) Lcd Controller: value: 1[0m
+[0;32mI (411737) Lcd Controller: value: 0[0m
+[0;32mI (413077) Lcd Controller: input value: 12425[0m
+[0;32mI (413077) Lcd Controller: value: 1242[0m
+[0;32mI (413077) Lcd Controller: value: 124[0m
+[0;32mI (413077) Lcd Controller: value: 12[0m
+[0;32mI (413077) Lcd Controller: value: 1[0m
+[0;32mI (413077) Lcd Controller: value: 0[0m
+[0;32mI (414417) Lcd Controller: input value: 12425[0m
+[0;32mI (414417) Lcd Controller: value: 1242[0m
+[0;32mI (414417) Lcd Controller: value: 124[0m
+[0;32mI (414417) Lcd Controller: value: 12[0m
+[0;32mI (414417) Lcd Controller: value: 1[0m
+[0;32mI (414417) Lcd Controller: value: 0[0m
+[0;32mI (415757) Lcd Controller: input value: 12425[0m
+[0;32mI (415757) Lcd Controller: value: 1242[0m
+[0;32mI (415757) Lcd Controller: value: 124[0m
+[0;32mI (415757) Lcd Controller: value: 12[0m
+[0;32mI (415757) Lcd Controller: value: 1[0m
+[0;32mI (415757) Lcd Controller: value: 0[0m
+[0;32mI (417097) Lcd Controller: input value: 12425[0m
+[0;32mI (417097) Lcd Controller: value: 1242[0m
+[0;32mI (417097) Lcd Controller: value: 124[0m
+[0;32mI (417097) Lcd Controller: value: 12[0m
+[0;32mI (417097) Lcd Controller: value: 1[0m
+[0;32mI (417097) Lcd Controller: value: 0[0m
+[0;32mI (418437) Lcd Controller: input value: 12425[0m
+[0;32mI (418437) Lcd Controller: value: 1242[0m
+[0;32mI (418437) Lcd Controller: value: 124[0m
+[0;32mI (418437) Lcd Controller: value: 12[0m
+[0;32mI (418437) Lcd Controller: value: 1[0m
+[0;32mI (418437) Lcd Controller: value: 0[0m
+[0;32mI (419777) Lcd Controller: input value: 12425[0m
+[0;32mI (419777) Lcd Controller: value: 1242[0m
+[0;32mI (419777) Lcd Controller: value: 124[0m
+[0;32mI (419777) Lcd Controller: value: 12[0m
+[0;32mI (419777) Lcd Controller: value: 1[0m
+[0;32mI (419777) Lcd Controller: value: 0[0m
+[0;32mI (421117) Lcd Controller: input value: 12425[0m
+[0;32mI (421117) Lcd Controller: value: 1242[0m
+[0;32mI (421117) Lcd Controller: value: 124[0m
+[0;32mI (421117) Lcd Controller: value: 12[0m
+[0;32mI (421117) Lcd Controller: value: 1[0m
+[0;32mI (421117) Lcd Controller: value: 0[0m
+[0;32mI (422457) Lcd Controller: input value: 12425[0m
+[0;32mI (422457) Lcd Controller: value: 1242[0m
+[0;32mI (422457) Lcd Controller: value: 124[0m
+[0;32mI (422457) Lcd Controller: value: 12[0m
+[0;32mI (422457) Lcd Controller: value: 1[0m
+[0;32mI (422457) Lcd Controller: value: 0[0m
+[0;32mI (423797) Lcd Controller: input value: 12425[0m
+[0;32mI (423797) Lcd Controller: value: 1242[0m
+[0;32mI (423797) Lcd Controller: value: 124[0m
+[0;32mI (423797) Lcd Controller: value: 12[0m
+[0;32mI (423797) Lcd Controller: value: 1[0m
+[0;32mI (423797) Lcd Controller: value: 0[0m
+[0;32mI (425137) Lcd Controller: input value: 12425[0m
+[0;32mI (425137) Lcd Controller: value: 1242[0m
+[0;32mI (425137) Lcd Controller: value: 124[0m
+[0;32mI (425137) Lcd Controller: value: 12[0m
+[0;32mI (425137) Lcd Controller: value: 1[0m
+[0;32mI (425137) Lcd Controller: value: 0[0m
+[0;32mI (426477) Lcd Controller: input value: 12425[0m
+[0;32mI (426477) Lcd Controller: value: 1242[0m
+[0;32mI (426477) Lcd Controller: value: 124[0m
+[0;32mI (426477) Lcd Controller: value: 12[0m
+[0;32mI (426477) Lcd Controller: value: 1[0m
+[0;32mI (426477) Lcd Controller: value: 0[0m
+[0;32mI (427817) Lcd Controller: input value: 12425[0m
+[0;32mI (427817) Lcd Controller: value: 1242[0m
+[0;32mI (427817) Lcd Controller: value: 124[0m
+[0;32mI (427817) Lcd Controller: value: 12[0m
+[0;32mI (427817) Lcd Controller: value: 1[0m
+[0;32mI (427817) Lcd Controller: value: 0[0m
+[0;32mI (429157) Lcd Controller: input value: 12425[0m
+[0;32mI (429157) Lcd Controller: value: 1242[0m
+[0;32mI (429157) Lcd Controller: value: 124[0m
+[0;32mI (429157) Lcd Controller: value: 12[0m
+[0;32mI (429157) Lcd Controller: value: 1[0m
+[0;32mI (429157) Lcd Controller: value: 0[0m
+[0;32mI (430497) Lcd Controller: input value: 12425[0m
+[0;32mI (430497) Lcd Controller: value: 1242[0m
+[0;32mI (430497) Lcd Controller: value: 124[0m
+[0;32mI (430497) Lcd Controller: value: 12[0m
+[0;32mI (430497) Lcd Controller: value: 1[0m
+[0;32mI (430497) Lcd Controller: value: 0[0m
+[0;32mI (431837) Lcd Controller: input value: 12425[0m
+[0;32mI (431837) Lcd Controller: value: 1242[0m
+[0;32mI (431837) Lcd Controller: value: 124[0m
+[0;32mI (431837) Lcd Controller: value: 12[0m
+[0;32mI (431837) Lcd Controller: value: 1[0m
+[0;32mI (431837) Lcd Controller: value: 0[0m
+[0;32mI (433177) Lcd Controller: input value: 12425[0m
+[0;32mI (433177) Lcd Controller: value: 1242[0m
+[0;32mI (433177) Lcd Controller: value: 124[0m
+[0;32mI (433177) Lcd Controller: value: 12[0m
+[0;32mI (433177) Lcd Controller: value: 1[0m
+[0;32mI (433177) Lcd Controller: value: 0[0m
+[0;32mI (434517) Lcd Controller: input value: 12425[0m
+[0;32mI (434517) Lcd Controller: value: 1242[0m
+[0;32mI (434517) Lcd Controller: value: 124[0m
+[0;32mI (434517) Lcd Controller: value: 12[0m
+[0;32mI (434517) Lcd Controller: value: 1[0m
+[0;32mI (434517) Lcd Controller: value: 0[0m
+[0;32mI (435857) Lcd Controller: input value: 12425[0m
+[0;32mI (435857) Lcd Controller: value: 1242[0m
+[0;32mI (435857) Lcd Controller: value: 124[0m
+[0;32mI (435857) Lcd Controller: value: 12[0m
+[0;32mI (435857) Lcd Controller: value: 1[0m
+[0;32mI (435857) Lcd Controller: value: 0[0m
+[0;32mI (437197) Lcd Controller: input value: 12425[0m
+[0;32mI (437197) Lcd Controller: value: 1242[0m
+[0;32mI (437197) Lcd Controller: value: 124[0m
+[0;32mI (437197) Lcd Controller: value: 12[0m
+[0;32mI (437197) Lcd Controller: value: 1[0m
+[0;32mI (437197) Lcd Controller: value: 0[0m
+[0;32mI (438537) Lcd Controller: input value: 12425[0m
+[0;32mI (438537) Lcd Controller: value: 1242[0m
+[0;32mI (438537) Lcd Controller: value: 124[0m
+[0;32mI (438537) Lcd Controller: value: 12[0m
+[0;32mI (438537) Lcd Controller: value: 1[0m
+[0;32mI (438537) Lcd Controller: value: 0[0m
+[0;32mI (439877) Lcd Controller: input value: 12425[0m
+[0;32mI (439877) Lcd Controller: value: 1242[0m
+[0;32mI (439877) Lcd Controller: value: 124[0m
+[0;32mI (439877) Lcd Controller: value: 12[0m
+[0;32mI (439877) Lcd Controller: value: 1[0m
+[0;32mI (439877) Lcd Controller: value: 0[0m
+[0;32mI (441217) Lcd Controller: input value: 12425[0m
+[0;32mI (441217) Lcd Controller: value: 1242[0m
+[0;32mI (441217) Lcd Controller: value: 124[0m
+[0;32mI (441217) Lcd Controller: value: 12[0m
+[0;32mI (441217) Lcd Controller: value: 1[0m
+[0;32mI (441217) Lcd Controller: value: 0[0m
+[0;32mI (442557) Lcd Controller: input value: 12425[0m
+[0;32mI (442557) Lcd Controller: value: 1242[0m
+[0;32mI (442557) Lcd Controller: value: 124[0m
+[0;32mI (442557) Lcd Controller: value: 12[0m
+[0;32mI (442557) Lcd Controller: value: 1[0m
+[0;32mI (442557) Lcd Controller: value: 0[0m
+[0;32mI (443897) Lcd Controller: input value: 12425[0m
+[0;32mI (443897) Lcd Controller: value: 1242[0m
+[0;32mI (443897) Lcd Controller: value: 124[0m
+[0;32mI (443897) Lcd Controller: value: 12[0m
+[0;32mI (443897) Lcd Controller: value: 1[0m
+[0;32mI (443897) Lcd Controller: value: 0[0m
+[0;32mI (445237) Lcd Controller: input value: 12425[0m
+[0;32mI (445237) Lcd Controller: value: 1242[0m
+[0;32mI (445237) Lcd Controller: value: 124[0m
+[0;32mI (445237) Lcd Controller: value: 12[0m
+[0;32mI (445237) Lcd Controller: value: 1[0m
+[0;32mI (445237) Lcd Controller: value: 0[0m
+[0;32mI (446577) Lcd Controller: input value: 12425[0m
+[0;32mI (446577) Lcd Controller: value: 1242[0m
+[0;32mI (446577) Lcd Controller: value: 124[0m
+[0;32mI (446577) Lcd Controller: value: 12[0m
+[0;32mI (446577) Lcd Controller: value: 1[0m
+[0;32mI (446577) Lcd Controller: value: 0[0m
+[0;32mI (447917) Lcd Controller: input value: 12425[0m
+[0;32mI (447917) Lcd Controller: value: 1242[0m
+[0;32mI (447917) Lcd Controller: value: 124[0m
+[0;32mI (447917) Lcd Controller: value: 12[0m
+[0;32mI (447917) Lcd Controller: value: 1[0m
+[0;32mI (447917) Lcd Controller: value: 0[0m
+[0;32mI (449257) Lcd Controller: input value: 12425[0m
+[0;32mI (449257) Lcd Controller: value: 1242[0m
+[0;32mI (449257) Lcd Controller: value: 124[0m
+[0;32mI (449257) Lcd Controller: value: 12[0m
+[0;32mI (449257) Lcd Controller: value: 1[0m
+[0;32mI (449257) Lcd Controller: value: 0[0m
+[0;32mI (450597) Lcd Controller: input value: 12425[0m
+[0;32mI (450597) Lcd Controller: value: 1242[0m
+[0;32mI (450597) Lcd Controller: value: 124[0m
+[0;32mI (450597) Lcd Controller: value: 12[0m
+[0;32mI (450597) Lcd Controller: value: 1[0m
+[0;32mI (450597) Lcd Controller: value: 0[0m
+[0;32mI (451937) Lcd Controller: input value: 12425[0m
+[0;32mI (451937) Lcd Controller: value: 1242[0m
+[0;32mI (451937) Lcd Controller: value: 124[0m
+[0;32mI (451937) Lcd Controller: value: 12[0m
+[0;32mI (451937) Lcd Controller: value: 1[0m
+[0;32mI (451937) Lcd Controller: value: 0[0m
+[0;32mI (453277) Lcd Controller: input value: 12425[0m
+[0;32mI (453277) Lcd Controller: value: 1242[0m
+[0;32mI (453277) Lcd Controller: value: 124[0m
+[0;32mI (453277) Lcd Controller: value: 12[0m
+[0;32mI (453277) Lcd Controller: value: 1[0m
+[0;32mI (453277) Lcd Controller: value: 0[0m
+[0;32mI (454617) Lcd Controller: input value: 12425[0m
+[0;32mI (454617) Lcd Controller: value: 1242[0m
+[0;32mI (454617) Lcd Controller: value: 124[0m
+[0;32mI (454617) Lcd Controller: value: 12[0m
+[0;32mI (454617) Lcd Controller: value: 1[0m
+[0;32mI (454617) Lcd Controller: value: 0[0m
+[0;32mI (455957) Lcd Controller: input value: 12425[0m
+[0;32mI (455957) Lcd Controller: value: 1242[0m
+[0;32mI (455957) Lcd Controller: value: 124[0m
+[0;32mI (455957) Lcd Controller: value: 12[0m
+[0;32mI (455957) Lcd Controller: value: 1[0m
+[0;32mI (455957) Lcd Controller: value: 0[0m
+[0;32mI (457297) Lcd Controller: input value: 12425[0m
+[0;32mI (457297) Lcd Controller: value: 1242[0m
+[0;32mI (457297) Lcd Controller: value: 124[0m
+[0;32mI (457297) Lcd Controller: value: 12[0m
+[0;32mI (457297) Lcd Controller: value: 1[0m
+[0;32mI (457297) Lcd Controller: value: 0[0m
+[0;32mI (458637) Lcd Controller: input value: 12425[0m
+[0;32mI (458637) Lcd Controller: value: 1242[0m
+[0;32mI (458637) Lcd Controller: value: 124[0m
+[0;32mI (458637) Lcd Controller: value: 12[0m
+[0;32mI (458637) Lcd Controller: value: 1[0m
+[0;32mI (458637) Lcd Controller: value: 0[0m
+[0;32mI (459977) Lcd Controller: input value: 12425[0m
+[0;32mI (459977) Lcd Controller: value: 1242[0m
+[0;32mI (459977) Lcd Controller: value: 124[0m
+[0;32mI (459977) Lcd Controller: value: 12[0m
+[0;32mI (459977) Lcd Controller: value: 1[0m
+[0;32mI (459977) Lcd Controller: value: 0[0m
+[0;32mI (461317) Lcd Controller: input value: 12425[0m
+[0;32mI (461317) Lcd Controller: value: 1242[0m
+[0;32mI (461317) Lcd Controller: value: 124[0m
+[0;32mI (461317) Lcd Controller: value: 12[0m
+[0;32mI (461317) Lcd Controller: value: 1[0m
+[0;32mI (461317) Lcd Controller: value: 0[0m
+[0;32mI (462657) Lcd Controller: input value: 12425[0m
+[0;32mI (462657) Lcd Controller: value: 1242[0m
+[0;32mI (462657) Lcd Controller: value: 124[0m
+[0;32mI (462657) Lcd Controller: value: 12[0m
+[0;32mI (462657) Lcd Controller: value: 1[0m
+[0;32mI (462657) Lcd Controller: value: 0[0m
+[0;32mI (463997) Lcd Controller: input value: 12425[0m
+[0;32mI (463997) Lcd Controller: value: 1242[0m
+[0;32mI (463997) Lcd Controller: value: 124[0m
+[0;32mI (463997) Lcd Controller: value: 12[0m
+[0;32mI (463997) Lcd Controller: value: 1[0m
+[0;32mI (463997) Lcd Controller: value: 0[0m
+[0;32mI (465337) Lcd Controller: input value: 12425[0m
+[0;32mI (465337) Lcd Controller: value: 1242[0m
+[0;32mI (465337) Lcd Controller: value: 124[0m
+[0;32mI (465337) Lcd Controller: value: 12[0m
+[0;32mI (465337) Lcd Controller: value: 1[0m
+[0;32mI (465337) Lcd Controller: value: 0[0m
+[0;32mI (466677) Lcd Controller: input value: 12425[0m
+[0;32mI (466677) Lcd Controller: value: 1242[0m
+[0;32mI (466677) Lcd Controller: value: 124[0m
+[0;32mI (466677) Lcd Controller: value: 12[0m
+[0;32mI (466677) Lcd Controller: value: 1[0m
+[0;32mI (466677) Lcd Controller: value: 0[0m
+[0;32mI (468017) Lcd Controller: input value: 12425[0m
+[0;32mI (468017) Lcd Controller: value: 1242[0m
+[0;32mI (468017) Lcd Controller: value: 124[0m
+[0;32mI (468017) Lcd Controller: value: 12[0m
+[0;32mI (468017) Lcd Controller: value: 1[0m
+[0;32mI (468017) Lcd Controller: value: 0[0m
+[0;32mI (469357) Lcd Controller: input value: 12425[0m
+[0;32mI (469357) Lcd Controller: value: 1242[0m
+[0;32mI (469357) Lcd Controller: value: 124[0m
+[0;32mI (469357) Lcd Controller: value: 12[0m
+[0;32mI (469357) Lcd Controller: value: 1[0m
+[0;32mI (469357) Lcd Controller: value: 0[0m
+[0;32mI (470697) Lcd Controller: input value: 12425[0m
+[0;32mI (470697) Lcd Controller: value: 1242[0m
+[0;32mI (470697) Lcd Controller: value: 124[0m
+[0;32mI (470697) Lcd Controller: value: 12[0m
+[0;32mI (470697) Lcd Controller: value: 1[0m
+[0;32mI (470697) Lcd Controller: value: 0[0m
+[0;32mI (472037) Lcd Controller: input value: 12425[0m
+[0;32mI (472037) Lcd Controller: value: 1242[0m
+[0;32mI (472037) Lcd Controller: value: 124[0m
+[0;32mI (472037) Lcd Controller: value: 12[0m
+[0;32mI (472037) Lcd Controller: value: 1[0m
+[0;32mI (472037) Lcd Controller: value: 0[0m
+[0;32mI (473377) Lcd Controller: input value: 12425[0m
+[0;32mI (473377) Lcd Controller: value: 1242[0m
+[0;32mI (473377) Lcd Controller: value: 124[0m
+[0;32mI (473377) Lcd Controller: value: 12[0m
+[0;32mI (473377) Lcd Controller: value: 1[0m
+[0;32mI (473377) Lcd Controller: value: 0[0m

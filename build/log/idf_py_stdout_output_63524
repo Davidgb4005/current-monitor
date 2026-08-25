@@ -1,0 +1,220 @@
+Command: /home/esp/.espressif/python_env/idf6.1_py3.13_env/bin/python /home/esp/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c6 --revision 0 --decode-panic backtrace /home/esp/esp/CurrentMonitor/build/CurrentMonitor.elf /home/esp/esp/CurrentMonitor/build/bootloader/bootloader.elf -m '/home/esp/.espressif/python_env/idf6.1_py3.13_env/bin/python' '/home/esp/esp/esp-idf/tools/idf.py'
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0xc (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875730,len:0x175c
+load:0x4086b910,len:0xed4
+load:0x4086e610,len:0x3244
+entry 0x4086b91a
+[0;32mI (23) boot: ESP-IDF v6.1-dev-1-gff97953b32-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Dec  4 2025 14:13:05[0m
+[0;32mI (24) boot: chip revision: v0.2[0m
+[0;32mI (25) boot: efuse block revision: v0.3[0m
+[0;32mI (29) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (33) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (37) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (40) boot: Enabling RNG early entropy source...[0m
+[0;32mI (45) boot: Partition Table:[0m
+[0;32mI (47) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (54) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (60) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (67) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (73) boot: End of partition table[0m
+[0;32mI (77) esp_image: segment 0: paddr=00010020 vaddr=42020020 size=0bfc0h ( 49088) map[0m
+[0;32mI (93) esp_image: segment 1: paddr=0001bfe8 vaddr=40800000 size=04030h ( 16432) load[0m
+[0;32mI (98) esp_image: segment 2: paddr=00020020 vaddr=42000020 size=1e6a4h (124580) map[0m
+[0;32mI (122) esp_image: segment 3: paddr=0003e6cc vaddr=40804030 size=07004h ( 28676) load[0m
+[0;32mI (129) esp_image: segment 4: paddr=000456d8 vaddr=4080b040 size=01c4ch (  7244) load[0m
+[0;32mI (131) esp_image: segment 5: paddr=0004732c vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (136) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (139) boot: Disabling RNG early entropy source...[0m
+[0;32mI (155) cpu_start: Unicore app[0m
+[0;32mI (164) cpu_start: GPIO 17 and 16 are used as console UART I/O pins[0m
+[0;32mI (164) cpu_start: Pro cpu start user code[0m
+[0;32mI (164) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (166) app_init: Application information:[0m
+[0;32mI (170) app_init: Project name:     CurrentMonitor[0m
+[0;32mI (174) app_init: App version:      1[0m
+[0;32mI (178) app_init: Compile time:     Dec  8 2025 17:05:14[0m
+[0;32mI (183) app_init: ELF file SHA256:  4f7046508...[0m
+[0;32mI (187) app_init: ESP-IDF:          v6.1-dev-1-gff97953b32-dirty[0m
+[0;32mI (193) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (197) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (200) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (204) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (211) heap_init: At 4080DCF0 len 0006E920 (442 KiB): RAM[0m
+[0;32mI (216) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (221) heap_init: At 50000020 len 00003FC8 (15 KiB): RTCRAM[0m
+[0;32mI (227) spi_flash: detected chip: generic[0m
+[0;32mI (230) spi_flash: flash io: dio[0m
+[0;33mW (233) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (246) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (251) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (258) coexist: coex firmware version: 0cec0ed[0m
+[0;32mI (276) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (277) main_task: Started on CPU0[0m
+[0;32mI (277) main_task: Calling app_main()[0m
+[0;32mI (277) PinController: Pin Already Used: 1[0m
+[0;32mI (347) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (687) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (1017) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (1357) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (1687) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (2017) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (2357) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (2687) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (3017) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (3357) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (3687) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (4017) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (4357) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (4687) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (5017) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (5357) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (5687) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (6027) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (6357) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (6687) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (7027) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (7357) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (7687) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (8027) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (8357) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (8687) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (9027) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (9357) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (9697) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (10027) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (10357) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (10697) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (11027) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (11357) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (11697) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (12027) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (12357) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (12697) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (13027) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (13367) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (13697) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (14027) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (14367) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (14697) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (15027) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (15367) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (15697) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (16027) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (16367) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (16697) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (17027) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (17367) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (17697) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (18037) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (18367) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (18697) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (19037) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (19367) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (19697) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (20037) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (20367) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (20697) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (21037) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (21367) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (21707) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (22037) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (22367) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (22707) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (23037) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (23367) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (23707) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (24037) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (24367) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (24707) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (25037) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (25377) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (25707) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (26037) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (26377) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (26707) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (27037) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (27377) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (27707) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (28037) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (28377) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (28707) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (29047) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (29377) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (29707) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (30047) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (30377) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (30707) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (31047) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (31377) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (31707) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (32047) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (32377) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (32717) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (33047) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (33377) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (33717) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (34047) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (34377) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (34717) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (35047) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (35377) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (35717) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (36047) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (36377) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (36717) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (37047) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (37387) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (37717) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (38047) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (38387) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (38717) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (39047) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (39387) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (39717) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (40047) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (40387) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (40717) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (41057) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (41387) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (41717) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (42057) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (42387) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (42717) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (43057) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (43387) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (43717) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (44057) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (44387) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (44727) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (45057) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (45387) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (45727) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (46057) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (46387) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (46727) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (47057) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (47387) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (47727) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (48057) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (48397) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (48727) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (49057) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (49397) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (49727) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (50057) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (50397) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (50727) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (51057) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (51397) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (51727) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (52057) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (52397) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (52727) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (53067) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (53397) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (53727) Lcd Controller: Data Invalid: -1[0m

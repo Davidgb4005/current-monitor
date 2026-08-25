@@ -1,0 +1,35 @@
+Command: /home/esp/.espressif/python_env/idf6.1_py3.13_env/bin/python /home/esp/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c6 --revision 0 --decode-panic backtrace /home/esp/esp/CurrentMonitor/build/CurrentMonitor.elf /home/esp/esp/CurrentMonitor/build/bootloader/bootloader.elf -m '/home/esp/.espressif/python_env/idf6.1_py3.13_env/bin/python' '/home/esp/esp/esp-idf/tools/idf.py'
+[0;33m--- esp-idf-monitor 1.8.0 on /dev/ttyUSB0 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/home/esp/esp/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m40[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/home/esp/esp/esp-idf/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/home/esp/esp/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200c80a: [0;33mLcdDisplay::EncodeFloat(char*, float, int)[0m[0m at [0;32m/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp[0m[0m:[1;31m294[0m
+[0m--- 0x4200a140: [0;33mapp_main[0m[0m at [0;32m/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp[0m[0m:[1;31m160[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/home/esp/esp/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0m--- 0x4002fec4: [0;33mrounding[0m[0m in [0;32mROM[0m
+[0m--- 0x4200a0b8: [0;33mapp_main[0m[0m at [0;32m/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp[0m[0m:[1;31m152[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/home/esp/esp/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0m--- 0x40030372: [0;33m_rvfp__floatsisf[0m[0m in [0;32mROM[0m
+[0m--- 0x4200c858: [0;33mLcdDisplay::EncodeFloat(char*, float, int)[0m[0m at [0;32m/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp[0m[0m:[1;31m309[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/home/esp/esp/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0m--- 0x4002fe74: [0;33msum[0m[0m in [0;32mROM[0m
+[0m--- 0x4200a0b8: [0;33mapp_main[0m[0m at [0;32m/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp[0m[0m:[1;31m152[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/home/esp/esp/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0m--- 0x4200a0e2: [0;33mapp_main[0m[0m at [0;32m/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp[0m[0m:[1;31m153[0m
+[0m--- 0x4200a0c0: [0;33mapp_main[0m[0m at [0;32m/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp[0m[0m:[1;31m152[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/home/esp/esp/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0m--- 0x4200c944: [0;33mLcdDisplay::EncodeFloat(char*, float, int)[0m[0m at [0;32m/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp[0m[0m:[1;31m333[0m
+[0m--- 0x4200c876: [0;33mLcdDisplay::EncodeFloat(char*, float, int)[0m[0m at [0;32m/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp[0m[0m:[1;31m313[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/home/esp/esp/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0m--- 0x4200c696: [0;33mLcdDisplay::WriteDecimalAlign(char*, signed char, unsigned char, unsigned char, unsigned char)[0m[0m at [0;32m/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp[0m[0m:[1;31m200[0m
+[0m--- 0x4200a162: [0;33mapp_main[0m[0m at [0;32m/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp[0m[0m:[1;31m171[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/home/esp/esp/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0m--- 0x4200c4e0: [0;33mLcdDisplay::WriteRightAlign(char*, signed char, unsigned char, unsigned char, unsigned char)[0m[0m at [0;32m/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp[0m[0m:[1;31m126[0m
+[0m--- 0x4200a130: [0;33mapp_main[0m[0m at [0;32m/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp[0m[0m:[1;31m160[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/home/esp/esp/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0m--- 0x4200c542: [0;33mLcdDisplay::WriteRightAlign(char*, signed char, unsigned char, unsigned char, unsigned char)[0m[0m at [0;32m/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp[0m[0m:[1;31m148[0m
+[0m--- 0x4200a130: [0;33mapp_main[0m[0m at [0;32m/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp[0m[0m:[1;31m160[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/home/esp/esp/esp-idf/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0m

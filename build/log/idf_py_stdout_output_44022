@@ -1,0 +1,37 @@
+Command: ninja all
+[1/12] Building CXX object esp-idf/LcdDisplay/CMakeFiles/__idf_LcdDisplay.dir/LcdDisplayConfig.cpp.obj
+[2/12] Performing build step for 'bootloader'
+[1/1] cd /home/esp/esp/CurrentMonitor/build/bootloader && /home/esp/.espressif/python_env/idf6.1_py3.13_env/bin/python /home/esp/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/esp/esp/CurrentMonitor/build/bootloader/bootloader.bin
+Bootloader binary size 0x58d0 bytes. 0x2730 bytes (31%) free.
+[3/12] No install step for 'bootloader'
+[4/12] Completed 'bootloader'
+[5/12] Building CXX object esp-idf/LcdDisplay/CMakeFiles/__idf_LcdDisplay.dir/LcdDisplay.cpp.obj
+[6/12] Linking C static library esp-idf/LcdDisplay/libLcdDisplay.a
+[7/12] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/CurrentMonitor.cpp.obj
+/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp: In function 'int app_main()':
+/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:92:19: warning: unused variable 'lion_1_volt' [-Wunused-variable]
+   92 |             float lion_1_volt = 15 * lion_1_voltage.Read() / 4096.0;
+      |                   ^~~~~~~~~~~
+/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:94:19: warning: unused variable 'lion_1_cur' [-Wunused-variable]
+   94 |             float lion_1_cur = lion_1_current.Read() * .173 - lion_1_offset;
+      |                   ^~~~~~~~~~
+/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:46:11: warning: variable 'current_buffer' set but not used [-Wunused-but-set-variable]
+   46 |     float current_buffer = 0;
+      |           ^~~~~~~~~~~~~~
+/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:47:11: warning: variable 'voltage_buffer' set but not used [-Wunused-but-set-variable]
+   47 |     float voltage_buffer = 0;
+      |           ^~~~~~~~~~~~~~
+/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:48:11: warning: unused variable 'temperature_buffer' [-Wunused-variable]
+   48 |     float temperature_buffer = 0;
+      |           ^~~~~~~~~~~~~~~~~~
+[8/12] Linking C static library esp-idf/main/libmain.a
+[9/12] Generating esp-idf/esp_system/ld/sections.ld
+[10/12] Linking CXX executable CurrentMonitor.elf
+[11/12] Generating binary image from built executable
+esptool v5.1.0
+Creating ESP32C6 image...
+Merged 1 ELF section.
+Successfully created ESP32C6 image.
+Generated /home/esp/esp/CurrentMonitor/build/CurrentMonitor.bin
+[12/12] cd /home/esp/esp/CurrentMonitor/build && /home/esp/.espressif/python_env/idf6.1_py3.13_env/bin/python /home/esp/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/esp/esp/CurrentMonitor/build/partition_table/partition-table.bin /home/esp/esp/CurrentMonitor/build/CurrentMonitor.bin
+CurrentMonitor.bin binary size 0x300f0 bytes. Smallest app partition is 0x100000 bytes. 0xcff10 bytes (81%) free.

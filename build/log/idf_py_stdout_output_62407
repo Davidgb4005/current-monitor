@@ -1,0 +1,447 @@
+Command: /home/esp/.espressif/python_env/idf6.1_py3.13_env/bin/python /home/esp/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c6 --revision 0 --decode-panic backtrace /home/esp/esp/CurrentMonitor/build/CurrentMonitor.elf /home/esp/esp/CurrentMonitor/build/bootloader/bootloader.elf -m '/home/esp/.espressif/python_env/idf6.1_py3.13_env/bin/python' '/home/esp/esp/esp-idf/tools/idf.py'
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0xc (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875730,len:0x175c
+load:0x4086b910,len:0xed4
+load:0x4086e610,len:0x3244
+entry 0x4086b91a
+[0;32mI (23) boot: ESP-IDF v6.1-dev-1-gff97953b32-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Dec  4 2025 14:13:05[0m
+[0;32mI (24) boot: chip revision: v0.2[0m
+[0;32mI (25) boot: efuse block revision: v0.3[0m
+[0;32mI (29) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (33) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (37) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (40) boot: Enabling RNG early entropy source...[0m
+[0;32mI (45) boot: Partition Table:[0m
+[0;32mI (47) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (54) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (60) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (67) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (73) boot: End of partition table[0m
+[0;32mI (77) esp_image: segment 0: paddr=00010020 vaddr=42020020 size=0bfc0h ( 49088) map[0m
+[0;32mI (93) esp_image: segment 1: paddr=0001bfe8 vaddr=40800000 size=04030h ( 16432) load[0m
+[0;32mI (98) esp_image: segment 2: paddr=00020020 vaddr=42000020 size=1e6ach (124588) map[0m
+[0;32mI (122) esp_image: segment 3: paddr=0003e6d4 vaddr=40804030 size=07004h ( 28676) load[0m
+[0;32mI (129) esp_image: segment 4: paddr=000456e0 vaddr=4080b040 size=01c4ch (  7244) load[0m
+[0;32mI (131) esp_image: segment 5: paddr=00047334 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (136) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (139) boot: Disabling RNG early entropy source...[0m
+[0;32mI (155) cpu_start: Unicore app[0m
+[0;32mI (164) cpu_start: GPIO 17 and 16 are used as console UART I/O pins[0m
+[0;32mI (164) cpu_start: Pro cpu start user code[0m
+[0;32mI (164) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (166) app_init: Application information:[0m
+[0;32mI (170) app_init: Project name:     CurrentMonitor[0m
+[0;32mI (174) app_init: App version:      1[0m
+[0;32mI (178) app_init: Compile time:     Dec  8 2025 17:05:14[0m
+[0;32mI (183) app_init: ELF file SHA256:  610f9a631...[0m
+[0;32mI (187) app_init: ESP-IDF:          v6.1-dev-1-gff97953b32-dirty[0m
+[0;32mI (193) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (197) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (200) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (204) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (211) heap_init: At 4080DCF0 len 0006E920 (442 KiB): RAM[0m
+[0;32mI (216) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (221) heap_init: At 50000020 len 00003FC8 (15 KiB): RTCRAM[0m
+[0;32mI (227) spi_flash: detected chip: generic[0m
+[0;32mI (230) spi_flash: flash io: dio[0m
+[0;33mW (233) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (246) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (251) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (258) coexist: coex firmware version: 0cec0ed[0m
+[0;32mI (276) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (277) main_task: Started on CPU0[0m
+[0;32mI (277) main_task: Calling app_main()[0m
+[0;32mI (277) PinController: Pin Already Used: 1[0m
+[0;32mI (347) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (687) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (1017) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (1357) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (1687) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (2017) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (2357) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (2687) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (3017) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (3017) Lcd Controller: return value: 49[0m
+[0;32mI (3017) Lcd Controller: return value: 104[0m
+[0;32mI (3017) Lcd Controller: return value: 49[0m
+[0;32mI (3027) Lcd Controller: return value: 104[0m
+[0;32mI (3357) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (3357) Lcd Controller: return value: 49[0m
+[0;32mI (3357) Lcd Controller: return value: 104[0m
+[0;32mI (3357) Lcd Controller: return value: 49[0m
+[0;32mI (3367) Lcd Controller: return value: 104[0m
+[0;32mI (3707) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (3707) Lcd Controller: return value: 51[0m
+[0;32mI (3707) Lcd Controller: return value: 104[0m
+[0;32mI (3707) Lcd Controller: return value: 51[0m
+[0;32mI (3707) Lcd Controller: return value: 104[0m
+[0;32mI (4047) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (4047) Lcd Controller: return value: 53[0m
+[0;32mI (4047) Lcd Controller: return value: 104[0m
+[0;32mI (4047) Lcd Controller: return value: 53[0m
+[0;32mI (4047) Lcd Controller: return value: 104[0m
+[0;32mI (4387) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (4387) Lcd Controller: return value: 54[0m
+[0;32mI (4387) Lcd Controller: return value: 104[0m
+[0;32mI (4387) Lcd Controller: return value: 54[0m
+[0;32mI (4387) Lcd Controller: return value: 104[0m
+[0;32mI (4727) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (4727) Lcd Controller: return value: 54[0m
+[0;32mI (4727) Lcd Controller: return value: 104[0m
+[0;32mI (4727) Lcd Controller: return value: 54[0m
+[0;32mI (4727) Lcd Controller: return value: 104[0m
+[0;32mI (5067) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (5067) Lcd Controller: return value: 54[0m
+[0;32mI (5067) Lcd Controller: return value: 104[0m
+[0;32mI (5067) Lcd Controller: return value: 54[0m
+[0;32mI (5067) Lcd Controller: return value: 104[0m
+[0;32mI (5407) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (5407) Lcd Controller: return value: 54[0m
+[0;32mI (5407) Lcd Controller: return value: 104[0m
+[0;32mI (5407) Lcd Controller: return value: 54[0m
+[0;32mI (5417) Lcd Controller: return value: 104[0m
+[0;32mI (5747) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (5747) Lcd Controller: return value: 54[0m
+[0;32mI (5747) Lcd Controller: return value: 104[0m
+[0;32mI (5747) Lcd Controller: return value: 54[0m
+[0;32mI (5757) Lcd Controller: return value: 104[0m
+[0;32mI (6087) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (6087) Lcd Controller: return value: 54[0m
+[0;32mI (6087) Lcd Controller: return value: 104[0m
+[0;32mI (6087) Lcd Controller: return value: 54[0m
+[0;32mI (6097) Lcd Controller: return value: 104[0m
+[0;32mI (6437) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (6437) Lcd Controller: return value: 54[0m
+[0;32mI (6437) Lcd Controller: return value: 104[0m
+[0;32mI (6437) Lcd Controller: return value: 54[0m
+[0;32mI (6437) Lcd Controller: return value: 104[0m
+[0;32mI (6777) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (6777) Lcd Controller: return value: 54[0m
+[0;32mI (6777) Lcd Controller: return value: 104[0m
+[0;32mI (6777) Lcd Controller: return value: 54[0m
+[0;32mI (6777) Lcd Controller: return value: 104[0m
+[0;32mI (7117) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (7117) Lcd Controller: return value: 54[0m
+[0;32mI (7117) Lcd Controller: return value: 104[0m
+[0;32mI (7117) Lcd Controller: return value: 54[0m
+[0;32mI (7117) Lcd Controller: return value: 104[0m
+[0;32mI (7457) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (7457) Lcd Controller: return value: 54[0m
+[0;32mI (7457) Lcd Controller: return value: 104[0m
+[0;32mI (7457) Lcd Controller: return value: 54[0m
+[0;32mI (7457) Lcd Controller: return value: 104[0m
+[0;32mI (7797) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (7797) Lcd Controller: return value: 54[0m
+[0;32mI (7797) Lcd Controller: return value: 104[0m
+[0;32mI (7797) Lcd Controller: return value: 54[0m
+[0;32mI (7797) Lcd Controller: return value: 104[0m
+[0;32mI (8137) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (8137) Lcd Controller: return value: 54[0m
+[0;32mI (8137) Lcd Controller: return value: 104[0m
+[0;32mI (8137) Lcd Controller: return value: 54[0m
+[0;32mI (8147) Lcd Controller: return value: 104[0m
+[0;32mI (8477) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (8477) Lcd Controller: return value: 54[0m
+[0;32mI (8477) Lcd Controller: return value: 104[0m
+[0;32mI (8477) Lcd Controller: return value: 54[0m
+[0;32mI (8487) Lcd Controller: return value: 104[0m
+[0;32mI (8817) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (8817) Lcd Controller: return value: 54[0m
+[0;32mI (8827) Lcd Controller: return value: 104[0m
+[0;32mI (8827) Lcd Controller: return value: 54[0m
+[0;32mI (8827) Lcd Controller: return value: 104[0m
+[0;32mI (9167) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (9167) Lcd Controller: return value: 54[0m
+[0;32mI (9167) Lcd Controller: return value: 104[0m
+[0;32mI (9167) Lcd Controller: return value: 54[0m
+[0;32mI (9167) Lcd Controller: return value: 104[0m
+[0;32mI (9507) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (9507) Lcd Controller: return value: 54[0m
+[0;32mI (9507) Lcd Controller: return value: 104[0m
+[0;32mI (9507) Lcd Controller: return value: 54[0m
+[0;32mI (9507) Lcd Controller: return value: 104[0m
+[0;32mI (9847) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (9847) Lcd Controller: return value: 54[0m
+[0;32mI (9847) Lcd Controller: return value: 104[0m
+[0;32mI (9847) Lcd Controller: return value: 54[0m
+[0;32mI (9847) Lcd Controller: return value: 104[0m
+[0;32mI (10187) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (10187) Lcd Controller: return value: 54[0m
+[0;32mI (10187) Lcd Controller: return value: 104[0m
+[0;32mI (10187) Lcd Controller: return value: 54[0m
+[0;32mI (10187) Lcd Controller: return value: 104[0m
+[0;32mI (10527) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (10527) Lcd Controller: return value: 54[0m
+[0;32mI (10527) Lcd Controller: return value: 104[0m
+[0;32mI (10527) Lcd Controller: return value: 54[0m
+[0;32mI (10537) Lcd Controller: return value: 104[0m
+[0;32mI (10867) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (10867) Lcd Controller: return value: 54[0m
+[0;32mI (10867) Lcd Controller: return value: 104[0m
+[0;32mI (10867) Lcd Controller: return value: 54[0m
+[0;32mI (10877) Lcd Controller: return value: 104[0m
+[0;32mI (11217) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (11217) Lcd Controller: return value: 54[0m
+[0;32mI (11217) Lcd Controller: return value: 104[0m
+[0;32mI (11217) Lcd Controller: return value: 54[0m
+[0;32mI (11217) Lcd Controller: return value: 104[0m
+[0;32mI (11557) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (11557) Lcd Controller: return value: 54[0m
+[0;32mI (11557) Lcd Controller: return value: 104[0m
+[0;32mI (11557) Lcd Controller: return value: 54[0m
+[0;32mI (11557) Lcd Controller: return value: 104[0m
+[0;32mI (11897) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (11897) Lcd Controller: return value: 54[0m
+[0;32mI (11897) Lcd Controller: return value: 104[0m
+[0;32mI (11897) Lcd Controller: return value: 54[0m
+[0;32mI (11897) Lcd Controller: return value: 104[0m
+[0;32mI (12237) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (12237) Lcd Controller: return value: 54[0m
+[0;32mI (12237) Lcd Controller: return value: 104[0m
+[0;32mI (12237) Lcd Controller: return value: 54[0m
+[0;32mI (12237) Lcd Controller: return value: 104[0m
+[0;32mI (12577) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (12577) Lcd Controller: return value: 54[0m
+[0;32mI (12577) Lcd Controller: return value: 104[0m
+[0;32mI (12577) Lcd Controller: return value: 54[0m
+[0;32mI (12587) Lcd Controller: return value: 104[0m
+[0;32mI (12917) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (12917) Lcd Controller: return value: 54[0m
+[0;32mI (12917) Lcd Controller: return value: 104[0m
+[0;32mI (12917) Lcd Controller: return value: 54[0m
+[0;32mI (12927) Lcd Controller: return value: 104[0m
+[0;32mI (13267) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (13267) Lcd Controller: return value: 54[0m
+[0;32mI (13267) Lcd Controller: return value: 104[0m
+[0;32mI (13267) Lcd Controller: return value: 54[0m
+[0;32mI (13267) Lcd Controller: return value: 104[0m
+[0;32mI (13607) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (13607) Lcd Controller: return value: 54[0m
+[0;32mI (13607) Lcd Controller: return value: 104[0m
+[0;32mI (13607) Lcd Controller: return value: 54[0m
+[0;32mI (13607) Lcd Controller: return value: 104[0m
+[0;32mI (13947) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (13947) Lcd Controller: return value: 54[0m
+[0;32mI (13947) Lcd Controller: return value: 104[0m
+[0;32mI (13947) Lcd Controller: return value: 54[0m
+[0;32mI (13947) Lcd Controller: return value: 104[0m
+[0;32mI (14287) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (14287) Lcd Controller: return value: 54[0m
+[0;32mI (14287) Lcd Controller: return value: 104[0m
+[0;32mI (14287) Lcd Controller: return value: 54[0m
+[0;32mI (14287) Lcd Controller: return value: 104[0m
+[0;32mI (14627) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (14627) Lcd Controller: return value: 54[0m
+[0;32mI (14627) Lcd Controller: return value: 104[0m
+[0;32mI (14627) Lcd Controller: return value: 54[0m
+[0;32mI (14637) Lcd Controller: return value: 104[0m
+[0;32mI (14967) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (14967) Lcd Controller: return value: 54[0m
+[0;32mI (14967) Lcd Controller: return value: 104[0m
+[0;32mI (14967) Lcd Controller: return value: 54[0m
+[0;32mI (14977) Lcd Controller: return value: 104[0m
+[0;32mI (15317) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (15317) Lcd Controller: return value: 54[0m
+[0;32mI (15317) Lcd Controller: return value: 104[0m
+[0;32mI (15317) Lcd Controller: return value: 54[0m
+[0;32mI (15317) Lcd Controller: return value: 104[0m
+[0;32mI (15657) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (15657) Lcd Controller: return value: 54[0m
+[0;32mI (15657) Lcd Controller: return value: 104[0m
+[0;32mI (15657) Lcd Controller: return value: 54[0m
+[0;32mI (15657) Lcd Controller: return value: 104[0m
+[0;32mI (15997) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (15997) Lcd Controller: return value: 54[0m
+[0;32mI (15997) Lcd Controller: return value: 104[0m
+[0;32mI (15997) Lcd Controller: return value: 54[0m
+[0;32mI (15997) Lcd Controller: return value: 104[0m
+[0;32mI (16337) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (16337) Lcd Controller: return value: 54[0m
+[0;32mI (16337) Lcd Controller: return value: 104[0m
+[0;32mI (16337) Lcd Controller: return value: 54[0m
+[0;32mI (16347) Lcd Controller: return value: 104[0m
+[0;32mI (16677) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (16677) Lcd Controller: return value: 54[0m
+[0;32mI (16677) Lcd Controller: return value: 104[0m
+[0;32mI (16677) Lcd Controller: return value: 54[0m
+[0;32mI (16687) Lcd Controller: return value: 104[0m
+[0;32mI (17017) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (17017) Lcd Controller: return value: 54[0m
+[0;32mI (17017) Lcd Controller: return value: 104[0m
+[0;32mI (17017) Lcd Controller: return value: 54[0m
+[0;32mI (17027) Lcd Controller: return value: 104[0m
+[0;32mI (17367) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (17367) Lcd Controller: return value: 54[0m
+[0;32mI (17367) Lcd Controller: return value: 104[0m
+[0;32mI (17367) Lcd Controller: return value: 54[0m
+[0;32mI (17367) Lcd Controller: return value: 104[0m
+[0;32mI (17707) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (17707) Lcd Controller: return value: 54[0m
+[0;32mI (17707) Lcd Controller: return value: 104[0m
+[0;32mI (17707) Lcd Controller: return value: 54[0m
+[0;32mI (17707) Lcd Controller: return value: 104[0m
+[0;32mI (18047) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (18047) Lcd Controller: return value: 54[0m
+[0;32mI (18047) Lcd Controller: return value: 104[0m
+[0;32mI (18047) Lcd Controller: return value: 54[0m
+[0;32mI (18047) Lcd Controller: return value: 104[0m
+[0;32mI (18387) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (18387) Lcd Controller: return value: 54[0m
+[0;32mI (18387) Lcd Controller: return value: 104[0m
+[0;32mI (18387) Lcd Controller: return value: 54[0m
+[0;32mI (18397) Lcd Controller: return value: 104[0m
+[0;32mI (18727) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (18727) Lcd Controller: return value: 54[0m
+[0;32mI (18727) Lcd Controller: return value: 104[0m
+[0;32mI (18727) Lcd Controller: return value: 54[0m
+[0;32mI (18737) Lcd Controller: return value: 104[0m
+[0;32mI (19067) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (19067) Lcd Controller: return value: 54[0m
+[0;32mI (19067) Lcd Controller: return value: 104[0m
+[0;32mI (19067) Lcd Controller: return value: 54[0m
+[0;32mI (19077) Lcd Controller: return value: 104[0m
+[0;32mI (19417) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (19417) Lcd Controller: return value: 54[0m
+[0;32mI (19417) Lcd Controller: return value: 104[0m
+[0;32mI (19417) Lcd Controller: return value: 54[0m
+[0;32mI (19417) Lcd Controller: return value: 104[0m
+[0;32mI (19757) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (19757) Lcd Controller: return value: 54[0m
+[0;32mI (19757) Lcd Controller: return value: 104[0m
+[0;32mI (19757) Lcd Controller: return value: 54[0m
+[0;32mI (19757) Lcd Controller: return value: 104[0m
+[0;32mI (20097) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (20097) Lcd Controller: return value: 54[0m
+[0;32mI (20097) Lcd Controller: return value: 104[0m
+[0;32mI (20097) Lcd Controller: return value: 54[0m
+[0;32mI (20097) Lcd Controller: return value: 104[0m
+[0;32mI (20437) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (20437) Lcd Controller: return value: 54[0m
+[0;32mI (20437) Lcd Controller: return value: 104[0m
+[0;32mI (20437) Lcd Controller: return value: 54[0m
+[0;32mI (20447) Lcd Controller: return value: 104[0m
+[0;32mI (20777) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (20777) Lcd Controller: return value: 54[0m
+[0;32mI (20777) Lcd Controller: return value: 104[0m
+[0;32mI (20777) Lcd Controller: return value: 54[0m
+[0;32mI (20787) Lcd Controller: return value: 104[0m
+[0;32mI (21117) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (21117) Lcd Controller: return value: 54[0m
+[0;32mI (21117) Lcd Controller: return value: 104[0m
+[0;32mI (21127) Lcd Controller: return value: 54[0m
+[0;32mI (21127) Lcd Controller: return value: 104[0m
+[0;32mI (21467) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (21467) Lcd Controller: return value: 54[0m
+[0;32mI (21467) Lcd Controller: return value: 104[0m
+[0;32mI (21467) Lcd Controller: return value: 54[0m
+[0;32mI (21467) Lcd Controller: return value: 104[0m
+[0;32mI (21807) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (21807) Lcd Controller: return value: 54[0m
+[0;32mI (21807) Lcd Controller: return value: 104[0m
+[0;32mI (21807) Lcd Controller: return value: 54[0m
+[0;32mI (21807) Lcd Controller: return value: 104[0m
+[0;32mI (22147) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (22147) Lcd Controller: return value: 54[0m
+[0;32mI (22147) Lcd Controller: return value: 104[0m
+[0;32mI (22147) Lcd Controller: return value: 54[0m
+[0;32mI (22147) Lcd Controller: return value: 104[0m
+[0;32mI (22487) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (22487) Lcd Controller: return value: 54[0m
+[0;32mI (22487) Lcd Controller: return value: 104[0m
+[0;32mI (22487) Lcd Controller: return value: 54[0m
+[0;32mI (22497) Lcd Controller: return value: 104[0m
+[0;32mI (22827) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (22827) Lcd Controller: return value: 54[0m
+[0;32mI (22827) Lcd Controller: return value: 104[0m
+[0;32mI (22827) Lcd Controller: return value: 54[0m
+[0;32mI (22837) Lcd Controller: return value: 104[0m
+[0;32mI (23167) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (23177) Lcd Controller: return value: 54[0m
+[0;32mI (23177) Lcd Controller: return value: 104[0m
+[0;32mI (23177) Lcd Controller: return value: 54[0m
+[0;32mI (23177) Lcd Controller: return value: 104[0m
+[0;32mI (23517) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (23517) Lcd Controller: return value: 54[0m
+[0;32mI (23517) Lcd Controller: return value: 104[0m
+[0;32mI (23517) Lcd Controller: return value: 54[0m
+[0;32mI (23517) Lcd Controller: return value: 104[0m
+[0;32mI (23857) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (23857) Lcd Controller: return value: 54[0m
+[0;32mI (23857) Lcd Controller: return value: 104[0m
+[0;32mI (23857) Lcd Controller: return value: 54[0m
+[0;32mI (23857) Lcd Controller: return value: 104[0m
+[0;32mI (24197) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (24197) Lcd Controller: return value: 54[0m
+[0;32mI (24197) Lcd Controller: return value: 104[0m
+[0;32mI (24197) Lcd Controller: return value: 54[0m
+[0;32mI (24197) Lcd Controller: return value: 104[0m
+[0;32mI (24537) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (24537) Lcd Controller: return value: 54[0m
+[0;32mI (24537) Lcd Controller: return value: 104[0m
+[0;32mI (24537) Lcd Controller: return value: 54[0m
+[0;32mI (24547) Lcd Controller: return value: 104[0m
+[0;32mI (24877) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (24877) Lcd Controller: return value: 54[0m
+[0;32mI (24877) Lcd Controller: return value: 104[0m
+[0;32mI (24877) Lcd Controller: return value: 54[0m
+[0;32mI (24887) Lcd Controller: return value: 104[0m
+[0;32mI (25227) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (25227) Lcd Controller: return value: 54[0m
+[0;32mI (25227) Lcd Controller: return value: 104[0m
+[0;32mI (25227) Lcd Controller: return value: 54[0m
+[0;32mI (25227) Lcd Controller: return value: 104[0m
+[0;32mI (25567) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (25567) Lcd Controller: return value: 54[0m
+[0;32mI (25567) Lcd Controller: return value: 104[0m
+[0;32mI (25567) Lcd Controller: return value: 54[0m
+[0;32mI (25567) Lcd Controller: return value: 104[0m
+[0;32mI (25907) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (25907) Lcd Controller: return value: 54[0m
+[0;32mI (25907) Lcd Controller: return value: 104[0m
+[0;32mI (25907) Lcd Controller: return value: 54[0m
+[0;32mI (25907) Lcd Controller: return value: 104[0m
+[0;32mI (26247) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (26247) Lcd Controller: return value: 54[0m
+[0;32mI (26247) Lcd Controller: return value: 104[0m
+[0;32mI (26247) Lcd Controller: return value: 54[0m
+[0;32mI (26247) Lcd Controller: return value: 104[0m
+[0;32mI (26587) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (26587) Lcd Controller: return value: 54[0m
+[0;32mI (26587) Lcd Controller: return value: 104[0m
+[0;32mI (26587) Lcd Controller: return value: 54[0m
+[0;32mI (26597) Lcd Controller: return value: 104[0m
+[0;32mI (26927) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (26927) Lcd Controller: return value: 54[0m
+[0;32mI (26927) Lcd Controller: return value: 104[0m
+[0;32mI (26927) Lcd Controller: return value: 54[0m
+[0;32mI (26937) Lcd Controller: return value: 104[0m
+[0;32mI (27277) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (27277) Lcd Controller: return value: 54[0m
+[0;32mI (27277) Lcd Controller: return value: 104[0m
+[0;32mI (27277) Lcd Controller: return value: 54[0m
+[0;32mI (27277) Lcd Controller: return value: 104[0m
+[0;32mI (27617) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (27617) Lcd Controller: return value: 54[0m
+[0;32mI (27617) Lcd Controller: return value: 104[0m
+[0;32mI (27617) Lcd Controller: return value: 54[0m
+[0;32mI (27617) Lcd Controller: return value: 104[0m
+[0;32mI (27957) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (27957) Lcd Controller: return value: 54[0m
+[0;32mI (27957) Lcd Controller: return value: 104[0m
+[0;32mI (27957) Lcd Controller: return value: 54[0m
+[0;32mI (27957) Lcd Controller: return value: 104[0m
+[0;32mI (28297) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (28297) Lcd Controller: return value: 54[0m
+[0;32mI (28297) Lcd Controller: return value: 104[0m
+[0;32mI (28297) Lcd Controller: return value: 54[0m
+[0;32mI (28297) Lcd Controller: return value: 104[0m
+[0;32mI (28637) Lcd Controller: Data Invalid: -1[0m
+[0;32mI (28637) Lcd Controller: return value: 54[0m
+[0;32mI (28637) Lcd Controller: return value: 104[0m
+[0;32mI (28637) Lcd Controller: return value: 54[0m
+[0;32mI (28647) Lcd Controller: return value: 104[0m

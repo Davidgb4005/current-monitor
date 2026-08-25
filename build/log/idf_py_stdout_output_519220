@@ -1,0 +1,10 @@
+Command: ninja flash
+[0/1] Re-running CMake...
+-- Component directory /home/esp/esp/CurrentMonitor/components/component2 does not contain a CMakeLists.txt file. No component will be added
+-- Minimal build - OFF
+-- git rev-parse returned 'fatal: not a git repository (or any of the parent directories): .git'
+-- Could not use 'git describe' to determine PROJECT_VER.
+-- Building ESP-IDF components for target esp32c6
+-- Configuring incomplete, errors occurred!
+[31mFAILED: [0mbuild.ninja 
+/usr/bin/cmake --regenerate-during-build -S/home/esp/esp/CurrentMonitor -B/home/esp/esp/CurrentMonitor/build

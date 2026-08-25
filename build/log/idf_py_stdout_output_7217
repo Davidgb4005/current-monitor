@@ -1,0 +1,103 @@
+Command: ninja all
+[1/11] Performing build step for 'bootloader'
+[1/1] cd /home/esp/esp/CurrentMonitor/build/bootloader && /home/esp/.espressif/python_env/idf6.1_py3.13_env/bin/python /home/esp/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/esp/esp/CurrentMonitor/build/bootloader/bootloader.bin
+Bootloader binary size 0x58d0 bytes. 0x2730 bytes (31%) free.
+[2/11] No install step for 'bootloader'
+[3/11] Building CXX object esp-idf/LcdDisplay/CMakeFiles/__idf_LcdDisplay.dir/LcdDisplay.cpp.obj
+FAILED: esp-idf/LcdDisplay/CMakeFiles/__idf_LcdDisplay.dir/LcdDisplay.cpp.obj 
+/home/esp/.espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/riscv32-esp-elf-g++ -DESP_PLATFORM -DIDF_VER=\"v6.1-dev-1-gff97953b32-dirty\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -I/home/esp/esp/CurrentMonitor/build/config -I/home/esp/esp/CurrentMonitor/components/LcdDisplay -I/home/esp/esp/esp-idf/components/esp_libc/platform_include -I/home/esp/esp/esp-idf/components/freertos/config/include -I/home/esp/esp/esp-idf/components/freertos/config/include/freertos -I/home/esp/esp/esp-idf/components/freertos/config/riscv/include -I/home/esp/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include -I/home/esp/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/include -I/home/esp/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/include/freertos -I/home/esp/esp/esp-idf/components/freertos/esp_additions/include -I/home/esp/esp/esp-idf/components/esp_hw_support/include -I/home/esp/esp/esp-idf/components/esp_hw_support/include/soc -I/home/esp/esp/esp-idf/components/esp_hw_support/dma/include -I/home/esp/esp/esp-idf/components/esp_hw_support/ldo/include -I/home/esp/esp/esp-idf/components/esp_hw_support/debug_probe/include -I/home/esp/esp/esp-idf/components/esp_hw_support/etm/include -I/home/esp/esp/esp-idf/components/esp_hw_support/mspi_timing_tuning/include -I/home/esp/esp/esp-idf/components/esp_hw_support/mspi_timing_tuning/tuning_scheme_impl/include -I/home/esp/esp/esp-idf/components/esp_hw_support/power_supply/include -I/home/esp/esp/esp-idf/components/esp_hw_support/modem/include -I/home/esp/esp/esp-idf/components/esp_hw_support/port/esp32c6/. -I/home/esp/esp/esp-idf/components/esp_hw_support/port/esp32c6/include -I/home/esp/esp/esp-idf/components/esp_hw_support/port/esp32c6/private_include -I/home/esp/esp/esp-idf/components/heap/include -I/home/esp/esp/esp-idf/components/heap/tlsf -I/home/esp/esp/esp-idf/components/log/include -I/home/esp/esp/esp-idf/components/soc/include -I/home/esp/esp/esp-idf/components/soc/esp32c6 -I/home/esp/esp/esp-idf/components/soc/esp32c6/include -I/home/esp/esp/esp-idf/components/soc/esp32c6/register -I/home/esp/esp/esp-idf/components/hal/platform_port/include -I/home/esp/esp/esp-idf/components/hal/esp32c6/include -I/home/esp/esp/esp-idf/components/hal/include -I/home/esp/esp/esp-idf/components/esp_rom/include -I/home/esp/esp/esp-idf/components/esp_rom/esp32c6/include -I/home/esp/esp/esp-idf/components/esp_rom/esp32c6/include/esp32c6 -I/home/esp/esp/esp-idf/components/esp_rom/esp32c6 -I/home/esp/esp/esp-idf/components/esp_common/include -I/home/esp/esp/esp-idf/components/esp_system/include -I/home/esp/esp/esp-idf/components/esp_system/port/soc -I/home/esp/esp/esp-idf/components/esp_system/port/include/riscv -I/home/esp/esp/esp-idf/components/esp_system/port/include/private -I/home/esp/esp/esp-idf/components/esp_stdio/include -I/home/esp/esp/esp-idf/components/riscv/include -I/home/esp/esp/esp-idf/components/esp_hal_dma/include -I/home/esp/esp/esp-idf/components/esp_hal_dma/esp32c6/include -I/home/esp/esp/esp-idf/components/lwip/include -I/home/esp/esp/esp-idf/components/lwip/include/apps -I/home/esp/esp/esp-idf/components/lwip/lwip/src/include -I/home/esp/esp/esp-idf/components/lwip/port/include -I/home/esp/esp/esp-idf/components/lwip/port/freertos/include -I/home/esp/esp/esp-idf/components/lwip/port/esp32xx/include -I/home/esp/esp/esp-idf/components/lwip/port/esp32xx/include/arch -I/home/esp/esp/esp-idf/components/lwip/port/esp32xx/include/sys -I/home/esp/esp/esp-idf/components/esp_event/include -I/home/esp/esp/esp-idf/components/esp_driver_i2c/include -I/home/esp/esp/esp-idf/components/esp_hal_i2c/esp32c6/include -I/home/esp/esp/esp-idf/components/esp_hal_i2c/include -march=rv32imac_zicsr_zifencei_zaamo_zalrsc  -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-error=extra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -nostartfiles -Og -fno-shrink-wrap -fmacro-prefix-map=/home/esp/esp/CurrentMonitor=. -fmacro-prefix-map=/home/esp/esp/esp-idf=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -std=gnu++26 -fno-exceptions -fno-rtti -fuse-cxa-atexit -MD -MT esp-idf/LcdDisplay/CMakeFiles/__idf_LcdDisplay.dir/LcdDisplay.cpp.obj -MF esp-idf/LcdDisplay/CMakeFiles/__idf_LcdDisplay.dir/LcdDisplay.cpp.obj.d -o esp-idf/LcdDisplay/CMakeFiles/__idf_LcdDisplay.dir/LcdDisplay.cpp.obj -c /home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp
+/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp: In constructor 'LcdDisplay::LcdDisplay(i2c_master_bus_handle_t, uint8_t, uint16_t, i2c_addr_bit_len_t)':
+/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp:23:47: error: cannot convert 'i2c_master_bus_t**' to 'i2c_master_bus_handle_t' {aka 'i2c_master_bus_t*'}
+   23 |     esp_err_t err = i2c_master_bus_add_device(&bus_handle, &dev_config, dev_handle);
+      |                                               ^~~~~~~~~~~
+      |                                               |
+      |                                               i2c_master_bus_t**
+In file included from /home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.hpp:6,
+                 from /home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp:2:
+/home/esp/esp/esp-idf/components/esp_driver_i2c/include/driver/i2c_master.h:135:61: note: initializing argument 1 of 'esp_err_t i2c_master_bus_add_device(i2c_master_bus_handle_t, const i2c_device_config_t*, i2c_master_dev_t**)'
+  135 | esp_err_t i2c_master_bus_add_device(i2c_master_bus_handle_t bus_handle, const i2c_device_config_t *dev_config, i2c_master_dev_handle_t *ret_handle);
+      |                                     ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp: In member function 'void LcdDisplay::update_lcd()':
+/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp:96:35: error: capture of variable 'ROW_LAYOUT' with non-automatic storage duration [-Werror]
+   96 |     for (size_t k = 0; k < sizeof[ROW_LAYOUT] - 1; k++)
+      |                                   ^~~~~~~~~~
+/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp:11:9: note: 'uint8_t ROW_LAYOUT [4]' declared here
+   11 | uint8_t ROW_LAYOUT[] = {0, 2, 1, 3};
+      |         ^~~~~~~~~~
+/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp: In lambda function:
+/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp:96:47: error: expected '{' before '-' token
+   96 |     for (size_t k = 0; k < sizeof[ROW_LAYOUT] - 1; k++)
+      |                                               ^
+/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp: In member function 'void LcdDisplay::update_lcd()':
+/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp:106:39: error: 'row_layout' was not declared in this scope
+  106 |                 lcd_send_char(display[row_layout[k]][i]);
+      |                                       ^~~~~~~~~~
+/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp: In member function 'int8_t LcdDisplay::WriteLeftAlign(char*, int8_t, uint8_t, uint8_t, uint8_t, bool)':
+/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp:157:5: error: expected ';' before 'if'
+  157 |     if (col + (size - 1) + sign_offset > 19 || len < 0 || len > size) // Enusure Data Will Fit
+      |     ^~
+/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp:4:31: error: statement has no effect [-Werror=unused-value]
+    4 | #define I2C_MASTER_TIMEOUT_MS 1000
+      |                               ^~~~
+/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp:156:5: note: in expansion of macro 'I2C_MASTER_TIMEOUT_MS'
+  156 |     I2C_MASTER_TIMEOUT_MS
+      |     ^~~~~~~~~~~~~~~~~~~~~
+/home/esp/esp/CurrentMonitor/components/LcdDisplay/LcdDisplay.cpp:162:5: error: 'else' without a previous 'if'
+  162 |     else
+      |     ^~~~
+cc1plus: all warnings being treated as errors
+[4/11] Completed 'bootloader'
+[5/11] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/CurrentMonitor.cpp.obj
+/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp: In function 'int app_main()':
+/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:151:14: warning: unused variable 'testdatat' [-Wunused-variable]
+  151 |         char testdatat[] = {'b', 'u', 't', ' ', 'd', 'o', 'e', 's', ' ', 't', 'h', 'i', 's', ' ', 'w', 'o', 'r', 'k'};
+      |              ^~~~~~~~~
+/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:49:13: warning: unused variable 'data' [-Wunused-variable]
+   49 |     uint8_t data[2]; // Example: read 14 bytes
+      |             ^~~~
+/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:53:13: warning: unused variable 'freq' [-Wunused-variable]
+   53 |     uint8_t freq = 0;
+      |             ^~~~
+/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:59:13: warning: unused variable 'pin5rx' [-Wunused-variable]
+   59 |     uint8_t pin5rx = 5;
+      |             ^~~~~~
+/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:60:13: warning: unused variable 'pin6tx' [-Wunused-variable]
+   60 |     uint8_t pin6tx = 6;
+      |             ^~~~~~
+/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:61:13: warning: unused variable 'pin7sda' [-Wunused-variable]
+   61 |     uint8_t pin7sda = 21;
+      |             ^~~~~~~
+/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:62:13: warning: unused variable 'pin8scl' [-Wunused-variable]
+   62 |     uint8_t pin8scl = 20;
+      |             ^~~~~~~
+/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:74:10: warning: unused variable 'flip' [-Wunused-variable]
+   74 |     bool flip = true;
+      |          ^~~~
+/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:75:13: warning: unused variable 'counter' [-Wunused-variable]
+   75 |     int16_t counter = 0;
+      |             ^~~~~~~
+/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:77:9: warning: unused variable 'position1' [-Wunused-variable]
+   77 |     int position1 = 20;
+      |         ^~~~~~~~~
+/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:78:9: warning: unused variable 'position2' [-Wunused-variable]
+   78 |     int position2 = 0;
+      |         ^~~~~~~~~
+/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:79:14: warning: unused variable 'last' [-Wunused-variable]
+   79 |     uint64_t last = 0;
+      |              ^~~~
+/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:80:14: warning: unused variable 'last_2' [-Wunused-variable]
+   80 |     uint64_t last_2 = 0;
+      |              ^~~~~~
+/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:81:10: warning: unused variable 'one_shot_2' [-Wunused-variable]
+   81 |     bool one_shot_2 = false;
+      |          ^~~~~~~~~~
+/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:82:10: warning: unused variable 'one_shot' [-Wunused-variable]
+   82 |     bool one_shot = false;
+      |          ^~~~~~~~
+/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:83:13: warning: unused variable 'level_a' [-Wunused-variable]
+   83 |     uint8_t level_a = false;
+      |             ^~~~~~~
+/home/esp/esp/CurrentMonitor/main/CurrentMonitor.cpp:84:13: warning: unused variable 'level_b' [-Wunused-variable]
+   84 |     uint8_t level_b = false;
+      |             ^~~~~~~
+ninja: build stopped: subcommand failed.

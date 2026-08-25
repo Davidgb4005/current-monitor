@@ -1,0 +1,18 @@
+Command: ninja all
+Configuration Report               
+ ───────────────────────────────── 
+   Parser Version: 1               
+   Verbosity: default              
+   Defaults policy: sdkconfig      
+   Status: Finished successfully   
+                                   
+ ───────────────────────────────── 
+CMake Error at /home/esp/esp/esp-idf/tools/cmake/component.cmake:319 (message):
+  Include directory '/home/esp/esp/CurrentMonitor/main/Init' is not a
+  directory.
+Call Stack (most recent call first):
+  /home/esp/esp/esp-idf/tools/cmake/component.cmake:494 (__component_add_include_dirs)
+  main/CMakeLists.txt:1 (idf_component_register)
+
+
+ninja: error: rebuilding 'build.ninja': subcommand failed
