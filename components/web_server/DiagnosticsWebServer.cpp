@@ -12,6 +12,7 @@
 namespace {
 
 const char* kLogTag = "DiagnosticsWebServer";
+const char kOkResponse[] = "{\"status\":\"ok\"}";
 const char kDashboardHtml[] = R"HTML(<!DOCTYPE html>
 <html>
 <head>
@@ -374,7 +375,7 @@ esp_err_t DiagnosticsWebServer::DashboardDataGet(httpd_req_t* req) {
         response,
         sizeof(response),
         "{"
-        "\"alternator\":{\"current\":%.2f,\"currentMax\":%.2f,\"voltage\":%.2f,\"voltageMax\":%.2f,\"offset\":%.2f,\"slope\":%.3f},"
+        "\"alternator\":{\"current\":%.2f,\"currentMax\":%.2f,\"voltage\":%.2f,\"voltageMax\":%.2f,\"offset\":%.2f,\"slope\":%.3f,\"energyJoules\":%.2f},"
         "\"battery\":{\"battery1Voltage\":%.2f,\"battery1Current\":%.2f,\"battery2Voltage\":%.2f,\"battery2Current\":%.2f},"
         "\"heaters\":{\"diesel\":%s,\"electric\":%s,\"engine\":%s},"
         "\"pumps\":{\"water\":%s,\"cabin\":%s}"
@@ -406,27 +407,27 @@ esp_err_t DiagnosticsWebServer::AlternatorConfigPost(httpd_req_t* req) {
     if (received <= 0) {
         return ESP_FAIL;
     }
-    body[received] = ' ';
+    body[received] = '\0';
 
     char offset_buffer[32] = {0};
     char slope_buffer[32] = {0};
     CopyFormValue(offset_buffer, sizeof(offset_buffer), body, "offset=");
     CopyFormValue(slope_buffer, sizeof(slope_buffer), body, "slope=");
 
-    if (offset_buffer[0] != ' ') {
+    if (offset_buffer[0] != '\0') {
         server->sensors_.SetAlternatorCurrentOffset(std::strtof(offset_buffer, nullptr));
     }
-    if (slope_buffer[0] != ' ') {
+    if (slope_buffer[0] != '\0') {
         server->sensors_.SetAlternatorCurrentSlope(std::strtof(slope_buffer, nullptr));
     }
 
     httpd_resp_set_type(req, "application/json");
-    return httpd_resp_send(req, "{"status":"ok"}", HTTPD_RESP_USE_STRLEN);
+    return httpd_resp_send(req, kOkResponse, HTTPD_RESP_USE_STRLEN);
 }
 
 esp_err_t DiagnosticsWebServer::AlternatorResetPost(httpd_req_t* req) {
     auto* server = static_cast<DiagnosticsWebServer*>(req->user_ctx);
     server->sensors_.ResetAlternatorPeaks();
     httpd_resp_set_type(req, "application/json");
-    return httpd_resp_send(req, "{"status":"ok"}", HTTPD_RESP_USE_STRLEN);
+    return httpd_resp_send(req, kOkResponse, HTTPD_RESP_USE_STRLEN);
 }
