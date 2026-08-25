@@ -190,7 +190,15 @@ void LcdDisplay::Clear() {
 }
 
 void LcdDisplay::ToggleDisplay() {
-    display_enabled_ = !display_enabled_;
+    SetDisplayEnabled(!display_enabled_);
+}
+
+void LcdDisplay::SetDisplayEnabled(bool enabled) {
+    if (display_enabled_ == enabled) {
+        return;
+    }
+
+    display_enabled_ = enabled;
     if (display_enabled_) {
         SendCommand(0x08);
         backlight_ = kBacklightDisabled;

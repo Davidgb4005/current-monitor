@@ -5,13 +5,17 @@ namespace display {
 namespace {
 
 constexpr uint8_t kDefaultPages[kPageCount][kRowCount][kColumnCount + 1] = {
-    {"Alt       AGM       ",
-     "A         A         ",
-     "V         V         ",
-     "                    "},
     {"ALTERNATOR          ",
-     "V                   ",
-     "A                   ",
+     "Current             ",
+     "Voltage             ",
+     "                    "},
+    {"PASSENGER BATTERY   ",
+     "Voltage             ",
+     "Current             ",
+     "                    "},
+    {"DRIVER BATTERY      ",
+     "Voltage             ",
+     "Current             ",
      "                    "},
     {"   Heater Status    ",
      "Diesel Heater       ",

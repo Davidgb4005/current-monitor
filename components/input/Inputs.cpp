@@ -14,10 +14,10 @@ DigitalInput engine_pump(0, DIGITAL_IN_PIN_TYPE::NONE);
 static adc_oneshot_unit_handle_t adc_handle = nullptr;
 AnalogInput alternator_current(board::kAlternatorCurrentChannel, &adc_handle);
 AnalogInput alternator_voltage(board::kAlternatorVoltageChannel, &adc_handle);
-AnalogInput lion_1_voltage(board::kLion1VoltageChannel, &adc_handle);
-AnalogInput lion_2_voltage(board::kLion2VoltageChannel, &adc_handle);
-AnalogInput lion_2_current(board::kLion2CurrentChannel, &adc_handle);
-AnalogInput lion_1_current(board::kLion1CurrentChannel, &adc_handle);
+AnalogInput passenger_voltage(board::kPassengerVoltageChannel, &adc_handle);
+AnalogInput driver_voltage(board::kDriverVoltageChannel, &adc_handle);
+AnalogInput driver_current(board::kDriverCurrentChannel, &adc_handle);
+AnalogInput passenger_current(board::kPassengerCurrentChannel, &adc_handle);
 
 namespace {
 
@@ -44,8 +44,8 @@ void InitInputs() {
     cabin_pump.Init();
     alternator_current.Init();
     alternator_voltage.Init();
-    lion_1_voltage.Init();
-    lion_2_voltage.Init();
-    lion_2_current.Init();
-    lion_1_current.Init();
+    passenger_voltage.Init();
+    driver_voltage.Init();
+    driver_current.Init();
+    passenger_current.Init();
 }

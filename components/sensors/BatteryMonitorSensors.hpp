@@ -12,18 +12,18 @@ struct BatteryReadings {
     float alternator_voltage_offset = 0.0f;
     float alternator_voltage_slope = 15.0f / 4096.0f;
     float alternator_energy_joules = 0.0f;
-    float lion_1_voltage = 0.0f;
-    float lion_2_voltage = 0.0f;
-    float lion_1_current = 0.0f;
-    float lion_2_current = 0.0f;
+    float passenger_voltage = 0.0f;
+    float driver_voltage = 0.0f;
+    float passenger_current = 0.0f;
+    float driver_current = 0.0f;
 };
 
 class BatteryMonitorSensors {
 public:
-    void SetLion1Offset(int offset);
-    void SetLion2Offset(int offset);
-    int GetLion1Offset() const;
-    int GetLion2Offset() const;
+    void SetPassengerCurrentOffset(int offset);
+    void SetDriverCurrentOffset(int offset);
+    int GetPassengerCurrentOffset() const;
+    int GetDriverCurrentOffset() const;
 
     void SetAlternatorCurrentOffset(float offset);
     void SetAlternatorCurrentSlope(float slope);
@@ -45,9 +45,9 @@ private:
     static constexpr float kMinimumTrackedCurrentAmps = 5.0f;
     static constexpr int kCurrentAverageWindow = 20;
 
-    float lion_2_current_samples_[kCurrentAverageWindow] = {};
-    int lion_1_offset_ = 369;
-    int lion_2_offset_ = 369;
+    float driver_current_samples_[kCurrentAverageWindow] = {};
+    int passenger_current_offset_ = 369;
+    int driver_current_offset_ = 369;
     float alternator_current_offset_ = 0.0f;
     float alternator_current_slope_ = kCurrentScale;
     float alternator_voltage_offset_ = 0.0f;

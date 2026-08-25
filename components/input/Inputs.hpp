@@ -13,9 +13,9 @@ extern DigitalInput engine_pump;
 
 extern AnalogInput alternator_current;
 extern AnalogInput alternator_voltage;
-extern AnalogInput lion_1_voltage;
-extern AnalogInput lion_2_voltage;
-extern AnalogInput lion_2_current;
-extern AnalogInput lion_1_current;
+extern AnalogInput passenger_voltage;
+extern AnalogInput driver_voltage;
+extern AnalogInput driver_current;
+extern AnalogInput passenger_current;
 
 void InitInputs();

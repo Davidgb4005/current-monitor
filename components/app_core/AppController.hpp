@@ -20,7 +20,8 @@ private:
     void HandleButtons();
     void RenderCurrentPage();
     void RenderAlternatorPage(uint8_t page);
-    void RenderBatteryPage(uint8_t page);
+    void RenderPassengerBatteryPage(uint8_t page);
+    void RenderDriverBatteryPage(uint8_t page);
     void RenderHeaterStatusPage(uint8_t page);
     void RenderPumpStatusPage(uint8_t page);
     void RenderNetworkPage(uint8_t page);

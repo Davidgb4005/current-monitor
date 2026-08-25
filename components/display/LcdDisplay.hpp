@@ -21,6 +21,7 @@ public:
     void StartRefreshTask(uint16_t refresh_rate_ms);
 
     void ToggleDisplay();
+    void SetDisplayEnabled(bool enabled);
     int8_t GetPage() const;
     void NextPage();
     void PrevPage();

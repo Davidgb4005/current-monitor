@@ -69,8 +69,11 @@ void AppController::RenderCurrentPage() {
         case display::kAlternatorPage:
             RenderAlternatorPage(page);
             break;
-        case display::kBatteryPage:
-            RenderBatteryPage(page);
+        case display::kPassengerBatteryPage:
+            RenderPassengerBatteryPage(page);
+            break;
+        case display::kDriverBatteryPage:
+            RenderDriverBatteryPage(page);
             break;
         case display::kHeaterStatusPage:
             RenderHeaterStatusPage(page);
@@ -92,10 +95,16 @@ void AppController::RenderAlternatorPage(uint8_t page) {
     lcd_display_.WriteLeftAlign(buffer_, display::EncodeFloat(buffer_, readings.alternator_current, 1), 1, 1, 6, page);
 }
 
-void AppController::RenderBatteryPage(uint8_t page) {
+void AppController::RenderPassengerBatteryPage(uint8_t page) {
     const BatteryReadings& readings = sensors_.LatestReadings();
-    lcd_display_.WriteLeftAlign(buffer_, display::EncodeFloat(buffer_, readings.lion_2_voltage, 1), 1, 1, 6, page);
-    lcd_display_.WriteLeftAlign(buffer_, display::EncodeFloat(buffer_, readings.lion_2_current, 1), 2, 1, 6, page);
+    lcd_display_.WriteLeftAlign(buffer_, display::EncodeFloat(buffer_, readings.passenger_voltage, 1), 1, 1, 6, page);
+    lcd_display_.WriteLeftAlign(buffer_, display::EncodeFloat(buffer_, readings.passenger_current, 1), 2, 1, 6, page);
+}
+
+void AppController::RenderDriverBatteryPage(uint8_t page) {
+    const BatteryReadings& readings = sensors_.LatestReadings();
+    lcd_display_.WriteLeftAlign(buffer_, display::EncodeFloat(buffer_, readings.driver_voltage, 1), 1, 1, 6, page);
+    lcd_display_.WriteLeftAlign(buffer_, display::EncodeFloat(buffer_, readings.driver_current, 1), 2, 1, 6, page);
 }
 
 void AppController::RenderHeaterStatusPage(uint8_t page) {

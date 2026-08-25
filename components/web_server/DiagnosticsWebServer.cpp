@@ -38,7 +38,7 @@ const char kDashboardHtml[] = R"HTML(<!DOCTYPE html>
                 <tr><td><p>Voltage</p></td><td><p id="voltage" class="display">0.00</p></td></tr>
                 <tr><td><p>Max Current</p></td><td><p id="currentMax" class="display">0.00</p></td></tr>
                 <tr><td><p>Current</p></td><td><p id="current" class="display">0.00</p></td></tr>
-                <tr><td><p>Energy (J)</p></td><td><p id="energyJoules" class="display">0.00</p></td></tr>
+                <tr><td><p>Energy (kJ)</p></td><td><p id="energyJoules" class="display">0.00</p></td></tr>
             </table>
             <div class="controls">
                 <label class="controlRow"><span>Current Offset</span><input id="currentOffsetInput" type="number" step="0.01"></label>
@@ -47,17 +47,17 @@ const char kDashboardHtml[] = R"HTML(<!DOCTYPE html>
                 <label class="controlRow"><span>Voltage Slope</span><input id="voltageSlopeInput" type="number" step="0.0001"></label>
                 <div class="buttonRow">
                     <button id="saveCalButton">Save Calibration</button>
-                    <button id="resetMaxButton">Reset Max</button>
+                    <button id="resetMaxButton">Reset</button>
                 </div>
             </div>
         </section>
 
         <section class="page" id="page-battery">
             <table>
-                <tr><td><p>Battery 1 Voltage</p></td><td><p id="battery1Voltage" class="display">0.00</p></td></tr>
-                <tr><td><p>Battery 1 Current</p></td><td><p id="battery1Current" class="display">0.00</p></td></tr>
-                <tr><td><p>Battery 2 Voltage</p></td><td><p id="battery2Voltage" class="display">0.00</p></td></tr>
-                <tr><td><p>Battery 2 Current</p></td><td><p id="battery2Current" class="display">0.00</p></td></tr>
+                <tr><td><p>Passenger Voltage</p></td><td><p id="passengerVoltage" class="display">0.00</p></td></tr>
+                <tr><td><p>Passenger Current</p></td><td><p id="passengerCurrent" class="display">0.00</p></td></tr>
+                <tr><td><p>Driver Voltage</p></td><td><p id="driverVoltage" class="display">0.00</p></td></tr>
+                <tr><td><p>Driver Current</p></td><td><p id="driverCurrent" class="display">0.00</p></td></tr>
             </table>
         </section>
 
@@ -220,16 +220,16 @@ async function fetchDashboard() {
         setText("currentMax", data.alternator.currentMax.toFixed(2));
         setText("voltage", data.alternator.voltage.toFixed(2));
         setText("voltageMax", data.alternator.voltageMax.toFixed(2));
-        setText("energyJoules", data.alternator.energyJoules.toFixed(0));
+        setText("energyJoules", data.alternator.energyKilojoules.toFixed(2));
         setIfNotFocused("currentOffsetInput", data.alternator.currentOffset.toFixed(2));
         setIfNotFocused("currentSlopeInput", data.alternator.currentSlope.toFixed(3));
         setIfNotFocused("voltageOffsetInput", data.alternator.voltageOffset.toFixed(2));
         setIfNotFocused("voltageSlopeInput", data.alternator.voltageSlope.toFixed(4));
 
-        setText("battery1Voltage", data.battery.battery1Voltage.toFixed(2));
-        setText("battery1Current", data.battery.battery1Current.toFixed(2));
-        setText("battery2Voltage", data.battery.battery2Voltage.toFixed(2));
-        setText("battery2Current", data.battery.battery2Current.toFixed(2));
+        setText("passengerVoltage", data.battery.passengerVoltage.toFixed(2));
+        setText("passengerCurrent", data.battery.passengerCurrent.toFixed(2));
+        setText("driverVoltage", data.battery.driverVoltage.toFixed(2));
+        setText("driverCurrent", data.battery.driverCurrent.toFixed(2));
 
         setText("dieselHeater", stateLabel(data.heaters.diesel));
         setText("electricHeater", stateLabel(data.heaters.electric));
@@ -381,8 +381,8 @@ esp_err_t DiagnosticsWebServer::DashboardDataGet(httpd_req_t* req) {
         response,
         sizeof(response),
         "{"
-        "\"alternator\":{\"current\":%.2f,\"currentMax\":%.2f,\"voltage\":%.2f,\"voltageMax\":%.2f,\"currentOffset\":%.2f,\"currentSlope\":%.3f,\"voltageOffset\":%.2f,\"voltageSlope\":%.4f,\"energyJoules\":%.2f},"
-        "\"battery\":{\"battery1Voltage\":%.2f,\"battery1Current\":%.2f,\"battery2Voltage\":%.2f,\"battery2Current\":%.2f},"
+        "\"alternator\":{\"current\":%.2f,\"currentMax\":%.2f,\"voltage\":%.2f,\"voltageMax\":%.2f,\"currentOffset\":%.2f,\"currentSlope\":%.3f,\"voltageOffset\":%.2f,\"voltageSlope\":%.4f,\"energyKilojoules\":%.3f},"
+        "\"battery\":{\"passengerVoltage\":%.2f,\"passengerCurrent\":%.2f,\"driverVoltage\":%.2f,\"driverCurrent\":%.2f},"
         "\"heaters\":{\"diesel\":%s,\"electric\":%s,\"engine\":%s},"
         "\"pumps\":{\"water\":%s,\"cabin\":%s}"
         "}",
@@ -394,11 +394,11 @@ esp_err_t DiagnosticsWebServer::DashboardDataGet(httpd_req_t* req) {
         readings.alternator_current_slope,
         readings.alternator_voltage_offset,
         readings.alternator_voltage_slope,
-        readings.alternator_energy_joules,
-        readings.lion_1_voltage,
-        readings.lion_1_current,
-        readings.lion_2_voltage,
-        readings.lion_2_current,
+        readings.alternator_energy_joules / 1000.0f,
+        readings.passenger_voltage,
+        readings.passenger_current,
+        readings.driver_voltage,
+        readings.driver_current,
         diesel_heater.Read() ? "true" : "false",
         electric_heater.Read() ? "true" : "false",
         engine_heater.Read() ? "true" : "false",
