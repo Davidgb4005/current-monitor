@@ -1,7 +1,7 @@
 #include "NetworkManager.hpp"
 
 #include <cstring>
-
+#include "esp_check.h"
 #include "NetworkConfig.hpp"
 #include "esp_event.h"
 #include "esp_log.h"
