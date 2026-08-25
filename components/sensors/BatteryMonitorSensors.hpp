@@ -71,12 +71,16 @@ public:
 private:
     esp_err_t LoadCalibration();
     void SaveCalibration();
+    float ReadVoltageSample(float raw_sample, float slope, float offset) const;
+    float ReadCurrentSample(float raw_sample, float slope, float offset, float* sample_window);
 
     static constexpr float kVoltageScale = 15.0f / 4096.0f;
     static constexpr float kCurrentScale = 0.173f;
     static constexpr float kMinimumTrackedCurrentAmps = 5.0f;
     static constexpr int kCurrentAverageWindow = 20;
 
+    float alternator_current_samples_[kCurrentAverageWindow] = {};
+    float passenger_current_samples_[kCurrentAverageWindow] = {};
     float driver_current_samples_[kCurrentAverageWindow] = {};
     float passenger_current_offset_ = 369.0f;
     float passenger_current_slope_ = kCurrentScale;

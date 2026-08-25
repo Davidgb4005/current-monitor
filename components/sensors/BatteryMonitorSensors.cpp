@@ -189,6 +189,22 @@ float BatteryMonitorSensors::GetAlternatorVoltageSlope() const {
     return alternator_voltage_slope_;
 }
 
+float BatteryMonitorSensors::ReadVoltageSample(float raw_sample, float slope, float offset) const {
+    return raw_sample * slope - offset;
+}
+
+float BatteryMonitorSensors::ReadCurrentSample(float raw_sample, float slope, float offset, float* sample_window) {
+    sample_window[0] = raw_sample * slope - offset;
+
+    float average = 0.0f;
+    for (int i = kCurrentAverageWindow - 1; i > 0; --i) {
+        average += sample_window[i];
+        sample_window[i] = sample_window[i - 1];
+    }
+    average += sample_window[0];
+    return average / kCurrentAverageWindow;
+}
+
 BatteryReadings BatteryMonitorSensors::Sample() {
     const int64_t now_us = esp_timer_get_time();
     const float delta_seconds = last_sample_time_us_ == 0 ? 0.0f : static_cast<float>(now_us - last_sample_time_us_) / 1000000.0f;
@@ -198,8 +214,8 @@ BatteryReadings BatteryMonitorSensors::Sample() {
     latest_readings_.alternator_current_slope = alternator_current_slope_;
     latest_readings_.alternator_voltage_offset = alternator_voltage_offset_;
     latest_readings_.alternator_voltage_slope = alternator_voltage_slope_;
-    latest_readings_.alternator_voltage = alternator_voltage.Read() * alternator_voltage_slope_ - alternator_voltage_offset_;
-    latest_readings_.alternator_current = alternator_current.Read() * alternator_current_slope_ - alternator_current_offset_;
+    latest_readings_.alternator_voltage = ReadVoltageSample(alternator_voltage.Read(), alternator_voltage_slope_, alternator_voltage_offset_);
+    latest_readings_.alternator_current = ReadCurrentSample(alternator_current.Read(), alternator_current_slope_, alternator_current_offset_, alternator_current_samples_);
     if (latest_readings_.alternator_current > latest_readings_.alternator_current_max) {
         latest_readings_.alternator_current_max = latest_readings_.alternator_current;
     }
@@ -214,23 +230,15 @@ BatteryReadings BatteryMonitorSensors::Sample() {
     latest_readings_.passenger_voltage_slope = passenger_voltage_slope_;
     latest_readings_.passenger_current_offset = passenger_current_offset_;
     latest_readings_.passenger_current_slope = passenger_current_slope_;
-    latest_readings_.passenger_voltage = passenger_voltage.Read() * passenger_voltage_slope_ - passenger_voltage_offset_;
-    latest_readings_.passenger_current = passenger_current.Read() * passenger_current_slope_ - passenger_current_offset_;
+    latest_readings_.passenger_voltage = ReadVoltageSample(passenger_voltage.Read(), passenger_voltage_slope_, passenger_voltage_offset_);
+    latest_readings_.passenger_current = ReadCurrentSample(passenger_current.Read(), passenger_current_slope_, passenger_current_offset_, passenger_current_samples_);
 
     latest_readings_.driver_voltage_offset = driver_voltage_offset_;
     latest_readings_.driver_voltage_slope = driver_voltage_slope_;
     latest_readings_.driver_current_offset = driver_current_offset_;
     latest_readings_.driver_current_slope = driver_current_slope_;
-    latest_readings_.driver_voltage = driver_voltage.Read() * driver_voltage_slope_ - driver_voltage_offset_;
-
-    driver_current_samples_[0] = driver_current.Read() * driver_current_slope_ - driver_current_offset_;
-    float driver_current_average = 0.0f;
-    for (int i = kCurrentAverageWindow - 1; i > 0; --i) {
-        driver_current_average += driver_current_samples_[i];
-        driver_current_samples_[i] = driver_current_samples_[i - 1];
-    }
-    driver_current_average += driver_current_samples_[0];
-    latest_readings_.driver_current = driver_current_average / kCurrentAverageWindow;
+    latest_readings_.driver_voltage = ReadVoltageSample(driver_voltage.Read(), driver_voltage_slope_, driver_voltage_offset_);
+    latest_readings_.driver_current = ReadCurrentSample(driver_current.Read(), driver_current_slope_, driver_current_offset_, driver_current_samples_);
     return latest_readings_;
 }
 
