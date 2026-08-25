@@ -15,8 +15,8 @@ constexpr uint32_t kI2cClockHz = 20000;
 constexpr uint32_t kI2cIgnoreCount = 10;
 constexpr bool kI2cPullupsEnabled = true;
 
-constexpr uint8_t kLeftButtonPin = 21;
-constexpr uint8_t kRightButtonPin = 22;
+constexpr uint8_t kLeftButtonPin = 20;
+constexpr uint8_t kRightButtonPin = 21;
 constexpr uint8_t kDieselHeaterPin = 9;
 constexpr uint8_t kElectricHeaterPin = 18;
 constexpr uint8_t kEngineHeaterPin = 19;
