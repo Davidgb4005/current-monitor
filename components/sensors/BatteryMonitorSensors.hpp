@@ -5,6 +5,8 @@
 struct BatteryReadings {
     float alternator_current_raw = 0.0f;
     float alternator_voltage_raw = 0.0f;
+    float alternator_current_max = 0.0f;
+    float alternator_voltage_max = 0.0f;
     float lion_1_voltage = 0.0f;
     float lion_2_voltage = 0.0f;
     float lion_1_current = 0.0f;
@@ -19,6 +21,8 @@ public:
     int GetLion2Offset() const;
 
     BatteryReadings Sample();
+    const BatteryReadings& LatestReadings() const;
+    void ResetAlternatorPeaks();
 
 private:
     static constexpr float kVoltageScale = 15.0f / 4096.0f;
@@ -28,4 +32,5 @@ private:
     float lion_2_current_samples_[kCurrentAverageWindow] = {};
     int lion_1_offset_ = 369;
     int lion_2_offset_ = 369;
+    BatteryReadings latest_readings_ = {};
 };

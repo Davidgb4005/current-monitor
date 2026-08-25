@@ -82,6 +82,11 @@ esp_err_t NetworkManager::Start(NetworkMode mode) {
 }
 
 esp_err_t NetworkManager::Start(const NetworkConfig& config) {
+    if (has_active_mode_ && config.startup_mode == current_mode_) {
+        config_ = config;
+        return ESP_OK;
+    }
+
     config_ = config;
     if (config.startup_mode == NetworkMode::AccessPoint) {
         return StartAccessPoint(config.access_point);
@@ -97,7 +102,10 @@ esp_err_t NetworkManager::StartAccessPoint(const AccessPointConfig& config) {
         ESP_RETURN_ON_ERROR(Stop(), kLogTag, "Failed to stop active Wi-Fi mode");
     }
 
-    esp_netif_create_default_wifi_ap();
+    if (!ap_netif_created_) {
+        esp_netif_create_default_wifi_ap();
+        ap_netif_created_ = true;
+    }
 
     wifi_config_t wifi_config = {};
     wifi_config.ap.ssid_len = strlen(config.ssid);
@@ -116,6 +124,8 @@ esp_err_t NetworkManager::StartAccessPoint(const AccessPointConfig& config) {
     ESP_RETURN_ON_ERROR(esp_wifi_start(), kLogTag, "Failed to start AP");
 
     wifi_started_ = true;
+    has_active_mode_ = true;
+    current_mode_ = NetworkMode::AccessPoint;
     ESP_LOGI(kLogTag, "AP started. SSID:%s password:%s", config.ssid, config.password);
     return ESP_OK;
 }
@@ -128,7 +138,10 @@ esp_err_t NetworkManager::StartStation(const StationConfig& config) {
         ESP_RETURN_ON_ERROR(Stop(), kLogTag, "Failed to stop active Wi-Fi mode");
     }
 
-    esp_netif_create_default_wifi_sta();
+    if (!sta_netif_created_) {
+        esp_netif_create_default_wifi_sta();
+        sta_netif_created_ = true;
+    }
 
     wifi_config_t wifi_config = {};
     CopyWifiString(wifi_config.sta.ssid, sizeof(wifi_config.sta.ssid), config.ssid);
@@ -143,6 +156,8 @@ esp_err_t NetworkManager::StartStation(const StationConfig& config) {
     ESP_RETURN_ON_ERROR(esp_wifi_connect(), kLogTag, "Failed to begin station connect");
 
     wifi_started_ = true;
+    has_active_mode_ = true;
+    current_mode_ = NetworkMode::Station;
     ESP_LOGI(kLogTag, "Station mode started. SSID:%s", config.ssid);
     return ESP_OK;
 }
@@ -163,6 +178,10 @@ esp_err_t NetworkManager::Stop() {
 
     wifi_started_ = false;
     return ESP_OK;
+}
+
+NetworkMode NetworkManager::CurrentMode() const {
+    return current_mode_;
 }
 
 }  // namespace network

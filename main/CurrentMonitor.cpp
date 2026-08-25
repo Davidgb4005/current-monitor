@@ -1,6 +1,7 @@
 #include "AppController.hpp"
 #include "BatteryMonitorSensors.hpp"
 #include "BoardConfig.hpp"
+#include "DiagnosticsWebServer.hpp"
 #include "I2cBus.hpp"
 #include "Inputs.hpp"
 #include "LcdDisplay.hpp"
@@ -26,6 +27,9 @@ extern "C" int app_main(void)
     network::NetworkManager network_manager;
     AppController app_controller(lcd_display, sensors, network_manager);
     app_controller.Init();
+
+    DiagnosticsWebServer web_server(sensors);
+    ESP_ERROR_CHECK(web_server.Start());
 
     while (1)
     {

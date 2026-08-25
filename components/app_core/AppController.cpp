@@ -24,6 +24,7 @@ void AppController::Init() {
 }
 
 void AppController::Tick() {
+    sensors_.Sample();
     HandleButtons();
     RenderCurrentPage();
 }
@@ -45,7 +46,7 @@ void AppController::HandleButtons() {
                                 ? network::NetworkMode::Station
                                 : network::NetworkMode::AccessPoint;
         } else if (right_button.ReadRisingEdge()) {
-            if (network_manager_.Start(pending_mode_) == ESP_OK) {
+            if (pending_mode_ == active_mode_ || network_manager_.Start(pending_mode_) == ESP_OK) {
                 active_mode_ = pending_mode_;
             } else {
                 ESP_LOGE(kLogTag, "Failed to apply network mode");
@@ -86,13 +87,13 @@ void AppController::RenderCurrentPage() {
 }
 
 void AppController::RenderAlternatorPage(uint8_t page) {
-    const BatteryReadings readings = sensors_.Sample();
+    const BatteryReadings& readings = sensors_.LatestReadings();
     lcd_display_.WriteLeftAlign(buffer_, display::EncodeFloat(buffer_, readings.alternator_voltage_raw, 1), 2, 1, 6, page);
     lcd_display_.WriteLeftAlign(buffer_, display::EncodeFloat(buffer_, readings.alternator_current_raw, 1), 1, 1, 6, page);
 }
 
 void AppController::RenderBatteryPage(uint8_t page) {
-    const BatteryReadings readings = sensors_.Sample();
+    const BatteryReadings& readings = sensors_.LatestReadings();
     lcd_display_.WriteLeftAlign(buffer_, display::EncodeFloat(buffer_, readings.lion_2_voltage, 1), 1, 1, 6, page);
     lcd_display_.WriteLeftAlign(buffer_, display::EncodeFloat(buffer_, readings.lion_2_current, 1), 2, 1, 6, page);
 }
