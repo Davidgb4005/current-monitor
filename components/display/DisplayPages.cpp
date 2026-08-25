@@ -21,6 +21,10 @@ constexpr uint8_t kDefaultPages[kPageCount][kRowCount][kColumnCount + 1] = {
      "Water Pump          ",
      "Cabin Pump          ",
      "Engine Pump         "},
+    {"  Network Settings  ",
+     "Mode                ",
+     "Pending             ",
+     "L:Toggle R:Apply    "},
 };
 
 }  // namespace

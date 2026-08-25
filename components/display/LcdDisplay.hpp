@@ -39,7 +39,7 @@ private:
 
     i2c_master_dev_handle_t dev_handle_ = nullptr;
     uint8_t display_[display::kPageCount][display::kRowCount][display::kColumnCount + 1] = {};
-    int8_t current_page_ = 1;
+    int8_t current_page_ = 0;
     uint16_t refresh_rate_ms_ = 10000;
     bool display_enabled_ = true;
     uint8_t backlight_ = kBacklightEnabled;
