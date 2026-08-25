@@ -3,10 +3,13 @@
 #include <cstdint>
 
 struct BatteryReadings {
-    float alternator_current_raw = 0.0f;
-    float alternator_voltage_raw = 0.0f;
+    float alternator_current = 0.0f;
+    float alternator_voltage = 0.0f;
     float alternator_current_max = 0.0f;
     float alternator_voltage_max = 0.0f;
+    float alternator_current_offset = 0.0f;
+    float alternator_current_slope = 0.173f;
+    float alternator_energy_joules = 0.0f;
     float lion_1_voltage = 0.0f;
     float lion_2_voltage = 0.0f;
     float lion_1_current = 0.0f;
@@ -20,6 +23,11 @@ public:
     int GetLion1Offset() const;
     int GetLion2Offset() const;
 
+    void SetAlternatorCurrentOffset(float offset);
+    void SetAlternatorCurrentSlope(float slope);
+    float GetAlternatorCurrentOffset() const;
+    float GetAlternatorCurrentSlope() const;
+
     BatteryReadings Sample();
     const BatteryReadings& LatestReadings() const;
     void ResetAlternatorPeaks();
@@ -27,10 +35,14 @@ public:
 private:
     static constexpr float kVoltageScale = 15.0f / 4096.0f;
     static constexpr float kCurrentScale = 0.173f;
+    static constexpr float kMinimumTrackedCurrentAmps = 5.0f;
     static constexpr int kCurrentAverageWindow = 20;
 
     float lion_2_current_samples_[kCurrentAverageWindow] = {};
     int lion_1_offset_ = 369;
     int lion_2_offset_ = 369;
+    float alternator_current_offset_ = 0.0f;
+    float alternator_current_slope_ = kCurrentScale;
+    int64_t last_sample_time_us_ = 0;
     BatteryReadings latest_readings_ = {};
 };

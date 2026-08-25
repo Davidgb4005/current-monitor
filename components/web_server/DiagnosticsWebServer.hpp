@@ -13,7 +13,8 @@ public:
     static esp_err_t RootGet(httpd_req_t* req);
     static esp_err_t StyleGet(httpd_req_t* req);
     static esp_err_t ScriptGet(httpd_req_t* req);
-    static esp_err_t AlternatorDataGet(httpd_req_t* req);
+    static esp_err_t DashboardDataGet(httpd_req_t* req);
+    static esp_err_t AlternatorConfigPost(httpd_req_t* req);
     static esp_err_t AlternatorResetPost(httpd_req_t* req);
 
 private:

@@ -88,8 +88,8 @@ void AppController::RenderCurrentPage() {
 
 void AppController::RenderAlternatorPage(uint8_t page) {
     const BatteryReadings& readings = sensors_.LatestReadings();
-    lcd_display_.WriteLeftAlign(buffer_, display::EncodeFloat(buffer_, readings.alternator_voltage_raw, 1), 2, 1, 6, page);
-    lcd_display_.WriteLeftAlign(buffer_, display::EncodeFloat(buffer_, readings.alternator_current_raw, 1), 1, 1, 6, page);
+    lcd_display_.WriteLeftAlign(buffer_, display::EncodeFloat(buffer_, readings.alternator_voltage, 1), 2, 1, 6, page);
+    lcd_display_.WriteLeftAlign(buffer_, display::EncodeFloat(buffer_, readings.alternator_current, 1), 1, 1, 6, page);
 }
 
 void AppController::RenderBatteryPage(uint8_t page) {

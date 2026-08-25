@@ -1,6 +1,7 @@
 #include "BatteryMonitorSensors.hpp"
 
 #include "Inputs.hpp"
+#include "esp_timer.h"
 
 void BatteryMonitorSensors::SetLion1Offset(int offset) {
     lion_1_offset_ = offset;
@@ -18,14 +19,39 @@ int BatteryMonitorSensors::GetLion2Offset() const {
     return lion_2_offset_;
 }
 
+void BatteryMonitorSensors::SetAlternatorCurrentOffset(float offset) {
+    alternator_current_offset_ = offset;
+}
+
+void BatteryMonitorSensors::SetAlternatorCurrentSlope(float slope) {
+    alternator_current_slope_ = slope;
+}
+
+float BatteryMonitorSensors::GetAlternatorCurrentOffset() const {
+    return alternator_current_offset_;
+}
+
+float BatteryMonitorSensors::GetAlternatorCurrentSlope() const {
+    return alternator_current_slope_;
+}
+
 BatteryReadings BatteryMonitorSensors::Sample() {
-    latest_readings_.alternator_current_raw = alternator_current.Read();
-    latest_readings_.alternator_voltage_raw = alternator_voltage.Read();
-    if (latest_readings_.alternator_current_raw > latest_readings_.alternator_current_max) {
-        latest_readings_.alternator_current_max = latest_readings_.alternator_current_raw;
+    const int64_t now_us = esp_timer_get_time();
+    const float delta_seconds = last_sample_time_us_ == 0 ? 0.0f : static_cast<float>(now_us - last_sample_time_us_) / 1000000.0f;
+    last_sample_time_us_ = now_us;
+
+    latest_readings_.alternator_current_offset = alternator_current_offset_;
+    latest_readings_.alternator_current_slope = alternator_current_slope_;
+    latest_readings_.alternator_voltage = alternator_voltage.Read() * kVoltageScale;
+    latest_readings_.alternator_current = alternator_current.Read() * alternator_current_slope_ - alternator_current_offset_;
+    if (latest_readings_.alternator_current > latest_readings_.alternator_current_max) {
+        latest_readings_.alternator_current_max = latest_readings_.alternator_current;
     }
-    if (latest_readings_.alternator_voltage_raw > latest_readings_.alternator_voltage_max) {
-        latest_readings_.alternator_voltage_max = latest_readings_.alternator_voltage_raw;
+    if (latest_readings_.alternator_voltage > latest_readings_.alternator_voltage_max) {
+        latest_readings_.alternator_voltage_max = latest_readings_.alternator_voltage;
+    }
+    if (latest_readings_.alternator_current >= kMinimumTrackedCurrentAmps && delta_seconds > 0.0f) {
+        latest_readings_.alternator_energy_joules += latest_readings_.alternator_voltage * latest_readings_.alternator_current * delta_seconds;
     }
     latest_readings_.lion_1_voltage = lion_1_voltage.Read() * kVoltageScale;
     latest_readings_.lion_2_voltage = lion_2_voltage.Read() * kVoltageScale;
