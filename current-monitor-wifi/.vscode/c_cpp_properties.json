@@ -1,0 +1,19 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/home/esp/esp/esp-idf/components/**/include",
+                "/home/esp/esp/esp-idf/components/freertos/config/include/freertos",
+                "/home/esp/esp/esp-idf/components/freertos/esp_additions/include"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c17",
+            "cppStandard": "gnu++17",
+            "intelliSenseMode": "linux-gcc-x64"
+        }
+    ],
+    "version": 4
+}

@@ -1,0 +1,5 @@
+Command: ninja spiffs
+[0/1] Re-running CMake...
+-- Configuring incomplete, errors occurred!
+FAILED: build.ninja 
+/usr/bin/cmake --regenerate-during-build -S/home/esp/esp/current-monitor-wifi -B/home/esp/esp/current-monitor-wifi/build

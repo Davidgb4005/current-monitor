@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>alternator</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <p>Alternator</p>
+        </header>
+        <table>
+            <tr>
+                <td>
+                    <p>Max Voltage</p>
+                </td>
+                <td>
+                    <p id="voltageMax" class="display">0.00</p>
+                </td>
+            </tr>
+              <tr>
+                <td>
+                    <p>Voltage</p>
+                </td>
+                <td>
+                    <p id="voltage" class="display">0.00</p>
+                </td>
+            </tr>           
+            <tr>
+                <td>
+                    <p>Max Current</p>
+                </td>
+                <td>
+                    <p id="currentMax" class="display">0.00</p>
+                </td>
+            </tr>           
+            <tr>
+                <td>
+                    <p>Current</p>
+                </td>
+                <td>
+                    <p id="current" class="display">0.00</p>
+                </td>
+            </tr>
+        </table>
+        <div>
+        <input type="button" id="button1" onclick="buttonPressed()" value="Reset Max">
+        <input type="button" id="button2" onclick="buttonPressed()" value="Does Nothing">
+        <input type="button" id="button3" onclick="buttonPressed()" value="Does Nothing">
+        </div>
+        <script>
+            function fetchAlternatorData() {
+                fetch("http://192.168.4.1/alternator_data")
+                    .then(res => res.json())
+                    .then(data => {
+                        document.getElementById("current").textContent = data.current;
+                        document.getElementById("currentMax").textContent = data.currentMax;
+                        document.getElementById("voltage").textContent = data.voltage;
+                        document.getElementById("voltageMax").textContent = data.voltageMax;
+                    })
+                .catch(err => {console.error("Error fetching data:", err)
+                        document.getElementById("current").textContent = "Error";
+                        document.getElementById("currentMax").textContent = "Error";
+                        document.getElementById("voltage").textContent = "Error";
+                        document.getElementById("voltageMax").textContent = "Error";
+                });
+            }
+            function buttonPressed(){
+                fetch("http://192.168.4.1/alternator_reset",{
+                    method : 'POST',
+                    body: 'r'
+                    })
+                .then(response => response.json())
+                .then(data => console.log(data));  
+                }
+            fetchAlternatorData();
+            setInterval(fetchAlternatorData, 500);
+        </script>
+    </body>
+</html>

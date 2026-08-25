@@ -1,0 +1,2 @@
+source /home/esp/esp/current-monitor-wifi/build/bootloader/gdbinit/symbols
+source /home/esp/esp/current-monitor-wifi/build/bootloader/gdbinit/connect

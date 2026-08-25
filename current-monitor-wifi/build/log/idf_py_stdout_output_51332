@@ -1,0 +1,4 @@
+Command: cmake -G Ninja -DPYTHON_DEPS_CHECKED=1 -DPYTHON=/home/esp/.espressif/python_env/idf6.1_py3.13_env/bin/python -DESP_PLATFORM=1 -DCCACHE_ENABLE=False /home/esp/esp/current-monitor-wifi
+-- IDF_TARGET is not set, guessed 'esp32c6' from sdkconfig '/home/esp/esp/current-monitor-wifi/sdkconfig'
+-- Found Git: /usr/bin/git (found version "2.47.3")
+-- Configuring incomplete, errors occurred!

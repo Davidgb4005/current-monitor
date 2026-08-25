@@ -1,0 +1,16 @@
+Command: ninja flash
+[1/15] Performing build step for 'bootloader'
+[1/1] cd /home/esp/esp/current-monitor-wifi/build/bootloader && /home/esp/.espressif/python_env/idf6.1_py3.13_env/bin/python /home/esp/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/esp/esp/current-monitor-wifi/build/bootloader/bootloader.bin
+Bootloader binary size 0x58d0 bytes. 0x2730 bytes (31%) free.
+[2/15] cd /home/esp/esp/current-monitor-wifi/build && /home/esp/.espressif/python_env/idf6.1_py3.13_env/bin/python /home/esp/esp/esp-idf/components/spiffs/spiffsgen.py 0x100000 /home/esp/esp/current-monitor-wifi/spiffs /home/esp/esp/current-monitor-wifi/build/spiffs.bin --page-size=256 --obj-name-len=32 --meta-len=4 --use-magic --use-magic-len
+[3/15] No install step for 'bootloader'
+[4/15] Building CXX object esp-idf/http_server/CMakeFiles/__idf_http_server.dir/UrlHandles.cpp.obj
+[5/15] Completed 'bootloader'
+[6/15] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/main.cpp.obj
+[01m[K/home/esp/esp/current-monitor-wifi/main/main.cpp:19:20:[m[K [01;35m[Kwarning: [m[K'[01m[KTAG[m[K' defined but not used [[01;35m[K-Wunused-variable[m[K]
+   19 | static const char *[01;35m[KTAG[m[K = "HTTP_SERVER";
+      |                    [01;35m[K^~~[m[K
+[7/15] Building CXX object esp-idf/http_server/CMakeFiles/__idf_http_server.dir/HttpServer.cpp.obj
+[8/15] Building CXX object esp-idf/http_server/CMakeFiles/__idf_http_server.dir/UrlHandlerFunctions.cpp.obj
+[9/15] Linking C static library esp-idf/http_server/libhttp_server.a
+[10/15] Linking C static library esp-idf/main/libmain.a

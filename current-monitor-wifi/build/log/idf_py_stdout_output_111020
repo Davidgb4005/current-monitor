@@ -1,0 +1,20 @@
+Command: ninja all
+[1/11] cd /home/esp/esp/current-monitor-wifi/build && /home/esp/.espressif/python_env/idf6.1_py3.13_env/bin/python /home/esp/esp/esp-idf/components/spiffs/spiffsgen.py 0x100000 /home/esp/esp/current-monitor-wifi/spiffs /home/esp/esp/current-monitor-wifi/build/spiffs.bin --page-size=256 --obj-name-len=32 --meta-len=4 --use-magic --use-magic-len
+[2/11] Performing build step for 'bootloader'
+[1/1] cd /home/esp/esp/current-monitor-wifi/build/bootloader && /home/esp/.espressif/python_env/idf6.1_py3.13_env/bin/python /home/esp/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/esp/esp/current-monitor-wifi/build/bootloader/bootloader.bin
+Bootloader binary size 0x58d0 bytes. 0x2730 bytes (31%) free.
+[3/11] No install step for 'bootloader'
+[4/11] Building CXX object esp-idf/http_server/CMakeFiles/__idf_http_server.dir/UrlHandles.cpp.obj
+[5/11] Completed 'bootloader'
+[6/11] Linking C static library esp-idf/http_server/libhttp_server.a
+[7/11] Linking C static library esp-idf/main/libmain.a
+[8/11] Generating esp-idf/esp_system/ld/sections.ld
+[9/11] Linking CXX executable CurrentMonitor.elf
+[10/11] Generating binary image from built executable
+esptool v5.1.0
+Creating ESP32C6 image...
+Merged 1 ELF section.
+Successfully created ESP32C6 image.
+Generated /home/esp/esp/current-monitor-wifi/build/CurrentMonitor.bin
+[11/11] cd /home/esp/esp/current-monitor-wifi/build && /home/esp/.espressif/python_env/idf6.1_py3.13_env/bin/python /home/esp/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/esp/esp/current-monitor-wifi/build/partition_table/partition-table.bin /home/esp/esp/current-monitor-wifi/build/CurrentMonitor.bin
+CurrentMonitor.bin binary size 0xe1350 bytes. Smallest app partition is 0x100000 bytes. 0x1ecb0 bytes (12%) free.

@@ -1,0 +1,5 @@
+Command: cmake -G Ninja -DPYTHON_DEPS_CHECKED=1 -DPYTHON=/home/esp/.espressif/python_env/idf6.1_py3.13_env/bin/python -DESP_PLATFORM=1 -DCCACHE_ENABLE=False /home/esp/esp/current-monitor-wifi
+CMake Error at CMakeLists.txt:7 (spiffs_create_partition_image):
+  Unknown CMake command "spiffs_create_partition_image".
+
+

@@ -1,0 +1,9 @@
+Command: ninja all
+[1/5] cd /home/esp/esp/current-monitor-wifi/build && /home/esp/.espressif/python_env/idf6.1_py3.13_env/bin/python /home/esp/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/esp/esp/current-monitor-wifi/build/partition_table/partition-table.bin /home/esp/esp/current-monitor-wifi/build/CurrentMonitor.bin
+CurrentMonitor.bin binary size 0xe57f0 bytes. Smallest app partition is 0x100000 bytes. 0x1a810 bytes (10%) free.
+[2/5] cd /home/esp/esp/current-monitor-wifi/build && /home/esp/.espressif/python_env/idf6.1_py3.13_env/bin/python /home/esp/esp/esp-idf/components/spiffs/spiffsgen.py 0x100000 /home/esp/esp/current-monitor-wifi/spiffs /home/esp/esp/current-monitor-wifi/build/spiffs.bin --page-size=256 --obj-name-len=32 --meta-len=4 --use-magic --use-magic-len
+[3/5] Performing build step for 'bootloader'
+[1/1] cd /home/esp/esp/current-monitor-wifi/build/bootloader && /home/esp/.espressif/python_env/idf6.1_py3.13_env/bin/python /home/esp/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/esp/esp/current-monitor-wifi/build/bootloader/bootloader.bin
+Bootloader binary size 0x58d0 bytes. 0x2730 bytes (31%) free.
+[4/5] No install step for 'bootloader'
+[5/5] Completed 'bootloader'
