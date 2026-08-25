@@ -48,7 +48,7 @@ private:
     float driver_current_samples_[kCurrentAverageWindow] = {};
     int passenger_current_offset_ = 369;
     int driver_current_offset_ = 369;
-    float alternator_current_offset_ = 0.0f;
+    float alternator_current_offset_ = 369.0f;
     float alternator_current_slope_ = kCurrentScale;
     float alternator_voltage_offset_ = 0.0f;
     float alternator_voltage_slope_ = kVoltageScale;
