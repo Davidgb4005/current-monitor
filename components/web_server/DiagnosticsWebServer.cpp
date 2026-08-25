@@ -1,7 +1,7 @@
 #include "DiagnosticsWebServer.hpp"
 
 #include <cstdio>
-
+#include "esp_check.h"
 #include "esp_log.h"
 
 namespace {
