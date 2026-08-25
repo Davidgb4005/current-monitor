@@ -21,10 +21,12 @@ int BatteryMonitorSensors::GetLion2Offset() const {
 
 void BatteryMonitorSensors::SetAlternatorCurrentOffset(float offset) {
     alternator_current_offset_ = offset;
+    latest_readings_.alternator_current_offset = offset;
 }
 
 void BatteryMonitorSensors::SetAlternatorCurrentSlope(float slope) {
     alternator_current_slope_ = slope;
+    latest_readings_.alternator_current_slope = slope;
 }
 
 float BatteryMonitorSensors::GetAlternatorCurrentOffset() const {
@@ -35,6 +37,24 @@ float BatteryMonitorSensors::GetAlternatorCurrentSlope() const {
     return alternator_current_slope_;
 }
 
+void BatteryMonitorSensors::SetAlternatorVoltageOffset(float offset) {
+    alternator_voltage_offset_ = offset;
+    latest_readings_.alternator_voltage_offset = offset;
+}
+
+void BatteryMonitorSensors::SetAlternatorVoltageSlope(float slope) {
+    alternator_voltage_slope_ = slope;
+    latest_readings_.alternator_voltage_slope = slope;
+}
+
+float BatteryMonitorSensors::GetAlternatorVoltageOffset() const {
+    return alternator_voltage_offset_;
+}
+
+float BatteryMonitorSensors::GetAlternatorVoltageSlope() const {
+    return alternator_voltage_slope_;
+}
+
 BatteryReadings BatteryMonitorSensors::Sample() {
     const int64_t now_us = esp_timer_get_time();
     const float delta_seconds = last_sample_time_us_ == 0 ? 0.0f : static_cast<float>(now_us - last_sample_time_us_) / 1000000.0f;
@@ -42,7 +62,9 @@ BatteryReadings BatteryMonitorSensors::Sample() {
 
     latest_readings_.alternator_current_offset = alternator_current_offset_;
     latest_readings_.alternator_current_slope = alternator_current_slope_;
-    latest_readings_.alternator_voltage = alternator_voltage.Read() * kVoltageScale;
+    latest_readings_.alternator_voltage_offset = alternator_voltage_offset_;
+    latest_readings_.alternator_voltage_slope = alternator_voltage_slope_;
+    latest_readings_.alternator_voltage = alternator_voltage.Read() * alternator_voltage_slope_ - alternator_voltage_offset_;
     latest_readings_.alternator_current = alternator_current.Read() * alternator_current_slope_ - alternator_current_offset_;
     if (latest_readings_.alternator_current > latest_readings_.alternator_current_max) {
         latest_readings_.alternator_current_max = latest_readings_.alternator_current;

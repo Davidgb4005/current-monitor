@@ -9,6 +9,8 @@ struct BatteryReadings {
     float alternator_voltage_max = 0.0f;
     float alternator_current_offset = 0.0f;
     float alternator_current_slope = 0.173f;
+    float alternator_voltage_offset = 0.0f;
+    float alternator_voltage_slope = 15.0f / 4096.0f;
     float alternator_energy_joules = 0.0f;
     float lion_1_voltage = 0.0f;
     float lion_2_voltage = 0.0f;
@@ -28,6 +30,11 @@ public:
     float GetAlternatorCurrentOffset() const;
     float GetAlternatorCurrentSlope() const;
 
+    void SetAlternatorVoltageOffset(float offset);
+    void SetAlternatorVoltageSlope(float slope);
+    float GetAlternatorVoltageOffset() const;
+    float GetAlternatorVoltageSlope() const;
+
     BatteryReadings Sample();
     const BatteryReadings& LatestReadings() const;
     void ResetAlternatorPeaks();
@@ -43,6 +50,8 @@ private:
     int lion_2_offset_ = 369;
     float alternator_current_offset_ = 0.0f;
     float alternator_current_slope_ = kCurrentScale;
+    float alternator_voltage_offset_ = 0.0f;
+    float alternator_voltage_slope_ = kVoltageScale;
     int64_t last_sample_time_us_ = 0;
     BatteryReadings latest_readings_ = {};
 };

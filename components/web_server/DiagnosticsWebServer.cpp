@@ -41,8 +41,10 @@ const char kDashboardHtml[] = R"HTML(<!DOCTYPE html>
                 <tr><td><p>Energy (J)</p></td><td><p id="energyJoules" class="display">0.00</p></td></tr>
             </table>
             <div class="controls">
-                <label class="controlRow"><span>Offset</span><input id="offsetInput" type="number" step="0.01"></label>
-                <label class="controlRow"><span>Slope</span><input id="slopeInput" type="number" step="0.001"></label>
+                <label class="controlRow"><span>Current Offset</span><input id="currentOffsetInput" type="number" step="0.01"></label>
+                <label class="controlRow"><span>Current Slope</span><input id="currentSlopeInput" type="number" step="0.001"></label>
+                <label class="controlRow"><span>Voltage Offset</span><input id="voltageOffsetInput" type="number" step="0.01"></label>
+                <label class="controlRow"><span>Voltage Slope</span><input id="voltageSlopeInput" type="number" step="0.0001"></label>
                 <div class="buttonRow">
                     <button id="saveCalButton">Save Calibration</button>
                     <button id="resetMaxButton">Reset Max</button>
@@ -219,8 +221,10 @@ async function fetchDashboard() {
         setText("voltage", data.alternator.voltage.toFixed(2));
         setText("voltageMax", data.alternator.voltageMax.toFixed(2));
         setText("energyJoules", data.alternator.energyJoules.toFixed(0));
-        setIfNotFocused("offsetInput", data.alternator.offset.toFixed(2));
-        setIfNotFocused("slopeInput", data.alternator.slope.toFixed(3));
+        setIfNotFocused("currentOffsetInput", data.alternator.currentOffset.toFixed(2));
+        setIfNotFocused("currentSlopeInput", data.alternator.currentSlope.toFixed(3));
+        setIfNotFocused("voltageOffsetInput", data.alternator.voltageOffset.toFixed(2));
+        setIfNotFocused("voltageSlopeInput", data.alternator.voltageSlope.toFixed(4));
 
         setText("battery1Voltage", data.battery.battery1Voltage.toFixed(2));
         setText("battery1Current", data.battery.battery1Current.toFixed(2));
@@ -239,12 +243,14 @@ async function fetchDashboard() {
 }
 
 async function saveCalibration() {
-    const offset = document.getElementById("offsetInput").value;
-    const slope = document.getElementById("slopeInput").value;
+    const currentOffset = document.getElementById("currentOffsetInput").value;
+    const currentSlope = document.getElementById("currentSlopeInput").value;
+    const voltageOffset = document.getElementById("voltageOffsetInput").value;
+    const voltageSlope = document.getElementById("voltageSlopeInput").value;
     await fetch("/api/alternator/config", {
         method: "POST",
         headers: {"Content-Type": "application/x-www-form-urlencoded"},
-        body: `offset=${encodeURIComponent(offset)}&slope=${encodeURIComponent(slope)}`
+        body: `currentOffset=${encodeURIComponent(currentOffset)}&currentSlope=${encodeURIComponent(currentSlope)}&voltageOffset=${encodeURIComponent(voltageOffset)}&voltageSlope=${encodeURIComponent(voltageSlope)}`
     });
     fetchDashboard();
 }
@@ -375,7 +381,7 @@ esp_err_t DiagnosticsWebServer::DashboardDataGet(httpd_req_t* req) {
         response,
         sizeof(response),
         "{"
-        "\"alternator\":{\"current\":%.2f,\"currentMax\":%.2f,\"voltage\":%.2f,\"voltageMax\":%.2f,\"offset\":%.2f,\"slope\":%.3f,\"energyJoules\":%.2f},"
+        "\"alternator\":{\"current\":%.2f,\"currentMax\":%.2f,\"voltage\":%.2f,\"voltageMax\":%.2f,\"currentOffset\":%.2f,\"currentSlope\":%.3f,\"voltageOffset\":%.2f,\"voltageSlope\":%.4f,\"energyJoules\":%.2f},"
         "\"battery\":{\"battery1Voltage\":%.2f,\"battery1Current\":%.2f,\"battery2Voltage\":%.2f,\"battery2Current\":%.2f},"
         "\"heaters\":{\"diesel\":%s,\"electric\":%s,\"engine\":%s},"
         "\"pumps\":{\"water\":%s,\"cabin\":%s}"
@@ -386,6 +392,8 @@ esp_err_t DiagnosticsWebServer::DashboardDataGet(httpd_req_t* req) {
         readings.alternator_voltage_max,
         readings.alternator_current_offset,
         readings.alternator_current_slope,
+        readings.alternator_voltage_offset,
+        readings.alternator_voltage_slope,
         readings.alternator_energy_joules,
         readings.lion_1_voltage,
         readings.lion_1_current,
@@ -409,16 +417,26 @@ esp_err_t DiagnosticsWebServer::AlternatorConfigPost(httpd_req_t* req) {
     }
     body[received] = '\0';
 
-    char offset_buffer[32] = {0};
-    char slope_buffer[32] = {0};
-    CopyFormValue(offset_buffer, sizeof(offset_buffer), body, "offset=");
-    CopyFormValue(slope_buffer, sizeof(slope_buffer), body, "slope=");
+    char current_offset_buffer[32] = {0};
+    char current_slope_buffer[32] = {0};
+    char voltage_offset_buffer[32] = {0};
+    char voltage_slope_buffer[32] = {0};
+    CopyFormValue(current_offset_buffer, sizeof(current_offset_buffer), body, "currentOffset=");
+    CopyFormValue(current_slope_buffer, sizeof(current_slope_buffer), body, "currentSlope=");
+    CopyFormValue(voltage_offset_buffer, sizeof(voltage_offset_buffer), body, "voltageOffset=");
+    CopyFormValue(voltage_slope_buffer, sizeof(voltage_slope_buffer), body, "voltageSlope=");
 
-    if (offset_buffer[0] != '\0') {
-        server->sensors_.SetAlternatorCurrentOffset(std::strtof(offset_buffer, nullptr));
+    if (current_offset_buffer[0] != '\0') {
+        server->sensors_.SetAlternatorCurrentOffset(std::strtof(current_offset_buffer, nullptr));
     }
-    if (slope_buffer[0] != '\0') {
-        server->sensors_.SetAlternatorCurrentSlope(std::strtof(slope_buffer, nullptr));
+    if (current_slope_buffer[0] != '\0') {
+        server->sensors_.SetAlternatorCurrentSlope(std::strtof(current_slope_buffer, nullptr));
+    }
+    if (voltage_offset_buffer[0] != '\0') {
+        server->sensors_.SetAlternatorVoltageOffset(std::strtof(voltage_offset_buffer, nullptr));
+    }
+    if (voltage_slope_buffer[0] != '\0') {
+        server->sensors_.SetAlternatorVoltageSlope(std::strtof(voltage_slope_buffer, nullptr));
     }
 
     httpd_resp_set_type(req, "application/json");
